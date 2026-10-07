@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pl" data-platform="other">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Calcalou: licznik kalorii — powiedz Lou, co jesz</title>
+  <meta name="description" content="Licznik kalorii z przyjacielem. Zapisuj posiłki ze zdjęcia lub ręcznie, zobacz, ile zostało, i trzymaj serię z Lou. Za darmo na iPhone&#39;a, iPada i Androida.">
+  <meta name="theme-color" content="#FFE2CF">
+  <meta name="apple-itunes-app" content="app-id=6757434158">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calcalou">
+  <meta property="og:url" content="https://calcalou.com/pl/">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:title" content="Powiedz Lou, co jesz. Lou policzy resztę.">
+  <meta property="og:description" content="Licznik kalorii z przyjacielem w środku. Za darmo na iPhone&#39;a, iPada i Androida.">
+  <meta property="og:image" content="https://calcalou.com/assets/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/assets/img/favicon-48.png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="preload" as="image" type="image/avif" imagesrcset="/assets/img/lou-happy-240.avif 240w, /assets/img/lou-happy-480.avif 480w, /assets/img/lou-happy-760.avif 760w" imagesizes="(min-width: 960px) 380px, 250px" fetchpriority="high">
+  <style>
+    :root {
+      --canvas: #FBF8F4; --peach: #FFE2CF; --peach-2: #FFF1E8; --muted: #F4F1EC; --surface: #FFFFFF; --border: #EAE6E0;
+      --text: #1C1917; --text-2: #57534E; --brand: #B93D0A; --accent: #EA580C; --accent-hi: #F76B15; --ink: #1C1917; --leaf: #16A34A;
+      --font: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
+      --shadow: 0 2px 4px rgba(28,25,23,.06), 0 20px 40px -16px rgba(124,45,18,.28);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+    body { margin: 0; background: var(--canvas); color: var(--text); font: 400 17px/1.5 var(--font); overflow-x: hidden; }
+    img { max-width: 100%; height: auto; display: block; }
+    picture { display: block; }
+    h1, h2, h3 { text-wrap: balance; }
+    a { color: var(--brand); }
+    a:focus-visible, summary:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; border-radius: 10px; }
+    .wrap { width: min(1120px, 100% - 40px); margin-inline: auto; }
+    .skip { position: absolute; left: -9999px; }
+    .skip:focus { left: 16px; top: 16px; z-index: 10; background: #fff; padding: 8px 12px; }
+    .center { text-align: center; }
+
+    .top { position: absolute; inset: 0 0 auto; z-index: 5; }
+    .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 64px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 21px; letter-spacing: -.5px; color: var(--text); text-decoration: none; }
+    .brand img { width: 34px; height: 34px; border-radius: 9px; box-shadow: 0 2px 6px rgba(124,45,18,.2); }
+    .top nav { display: flex; gap: 18px; align-items: center; font-weight: 600; font-size: 15px; }
+    .top nav > a { color: var(--text); text-decoration: none; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 20px; border-radius: 16px; font-weight: 800;
+      background: var(--ink); color: #fff !important; text-decoration: none; box-shadow: 0 4px 0 #000; transition: transform .1s, box-shadow .1s; }
+    .btn:active { transform: translateY(3px); box-shadow: 0 1px 0 #000; }
+    .btn.sm { padding: 9px 14px; border-radius: 12px; font-size: 14px; box-shadow: 0 3px 0 #000; white-space: nowrap; }
+    .lang { position: relative; }
+    .lang summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 5px; padding: 8px 6px; min-height: 44px; font-weight: 700; text-transform: uppercase; }
+    .lang summary::-webkit-details-marker { display: none; }
+    .lang svg { width: 18px; height: 18px; }
+    .lang ul { position: absolute; right: 0; top: 46px; margin: 0; padding: 6px; list-style: none; background: #fff; border-radius: 14px; box-shadow: var(--shadow); min-width: 170px; }
+    .lang li a { display: block; padding: 9px 12px; border-radius: 9px; color: var(--text); text-decoration: none; font-weight: 600; }
+    .lang li a:hover, .lang li a[aria-current] { background: var(--peach-2); }
+    @media (max-width: 700px) { .top nav .hide-sm { display: none; } }
+
+    .hero { position: relative; background: radial-gradient(120% 70% at 50% 0%, #FFF7F0 0%, var(--peach) 55%, #FDBA8C 120%); padding: 88px 0 0; overflow: hidden; text-align: center; }
+    .hero h1 { font-size: clamp(38px, 9.6vw, 80px); line-height: 1; letter-spacing: -.045em; font-weight: 900; margin: 0 auto 14px; max-width: 13em; }
+    .hero h1 span { display: block; }
+    .hero h1 span + span { color: var(--brand); }
+    .lead { font-size: clamp(17px, 2.4vw, 21px); color: #3D3936; max-width: 32em; margin: 0 auto 22px; }
+    .stores { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+    .stores a { display: block; border-radius: 10px; }
+    .stores img { height: 50px; width: auto; }
+    .fine { font-size: 14px; color: #57534E; margin: 12px 0 0; }
+
+    /* Lou is ~1.5 m tall and stands behind the counter: the counter hides the lower 38 % of the render. */
+    .stage { position: relative; width: min(820px, 100%); margin: 56px auto 0; height: 295px; }
+    .stage .lou { position: absolute; left: 50%; bottom: 41px; width: 250px; transform: translateX(-50%); }
+    .bubble { position: absolute; left: calc(50% + 58px); bottom: 228px; margin: 0; background: #fff; border-radius: 20px 20px 20px 6px; padding: 10px 14px; font-weight: 800;
+      font-size: 14px; line-height: 1.25; box-shadow: var(--shadow); text-align: left; max-width: min(170px, calc(50% - 66px)); z-index: 2; }
+    .counter { position: absolute; left: 0; right: 0; bottom: 0; height: 130px; z-index: 1; background: linear-gradient(#2E2B29, var(--ink) 30%); border-radius: 26px 26px 0 0;
+      box-shadow: 0 -2px 0 #57534E inset, 0 -24px 40px -20px rgba(28,25,23,.5); display: flex; align-items: center; justify-content: center; gap: 26px; color: #fff; padding: 0 20px; }
+    .counter::before { content: ""; position: absolute; left: -8px; right: -8px; top: -12px; height: 18px; border-radius: 12px; background: #3D3936; }
+    .display { text-align: left; font-variant-numeric: tabular-nums; }
+    .display b { display: block; font-size: clamp(42px, 9vw, 64px); line-height: 1; letter-spacing: -2px; color: var(--accent-hi); text-shadow: 0 0 24px rgba(247,107,21,.45); }
+    .display small { color: #B5AFA9; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+    .readouts { display: none; text-align: left; font-size: 14px; color: #B5AFA9; line-height: 1.6; margin: 0; padding: 0; list-style: none; }
+    .readouts b { color: #fff; font-variant-numeric: tabular-nums; margin-left: 6px; }
+    .readouts i { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: 1px; }
+    .dot-eaten { background: var(--accent); } .dot-burned { background: var(--leaf); } .dot-goal { background: #B5AFA9; }
+    @media (min-width: 640px) { .readouts { display: block; } }
+    @media (min-width: 960px) {
+      .hero { padding-top: 112px; }
+      .stage { height: 411px; margin-top: 30px; }
+      .stage .lou { width: 380px; bottom: 25px; }
+      .bubble { left: calc(50% + 150px); bottom: 318px; font-size: 17px; max-width: 220px; }
+      .counter { height: 160px; }
+    }
+
+    section { scroll-margin-top: 24px; }
+    .eyebrow { display: inline-block; font-weight: 800; color: var(--brand); background: var(--peach-2); border-radius: 999px; padding: 6px 12px; font-size: 14px; margin-bottom: 12px; }
+    h2 { font-size: clamp(32px, 6.4vw, 52px); line-height: 1.05; letter-spacing: -.035em; font-weight: 900; margin: 0 0 14px; }
+    .sub { color: var(--text-2); font-size: 18px; max-width: 34em; margin: 0 auto; }
+
+    .features { padding: 72px 0 24px; }
+    .feature { display: grid; gap: 24px; align-items: center; padding: 40px 0; }
+    .kicker { color: var(--brand); font-weight: 800; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; margin: 0 0 8px; }
+    .feature h3 { font-size: clamp(28px, 5vw, 42px); line-height: 1.08; letter-spacing: -.03em; margin: 0 0 12px; font-weight: 900; }
+    .feature p { color: var(--text-2); margin: 0 0 12px; font-size: 18px; max-width: 30em; }
+    .tag { display: inline-block; font-size: 13px; font-weight: 800; color: var(--brand); background: var(--peach-2); padding: 4px 10px; border-radius: 999px; }
+    .shots { display: flex; justify-content: center; gap: 16px; background: linear-gradient(160deg, var(--peach-2), var(--muted)); border-radius: 32px; padding: 28px 16px; }
+    .shot { width: min(250px, 46%); padding: 6px; border-radius: 30px; background: var(--ink); box-shadow: var(--shadow); align-self: flex-start; }
+    .shot img { border-radius: 25px; }
+    .shots .shot:only-child { width: min(260px, 72%); }
+    .shots .shot:nth-child(2) { margin-top: 36px; }
+    @media (min-width: 960px) {
+      .feature { grid-template-columns: 1fr 1fr; gap: 64px; }
+      .feature:nth-of-type(even) .copy { order: 2; }
+    }
+
+    .moods { padding: 52px 0 40px; background: var(--ink); color: #fff; border-radius: 40px; margin: 24px 0; }
+    .moods h2 { color: #fff; }
+    .moods .sub { color: #DCD7D0; }
+    .mood-row { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; padding: 34px 20px 0; margin: 0 -20px; scrollbar-width: none; }
+    .mood-row::-webkit-scrollbar { display: none; }
+    .mood { position: relative; flex: 0 0 140px; height: 126px; margin: 0; scroll-snap-align: center; }
+    .mood .lou { position: absolute; left: 50%; bottom: 7px; width: 124px; transform: translateX(-50%); }
+    .mood figcaption { position: absolute; z-index: 1; left: 0; right: 0; bottom: 0; height: 52px; display: grid; place-items: center; background: #2E2B29;
+      border-top: 6px solid #3D3936; font-weight: 800; font-size: 14px; color: #F4F1EC; }
+    .mood:first-child figcaption { border-top-left-radius: 14px; }
+    .mood:last-child figcaption { border-top-right-radius: 14px; }
+    @media (min-width: 900px) { .mood-row { justify-content: center; } }
+
+    .more { padding: 40px 0 56px; }
+    .chips { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; margin-top: 26px; }
+    .chip { background: var(--peach-2); border-radius: 22px; padding: 18px 20px; }
+    .chip h3 { font-size: 17px; margin: 0 0 4px; font-weight: 900; }
+    .chip p { margin: 0; color: var(--text-2); font-size: 15px; }
+
+    .faq { padding: 24px 0 40px; }
+    .faq .list { max-width: 760px; margin: 22px auto 0; display: grid; gap: 10px; }
+    .faq details { background: var(--surface); border-radius: 20px; box-shadow: 0 1px 2px rgba(28,25,23,.06); }
+    .faq summary { list-style: none; cursor: pointer; padding: 18px 54px 18px 20px; font-weight: 800; font-size: 18px; position: relative; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: ""; position: absolute; right: 18px; top: 50%; width: 26px; height: 26px; margin-top: -13px; border-radius: 50%; background: var(--peach-2)
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5' fill='none' stroke='%23B93D0A' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/18px no-repeat; transition: transform .2s; }
+    .faq details[open] summary::after { transform: rotate(180deg); }
+    .faq details p { margin: 0; padding: 0 20px 20px; color: var(--text-2); }
+
+    .final { padding: 40px 0 0; text-align: center; background: linear-gradient(var(--canvas), var(--peach)); overflow: hidden; }
+    .final .stage { height: 255px; margin-top: 30px; }
+    .final .stage .lou { width: 220px; bottom: 22px; }
+    .final .counter { height: 100px; }
+    .final .display b { font-size: 34px; letter-spacing: -1px; }
+    @media (min-width: 960px) { .final .stage { height: 265px; } .final .stage .lou { width: 260px; bottom: 9px; } .final .counter { height: 100px; } }
+
+    footer { background: var(--ink); color: #B5AFA9; padding: 32px 0 calc(110px + env(safe-area-inset-bottom)); font-size: 15px; }
+    footer ul { display: flex; flex-wrap: wrap; gap: 4px 20px; margin: 0 0 14px; padding: 0; list-style: none; }
+    footer a { color: #fff; display: inline-block; padding: 6px 0; }
+    footer .langs a { color: #DCD7D0; }
+    footer p { margin: 0 0 8px; max-width: 46em; }
+    @media (min-width: 760px) { footer { padding-bottom: 40px; } }
+
+    .sticky { position: fixed; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 6; transform: translateY(160%); transition: transform .3s cubic-bezier(.2,.8,.2,1); }
+    .sticky.is-visible { transform: none; }
+    .sticky .btn { width: 100%; padding: 15px; font-size: 17px; background: var(--brand); box-shadow: 0 4px 0 #7C2D12, 0 12px 30px -8px rgba(124,45,18,.5); }
+    .sticky .btn img { width: 26px; height: 26px; border-radius: 7px; }
+    .sticky [data-store="android"], [data-platform="android"] .sticky [data-store="ios"] { display: none; }
+    [data-platform="android"] .sticky [data-store="android"] { display: flex; }
+    @media (min-width: 760px) { .sticky { display: none; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Przejdź do treści</a>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/pl/"><img src="/assets/img/app-icon-96.png" alt="" width="34" height="34">Calcalou</a>
+      <nav aria-label="Główna">
+        <a class="hide-sm" href="#features">Funkcje</a>
+        <a class="hide-sm" href="#faq">FAQ</a>
+        <details class="lang">
+          <summary aria-label="PL · Język: Polski"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" fill="none" stroke="currentColor" stroke-width="2"/></svg>pl</summary>
+          <ul>
+            <li><a href="/" hreflang="en" lang="en">English</a></li>
+            <li><a href="/de/" hreflang="de" lang="de">Deutsch</a></li>
+            <li><a href="/es/" hreflang="es" lang="es">Español</a></li>
+            <li><a href="/fr/" hreflang="fr" lang="fr">Français</a></li>
+            <li><a href="/it/" hreflang="it" lang="it">Italiano</a></li>
+            <li><a href="/pl/" hreflang="pl" lang="pl" aria-current="page">Polski</a></li>
+            <li><a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li>
+            <li><a href="/ru/" hreflang="ru" lang="ru">Русский</a></li>
+            <li><a href="/tr/" hreflang="tr" lang="tr">Türkçe</a></li>
+          </ul>
+        </details>
+        <a class="btn sm" href="#get">Pobierz</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="get">
+      <div class="wrap">
+        <h1><span>Powiedz Lou, co jesz.</span> <span>Lou policzy resztę.</span></h1>
+        <p class="lead">Calcalou to licznik kalorii z przyjacielem w środku. Pstryknij lub wpisz posiłek, sprawdź, ile zostało na dziś, i utrzymuj swoją serię.</p>
+        <div class="stores" data-hero-cta>
+  <a data-store="ios" href="https://apps.apple.com/app/id6757434158"><img src="/assets/img/badge-app-store.svg" alt="Pobierz w App Store" width="150" height="50"></a>
+  <a data-store="android" href="https://play.google.com/store/apps/details?id=com.khrolovich.calorietracker"><img src="/assets/img/badge-google-play-pl-50.webp" srcset="/assets/img/badge-google-play-pl-50.webp 1x, /assets/img/badge-google-play-pl-100.webp 2x" alt="Pobierz z Google Play" width="168" height="50"></a>
+</div>
+        <p class="fine">Za darmo na iPhone&#39;a, iPada i Androida</p>
+      </div>
+      <div class="stage">
+        <picture class="lou"><source type="image/avif" srcset="/assets/img/lou-happy-240.avif 240w, /assets/img/lou-happy-480.avif 480w, /assets/img/lou-happy-760.avif 760w" sizes="(min-width: 960px) 380px, 250px"><img src="/assets/img/lou-happy-760.webp" srcset="/assets/img/lou-happy-240.webp 240w, /assets/img/lou-happy-480.webp 480w, /assets/img/lou-happy-760.webp 760w" sizes="(min-width: 960px) 380px, 250px" width="760" height="712" alt="Lou, maskotka Calcalou, uśmiecha się zza lady" fetchpriority="high"></picture>
+        <p class="bubble">Cześć, jestem Lou! Co dziś na talerzu?</p>
+        <div class="counter" aria-hidden="true">
+          <div class="display"><b>2 320</b><small>kcal zostało</small></div>
+          <ul class="readouts">
+            <li><i class="dot-eaten"></i>Zjedzone<b>1 780</b></li>
+            <li><i class="dot-burned"></i>Spalone<b>2 100</b></li>
+            <li><i class="dot-goal"></i>Cel<b>2 000</b></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features" aria-labelledby="features-title">
+      <div class="wrap">
+        <div class="center">
+          <span class="eyebrow">Jak to działa</span>
+          <h2 id="features-title">Pstryk. Wynik. Seria.</h2>
+          <p class="sub">Większość liczników kalorii przypomina arkusze kalkulacyjne. Calcalou przypomina grę, do której naprawdę chcesz wracać.</p>
+        </div>
+        <article class="feature">
+          <div class="copy">
+            <p class="kicker">Pstryk. Szacunek. Gotowe.</p>
+            <h3>Wystarczy zdjęcie.</h3>
+            <p>Rozpoznawanie zdjęć przez AI zamienia Twój posiłek w szacunek kalorii w kilka sekund. Bez kodów kreskowych, bez przeszukiwania bazy. Wolisz wpisać? Dodaj ręcznie równie szybko.</p>
+            <span class="tag">Premium · do 50 skanów dziennie · 7 dni za darmo</span>
+          </div>
+          <div class="shots"><div class="shot"><picture><source type="image/avif" srcset="/assets/img/shot-pl-add-320.avif 320w, /assets/img/shot-pl-add-480.avif 480w, /assets/img/shot-pl-add-640.avif 640w" sizes="260px"><img src="/assets/img/shot-pl-add-640.webp" srcset="/assets/img/shot-pl-add-320.webp 320w, /assets/img/shot-pl-add-480.webp 480w, /assets/img/shot-pl-add-640.webp 640w" sizes="260px" width="640" height="1138" alt="Ekran Dodaj wpis: 540 kcal za sałatkę, z przyciskiem Skanuj zdjęcie" loading="lazy" decoding="async"></picture></div></div>
+        </article>
+        <article class="feature">
+          <div class="copy">
+            <p class="kicker">Twój dzień na pierwszy rzut oka</p>
+            <h3>Zjedzone, spalone, co zostało.</h3>
+            <p>Śledź zjedzone i spalone kalorie w jednym miejscu. Ustaw dzienny cel: deficyt, utrzymanie lub nadwyżka, i zobacz od razu, ile zostało.</p>
+          </div>
+          <div class="shots"><div class="shot"><picture><source type="image/avif" srcset="/assets/img/shot-pl-today-320.avif 320w, /assets/img/shot-pl-today-480.avif 480w, /assets/img/shot-pl-today-640.avif 640w" sizes="260px"><img src="/assets/img/shot-pl-today-640.webp" srcset="/assets/img/shot-pl-today-320.webp 320w, /assets/img/shot-pl-today-480.webp 480w, /assets/img/shot-pl-today-640.webp 640w" sizes="260px" width="640" height="1138" alt="Ekran Dzisiaj: zostało 2320 kcal, zjedzone 1780, spalone 2100, cel 2000" loading="lazy" decoding="async"></picture></div></div>
+        </article>
+        <article class="feature">
+          <div class="copy">
+            <p class="kicker">Serie, które trwają</p>
+            <h3>Zapisuj codziennie. Awansuj.</h3>
+            <p>Każdy dzień z wpisem podtrzymuje Twoją serię, daje XP i odblokowuje osiągnięcia. Zdobądź kamień milowy i udostępnij kartę znajomym.</p>
+          </div>
+          <div class="shots"><div class="shot"><picture><source type="image/avif" srcset="/assets/img/shot-pl-achievements-320.avif 320w, /assets/img/shot-pl-achievements-480.avif 480w, /assets/img/shot-pl-achievements-640.avif 640w" sizes="(min-width: 600px) 250px, 46vw"><img src="/assets/img/shot-pl-achievements-640.webp" srcset="/assets/img/shot-pl-achievements-320.webp 320w, /assets/img/shot-pl-achievements-480.webp 480w, /assets/img/shot-pl-achievements-640.webp 640w" sizes="(min-width: 600px) 250px, 46vw" width="640" height="1138" alt="Ekran Osiągnięcia: Poziom 11, odblokowane 12 z 20 odznak" loading="lazy" decoding="async"></picture></div><div class="shot"><picture><source type="image/avif" srcset="/assets/img/shot-pl-milestone-320.avif 320w, /assets/img/shot-pl-milestone-480.avif 480w, /assets/img/shot-pl-milestone-640.avif 640w" sizes="(min-width: 600px) 250px, 46vw"><img src="/assets/img/shot-pl-milestone-640.webp" srcset="/assets/img/shot-pl-milestone-320.webp 320w, /assets/img/shot-pl-milestone-480.webp 480w, /assets/img/shot-pl-milestone-640.webp 640w" sizes="(min-width: 600px) 250px, 46vw" width="640" height="1138" alt="Karta kamienia milowego: 30 dni, cały miesiąc" loading="lazy" decoding="async"></picture></div></div>
+        </article>
+        <article class="feature">
+          <div class="copy">
+            <p class="kicker">Postępy, które widać</p>
+            <h3>Twój tydzień w skrócie.</h3>
+            <p>Podsumowanie tygodnia pokazuje Twoje średnie spożycie, średnie spalanie i dni, w których osiągnąłeś cel. Statystyki obejmują cały miesiąc.</p>
+          </div>
+          <div class="shots"><div class="shot"><picture><source type="image/avif" srcset="/assets/img/shot-pl-weekly-320.avif 320w, /assets/img/shot-pl-weekly-480.avif 480w, /assets/img/shot-pl-weekly-640.avif 640w" sizes="(min-width: 600px) 250px, 46vw"><img src="/assets/img/shot-pl-weekly-640.webp" srcset="/assets/img/shot-pl-weekly-320.webp 320w, /assets/img/shot-pl-weekly-480.webp 480w, /assets/img/shot-pl-weekly-640.webp 640w" sizes="(min-width: 600px) 250px, 46vw" width="640" height="1138" alt="Podsumowanie tygodnia: średnie zjedzone i spalone, 7 z 7 dni zapisanych" loading="lazy" decoding="async"></picture></div><div class="shot"><picture><source type="image/avif" srcset="/assets/img/shot-pl-stats-320.avif 320w, /assets/img/shot-pl-stats-480.avif 480w, /assets/img/shot-pl-stats-640.avif 640w" sizes="(min-width: 600px) 250px, 46vw"><img src="/assets/img/shot-pl-stats-640.webp" srcset="/assets/img/shot-pl-stats-320.webp 320w, /assets/img/shot-pl-stats-480.webp 480w, /assets/img/shot-pl-stats-640.webp 640w" sizes="(min-width: 600px) 250px, 46vw" width="640" height="1138" alt="Statystyki za poprzedni miesiąc z tygodniowymi słupkami" loading="lazy" decoding="async"></picture></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="moods" aria-labelledby="moods-title">
+      <div class="wrap center">
+        <h2 id="moods-title">Lou też ma uczucia.</h2>
+        <p class="sub">Lou reaguje na to, co zapisujesz, świętuje Twoje serie i delikatnie szturcha, gdy opuścisz dzień.</p>
+        <div class="mood-row">
+          <figure class="mood"><picture class="lou"><source type="image/avif" srcset="/assets/img/lou-happy-240.avif 240w, /assets/img/lou-happy-480.avif 480w, /assets/img/lou-happy-760.avif 760w" sizes="124px"><img src="/assets/img/lou-happy-760.webp" srcset="/assets/img/lou-happy-240.webp 240w, /assets/img/lou-happy-480.webp 480w, /assets/img/lou-happy-760.webp 760w" sizes="124px" width="760" height="712" alt="" loading="lazy" decoding="async"></picture><figcaption>Radość</figcaption></figure>
+          <figure class="mood"><picture class="lou"><source type="image/avif" srcset="/assets/img/lou-celebrating-240.avif 240w, /assets/img/lou-celebrating-480.avif 480w, /assets/img/lou-celebrating-760.avif 760w" sizes="124px"><img src="/assets/img/lou-celebrating-760.webp" srcset="/assets/img/lou-celebrating-240.webp 240w, /assets/img/lou-celebrating-480.webp 480w, /assets/img/lou-celebrating-760.webp 760w" sizes="124px" width="760" height="712" alt="" loading="lazy" decoding="async"></picture><figcaption>Zachwyt</figcaption></figure>
+          <figure class="mood"><picture class="lou"><source type="image/avif" srcset="/assets/img/lou-curious-240.avif 240w, /assets/img/lou-curious-480.avif 480w, /assets/img/lou-curious-760.avif 760w" sizes="124px"><img src="/assets/img/lou-curious-760.webp" srcset="/assets/img/lou-curious-240.webp 240w, /assets/img/lou-curious-480.webp 480w, /assets/img/lou-curious-760.webp 760w" sizes="124px" width="760" height="712" alt="" loading="lazy" decoding="async"></picture><figcaption>Ciekawość</figcaption></figure>
+          <figure class="mood"><picture class="lou"><source type="image/avif" srcset="/assets/img/lou-encouraging-240.avif 240w, /assets/img/lou-encouraging-480.avif 480w, /assets/img/lou-encouraging-760.avif 760w" sizes="124px"><img src="/assets/img/lou-encouraging-760.webp" srcset="/assets/img/lou-encouraging-240.webp 240w, /assets/img/lou-encouraging-480.webp 480w, /assets/img/lou-encouraging-760.webp 760w" sizes="124px" width="760" height="712" alt="" loading="lazy" decoding="async"></picture><figcaption>Zachęta</figcaption></figure>
+          <figure class="mood"><picture class="lou"><source type="image/avif" srcset="/assets/img/lou-surprised-240.avif 240w, /assets/img/lou-surprised-480.avif 480w, /assets/img/lou-surprised-760.avif 760w" sizes="124px"><img src="/assets/img/lou-surprised-760.webp" srcset="/assets/img/lou-surprised-240.webp 240w, /assets/img/lou-surprised-480.webp 480w, /assets/img/lou-surprised-760.webp 760w" sizes="124px" width="760" height="712" alt="" loading="lazy" decoding="async"></picture><figcaption>Zdziwienie</figcaption></figure>
+          <figure class="mood"><picture class="lou"><source type="image/avif" srcset="/assets/img/lou-shy-240.avif 240w, /assets/img/lou-shy-480.avif 480w, /assets/img/lou-shy-760.avif 760w" sizes="124px"><img src="/assets/img/lou-shy-760.webp" srcset="/assets/img/lou-shy-240.webp 240w, /assets/img/lou-shy-480.webp 480w, /assets/img/lou-shy-760.webp 760w" sizes="124px" width="760" height="712" alt="" loading="lazy" decoding="async"></picture><figcaption>Nieśmiałość</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="more" aria-labelledby="more-title">
+      <div class="wrap">
+        <h2 id="more-title" class="center">Świetnie dogaduje się z Twoim telefonem.</h2>
+        <div class="chips">
+          <div class="chip"><h3>Widżety</h3><p>Dzisiejszy bilans na ekranie głównym, a na iPhonie także widżety na ekranie blokady.</p></div>
+          <div class="chip"><h3>Siri i Live Activity</h3><p>Poproś Siri, by zapisała posiłek, zeskanowała jedzenie albo powiedziała, ile zostało (iPhone).</p></div>
+          <div class="chip"><h3>Zdrowie od Apple i Health Connect</h3><p>Calcalou dodaje Twoje dzienne kalorie i pokazuje z nich Twoją aktywną energię.</p></div>
+          <div class="chip"><h3>Twój dziennik podróżuje z Tobą</h3><p>Twój dziennik mieszka na koncie: nowy telefon przynosi historię, serie i poziomy.</p></div>
+          <div class="chip"><h3>9 języków</h3><p>Angielski, niemiecki, hiszpański, francuski, włoski, polski, portugalski, rosyjski i turecki.</p></div>
+          <div class="chip"><h3>Twoje dane zostają Twoje</h3><p>Twój dziennik jedzenia nigdy nie jest sprzedawany.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <h2 id="faq-title" class="center">Pytania i odpowiedzi.</h2>
+        <div class="list">
+          <details><summary>Czy Calcalou jest darmowe?</summary><p>Tak. Zapisywanie posiłków i aktywności, cele, serie, poziomy, osiągnięcia i statystyki są za darmo. Calcalou Premium odblokowuje skany zdjęć przez AI, do 50 dziennie, i usuwa banery reklamowe. Zaczyna się od 7-dniowego darmowego okresu próbnego.</p></details>
+          <details><summary>Kim jest Lou?</summary><p>Lou to mała postać, która mieszka w aplikacji. Lou reaguje na to, co zapisujesz, świętuje Twoje serie i delikatnie szturcha, gdy opuścisz dzień.</p></details>
+          <details><summary>Jak dokładne są szacunki ze zdjęć?</summary><p>Skany zdjęć dają szybki szacunek, a nie pomiar laboratoryjny. Wszystkie wartości kaloryczne w Calcalou są szacunkami. To aplikacja służąca ogólnemu dobremu samopoczuciu, nie wyrób medyczny: przed wprowadzeniem istotnych zmian w diecie skonsultuj się z lekarzem lub dyplomowanym dietetykiem.</p></details>
+          <details><summary>Na jakich urządzeniach działa?</summary><p>iPhone, iPad i telefony z Androidem. Zaloguj się przez Apple lub Google na iPhonie i iPadzie, przez Google lub e-mail na Androidzie, a Twój dziennik, serie i poziomy zsynchronizują się między urządzeniami.</p></details>
+          <details><summary>Co dzieje się z moimi danymi?</summary><p>Twój dziennik jedzenia to Twoje dane i nigdy nie jest sprzedawany. Możesz w każdej chwili usunąć swoje konto i wszystkie jego dane. <a href="/delete-account/">Jak usunąć konto</a></p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final" aria-labelledby="final-title">
+      <div class="wrap">
+        <h2 id="final-title">Lou czeka przy ladzie.</h2>
+        <div class="stores">
+  <a data-store="ios" href="https://apps.apple.com/app/id6757434158"><img src="/assets/img/badge-app-store.svg" alt="Pobierz w App Store" width="150" height="50" loading="lazy"></a>
+  <a data-store="android" href="https://play.google.com/store/apps/details?id=com.khrolovich.calorietracker"><img src="/assets/img/badge-google-play-pl-50.webp" srcset="/assets/img/badge-google-play-pl-50.webp 1x, /assets/img/badge-google-play-pl-100.webp 2x" alt="Pobierz z Google Play" width="168" height="50" loading="lazy"></a>
+</div>
+      </div>
+      <div class="stage">
+        <picture class="lou"><source type="image/avif" srcset="/assets/img/lou-celebrating-240.avif 240w, /assets/img/lou-celebrating-480.avif 480w, /assets/img/lou-celebrating-760.avif 760w" sizes="(min-width: 960px) 260px, 220px"><img src="/assets/img/lou-celebrating-760.webp" srcset="/assets/img/lou-celebrating-240.webp 240w, /assets/img/lou-celebrating-480.webp 480w, /assets/img/lou-celebrating-760.webp 760w" sizes="(min-width: 960px) 260px, 220px" width="760" height="712" alt="Lou kibicuje z obiema łapkami w górze zza lady" loading="lazy" decoding="async"></picture>
+        <div class="counter" aria-hidden="true"><div class="display"><b>Dzień 1</b><small>seria zaczyna się dziś</small></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <ul>
+        <li><a href="/privacy/">Polityka prywatności</a></li>
+        <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Warunki korzystania</a></li>
+        <li><a href="/support/">Pomoc</a></li>
+        <li><a href="/delete-account/">Usuń konto</a></li>
+        <li><a href="mailto:support@calcalou.com">support@calcalou.com</a></li>
+      </ul>
+      <ul class="langs" aria-label="Język">
+        <li><a href="/" hreflang="en" lang="en">English</a></li>
+        <li><a href="/de/" hreflang="de" lang="de">Deutsch</a></li>
+        <li><a href="/es/" hreflang="es" lang="es">Español</a></li>
+        <li><a href="/fr/" hreflang="fr" lang="fr">Français</a></li>
+        <li><a href="/it/" hreflang="it" lang="it">Italiano</a></li>
+        <li><a href="/pl/" hreflang="pl" lang="pl" aria-current="page">Polski</a></li>
+        <li><a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li>
+        <li><a href="/ru/" hreflang="ru" lang="ru">Русский</a></li>
+        <li><a href="/tr/" hreflang="tr" lang="tr">Türkçe</a></li>
+      </ul>
+      <p>Calcalou to aplikacja do rejestrowania posiłków i kalorii służąca ogólnemu dobremu samopoczuciu, nie wyrób medyczny. Wartości kaloryczne, w tym szacunki ze zdjęć AI, są wyłącznie szacunkami.</p>
+      <p>© 2026 Calcalou</p>
+    </div>
+  </footer>
+
+  <div class="sticky" data-sticky-cta>
+    <a class="btn" data-store="ios" href="https://apps.apple.com/app/id6757434158"><img src="/assets/img/app-icon-96.png" alt="" width="26" height="26" loading="lazy">Pobierz Calcalou w App Store</a>
+    <a class="btn" data-store="android" href="https://play.google.com/store/apps/details?id=com.khrolovich.calorietracker"><img src="/assets/img/app-icon-96.png" alt="" width="26" height="26" loading="lazy">Pobierz Calcalou z Google Play</a>
+  </div>
+
+  <script src="/assets/landing.js" defer></script>
+</body>
+</html>
