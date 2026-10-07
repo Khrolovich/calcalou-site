@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calcalou: Calorie Tracker</title>
+  <meta name="description" content="Calcalou makes calorie tracking fun: a friendly mascot, daily streaks, achievements and AI photo scans.">
+  <style>
+    :root { --bg: #ffffff; --text: #1b1f24; --muted: #5b6470; --accent: #006874; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #111417; --text: #eef1f4; --muted: #a3acb6; --accent: #4fd8e8; }
+    }
+    body { margin: 0; background: var(--bg); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.5; }
+    main { max-width: 36rem; margin: 0 auto; padding: 4rem 1rem; }
+    h1 { font-size: 2rem; margin: 0 0 .5rem; }
+    p { margin: 0 0 1rem; }
+    .lead { font-size: 1.15rem; color: var(--muted); }
+    .store { display: inline-block; margin: 1rem 0 2rem; padding: .75rem 1.25rem; border-radius: .75rem;
+      background: var(--accent); color: var(--bg); text-decoration: none; font-weight: 600; }
+    nav a { color: var(--accent); margin-right: 1.25rem; }
+    footer { margin-top: 3rem; color: var(--muted); font-size: .9rem; }
+    .mascot { width: 160px; height: 160px; margin: 0 auto 1.25rem; padding: 18px; box-sizing: border-box;
+      border-radius: 50%; background: #fdf3e7; box-shadow: 0 6px 24px rgba(0,0,0,.08); }
+    .mascot img { width: 100%; height: 100%; display: block; }
+    .soon { color: var(--muted); margin: -1rem 0 2rem; }
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="mascot"><img src="/mascot.svg" alt="Calcalou mascot" width="124" height="124"></div>
+    <h1>Calcalou: Calorie Tracker</h1>
+    <p class="lead">Hi, I'm Calcalou! I make calorie tracking feel like a game: daily streaks, level-ups, achievements, and AI photo scans that turn a meal into a calorie estimate in seconds.</p>
+    <a id="ios" class="store" href="https://apps.apple.com/app/id6757434158">Get Calcalou on the App Store</a>
+    <a id="play" class="store" href="#" hidden>Get it on Google Play</a>
+    <p id="soon" class="soon">Android version coming soon.</p>
+    <nav>
+      <a href="/privacy/">Privacy Policy</a>
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a>
+      <a href="/support/">Support</a>
+    </nav>
+    <footer>
+      <p>Calcalou is a food and calorie logging app for general wellness, not a medical device.</p>
+      <p>Questions? <a href="mailto:support@calcalou.com">support@calcalou.com</a> — Calcalou Team</p>
+    </footer>
+  </main>
+  <script>
+    // Switch to true when Calcalou 1.2 is live in production on Google Play.
+    var PLAY_ENABLED = true;
+    var params = new URLSearchParams(location.search);
+    var raw = params.get('ct');
+    var ct = ((raw || 'web-site').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40)) || 'web-site';
+    var appStore = 'https://apps.apple.com/app/apple-store/id6757434158?pt=128407090&ct=' + encodeURIComponent(ct) + '&mt=8';
+    var play = 'https://play.google.com/store/apps/details?id=com.khrolovich.calorietracker&referrer=' +
+      encodeURIComponent('utm_source=' + ct + '&utm_medium=social&utm_campaign=launch');
+    document.getElementById('ios').href = appStore;
+    document.getElementById('play').href = play;
+    if (PLAY_ENABLED) { document.getElementById('play').hidden = false; document.getElementById('soon').hidden = true; }
+    // Only visitors from a campaign link (?ct=...) are sent straight to the store; the page itself stays readable.
+    if (raw) {
+      var ua = navigator.userAgent || '';
+      var isIOS = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      if (isIOS) location.replace(appStore);
+      else if (/Android/.test(ua) && PLAY_ENABLED) location.replace(play);
+    }
+  </script>
+</body>
+</html>
