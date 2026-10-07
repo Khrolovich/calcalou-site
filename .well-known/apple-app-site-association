@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["55A76299CP.com.khrolovich.calorietracker"],
+        "components": [
+          { "/": "/app", "comment": "Open the app" },
+          { "/": "/app/*", "comment": "/app/add, /app/scan, /app/challenge/<id>" }
+        ]
+      }
+    ]
+  }
+}
