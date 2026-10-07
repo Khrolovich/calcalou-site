@@ -1,0 +1,262 @@
+{
+  "shots": {
+    "en/today": [
+      640,
+      1391
+    ],
+    "en/add": [
+      640,
+      1138
+    ],
+    "en/achievements": [
+      640,
+      1138
+    ],
+    "en/milestone": [
+      640,
+      1138
+    ],
+    "en/weekly": [
+      640,
+      1138
+    ],
+    "en/stats": [
+      640,
+      1138
+    ],
+    "de/today": [
+      640,
+      1138
+    ],
+    "de/add": [
+      640,
+      1138
+    ],
+    "de/achievements": [
+      640,
+      1138
+    ],
+    "de/milestone": [
+      640,
+      1138
+    ],
+    "de/weekly": [
+      640,
+      1138
+    ],
+    "de/stats": [
+      640,
+      1138
+    ],
+    "es/today": [
+      640,
+      1138
+    ],
+    "es/add": [
+      640,
+      1138
+    ],
+    "es/achievements": [
+      640,
+      1138
+    ],
+    "es/milestone": [
+      640,
+      1138
+    ],
+    "es/weekly": [
+      640,
+      1138
+    ],
+    "es/stats": [
+      640,
+      1138
+    ],
+    "fr/today": [
+      640,
+      1138
+    ],
+    "fr/add": [
+      640,
+      1138
+    ],
+    "fr/achievements": [
+      640,
+      1138
+    ],
+    "fr/milestone": [
+      640,
+      1138
+    ],
+    "fr/weekly": [
+      640,
+      1138
+    ],
+    "fr/stats": [
+      640,
+      1138
+    ],
+    "it/today": [
+      640,
+      1138
+    ],
+    "it/add": [
+      640,
+      1138
+    ],
+    "it/achievements": [
+      640,
+      1138
+    ],
+    "it/milestone": [
+      640,
+      1138
+    ],
+    "it/weekly": [
+      640,
+      1138
+    ],
+    "it/stats": [
+      640,
+      1138
+    ],
+    "pl/today": [
+      640,
+      1138
+    ],
+    "pl/add": [
+      640,
+      1138
+    ],
+    "pl/achievements": [
+      640,
+      1138
+    ],
+    "pl/milestone": [
+      640,
+      1138
+    ],
+    "pl/weekly": [
+      640,
+      1138
+    ],
+    "pl/stats": [
+      640,
+      1138
+    ],
+    "pt-BR/today": [
+      640,
+      1138
+    ],
+    "pt-BR/add": [
+      640,
+      1138
+    ],
+    "pt-BR/achievements": [
+      640,
+      1138
+    ],
+    "pt-BR/milestone": [
+      640,
+      1138
+    ],
+    "pt-BR/weekly": [
+      640,
+      1138
+    ],
+    "pt-BR/stats": [
+      640,
+      1138
+    ],
+    "ru/today": [
+      640,
+      1138
+    ],
+    "ru/add": [
+      640,
+      1138
+    ],
+    "ru/achievements": [
+      640,
+      1138
+    ],
+    "ru/milestone": [
+      640,
+      1138
+    ],
+    "ru/weekly": [
+      640,
+      1138
+    ],
+    "ru/stats": [
+      640,
+      1138
+    ],
+    "tr/today": [
+      640,
+      1138
+    ],
+    "tr/add": [
+      640,
+      1138
+    ],
+    "tr/achievements": [
+      640,
+      1138
+    ],
+    "tr/milestone": [
+      640,
+      1138
+    ],
+    "tr/weekly": [
+      640,
+      1138
+    ],
+    "tr/stats": [
+      640,
+      1138
+    ]
+  },
+  "googlePlay": {
+    "de": [
+      168,
+      50
+    ],
+    "it": [
+      168,
+      50
+    ],
+    "es": [
+      168,
+      50
+    ],
+    "ru": [
+      168,
+      50
+    ],
+    "pt-br": [
+      168,
+      50
+    ],
+    "fr": [
+      168,
+      50
+    ],
+    "pl": [
+      168,
+      50
+    ],
+    "en": [
+      168,
+      50
+    ],
+    "tr": [
+      168,
+      50
+    ]
+  },
+  "source": {
+    "android": "qa-runs/1.4.0-65-store-screenshots/raw/android-phone",
+    "iosToday": "qa-runs/1.4.0-65-store-screenshots-v2/samples/ios-iphone/en-US/iphone69_01_today.png"
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Source of /assets/img/og.jpg (1200x630). Render: Chrome --headless=new --window-size=1200,630 --screenshot, then convert to JPEG. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>og</title>
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body { position: relative; font-family: -apple-system, "SF Pro Rounded", sans-serif; background: radial-gradient(120% 90% at 30% 0%, #FFF7F0 0%, #FFE2CF 55%, #FDBA8C 120%); }
+  .copy { position: absolute; left: 80px; top: 120px; width: 560px; }
+  .brand { display: flex; align-items: center; gap: 16px; font-weight: 800; font-size: 34px; color: #1C1917; letter-spacing: -.5px; }
+  .brand img { width: 56px; height: 56px; border-radius: 14px; box-shadow: 0 2px 8px rgba(124,45,18,.25); }
+  h1 { margin: 34px 0 0; font-size: 62px; text-wrap: balance; line-height: 1; letter-spacing: -3px; font-weight: 900; color: #1C1917; }
+  h1 span { display: block; color: #B93D0A; }
+  .stage { position: absolute; right: 40px; bottom: 0; width: 520px; height: 520px; }
+  .stage img { position: absolute; left: 50%; bottom: 52px; width: 400px; transform: translateX(-50%); }
+  .counter { position: absolute; left: 0; right: 0; bottom: 0; height: 190px; background: linear-gradient(#2E2B29, #1C1917 30%); border-radius: 30px 30px 0 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; color: #B5AFA9; font-weight: 700; font-size: 20px; letter-spacing: .1em; }
+  .counter::before { content: ""; position: absolute; left: -10px; right: -10px; top: -14px; height: 20px; border-radius: 12px; background: #3D3936; }
+  .counter b { color: #F76B15; font-size: 84px; line-height: 1; letter-spacing: -3px; text-shadow: 0 0 28px rgba(247,107,21,.45); }
+</style>
+</head>
+<body>
+  <div class="copy">
+    <div class="brand"><img src="../assets/img/app-icon-96.png" alt="">Calcalou</div>
+    <h1>Tell Lou what you ate. <span>Lou does the counting.</span></h1>
+  </div>
+  <div class="stage">
+    <img src="../assets/img/lou-happy-760.webp" alt="">
+    <div class="counter"><b>2 320</b>KCAL LEFT</div>
+  </div>
+</body>
+</html>

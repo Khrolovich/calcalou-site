@@ -1,0 +1,340 @@
+{%- macro pic(stem, widths, sizes, w, h, alt="", cls="", lazy=true, high=false) -%}
+<picture{% if cls %} class="{{ cls }}"{% endif %}><source type="image/avif" srcset="{% for x in widths %}/assets/img/{{ stem }}-{{ x }}.avif {{ x }}w{{ ", " if not loop.last }}{% endfor %}" sizes="{{ sizes }}"><img src="/assets/img/{{ stem }}-{{ widths[-1] }}.webp" srcset="{% for x in widths %}/assets/img/{{ stem }}-{{ x }}.webp {{ x }}w{{ ", " if not loop.last }}{% endfor %}" sizes="{{ sizes }}" width="{{ w }}" height="{{ h }}" alt="{{ alt }}"{% if lazy %} loading="lazy" decoding="async"{% endif %}{% if high %} fetchpriority="high"{% endif %}></picture>
+{%- endmacro -%}
+{%- macro lou(mood, sizes, alt="", cls="lou", lazy=true, high=false) -%}{{ pic("lou-" ~ mood, [240, 480, 760], sizes, 760, 712, alt, cls, lazy, high) }}{%- endmacro -%}
+{%- macro shot(key, sizes, alt) -%}{% set d = shots[lang ~ "/" ~ key] %}<div class="shot">{{ pic("shot-" ~ lang ~ "-" ~ key, [320, 480, 640], sizes, d[0], d[1], alt) }}</div>{%- endmacro -%}
+{%- macro stores(cls="stores", lazy=true) -%}
+<div class="{{ cls }}"{% if not lazy %} data-hero-cta{% endif %}>
+  <a data-store="ios" href="https://apps.apple.com/app/id6757434158"><img src="/assets/img/badge-app-store.svg" alt="{{ t['store.ios'] }}" width="150" height="50"{% if lazy %} loading="lazy"{% endif %}></a>
+  <a data-store="android" href="https://play.google.com/store/apps/details?id=com.khrolovich.calorietracker"><img src="/assets/img/badge-google-play-{{ gp.code }}-50.webp" srcset="/assets/img/badge-google-play-{{ gp.code }}-50.webp 1x, /assets/img/badge-google-play-{{ gp.code }}-100.webp 2x" alt="{{ t['store.android'] }}" width="{{ gp.w }}" height="50"{% if lazy %} loading="lazy"{% endif %}></a>
+</div>
+{%- endmacro -%}
+<!DOCTYPE html>
+<html lang="{{ lang }}" data-platform="other">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{ t['meta.title'] }}</title>
+  <meta name="description" content="{{ t['meta.description'] }}">
+  <meta name="theme-color" content="#FFE2CF">
+  <meta name="apple-itunes-app" content="app-id=6757434158">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calcalou">
+  <meta property="og:url" content="{{ base }}{{ path }}">
+  <meta property="og:locale" content="{{ og_locale }}">
+  <meta property="og:title" content="{{ t['meta.og_title'] }}">
+  <meta property="og:description" content="{{ t['meta.og_description'] }}">
+  <meta property="og:image" content="{{ base }}/assets/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/assets/img/favicon-48.png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="preload" as="image" type="image/avif" imagesrcset="/assets/img/lou-happy-240.avif 240w, /assets/img/lou-happy-480.avif 480w, /assets/img/lou-happy-760.avif 760w" imagesizes="(min-width: 960px) 380px, 250px" fetchpriority="high">
+  <style>
+    :root {
+      --canvas: #FBF8F4; --peach: #FFE2CF; --peach-2: #FFF1E8; --muted: #F4F1EC; --surface: #FFFFFF; --border: #EAE6E0;
+      --text: #1C1917; --text-2: #57534E; --brand: #B93D0A; --accent: #EA580C; --accent-hi: #F76B15; --ink: #1C1917; --leaf: #16A34A;
+      --font: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
+      --shadow: 0 2px 4px rgba(28,25,23,.06), 0 20px 40px -16px rgba(124,45,18,.28);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+    body { margin: 0; background: var(--canvas); color: var(--text); font: 400 17px/1.5 var(--font); overflow-x: hidden; }
+    img { max-width: 100%; height: auto; display: block; }
+    picture { display: block; }
+    h1, h2, h3 { text-wrap: balance; }
+    a { color: var(--brand); }
+    a:focus-visible, summary:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; border-radius: 10px; }
+    .wrap { width: min(1120px, 100% - 40px); margin-inline: auto; }
+    .skip { position: absolute; left: -9999px; }
+    .skip:focus { left: 16px; top: 16px; z-index: 10; background: #fff; padding: 8px 12px; }
+    .center { text-align: center; }
+
+    .top { position: absolute; inset: 0 0 auto; z-index: 5; }
+    .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 64px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 21px; letter-spacing: -.5px; color: var(--text); text-decoration: none; }
+    .brand img { width: 34px; height: 34px; border-radius: 9px; box-shadow: 0 2px 6px rgba(124,45,18,.2); }
+    .top nav { display: flex; gap: 18px; align-items: center; font-weight: 600; font-size: 15px; }
+    .top nav > a { color: var(--text); text-decoration: none; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 20px; border-radius: 16px; font-weight: 800;
+      background: var(--ink); color: #fff !important; text-decoration: none; box-shadow: 0 4px 0 #000; transition: transform .1s, box-shadow .1s; }
+    .btn:active { transform: translateY(3px); box-shadow: 0 1px 0 #000; }
+    .btn.sm { padding: 9px 14px; border-radius: 12px; font-size: 14px; box-shadow: 0 3px 0 #000; white-space: nowrap; }
+    .lang { position: relative; }
+    .lang summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 5px; padding: 8px 6px; min-height: 44px; font-weight: 700; text-transform: uppercase; }
+    .lang summary::-webkit-details-marker { display: none; }
+    .lang svg { width: 18px; height: 18px; }
+    .lang ul { position: absolute; right: 0; top: 46px; margin: 0; padding: 6px; list-style: none; background: #fff; border-radius: 14px; box-shadow: var(--shadow); min-width: 170px; }
+    .lang li a { display: block; padding: 9px 12px; border-radius: 9px; color: var(--text); text-decoration: none; font-weight: 600; }
+    .lang li a:hover, .lang li a[aria-current] { background: var(--peach-2); }
+    @media (max-width: 700px) { .top nav .hide-sm { display: none; } }
+
+    .hero { position: relative; background: radial-gradient(120% 70% at 50% 0%, #FFF7F0 0%, var(--peach) 55%, #FDBA8C 120%); padding: 88px 0 0; overflow: hidden; text-align: center; }
+    .hero h1 { font-size: clamp(38px, 9.6vw, 80px); line-height: 1; letter-spacing: -.045em; font-weight: 900; margin: 0 auto 14px; max-width: 13em; }
+    .hero h1 span { display: block; }
+    .hero h1 span + span { color: var(--brand); }
+    .lead { font-size: clamp(17px, 2.4vw, 21px); color: #3D3936; max-width: 32em; margin: 0 auto 22px; }
+    .stores { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+    .stores a { display: block; border-radius: 10px; }
+    .stores img { height: 50px; width: auto; }
+    .fine { font-size: 14px; color: #57534E; margin: 12px 0 0; }
+
+    /* Lou is ~1.5 m tall and stands behind the counter: the counter hides the lower 38 % of the render. */
+    .stage { position: relative; width: min(820px, 100%); margin: 56px auto 0; height: 295px; }
+    .stage .lou { position: absolute; left: 50%; bottom: 41px; width: 250px; transform: translateX(-50%); }
+    .bubble { position: absolute; left: calc(50% + 58px); bottom: 228px; margin: 0; background: #fff; border-radius: 20px 20px 20px 6px; padding: 10px 14px; font-weight: 800;
+      font-size: 14px; line-height: 1.25; box-shadow: var(--shadow); text-align: left; max-width: min(170px, calc(50% - 66px)); z-index: 2; }
+    .counter { position: absolute; left: 0; right: 0; bottom: 0; height: 130px; z-index: 1; background: linear-gradient(#2E2B29, var(--ink) 30%); border-radius: 26px 26px 0 0;
+      box-shadow: 0 -2px 0 #57534E inset, 0 -24px 40px -20px rgba(28,25,23,.5); display: flex; align-items: center; justify-content: center; gap: 26px; color: #fff; padding: 0 20px; }
+    .counter::before { content: ""; position: absolute; left: -8px; right: -8px; top: -12px; height: 18px; border-radius: 12px; background: #3D3936; }
+    .display { text-align: left; font-variant-numeric: tabular-nums; }
+    .display b { display: block; font-size: clamp(42px, 9vw, 64px); line-height: 1; letter-spacing: -2px; color: var(--accent-hi); text-shadow: 0 0 24px rgba(247,107,21,.45); }
+    .display small { color: #B5AFA9; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+    .readouts { display: none; text-align: left; font-size: 14px; color: #B5AFA9; line-height: 1.6; margin: 0; padding: 0; list-style: none; }
+    .readouts b { color: #fff; font-variant-numeric: tabular-nums; margin-left: 6px; }
+    .readouts i { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: 1px; }
+    .dot-eaten { background: var(--accent); } .dot-burned { background: var(--leaf); } .dot-goal { background: #B5AFA9; }
+    @media (min-width: 640px) { .readouts { display: block; } }
+    @media (min-width: 960px) {
+      .hero { padding-top: 112px; }
+      .stage { height: 411px; margin-top: 30px; }
+      .stage .lou { width: 380px; bottom: 25px; }
+      .bubble { left: calc(50% + 150px); bottom: 318px; font-size: 17px; max-width: 220px; }
+      .counter { height: 160px; }
+    }
+
+    section { scroll-margin-top: 24px; }
+    .eyebrow { display: inline-block; font-weight: 800; color: var(--brand); background: var(--peach-2); border-radius: 999px; padding: 6px 12px; font-size: 14px; margin-bottom: 12px; }
+    h2 { font-size: clamp(32px, 6.4vw, 52px); line-height: 1.05; letter-spacing: -.035em; font-weight: 900; margin: 0 0 14px; }
+    .sub { color: var(--text-2); font-size: 18px; max-width: 34em; margin: 0 auto; }
+
+    .features { padding: 72px 0 24px; }
+    .feature { display: grid; gap: 24px; align-items: center; padding: 40px 0; }
+    .kicker { color: var(--brand); font-weight: 800; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; margin: 0 0 8px; }
+    .feature h3 { font-size: clamp(28px, 5vw, 42px); line-height: 1.08; letter-spacing: -.03em; margin: 0 0 12px; font-weight: 900; }
+    .feature p { color: var(--text-2); margin: 0 0 12px; font-size: 18px; max-width: 30em; }
+    .tag { display: inline-block; font-size: 13px; font-weight: 800; color: var(--brand); background: var(--peach-2); padding: 4px 10px; border-radius: 999px; }
+    .shots { display: flex; justify-content: center; gap: 16px; background: linear-gradient(160deg, var(--peach-2), var(--muted)); border-radius: 32px; padding: 28px 16px; }
+    .shot { width: min(250px, 46%); padding: 6px; border-radius: 30px; background: var(--ink); box-shadow: var(--shadow); align-self: flex-start; }
+    .shot img { border-radius: 25px; }
+    .shots .shot:only-child { width: min(260px, 72%); }
+    .shots .shot:nth-child(2) { margin-top: 36px; }
+    @media (min-width: 960px) {
+      .feature { grid-template-columns: 1fr 1fr; gap: 64px; }
+      .feature:nth-of-type(even) .copy { order: 2; }
+    }
+
+    .moods { padding: 52px 0 40px; background: var(--ink); color: #fff; border-radius: 40px; margin: 24px 0; }
+    .moods h2 { color: #fff; }
+    .moods .sub { color: #DCD7D0; }
+    .mood-row { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; padding: 34px 20px 0; margin: 0 -20px; scrollbar-width: none; }
+    .mood-row::-webkit-scrollbar { display: none; }
+    .mood { position: relative; flex: 0 0 140px; height: 126px; margin: 0; scroll-snap-align: center; }
+    .mood .lou { position: absolute; left: 50%; bottom: 7px; width: 124px; transform: translateX(-50%); }
+    .mood figcaption { position: absolute; z-index: 1; left: 0; right: 0; bottom: 0; height: 52px; display: grid; place-items: center; background: #2E2B29;
+      border-top: 6px solid #3D3936; font-weight: 800; font-size: 14px; color: #F4F1EC; }
+    .mood:first-child figcaption { border-top-left-radius: 14px; }
+    .mood:last-child figcaption { border-top-right-radius: 14px; }
+    @media (min-width: 900px) { .mood-row { justify-content: center; } }
+
+    .more { padding: 40px 0 56px; }
+    .chips { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; margin-top: 26px; }
+    .chip { background: var(--peach-2); border-radius: 22px; padding: 18px 20px; }
+    .chip h3 { font-size: 17px; margin: 0 0 4px; font-weight: 900; }
+    .chip p { margin: 0; color: var(--text-2); font-size: 15px; }
+
+    .faq { padding: 24px 0 40px; }
+    .faq .list { max-width: 760px; margin: 22px auto 0; display: grid; gap: 10px; }
+    .faq details { background: var(--surface); border-radius: 20px; box-shadow: 0 1px 2px rgba(28,25,23,.06); }
+    .faq summary { list-style: none; cursor: pointer; padding: 18px 54px 18px 20px; font-weight: 800; font-size: 18px; position: relative; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: ""; position: absolute; right: 18px; top: 50%; width: 26px; height: 26px; margin-top: -13px; border-radius: 50%; background: var(--peach-2)
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5' fill='none' stroke='%23B93D0A' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/18px no-repeat; transition: transform .2s; }
+    .faq details[open] summary::after { transform: rotate(180deg); }
+    .faq details p { margin: 0; padding: 0 20px 20px; color: var(--text-2); }
+
+    .final { padding: 40px 0 0; text-align: center; background: linear-gradient(var(--canvas), var(--peach)); overflow: hidden; }
+    .final .stage { height: 255px; margin-top: 30px; }
+    .final .stage .lou { width: 220px; bottom: 22px; }
+    .final .counter { height: 100px; }
+    .final .display b { font-size: 34px; letter-spacing: -1px; }
+    @media (min-width: 960px) { .final .stage { height: 265px; } .final .stage .lou { width: 260px; bottom: 9px; } .final .counter { height: 100px; } }
+
+    footer { background: var(--ink); color: #B5AFA9; padding: 32px 0 calc(110px + env(safe-area-inset-bottom)); font-size: 15px; }
+    footer ul { display: flex; flex-wrap: wrap; gap: 4px 20px; margin: 0 0 14px; padding: 0; list-style: none; }
+    footer a { color: #fff; display: inline-block; padding: 6px 0; }
+    footer .langs a { color: #DCD7D0; }
+    footer p { margin: 0 0 8px; max-width: 46em; }
+    @media (min-width: 760px) { footer { padding-bottom: 40px; } }
+
+    .sticky { position: fixed; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 6; transform: translateY(160%); transition: transform .3s cubic-bezier(.2,.8,.2,1); }
+    .sticky.is-visible { transform: none; }
+    .sticky .btn { width: 100%; padding: 15px; font-size: 17px; background: var(--brand); box-shadow: 0 4px 0 #7C2D12, 0 12px 30px -8px rgba(124,45,18,.5); }
+    .sticky .btn img { width: 26px; height: 26px; border-radius: 7px; }
+    .sticky [data-store="android"], [data-platform="android"] .sticky [data-store="ios"] { display: none; }
+    [data-platform="android"] .sticky [data-store="android"] { display: flex; }
+    @media (min-width: 760px) { .sticky { display: none; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">{{ t['a11y.skip'] }}</a>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="{{ path }}"><img src="/assets/img/app-icon-96.png" alt="" width="34" height="34">Calcalou</a>
+      <nav aria-label="{{ t['a11y.main_nav'] }}">
+        <a class="hide-sm" href="#features">{{ t['nav.features'] }}</a>
+        <a class="hide-sm" href="#faq">{{ t['nav.faq'] }}</a>
+        <details class="lang">
+          <summary aria-label="{{ current.short|upper }} · {{ t['a11y.language'] }}: {{ current.name }}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" fill="none" stroke="currentColor" stroke-width="2"/></svg>{{ current.short }}</summary>
+          <ul>
+{%- for l in locales %}
+            <li><a href="{{ l.path }}" hreflang="{{ l.code }}" lang="{{ l.code }}"{% if l.code == lang %} aria-current="page"{% endif %}>{{ l.name }}</a></li>
+{%- endfor %}
+          </ul>
+        </details>
+        <a class="btn sm" href="#get">{{ t['nav.get'] }}</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="get">
+      <div class="wrap">
+        <h1><span>{{ t['hero.title1'] }}</span> <span>{{ t['hero.title2'] }}</span></h1>
+        <p class="lead">{{ t['hero.lead'] }}</p>
+        {{ stores(lazy=false) }}
+        <p class="fine">{{ t['hero.fine'] }}</p>
+      </div>
+      <div class="stage">
+        {{ lou("happy", "(min-width: 960px) 380px, 250px", t['hero.alt'], lazy=false, high=true) }}
+        <p class="bubble">{{ t['hero.bubble'] }}</p>
+        <div class="counter" aria-hidden="true">
+          <div class="display"><b>{{ num(2320) }}</b><small>{{ t['counter.left'] }}</small></div>
+          <ul class="readouts">
+            <li><i class="dot-eaten"></i>{{ t['counter.eaten'] }}<b>{{ num(1780) }}</b></li>
+            <li><i class="dot-burned"></i>{{ t['counter.burned'] }}<b>{{ num(2100) }}</b></li>
+            <li><i class="dot-goal"></i>{{ t['counter.goal'] }}<b>{{ num(2000) }}</b></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features" aria-labelledby="features-title">
+      <div class="wrap">
+        <div class="center">
+          <span class="eyebrow">{{ t['features.eyebrow'] }}</span>
+          <h2 id="features-title">{{ t['features.title'] }}</h2>
+          <p class="sub">{{ t['features.sub'] }}</p>
+        </div>
+        <article class="feature">
+          <div class="copy">
+            <p class="kicker">{{ t['f1.kicker'] }}</p>
+            <h3>{{ t['f1.title'] }}</h3>
+            <p>{{ t['f1.text'] }}</p>
+            <span class="tag">{{ t['f1.tag'] }}</span>
+          </div>
+          <div class="shots">{{ shot("add", "260px", t['f1.alt']) }}</div>
+        </article>
+        <article class="feature">
+          <div class="copy">
+            <p class="kicker">{{ t['f2.kicker'] }}</p>
+            <h3>{{ t['f2.title'] }}</h3>
+            <p>{{ t['f2.text'] }}</p>
+          </div>
+          <div class="shots">{{ shot("today", "260px", t['f2.alt']) }}</div>
+        </article>
+        <article class="feature">
+          <div class="copy">
+            <p class="kicker">{{ t['f3.kicker'] }}</p>
+            <h3>{{ t['f3.title'] }}</h3>
+            <p>{{ t['f3.text'] }}</p>
+          </div>
+          <div class="shots">{{ shot("achievements", "(min-width: 600px) 250px, 46vw", t['f3.alt1']) }}{{ shot("milestone", "(min-width: 600px) 250px, 46vw", t['f3.alt2']) }}</div>
+        </article>
+        <article class="feature">
+          <div class="copy">
+            <p class="kicker">{{ t['f4.kicker'] }}</p>
+            <h3>{{ t['f4.title'] }}</h3>
+            <p>{{ t['f4.text'] }}</p>
+          </div>
+          <div class="shots">{{ shot("weekly", "(min-width: 600px) 250px, 46vw", t['f4.alt1']) }}{{ shot("stats", "(min-width: 600px) 250px, 46vw", t['f4.alt2']) }}</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="moods" aria-labelledby="moods-title">
+      <div class="wrap center">
+        <h2 id="moods-title">{{ t['moods.title'] }}</h2>
+        <p class="sub">{{ t['moods.sub'] }}</p>
+        <div class="mood-row">
+{%- for mood, key in [("happy", "mood.happy"), ("celebrating", "mood.delighted"), ("curious", "mood.curious"), ("encouraging", "mood.encouraging"), ("surprised", "mood.surprised"), ("shy", "mood.shy")] %}
+          <figure class="mood">{{ lou(mood, "124px") }}<figcaption>{{ t[key] }}</figcaption></figure>
+{%- endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section class="more" aria-labelledby="more-title">
+      <div class="wrap">
+        <h2 id="more-title" class="center">{{ t['more.title'] }}</h2>
+        <div class="chips">
+{%- for k in ["widgets", "siri", "health", "sync", "lang", "privacy"] %}
+          <div class="chip"><h3>{{ t['more.' ~ k ~ '.t'] }}</h3><p>{{ t['more.' ~ k ~ '.d'] }}</p></div>
+{%- endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <h2 id="faq-title" class="center">{{ t['faq.title'] }}</h2>
+        <div class="list">
+{%- for k in ["free", "lou", "accuracy", "devices"] %}
+          <details><summary>{{ t['faq.' ~ k ~ '.q'] }}</summary><p>{{ t['faq.' ~ k ~ '.a'] }}</p></details>
+{%- endfor %}
+          <details><summary>{{ t['faq.data.q'] }}</summary><p>{{ t['faq.data.a'] }} <a href="/delete-account/">{{ t['faq.data.link'] }}</a></p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final" aria-labelledby="final-title">
+      <div class="wrap">
+        <h2 id="final-title">{{ t['final.title'] }}</h2>
+        {{ stores() }}
+      </div>
+      <div class="stage">
+        {{ lou("celebrating", "(min-width: 960px) 260px, 220px", t['final.alt']) }}
+        <div class="counter" aria-hidden="true"><div class="display"><b>{{ t['final.day1'] }}</b><small>{{ t['final.streak'] }}</small></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <ul>
+        <li><a href="/privacy/">{{ t['footer.privacy'] }}</a></li>
+        <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">{{ t['footer.terms'] }}</a></li>
+        <li><a href="/support/">{{ t['footer.support'] }}</a></li>
+        <li><a href="/delete-account/">{{ t['footer.delete'] }}</a></li>
+        <li><a href="mailto:support@calcalou.com">support@calcalou.com</a></li>
+      </ul>
+      <ul class="langs" aria-label="{{ t['a11y.language'] }}">
+{%- for l in locales %}
+        <li><a href="{{ l.path }}" hreflang="{{ l.code }}" lang="{{ l.code }}"{% if l.code == lang %} aria-current="page"{% endif %}>{{ l.name }}</a></li>
+{%- endfor %}
+      </ul>
+      <p>{{ t['footer.disclaimer'] }}</p>
+      <p>© {{ year }} Calcalou</p>
+    </div>
+  </footer>
+
+  <div class="sticky" data-sticky-cta>
+    <a class="btn" data-store="ios" href="https://apps.apple.com/app/id6757434158"><img src="/assets/img/app-icon-96.png" alt="" width="26" height="26" loading="lazy">{{ t['sticky.ios'] }}</a>
+    <a class="btn" data-store="android" href="https://play.google.com/store/apps/details?id=com.khrolovich.calorietracker"><img src="/assets/img/app-icon-96.png" alt="" width="26" height="26" loading="lazy">{{ t['sticky.android'] }}</a>
+  </div>
+
+  <script src="/assets/landing.js" defer></script>
+</body>
+</html>
