@@ -1,0 +1,24 @@
+  <link rel="canonical" href="{{ base }}{{ path }}">
+{%- for l in locales %}
+  <link rel="alternate" hreflang="{{ l.code }}" href="{{ base }}{{ l.path }}">
+{%- endfor %}
+  <link rel="alternate" hreflang="x-default" href="{{ base }}/">
+  <meta name="twitter:title" content="{{ t['meta.og_title'] }}">
+  <meta name="twitter:description" content="{{ t['meta.og_description'] }}">
+  <meta name="twitter:image" content="{{ base }}/assets/img/og.jpg">
+  <meta property="og:image:alt" content="{{ t['hero.alt'] }}">
+{%- set org = {"@type": "Organization", "@id": base ~ "/#org", "name": "Calcalou", "url": base ~ "/",
+    "logo": base ~ "/assets/img/apple-touch-icon.png", "email": "support@calcalou.com",
+    "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "email": "support@calcalou.com", "url": base ~ "/support/"}} %}
+{%- set app = {"@type": "MobileApplication", "@id": base ~ "/#app", "name": "Calcalou", "alternateName": "Calcaloo",
+    "url": base ~ path, "description": t['meta.description'], "inLanguage": lang,
+    "operatingSystem": "iOS, iPadOS, Android", "applicationCategory": "HealthApplication",
+    "image": base ~ "/assets/img/og.jpg", "publisher": {"@id": base ~ "/#org"},
+    "installUrl": ["https://apps.apple.com/app/id6757434158", "https://play.google.com/store/apps/details?id=com.khrolovich.calorietracker"],
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "category": "free"}} %}
+{%- set faq = {"@type": "FAQPage", "inLanguage": lang, "mainEntity": []} %}
+{%- for k in ["free", "lou", "accuracy", "devices", "data"] %}
+{%- set _ = faq["mainEntity"].append({"@type": "Question", "name": t['faq.' ~ k ~ '.q'],
+    "acceptedAnswer": {"@type": "Answer", "text": t['faq.' ~ k ~ '.a']}}) %}
+{%- endfor %}
+  <script type="application/ld+json">{{ {"@context": "https://schema.org", "@graph": [org, app, faq]} | tojson }}</script>

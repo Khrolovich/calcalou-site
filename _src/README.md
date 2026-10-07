@@ -8,4 +8,4 @@
 - Copy: only features the app really has (store descriptions are the source). English is the source of truth; keep keys identical in every locale (the build fails otherwise).
 - Store routing: `/assets/landing.js` keeps the `?ct=` campaign links and the phone redirect of the previous site; `/get/` forwards its query to `/`.
 - Checks: `node --test _src/tests/landing.test.js` (store links, ct routing, pages up to date, assets exist, approved mascot only, legal files untouched).
-- SEO beyond title/description/OG (hreflang, sitemap, robots, schema, verification) is owned by the SEO session.
+- SEO beyond title/description/OG (hreflang, sitemap, robots, schema, verification) is owned by the SEO session: `seo_head.html` (canonical, hreflang, Twitter tags, schema.org graph; included by `template.html`), `seo.py` (writes `/sitemap.xml`; run after `build.py`), checks `python3 -m unittest discover -s _src/tests -p 'test_*.py'`.
