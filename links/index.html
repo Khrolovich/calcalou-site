@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex">
+  <title>Calcalou · links</title>
+  <meta name="theme-color" content="#FFE2CF">
+  <meta property="og:title" content="Calcalou: tell Lou what you ate">
+  <meta property="og:image" content="https://calcalou.com/assets/img/og.jpg">
+  <link rel="icon" href="/assets/img/favicon-48.png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <style>
+    body { margin: 0; min-height: 100vh; background: #FFE2CF; color: #1C1917; text-align: center;
+      font: 400 17px/1.5 ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif; }
+    main { width: min(440px, 100% - 40px); margin: 0 auto; padding: 32px 0 48px; }
+    picture img { width: 180px; height: auto; margin: 0 auto; display: block; }
+    h1 { font-size: 28px; margin: 4px 0 4px; }
+    p { margin: 0 0 24px; color: #57534E; }
+    a { display: block; margin: 0 0 12px; padding: 16px 20px; min-height: 44px; border-radius: 18px; background: #fff; color: #1C1917;
+      font-weight: 800; text-decoration: none; box-shadow: 0 3px 0 rgba(28,25,23,.18); }
+    a.primary { background: #1C1917; color: #fff; box-shadow: 0 4px 0 #000; }
+    a:focus-visible { outline: 3px solid #B93D0A; outline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <main>
+    <picture><source type="image/avif" srcset="/assets/img/lou-happy-480.avif"><img src="/assets/img/lou-happy-480.webp" alt="Lou, the Calcalou mascot" width="480" height="450"></picture>
+    <h1>Calcalou</h1>
+    <p>Tell Lou what you ate. Lou does the counting.</p>
+    <a class="primary" data-store="ios" href="https://apps.apple.com/app/id6757434158">Get it on the App Store</a>
+    <a class="primary" data-store="android" href="https://play.google.com/store/apps/details?id=com.khrolovich.calorietracker">Get it on Google Play</a>
+    <a href="/">calcalou.com</a>
+    <a href="/support/">Help and support</a>
+  </main>
+  <script>
+    (function () {
+      var ct = (new URLSearchParams(location.search).get('ct') || 'links').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40) || 'links';
+      var hrefs = {
+        ios: 'https://apps.apple.com/app/apple-store/id6757434158?pt=128407090&ct=' + ct + '&mt=8',
+        android: 'https://play.google.com/store/apps/details?id=com.khrolovich.calorietracker&referrer=' +
+          encodeURIComponent('utm_source=' + ct + '&utm_medium=social&utm_campaign=links')
+      };
+      document.querySelectorAll('[data-store]').forEach(function (a) { a.href = hrefs[a.getAttribute('data-store')]; });
+    })();
+  </script>
+</body>
+</html>
