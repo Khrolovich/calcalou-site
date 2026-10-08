@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://calcalou.com/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/"/>
@@ -16,7 +16,7 @@
   </url>
   <url>
     <loc>https://calcalou.com/de/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/"/>
@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://calcalou.com/es/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/"/>
@@ -44,7 +44,7 @@
   </url>
   <url>
     <loc>https://calcalou.com/fr/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/"/>
@@ -58,7 +58,7 @@
   </url>
   <url>
     <loc>https://calcalou.com/it/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/"/>
@@ -72,7 +72,7 @@
   </url>
   <url>
     <loc>https://calcalou.com/pl/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/"/>
@@ -86,7 +86,7 @@
   </url>
   <url>
     <loc>https://calcalou.com/pt-br/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/"/>
@@ -100,7 +100,7 @@
   </url>
   <url>
     <loc>https://calcalou.com/ru/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/"/>
@@ -114,7 +114,7 @@
   </url>
   <url>
     <loc>https://calcalou.com/tr/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/"/>
@@ -127,8 +127,32 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/"/>
   </url>
   <url>
+    <loc>https://calcalou.com/bmr-calculator/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/bmr-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/grundumsatz-rechner/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/kalkulator-zapotrzebowania-kalorycznego/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/bmr-calculator/"/>
+  </url>
+  <url>
+    <loc>https://calcalou.com/de/grundumsatz-rechner/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/bmr-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/grundumsatz-rechner/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/kalkulator-zapotrzebowania-kalorycznego/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/bmr-calculator/"/>
+  </url>
+  <url>
+    <loc>https://calcalou.com/pl/kalkulator-zapotrzebowania-kalorycznego/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/bmr-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/grundumsatz-rechner/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/kalkulator-zapotrzebowania-kalorycznego/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/bmr-calculator/"/>
+  </url>
+  <url>
     <loc>https://calcalou.com/press/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://calcalou.com/privacy/</loc>

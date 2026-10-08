@@ -4,12 +4,13 @@ import re
 import subprocess
 import sys
 import unittest
+from html import unescape
 from pathlib import Path
 
 SRC = Path(__file__).resolve().parent.parent
 SITE = SRC.parent
 sys.path.insert(0, str(SRC))
-from build import BASE, LOCALES  # noqa: E402
+from build import BASE, CALC_LOCALES, LOCALES  # noqa: E402
 
 
 class LandingHead(unittest.TestCase):
@@ -34,6 +35,27 @@ class LandingHead(unittest.TestCase):
             self.assertEqual(app["offers"]["price"], "0")
             self.assertNotIn("aggregateRating", app)
             self.assertTrue(all(q["name"] and q["acceptedAnswer"]["text"] for q in graph[2]["mainEntity"]))
+
+
+class CalculatorHead(unittest.TestCase):
+    def test_canonical_hreflang_faq(self):
+        expected = {code: BASE + path for code, path, _ in CALC_LOCALES} | {"x-default": BASE + CALC_LOCALES[0][1]}
+        for code, path, _ in CALC_LOCALES:
+            html = (SITE / path.strip("/") / "index.html").read_text(encoding="utf-8")
+            self.assertEqual(re.findall(r'rel="canonical" href="([^"]+)"', html), [BASE + path])
+            self.assertEqual(dict(re.findall(r'<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"', html)), expected)
+            self.assertIn(f'<html lang="{code}">', html)
+            raw = re.search(r'<script type="application/ld\+json">(.*?)</script>', html, re.S).group(1)
+            faq = json.loads(raw)["@graph"][0]
+            self.assertEqual(faq["@type"], "FAQPage")
+            visible = re.findall(r"<summary>(.*?)</summary>", html)
+            self.assertEqual([q["name"] for q in faq["mainEntity"]], [unescape(v) for v in visible])
+
+    def test_in_sitemap_with_alternates(self):
+        sitemap = (SITE / "sitemap.xml").read_text(encoding="utf-8")
+        for _, path, _ in CALC_LOCALES:
+            self.assertIn(f"<loc>{BASE}{path}</loc>", sitemap)
+            self.assertIn(f'hreflang="x-default" href="{BASE}{CALC_LOCALES[0][1]}"', sitemap)
 
 
 class StaticFiles(unittest.TestCase):

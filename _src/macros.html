@@ -1,0 +1,4 @@
+{%- macro pic(stem, widths, sizes, w, h, alt="", cls="", lazy=true, high=false) -%}
+<picture{% if cls %} class="{{ cls }}"{% endif %}><source type="image/avif" srcset="{% for x in widths %}/assets/img/{{ stem }}-{{ x }}.avif {{ x }}w{{ ", " if not loop.last }}{% endfor %}" sizes="{{ sizes }}"><img src="/assets/img/{{ stem }}-{{ widths[-1] }}.webp" srcset="{% for x in widths %}/assets/img/{{ stem }}-{{ x }}.webp {{ x }}w{{ ", " if not loop.last }}{% endfor %}" sizes="{{ sizes }}" width="{{ w }}" height="{{ h }}" alt="{{ alt }}"{% if lazy %} loading="lazy" decoding="async"{% endif %}{% if high %} fetchpriority="high"{% endif %}></picture>
+{%- endmacro -%}
+{%- macro lou(mood, sizes, alt="", cls="lou", lazy=true, high=false) -%}{{ pic("lou-" ~ mood, [240, 480, 760], sizes, 760, 712, alt, cls, lazy, high) }}{%- endmacro -%}

@@ -7,6 +7,7 @@ import datetime
 import json
 import sys
 from pathlib import Path
+from urllib.parse import quote
 
 from jinja2 import Environment, FileSystemLoader, StrictUndefined
 
@@ -26,6 +27,36 @@ LOCALES = [
     ("ru", "/ru/", "Русский", "ru_RU", "ru", " "),
     ("tr", "/tr/", "Türkçe", "tr_TR", "tr", "."),
 ]
+
+# code, path, default units
+CALC_LOCALES = [
+    ("en", "/bmr-calculator/", "imperial"),
+    ("de", "/de/grundumsatz-rechner/", "metric"),
+    ("pl", "/pl/kalkulator-zapotrzebowania-kalorycznego/", "metric"),
+]
+CALC_FACTORS = ["1.2", "1.375", "1.55", "1.725", "1.9"]
+CALC_FAQ = ["bmr", "tdee", "formula", "accuracy", "activity"]
+
+
+def store_links(ct):
+    """Mirror of storeLinks() in /assets/landing.js, for pages that do not load it."""
+    return {
+        "ios": f"https://apps.apple.com/app/apple-store/id6757434158?pt=128407090&ct={quote(ct, safe='')}&mt=8",
+        "android": "https://play.google.com/store/apps/details?id=com.khrolovich.calorietracker&referrer="
+                   + quote(f"utm_source={ct}&utm_medium=social&utm_campaign=launch", safe=""),
+    }
+
+
+def load_calc_strings():
+    folder = SRC / "i18n" / "calc"
+    english = json.loads((folder / "en.json").read_text(encoding="utf-8"))
+    result = {}
+    for code, *_ in CALC_LOCALES:
+        strings = json.loads((folder / f"{code}.json").read_text(encoding="utf-8"))
+        if set(strings) != set(english) or not all(str(v).strip() for v in strings.values()):
+            raise SystemExit(f"calc/{code}.json: keys differ from calc/en.json or a value is empty")
+        result[code] = strings
+    return result
 
 
 def load_strings():
@@ -49,15 +80,30 @@ def render_all():
     template = env.get_template("template.html")
     assets = json.loads((SRC / "assets.json").read_text(encoding="utf-8"))
     strings = load_strings()
+    calc_strings = load_calc_strings()
+    calc_paths = {code: path for code, path, _ in CALC_LOCALES}
+    landing = {code: (path, name, og_locale, gp_code) for code, path, name, og_locale, gp_code, _ in LOCALES}
     locales = [{"code": c, "path": p, "name": n, "short": c.split("-")[0]} for c, p, n, *_ in LOCALES]
+    calc_locales = [{"code": c, "path": p, "name": landing[c][1], "short": c} for c, p, _ in CALC_LOCALES]
+    year = datetime.date.today().year
     pages = {}
     for code, path, name, og_locale, gp_code, sep in LOCALES:
         gp_w, gp_h = assets["googlePlay"][gp_code]
+        calc = {"path": calc_paths[code], "label": calc_strings[code]["link.footer"]} if code in calc_paths else None
         html = template.render(
             lang=code, path=path, base=BASE, og_locale=og_locale, t=strings[code], locales=locales,
             current={"name": name, "short": code.split("-")[0]}, shots=assets["shots"],
-            gp={"code": gp_code, "w": gp_w},
-            num=lambda n, s=sep: f"{n:,}".replace(",", s), year=datetime.date.today().year)
+            gp={"code": gp_code, "w": gp_w}, calc=calc,
+            num=lambda n, s=sep: f"{n:,}".replace(",", s), year=year)
+        pages[SITE / path.strip("/") / "index.html"] = html
+    calc_template = env.get_template("calc.html")
+    for code, path, units in CALC_LOCALES:
+        home, name, og_locale, gp_code = landing[code]
+        html = calc_template.render(
+            lang=code, path=path, home=home, base=BASE, og_locale=og_locale, t=strings[code], c=calc_strings[code],
+            locales=calc_locales, current={"name": name, "short": code}, units=units, factors=CALC_FACTORS,
+            faq_keys=CALC_FAQ, links=store_links(f"calc-{code}"),
+            gp={"code": gp_code, "w": assets["googlePlay"][gp_code][0]}, year=year)
         pages[SITE / path.strip("/") / "index.html"] = html
     return pages
 

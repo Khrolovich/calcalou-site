@@ -9,7 +9,7 @@ import sys
 from datetime import date
 from xml.sax.saxutils import quoteattr
 
-from build import BASE, LOCALES, SITE
+from build import BASE, CALC_LOCALES, LOCALES, SITE
 
 OTHER_PAGES = [("/press/", "press/index.html"), ("/privacy/", "privacy/index.md"),
                ("/support/", "support/index.md"), ("/delete-account/", "delete-account/index.html")]
@@ -25,12 +25,16 @@ def landing_rel(path):
     return (path.strip("/") + "/index.html").lstrip("/")
 
 
-def render():
-    alternates = [(code, BASE + path) for code, path, *_ in LOCALES] + [("x-default", BASE + "/")]
+def cluster(pages):
+    alternates = [(code, BASE + path) for code, path, *_ in pages] + [("x-default", BASE + pages[0][1])]
     links = "".join(f"\n    <xhtml:link rel=\"alternate\" hreflang={quoteattr(c)} href={quoteattr(u)}/>"
                     for c, u in alternates)
-    urls = [f"  <url>\n    <loc>{BASE}{path}</loc>\n    <lastmod>{lastmod(landing_rel(path))}</lastmod>{links}\n  </url>"
-            for _, path, *_ in LOCALES]
+    return [f"  <url>\n    <loc>{BASE}{path}</loc>\n    <lastmod>{lastmod(landing_rel(path))}</lastmod>{links}\n  </url>"
+            for _, path, *_ in pages]
+
+
+def render():
+    urls = cluster(LOCALES) + cluster(CALC_LOCALES)
     urls += [f"  <url>\n    <loc>{BASE}{path}</loc>\n    <lastmod>{lastmod(src)}</lastmod>\n  </url>"
              for path, src in OTHER_PAGES if (SITE / src).exists()]
     return ('<?xml version="1.0" encoding="UTF-8"?>\n'

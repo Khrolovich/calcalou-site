@@ -1,0 +1,238 @@
+{%- from "macros.html" import pic, lou -%}
+{%- macro field(name, err, label, unit, mode="decimal", max=5) -%}
+<label class="field"><span>{{ label }}</span><span class="input"><input name="{{ name }}" inputmode="{{ mode }}" autocomplete="off" maxlength="{{ max }}" aria-describedby="err-{{ err }}"><span class="unit">{{ unit }}</span></span></label>
+{%- endmacro -%}
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{ c['meta.title'] }}</title>
+  <meta name="description" content="{{ c['meta.description'] }}">
+  <meta name="theme-color" content="#FFE2CF">
+  <meta name="apple-itunes-app" content="app-id=6757434158">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calcalou">
+  <meta property="og:url" content="{{ base }}{{ path }}">
+  <meta property="og:locale" content="{{ og_locale }}">
+  <meta property="og:title" content="{{ c['meta.og_title'] }}">
+  <meta property="og:description" content="{{ c['meta.og_description'] }}">
+  <meta property="og:image" content="{{ base }}/assets/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="{{ base }}{{ path }}">
+{%- for l in locales %}
+  <link rel="alternate" hreflang="{{ l.code }}" href="{{ base }}{{ l.path }}">
+{%- endfor %}
+  <link rel="alternate" hreflang="x-default" href="{{ base }}{{ locales[0].path }}">
+{%- set faq = {"@type": "FAQPage", "inLanguage": lang, "mainEntity": []} %}
+{%- for k in faq_keys %}
+{%- set _ = faq["mainEntity"].append({"@type": "Question", "name": c['faq.' ~ k ~ '.q'],
+    "acceptedAnswer": {"@type": "Answer", "text": c['faq.' ~ k ~ '.a']}}) %}
+{%- endfor %}
+  <script type="application/ld+json">{{ {"@context": "https://schema.org", "@graph": [faq]} | tojson }}</script>
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/assets/img/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/assets/img/favicon-48.png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+{% include "styles.html" %}
+  <style>
+    .hero { padding-bottom: 56px; }
+    .hero h1 { font-size: clamp(36px, 8vw, 64px); }
+    .calc { max-width: 760px; margin: 8px auto 0; text-align: left; background: var(--surface); border-radius: 26px; box-shadow: var(--shadow); padding: 22px 20px; display: grid; gap: 18px; }
+    .calc fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+    .calc legend, .field > span:first-child { font-weight: 800; font-size: 15px; margin-bottom: 8px; padding: 0; }
+    .seg { display: flex; flex-wrap: wrap; gap: 8px; }
+    .seg label { position: relative; flex: 1 1 140px; }
+    .seg input { position: absolute; opacity: 0; inset: 0; margin: 0; }
+    .seg span { display: block; text-align: center; padding: 11px 12px; border-radius: 14px; background: var(--peach-2); font-weight: 700; cursor: pointer; }
+    .seg input:checked + span { background: var(--ink); color: #fff; }
+    .seg input:focus-visible + span { outline: 3px solid var(--ink); outline-offset: 3px; }
+    .row { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+    .row[hidden] { display: none; }
+    .field { display: grid; min-width: 0; }
+    .input { display: flex; align-items: center; gap: 6px; background: var(--canvas); border: 1.5px solid var(--border); border-radius: 14px; padding: 0 14px; }
+    .input:focus-within { border-color: var(--ink); }
+    .input input, .calc select { flex: 1; min-width: 0; width: 100%; border: 0; background: transparent; font: 700 19px var(--font); color: var(--text); padding: 12px 0; font-variant-numeric: tabular-nums; }
+    .input input:focus, .calc select:focus { outline: none; }
+    .input:has([aria-invalid="true"]) { border-color: var(--brand); }
+    .unit { color: var(--text-2); font-weight: 600; }
+    .calc select { width: 100%; font-size: 17px; background: var(--canvas); border: 1.5px solid var(--border); border-radius: 14px; padding: 12px; }
+    .calc select:focus-visible { border-color: var(--ink); }
+    .err { color: var(--brand); font-weight: 700; font-size: 15px; margin: 0; }
+    .calc .btn { justify-self: start; font-size: 17px; border: 0; cursor: pointer; }
+    .calc .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+    .out { background: linear-gradient(#2E2B29, var(--ink) 30%); color: #fff; border-radius: 22px; padding: 20px; display: grid; gap: 14px; }
+    .out:focus { outline: 3px solid var(--accent); outline-offset: 3px; }
+    .out .readouts { display: block; }
+    .out table { width: 100%; border-collapse: collapse; font-size: 15px; color: #DCD7D0; }
+    .out caption { text-align: left; font-weight: 800; color: #fff; margin-bottom: 6px; }
+    .out th, .out td { text-align: left; padding: 6px 0; border-top: 1px solid #3D3936; font-weight: 600; }
+    .out td { text-align: right; font-variant-numeric: tabular-nums; color: #fff; }
+    .out tr.is-current th, .out tr.is-current td { color: var(--accent-hi); }
+    .out thead th { color: #B5AFA9; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; border-top: 0; }
+    .out .note { margin: 0; color: #B5AFA9; font-size: 14px; }
+    .method { padding: 56px 0 24px; }
+    .method .copy { max-width: 760px; margin: 0 auto; }
+    .method p { color: var(--text-2); font-size: 18px; }
+    .method .chip p { font-weight: 700; color: var(--text); font-size: 16px; }
+    .method .chips { grid-template-columns: 1fr; margin: 0 0 16px; }
+    footer { padding-bottom: 40px; }
+    .method small { display: block; color: var(--text-2); font-size: 14px; }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">{{ t['a11y.skip'] }}</a>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="{{ home }}"><img src="/assets/img/app-icon-96.png" alt="" width="34" height="34">Calcalou</a>
+      <nav aria-label="{{ t['a11y.main_nav'] }}">
+        <a class="hide-sm" href="#faq">{{ t['nav.faq'] }}</a>
+        <details class="lang">
+          <summary aria-label="{{ current.short|upper }} · {{ t['a11y.language'] }}: {{ current.name }}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" fill="none" stroke="currentColor" stroke-width="2"/></svg>{{ current.short }}</summary>
+          <ul>
+{%- for l in locales %}
+            <li><a href="{{ l.path }}" hreflang="{{ l.code }}" lang="{{ l.code }}"{% if l.code == lang %} aria-current="page"{% endif %}>{{ l.name }}</a></li>
+{%- endfor %}
+          </ul>
+        </details>
+        <a class="btn sm" href="#get">{{ t['nav.get'] }}</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <h1><span>{{ c['h1'] }}</span> <span>{{ c['h1.sub'] }}</span></h1>
+        <p class="lead">{{ c['lead'] }}</p>
+        <form class="calc" data-calc aria-label="{{ c['form.label'] }}" novalidate>
+          <div class="row">
+            <fieldset>
+              <legend>{{ c['form.sex'] }}</legend>
+              <div class="seg">
+                <label><input type="radio" name="sex" value="male" checked><span>{{ c['sex.male'] }}</span></label>
+                <label><input type="radio" name="sex" value="female"><span>{{ c['sex.female'] }}</span></label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>{{ c['form.units'] }}</legend>
+              <div class="seg">
+                <label><input type="radio" name="units" value="metric"{% if units == "metric" %} checked{% endif %}><span>{{ c['units.metric'] }}</span></label>
+                <label><input type="radio" name="units" value="imperial"{% if units == "imperial" %} checked{% endif %}><span>{{ c['units.imperial'] }}</span></label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="row">
+            {{ field("age", "age", c['form.age'], c['unit.years'], "numeric", 3) }}
+          </div>
+          <p class="err" id="err-age" hidden>{{ c['err.age'] }}</p>
+          <div class="row" data-units="metric"{% if units != "metric" %} hidden{% endif %}>
+            {{ field("heightCm", "height", c['form.height'], c['unit.cm']) }}
+            {{ field("weightKg", "weight", c['form.weight'], c['unit.kg']) }}
+          </div>
+          <div class="row" data-units="imperial"{% if units != "imperial" %} hidden{% endif %}>
+            {{ field("heightFt", "height", c['form.height'] ~ " (" ~ c['unit.ft'] ~ ")", c['unit.ft'], "numeric", 1) }}
+            {{ field("heightIn", "height", c['form.height'] ~ " (" ~ c['unit.in'] ~ ")", c['unit.in'], "decimal", 4) }}
+            {{ field("weightLb", "weight", c['form.weight'], c['unit.lb']) }}
+          </div>
+          <p class="err" id="err-height" hidden>{{ c['err.height'] }}</p>
+          <p class="err" id="err-weight" hidden>{{ c['err.weight'] }}</p>
+          <label class="field"><span>{{ c['form.activity'] }}</span>
+            <select name="activity">
+{%- for i in range(5) %}
+              <option value="{{ i }}"{% if i == 0 %} selected{% endif %}>{{ c['act.' ~ i] }}</option>
+{%- endfor %}
+            </select>
+          </label>
+          <button class="btn" type="submit">{{ c['form.submit'] }}</button>
+          <div aria-live="polite">
+            <div class="out" data-calc-result tabindex="-1" hidden>
+              <div class="display"><b data-out="tdee"></b><small>{{ c['result.tdee'] }} · {{ c['result.unit'] }}</small></div>
+              <ul class="readouts">
+                <li><i class="dot-goal"></i>{{ c['result.bmr'] }}<b data-out="bmr"></b></li>
+                <li><i class="dot-burned"></i>{{ c['result.base'] }}<b data-out="base"></b></li>
+              </ul>
+              <table>
+                <caption>{{ c['table.caption'] }}</caption>
+                <thead><tr><th scope="col">{{ c['table.level'] }}</th><th scope="col" style="text-align:right">{{ c['table.kcal'] }}</th></tr></thead>
+                <tbody>
+{%- for i in range(5) %}
+                  <tr data-level="{{ i }}"><th scope="row">{{ c['act.short.' ~ i] }} ({{ factors[i] }})</th><td></td></tr>
+{%- endfor %}
+                </tbody>
+              </table>
+              <p class="note">{{ c['result.note'] }}</p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="method" aria-labelledby="method-title">
+      <div class="wrap">
+        <div class="copy">
+          <h2 id="method-title">{{ c['method.title'] }}</h2>
+          <p>{{ c['method.p1'] }}</p>
+          <div class="chips">
+            <div class="chip"><p>{{ c['method.male'] }}</p></div>
+            <div class="chip"><p>{{ c['method.female'] }}</p></div>
+          </div>
+          <p>{{ c['method.p2'] }}</p>
+          <small>{{ c['method.source'] }}</small>
+          <h2>{{ c['app.title'] }}</h2>
+          <p>{{ c['app.text'] }}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <h2 id="faq-title" class="center">{{ c['faq.title'] }}</h2>
+        <div class="list">
+{%- for k in faq_keys %}
+          <details><summary>{{ c['faq.' ~ k ~ '.q'] }}</summary><p>{{ c['faq.' ~ k ~ '.a'] }}</p></details>
+{%- endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section class="final" id="get" aria-labelledby="final-title">
+      <div class="wrap">
+        <h2 id="final-title">{{ c['cta.title'] }}</h2>
+        <div class="stores">
+          <a data-store="ios" href="{{ links.ios }}"><img src="/assets/img/badge-app-store.svg" alt="{{ t['store.ios'] }}" width="150" height="50" loading="lazy"></a>
+          <a data-store="android" href="{{ links.android }}"><img src="/assets/img/badge-google-play-{{ gp.code }}-50.webp" srcset="/assets/img/badge-google-play-{{ gp.code }}-50.webp 1x, /assets/img/badge-google-play-{{ gp.code }}-100.webp 2x" alt="{{ t['store.android'] }}" width="{{ gp.w }}" height="50" loading="lazy"></a>
+        </div>
+        <p class="fine">{{ t['hero.fine'] }}</p>
+      </div>
+      <div class="stage">
+        {{ lou("celebrating", "(min-width: 960px) 260px, 220px", t['final.alt']) }}
+        <div class="counter" aria-hidden="true"><div class="display"><b>{{ t['final.day1'] }}</b><small>{{ t['final.streak'] }}</small></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <ul>
+        <li><a href="{{ home }}">Calcalou</a></li>
+        <li><a href="/privacy/">{{ t['footer.privacy'] }}</a></li>
+        <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">{{ t['footer.terms'] }}</a></li>
+        <li><a href="/support/">{{ t['footer.support'] }}</a></li>
+        <li><a href="mailto:support@calcalou.com">support@calcalou.com</a></li>
+      </ul>
+      <ul class="langs" aria-label="{{ t['a11y.language'] }}">
+{%- for l in locales %}
+        <li><a href="{{ l.path }}" hreflang="{{ l.code }}" lang="{{ l.code }}"{% if l.code == lang %} aria-current="page"{% endif %}>{{ l.name }}</a></li>
+{%- endfor %}
+      </ul>
+      <p>{{ t['footer.disclaimer'] }}</p>
+      <p>© {{ year }} Calcalou</p>
+    </div>
+  </footer>
+
+  <script src="/assets/calc.js" defer></script>
+</body>
+</html>
