@@ -5,8 +5,10 @@ store screenshots, app icon, store badges). Re-run when the final store screensh
     python3 _src/make_assets.py [--shots <dir with android-phone/<locale>/ and ios-iphone/en-US/>]
 """
 import argparse
+import io
 import json
 import shutil
+import zipfile
 from pathlib import Path
 
 from PIL import Image
@@ -15,7 +17,8 @@ SITE = Path(__file__).resolve().parent.parent
 PROJECT = SITE.parent.parent
 OUT = SITE / "assets" / "img"
 MASCOT = PROJECT / "design" / "mascot" / "reference" / "3d-png"
-ICON = PROJECT / "worktrees" / "release-1.4" / "ios" / "Runner" / "Assets.xcassets" / "AppIcon.appiconset" / "Icon-App-1024x1024@1x.png"
+ICON_DIR = PROJECT / "design" / "icon-refresh" / "assets"
+ICON_DRAFT = "D"
 SHOTS_ANDROID = PROJECT / "qa-runs" / "1.4.0-65-store-screenshots" / "raw" / "android-phone"
 SHOT_IOS_TODAY = PROJECT / "qa-runs" / "1.4.0-65-store-screenshots-v2" / "samples" / "ios-iphone" / "en-US" / "iphone69_01_today.png"
 BADGES = Path(__file__).resolve().parent / "vendor" / "badges"
@@ -75,13 +78,37 @@ def badges():
 
 
 def icons():
-    icon = Image.open(ICON).convert("RGB")
-    for size, name in ((48, "favicon-48.png"), (180, "apple-touch-icon.png"), (96, "app-icon-96.png")):
-        icon.resize((size, size), Image.LANCZOS).save(OUT / name, optimize=True)
+    masked = Image.open(ICON_DIR / f"{ICON_DRAFT}_ios_light_1024.png").convert("RGBA")
+    full = Image.open(ICON_DIR / f"{ICON_DRAFT}_background_1024.png").convert("RGBA")
+    full.alpha_composite(masked)
+    full = full.convert("RGB")
+    for size, name in ((180, "apple-touch-icon.png"), (96, "app-icon-96.png")):
+        full.resize((size, size), Image.LANCZOS).save(OUT / name, optimize=True)
+    for size in (32, 48):
+        masked.resize((size, size), Image.LANCZOS).save(OUT / f"favicon-{size}.png", optimize=True)
+    masked.save(SITE / "favicon.ico", sizes=[(16, 16), (32, 32), (48, 48)])
+    return full
+
+
+def refresh_press_kit(icon):
+    """Swap the icon and the banner (= og.jpg) inside /press/calcalou-press-kit.zip, keeping every other entry."""
+    kit = SITE / "press" / "calcalou-press-kit.zip"
+    if not kit.exists():
+        return
+    buf = io.BytesIO()
+    icon.save(buf, "PNG", optimize=True)
+    replacements = {"calcalou-press-kit/app-icon/calcalou-app-icon-1024.png": buf.getvalue(),
+                    "calcalou-press-kit/calcalou-banner-1200x630.jpg": (OUT / "og.jpg").read_bytes()}
+    with zipfile.ZipFile(kit) as src:
+        entries = [(info, replacements.get(info.filename, src.read(info))) for info in src.infolist()]
+    with zipfile.ZipFile(kit, "w", zipfile.ZIP_DEFLATED) as dst:
+        for info, data in entries:
+            dst.writestr(info, data)
 
 
 def main():
     parser = argparse.ArgumentParser()
+    parser.add_argument("--icons-only", action="store_true", help="refresh only the icon set")
     parser.add_argument("--shots", type=Path, help="screenshot set root (android-phone/<locale>/, ios-iphone/en-US/)")
     args = parser.parse_args()
     android_root, ios_today = SHOTS_ANDROID, SHOT_IOS_TODAY
@@ -89,8 +116,10 @@ def main():
         android_root = args.shots / "android-phone"
         ios_today = args.shots / "ios-iphone" / "en-US" / "iphone69_01_today.png"
     OUT.mkdir(parents=True, exist_ok=True)
+    refresh_press_kit(icons())
+    if args.icons_only:
+        return
     mascot()
-    icons()
     meta = {"shots": shots(android_root, ios_today), "googlePlay": badges(),
             "source": {"android": str(android_root.relative_to(PROJECT)), "iosToday": str(ios_today.relative_to(PROJECT))}}
     (Path(__file__).resolve().parent / "assets.json").write_text(json.dumps(meta, indent=2) + "\n")

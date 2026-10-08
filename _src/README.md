@@ -1,7 +1,7 @@
 # Landing page sources (not published: Jekyll skips `_src/`)
 
 - `template.html` + `i18n/<locale>.json` → `python3 _src/build.py` → `/index.html`, `/de/`, `/es/`, `/fr/`, `/it/`, `/pl/`, `/pt-br/`, `/ru/`, `/tr/` (needs `jinja2`).
-- `make_assets.py` imports images into `/assets/img` from the Calcaloo project: approved 3D Lou renders (`design/mascot/reference/3d-png`), the app icon, store badges (`vendor/badges`) and store screenshots.
+- `make_assets.py` imports images into `/assets/img` from the Calcaloo project: approved 3D Lou renders (`design/mascot/reference/3d-png`), the app icon (approved draft D from `design/icon-refresh`; `--icons-only` refreshes favicons, apple-touch-icon and the press-kit icon/banner), store badges (`vendor/badges`) and store screenshots.
 - **Screenshots are the current 1.4.0 (65) set** (`qa-runs/1.4.0-65-store-screenshots/raw/android-phone/<locale>` + the iPhone Today sample). When the final 1.4.0 set is ready: `python3 _src/make_assets.py --shots <set root>` then `python3 _src/build.py`.
 - `og.html` is the source of `/assets/img/og.jpg` (1200×630, headless Chrome screenshot).
 - Mascot rules: Lou (~1.5 m) stands **behind** the counter (counter hides the lower ~38 % of the render), never sits on it; eyes are solid dark, no whites.
