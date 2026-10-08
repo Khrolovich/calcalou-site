@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.khrolovich.calorietracker",
+      "sha256_cert_fingerprints": [
+        "37:5F:35:34:C3:FF:37:5B:39:48:1F:50:1F:5B:77:D0:B3:F6:FD:A4:E0:87:CD:32:70:53:74:95:1E:03:8D:9F",
+        "36:16:55:F8:78:52:27:B1:E4:16:64:CE:64:1D:A7:7A:BE:0E:E8:25:1B:A3:E8:4C:B6:30:A9:77:59:C7:9C:7C"
+      ]
+    }
+  }
+]
