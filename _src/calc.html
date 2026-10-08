@@ -46,24 +46,25 @@
     .seg { display: flex; flex-wrap: wrap; gap: 8px; }
     .seg label { position: relative; flex: 1 1 140px; }
     .seg input { position: absolute; opacity: 0; inset: 0; margin: 0; }
-    .seg span { display: block; text-align: center; padding: 11px 12px; border-radius: 14px; background: var(--peach-2); font-weight: 700; cursor: pointer; }
-    .seg input:checked + span { background: var(--ink); color: #fff; }
+    .seg span { display: block; text-align: center; padding: 11px 12px; border-radius: 14px; background: var(--peach-2); border: 1.5px solid #8A847E; font-weight: 700; cursor: pointer; }
+    .seg input:checked + span { background: var(--ink); border-color: var(--ink); color: #fff; }
     .seg input:focus-visible + span { outline: 3px solid var(--ink); outline-offset: 3px; }
     .row { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
     .row[hidden] { display: none; }
     .field { display: grid; min-width: 0; }
-    .input { display: flex; align-items: center; gap: 6px; background: var(--canvas); border: 1.5px solid var(--border); border-radius: 14px; padding: 0 14px; }
+    .input { display: flex; align-items: center; gap: 6px; background: var(--canvas); border: 1.5px solid #8A847E; border-radius: 14px; padding: 0 14px; }
     .input:focus-within { border-color: var(--ink); }
     .input input, .calc select { flex: 1; min-width: 0; width: 100%; border: 0; background: transparent; font: 700 19px var(--font); color: var(--text); padding: 12px 0; font-variant-numeric: tabular-nums; }
     .input input:focus, .calc select:focus { outline: none; }
     .input:has([aria-invalid="true"]) { border-color: var(--brand); }
     .unit { color: var(--text-2); font-weight: 600; }
-    .calc select { width: 100%; font-size: 17px; background: var(--canvas); border: 1.5px solid var(--border); border-radius: 14px; padding: 12px; }
+    .calc select { width: 100%; font-size: 17px; background: var(--canvas); border: 1.5px solid #8A847E; border-radius: 14px; padding: 12px; }
     .calc select:focus-visible { border-color: var(--ink); }
     .err { color: var(--brand); font-weight: 700; font-size: 15px; margin: 0; }
     .calc .btn { justify-self: start; font-size: 17px; border: 0; cursor: pointer; }
     .calc .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
     .out { background: linear-gradient(#2E2B29, var(--ink) 30%); color: #fff; border-radius: 22px; padding: 20px; display: grid; gap: 14px; }
+    .out[hidden] { display: none; }
     .out:focus { outline: 3px solid var(--accent); outline-offset: 3px; }
     .out .readouts { display: block; }
     .out table { width: 100%; border-collapse: collapse; font-size: 15px; color: #DCD7D0; }
@@ -133,8 +134,8 @@
             {{ field("weightKg", "weight", c['form.weight'], c['unit.kg']) }}
           </div>
           <div class="row" data-units="imperial"{% if units != "imperial" %} hidden{% endif %}>
-            {{ field("heightFt", "height", c['form.height'] ~ " (" ~ c['unit.ft'] ~ ")", c['unit.ft'], "numeric", 1) }}
-            {{ field("heightIn", "height", c['form.height'] ~ " (" ~ c['unit.in'] ~ ")", c['unit.in'], "decimal", 4) }}
+            {{ field("heightFt", "height", c['form.height'], c['unit.ft'], "numeric", 1) }}
+            {{ field("heightIn", "height", c['form.inches'], c['unit.in'], "decimal", 4) }}
             {{ field("weightLb", "weight", c['form.weight'], c['unit.lb']) }}
           </div>
           <p class="err" id="err-height" hidden>{{ c['err.height'] }}</p>
@@ -146,9 +147,9 @@
 {%- endfor %}
             </select>
           </label>
-          <button class="btn" type="submit">{{ c['form.submit'] }}</button>
-          <div aria-live="polite">
-            <div class="out" data-calc-result tabindex="-1" hidden>
+          <button class="btn" type="submit" disabled>{{ c['form.submit'] }}</button>
+          <div>
+            <div class="out" data-calc-result tabindex="-1" role="region" aria-label="{{ c['result.tdee'] }}" hidden>
               <div class="display"><b data-out="tdee"></b><small>{{ c['result.tdee'] }} · {{ c['result.unit'] }}</small></div>
               <ul class="readouts">
                 <li><i class="dot-goal"></i>{{ c['result.bmr'] }}<b data-out="bmr"></b></li>

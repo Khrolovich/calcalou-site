@@ -70,3 +70,8 @@ test('calculator pages: store links carry ct=calc-<lang>, no landing.js, assets 
     for (const id of ['err-age', 'err-height', 'err-weight']) assert.ok(html.includes(`id="${id}"`));
   }
 });
+
+test('trailing decimal separator is accepted, like Dart double.tryParse in the app', () => {
+  assert.equal(C.parseNumber('180.'), 180);
+  assert.equal(C.parseNumber('80,'), 80);
+});

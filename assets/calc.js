@@ -11,7 +11,7 @@
 
   function parseNumber(raw) {
     var text = String(raw == null ? '' : raw).trim().replace(',', '.');
-    return /^\d+(\.\d+)?$/.test(text) ? Number(text) : null;
+    return /^\d+(\.\d*)?$/.test(text) ? Number(text) : null;
   }
 
   // Same formula and limits as the app's base-burn calculator (calcaloo-app lib/widgets/passive_burn_calculator_dialog.dart).
@@ -110,9 +110,11 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       render(true);
-      if (!out.hidden) out.focus();
+      var invalid = form.querySelector('[aria-invalid="true"]:not(:disabled)');
+      (invalid || (out.hidden ? null : out) || form.elements.sex[0]).focus();
     });
     if (activity && !activity.value) activity.value = '0';
+    form.querySelector('[type="submit"]').disabled = false;
     syncUnits();
     render(false);
   }

@@ -1,6 +1,6 @@
 {
   "meta.title": "Grundumsatz-Rechner: Kalorienbedarf berechnen | Calcalou",
-  "meta.description": "Kostenloser Grundumsatz-Rechner nach der Mifflin-St-Jeor-Formel. Alter, Größe und Gewicht eingeben und Grundumsatz sowie täglichen Kalorienbedarf (Gesamtumsatz) schätzen.",
+  "meta.description": "Kostenloser Grundumsatz-Rechner (Mifflin-St-Jeor). Alter, Größe und Gewicht eingeben und Grundumsatz sowie täglichen Kalorienbedarf schätzen.",
   "meta.og_title": "Grundumsatz und Kalorienbedarf berechnen",
   "meta.og_description": "Schätze Grundumsatz und täglichen Kalorienbedarf mit der Mifflin-St-Jeor-Formel, in kg/cm oder lb/ft.",
   "link.footer": "Grundumsatz-Rechner",
@@ -53,17 +53,18 @@
   "method.p2": "Der Gesamtumsatz ist der Grundumsatz mal einem Aktivitätsfaktor (PAL): 1,2 sitzend, 1,375 leicht aktiv, 1,55 mäßig aktiv, 1,725 sehr aktiv, 1,9 extrem aktiv. Imperiale Werte werden vorher in Kilogramm und Zentimeter umgerechnet.",
   "method.source": "Quelle: Mifflin MD, St Jeor ST et al. A new predictive equation for resting energy expenditure in healthy individuals. Am J Clin Nutr. 1990;51(2):241–247. Die Gleichung wurde an Erwachsenen von 19 bis 78 Jahren entwickelt.",
   "app.title": "In Calcalou nutzen",
-  "app.text": "Calcalou hat denselben Rechner eingebaut. Die App speichert den Wert für „sitzend“ als deinen Grundverbrauch, kann ihn jeden Tag zu „verbrannt“ hinzufügen und zählt deine eingetragenen Aktivitäten dazu. So siehst du Gegessenes und Verbranntes und was heute noch übrig ist.",
-  "faq.title": "Fragen und Antworten",
+  "app.text": "Calcalou nutzt dieselbe Formel mit dem Faktor für „sitzend“. Die App speichert diesen Wert als deinen Grundverbrauch, kann ihn jeden Tag zu „verbrannt“ hinzufügen und zählt deine eingetragenen Aktivitäten dazu. So siehst du Gegessenes und Verbranntes und was heute noch übrig ist.",
+  "faq.title": "Fragen, beantwortet.",
   "faq.bmr.q": "Was ist der Grundumsatz?",
   "faq.bmr.a": "Der Grundumsatz ist eine Schätzung der Kalorien, die dein Körper in völliger Ruhe verbraucht, etwa für Atmung, Kreislauf und Körpertemperatur.",
   "faq.tdee.q": "Was ist der Gesamtumsatz bzw. der tägliche Kalorienbedarf?",
-  "faq.tdee.a": "Der Gesamtumsatz addiert Alltagsbewegung und Sport zum Grundumsatz. Er schätzt, wie viele Kalorien pro Tag dein Gewicht ungefähr gleich halten.",
+  "faq.tdee.a": "Der Gesamtumsatz addiert Alltagsbewegung und Sport zum Grundumsatz. Er schätzt, mit wie vielen Kalorien pro Tag dein Gewicht ungefähr konstant bleibt.",
   "faq.formula.q": "Welche Formel nutzt der Rechner?",
   "faq.formula.a": "Die Mifflin-St-Jeor-Gleichung von 1990, multipliziert mit einem üblichen Aktivitätsfaktor von 1,2 bis 1,9. Die Calcalou-App nutzt dieselbe Gleichung mit dem Faktor 1,2 für den Grundverbrauch.",
   "faq.accuracy.q": "Wie genau ist das Ergebnis?",
   "faq.accuracy.a": "Es ist eine Schätzung für eine durchschnittliche Person mit deinem Alter, Geschlecht, deiner Größe und deinem Gewicht. Körperzusammensetzung, Erkrankungen und Medikamente können deinen tatsächlichen Bedarf verändern. Das ist keine medizinische Beratung: Sprich mit einer Ärztin, einem Arzt oder einer Ernährungsfachkraft, bevor du deine Ernährung stark umstellst.",
   "faq.activity.q": "Welches Aktivitätslevel soll ich wählen?",
   "faq.activity.a": "Wähle das Level, das zu einer typischen Woche passt, nicht zu deiner aktivsten. Wenn du Training separat einträgst, wie in Calcalou, nimm den Wert für „sitzend“, damit Sport nicht doppelt zählt.",
-  "cta.title": "Gegessen gegen verbrannt – zählen mit Lou."
+  "cta.title": "Gegessen und verbrannt im Blick – mit Lou.",
+  "form.inches": "Zoll"
 }

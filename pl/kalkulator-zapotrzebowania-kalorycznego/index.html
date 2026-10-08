@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Kalkulator zapotrzebowania kalorycznego (PPM i CPM) | Calcalou</title>
-  <meta name="description" content="Darmowy kalkulator zapotrzebowania kalorycznego według wzoru Mifflina-St Jeora. Podaj wiek, wzrost i wagę, aby oszacować podstawową (PPM) i całkowitą przemianę materii (CPM).">
+  <meta name="description" content="Darmowy kalkulator zapotrzebowania kalorycznego (wzór Mifflina-St Jeora). Podaj wiek, wzrost i wagę, aby oszacować PPM i CPM.">
   <meta name="theme-color" content="#FFE2CF">
   <meta name="apple-itunes-app" content="app-id=6757434158">
   <meta property="og:type" content="website">
@@ -182,24 +182,25 @@
     .seg { display: flex; flex-wrap: wrap; gap: 8px; }
     .seg label { position: relative; flex: 1 1 140px; }
     .seg input { position: absolute; opacity: 0; inset: 0; margin: 0; }
-    .seg span { display: block; text-align: center; padding: 11px 12px; border-radius: 14px; background: var(--peach-2); font-weight: 700; cursor: pointer; }
-    .seg input:checked + span { background: var(--ink); color: #fff; }
+    .seg span { display: block; text-align: center; padding: 11px 12px; border-radius: 14px; background: var(--peach-2); border: 1.5px solid #8A847E; font-weight: 700; cursor: pointer; }
+    .seg input:checked + span { background: var(--ink); border-color: var(--ink); color: #fff; }
     .seg input:focus-visible + span { outline: 3px solid var(--ink); outline-offset: 3px; }
     .row { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
     .row[hidden] { display: none; }
     .field { display: grid; min-width: 0; }
-    .input { display: flex; align-items: center; gap: 6px; background: var(--canvas); border: 1.5px solid var(--border); border-radius: 14px; padding: 0 14px; }
+    .input { display: flex; align-items: center; gap: 6px; background: var(--canvas); border: 1.5px solid #8A847E; border-radius: 14px; padding: 0 14px; }
     .input:focus-within { border-color: var(--ink); }
     .input input, .calc select { flex: 1; min-width: 0; width: 100%; border: 0; background: transparent; font: 700 19px var(--font); color: var(--text); padding: 12px 0; font-variant-numeric: tabular-nums; }
     .input input:focus, .calc select:focus { outline: none; }
     .input:has([aria-invalid="true"]) { border-color: var(--brand); }
     .unit { color: var(--text-2); font-weight: 600; }
-    .calc select { width: 100%; font-size: 17px; background: var(--canvas); border: 1.5px solid var(--border); border-radius: 14px; padding: 12px; }
+    .calc select { width: 100%; font-size: 17px; background: var(--canvas); border: 1.5px solid #8A847E; border-radius: 14px; padding: 12px; }
     .calc select:focus-visible { border-color: var(--ink); }
     .err { color: var(--brand); font-weight: 700; font-size: 15px; margin: 0; }
     .calc .btn { justify-self: start; font-size: 17px; border: 0; cursor: pointer; }
     .calc .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
     .out { background: linear-gradient(#2E2B29, var(--ink) 30%); color: #fff; border-radius: 22px; padding: 20px; display: grid; gap: 14px; }
+    .out[hidden] { display: none; }
     .out:focus { outline: 3px solid var(--accent); outline-offset: 3px; }
     .out .readouts { display: block; }
     .out table { width: 100%; border-collapse: collapse; font-size: 15px; color: #DCD7D0; }
@@ -269,24 +270,24 @@
             <label class="field"><span>Waga</span><span class="input"><input name="weightKg" inputmode="decimal" autocomplete="off" maxlength="5" aria-describedby="err-weight"><span class="unit">kg</span></span></label>
           </div>
           <div class="row" data-units="imperial" hidden>
-            <label class="field"><span>Wzrost (ft)</span><span class="input"><input name="heightFt" inputmode="numeric" autocomplete="off" maxlength="1" aria-describedby="err-height"><span class="unit">ft</span></span></label>
-            <label class="field"><span>Wzrost (in)</span><span class="input"><input name="heightIn" inputmode="decimal" autocomplete="off" maxlength="4" aria-describedby="err-height"><span class="unit">in</span></span></label>
+            <label class="field"><span>Wzrost</span><span class="input"><input name="heightFt" inputmode="numeric" autocomplete="off" maxlength="1" aria-describedby="err-height"><span class="unit">ft</span></span></label>
+            <label class="field"><span>Cale</span><span class="input"><input name="heightIn" inputmode="decimal" autocomplete="off" maxlength="4" aria-describedby="err-height"><span class="unit">in</span></span></label>
             <label class="field"><span>Waga</span><span class="input"><input name="weightLb" inputmode="decimal" autocomplete="off" maxlength="5" aria-describedby="err-weight"><span class="unit">lb</span></span></label>
           </div>
           <p class="err" id="err-height" hidden>Podaj wzrost od 100 do 250 cm (3 ft 4 in do 8 ft 2 in).</p>
           <p class="err" id="err-weight" hidden>Podaj wagę od 30 do 300 kg (67 do 661 lb).</p>
           <label class="field"><span>Poziom aktywności</span>
             <select name="activity">
-              <option value="0" selected>Siedzący: mało lub brak ćwiczeń</option>
+              <option value="0" selected>Siedzący: mało ćwiczeń lub ich brak</option>
               <option value="1">Lekko aktywny: lekkie ćwiczenia 1–3 dni w tygodniu</option>
               <option value="2">Umiarkowanie aktywny: ćwiczenia 3–5 dni w tygodniu</option>
               <option value="3">Bardzo aktywny: intensywne ćwiczenia 6–7 dni w tygodniu</option>
               <option value="4">Ekstremalnie aktywny: praca fizyczna lub trening dwa razy dziennie</option>
             </select>
           </label>
-          <button class="btn" type="submit">Oblicz</button>
-          <div aria-live="polite">
-            <div class="out" data-calc-result tabindex="-1" hidden>
+          <button class="btn" type="submit" disabled>Oblicz</button>
+          <div>
+            <div class="out" data-calc-result tabindex="-1" role="region" aria-label="Dzienne zapotrzebowanie kaloryczne (CPM)" hidden>
               <div class="display"><b data-out="tdee"></b><small>Dzienne zapotrzebowanie kaloryczne (CPM) · kcal/dzień</small></div>
               <ul class="readouts">
                 <li><i class="dot-goal"></i>PPM (w spoczynku)<b data-out="bmr"></b></li>
@@ -320,16 +321,16 @@
             <div class="chip"><p>Kobiety: PPM = 10 × waga (kg) + 6,25 × wzrost (cm) − 5 × wiek − 161</p></div>
           </div>
           <p>CPM (całkowita przemiana materii) to PPM pomnożona przez współczynnik aktywności: 1,2 siedzący, 1,375 lekko aktywny, 1,55 umiarkowanie aktywny, 1,725 bardzo aktywny, 1,9 ekstremalnie aktywny. Wartości imperialne są najpierw przeliczane na kilogramy i centymetry.</p>
-          <small>Źródło: Mifflin MD, St Jeor ST i wsp. A new predictive equation for resting energy expenditure in healthy individuals. Am J Clin Nutr. 1990;51(2):241–247. Wzór opracowano na podstawie dorosłych w wieku 19–78 lat.</small>
+          <small>Źródło: Mifflin MD, St Jeor ST i wsp. A new predictive equation for resting energy expenditure in healthy individuals. Am J Clin Nutr. 1990;51(2):241–247. Wzór opracowano na podstawie badań z udziałem dorosłych w wieku 19–78 lat.</small>
           <h2>Użyj w Calcalou</h2>
-          <p>Calcalou ma ten sam kalkulator wbudowany. Zapisuje wartość dla trybu siedzącego jako Twoje spalanie bazowe, może codziennie dodawać ją do spalonych i dolicza zapisaną aktywność. Widzisz zjedzone i spalone kalorie oraz to, co zostało na dziś.</p>
+          <p>Calcalou używa tego samego wzoru ze współczynnikiem dla trybu siedzącego. Zapisuje tę wartość jako Twoje spalanie bazowe, może codziennie dodawać ją do spalonych i dolicza zapisaną aktywność. Widzisz zjedzone i spalone kalorie oraz to, co zostało na dziś.</p>
         </div>
       </div>
     </section>
 
     <section class="faq" id="faq" aria-labelledby="faq-title">
       <div class="wrap">
-        <h2 id="faq-title" class="center">Pytania i odpowiedzi</h2>
+        <h2 id="faq-title" class="center">Pytania i odpowiedzi.</h2>
         <div class="list">
           <details><summary>Czym jest PPM?</summary><p>PPM, czyli podstawowa przemiana materii, to szacunkowa liczba kalorii, które Twoje ciało spala w całkowitym spoczynku, m.in. na oddychanie, krążenie krwi i utrzymanie temperatury ciała.</p></details>
           <details><summary>Czym jest CPM, czyli dzienne zapotrzebowanie kaloryczne?</summary><p>CPM, czyli całkowita przemiana materii, dodaje do PPM codzienny ruch i ćwiczenia. Szacuje, ile kalorii dziennie utrzymuje Twoją wagę mniej więcej na stałym poziomie.</p></details>

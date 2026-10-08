@@ -1,6 +1,6 @@
 {
   "meta.title": "Kalkulator zapotrzebowania kalorycznego (PPM i CPM) | Calcalou",
-  "meta.description": "Darmowy kalkulator zapotrzebowania kalorycznego według wzoru Mifflina-St Jeora. Podaj wiek, wzrost i wagę, aby oszacować podstawową (PPM) i całkowitą przemianę materii (CPM).",
+  "meta.description": "Darmowy kalkulator zapotrzebowania kalorycznego (wzór Mifflina-St Jeora). Podaj wiek, wzrost i wagę, aby oszacować PPM i CPM.",
   "meta.og_title": "Kalkulator PPM i dziennego zapotrzebowania kalorycznego",
   "meta.og_description": "Oszacuj PPM i dzienne zapotrzebowanie kaloryczne wzorem Mifflina-St Jeora, w kg/cm lub lb/ft.",
   "link.footer": "Kalkulator zapotrzebowania kalorycznego",
@@ -24,7 +24,7 @@
   "unit.in": "in",
   "unit.lb": "lb",
   "form.activity": "Poziom aktywności",
-  "act.0": "Siedzący: mało lub brak ćwiczeń",
+  "act.0": "Siedzący: mało ćwiczeń lub ich brak",
   "act.1": "Lekko aktywny: lekkie ćwiczenia 1–3 dni w tygodniu",
   "act.2": "Umiarkowanie aktywny: ćwiczenia 3–5 dni w tygodniu",
   "act.3": "Bardzo aktywny: intensywne ćwiczenia 6–7 dni w tygodniu",
@@ -51,10 +51,10 @@
   "method.male": "Mężczyźni: PPM = 10 × waga (kg) + 6,25 × wzrost (cm) − 5 × wiek + 5",
   "method.female": "Kobiety: PPM = 10 × waga (kg) + 6,25 × wzrost (cm) − 5 × wiek − 161",
   "method.p2": "CPM (całkowita przemiana materii) to PPM pomnożona przez współczynnik aktywności: 1,2 siedzący, 1,375 lekko aktywny, 1,55 umiarkowanie aktywny, 1,725 bardzo aktywny, 1,9 ekstremalnie aktywny. Wartości imperialne są najpierw przeliczane na kilogramy i centymetry.",
-  "method.source": "Źródło: Mifflin MD, St Jeor ST i wsp. A new predictive equation for resting energy expenditure in healthy individuals. Am J Clin Nutr. 1990;51(2):241–247. Wzór opracowano na podstawie dorosłych w wieku 19–78 lat.",
+  "method.source": "Źródło: Mifflin MD, St Jeor ST i wsp. A new predictive equation for resting energy expenditure in healthy individuals. Am J Clin Nutr. 1990;51(2):241–247. Wzór opracowano na podstawie badań z udziałem dorosłych w wieku 19–78 lat.",
   "app.title": "Użyj w Calcalou",
-  "app.text": "Calcalou ma ten sam kalkulator wbudowany. Zapisuje wartość dla trybu siedzącego jako Twoje spalanie bazowe, może codziennie dodawać ją do spalonych i dolicza zapisaną aktywność. Widzisz zjedzone i spalone kalorie oraz to, co zostało na dziś.",
-  "faq.title": "Pytania i odpowiedzi",
+  "app.text": "Calcalou używa tego samego wzoru ze współczynnikiem dla trybu siedzącego. Zapisuje tę wartość jako Twoje spalanie bazowe, może codziennie dodawać ją do spalonych i dolicza zapisaną aktywność. Widzisz zjedzone i spalone kalorie oraz to, co zostało na dziś.",
+  "faq.title": "Pytania i odpowiedzi.",
   "faq.bmr.q": "Czym jest PPM?",
   "faq.bmr.a": "PPM, czyli podstawowa przemiana materii, to szacunkowa liczba kalorii, które Twoje ciało spala w całkowitym spoczynku, m.in. na oddychanie, krążenie krwi i utrzymanie temperatury ciała.",
   "faq.tdee.q": "Czym jest CPM, czyli dzienne zapotrzebowanie kaloryczne?",
@@ -65,5 +65,6 @@
   "faq.accuracy.a": "To szacunek dla przeciętnej osoby w Twoim wieku, o Twojej płci, wzroście i wadze. Skład ciała, choroby i leki mogą zmieniać rzeczywiste zapotrzebowanie. To nie jest porada medyczna: porozmawiaj z lekarzem lub dietetykiem, zanim mocno zmienisz dietę.",
   "faq.activity.q": "Jaki poziom aktywności wybrać?",
   "faq.activity.a": "Wybierz poziom pasujący do typowego tygodnia, a nie do najbardziej aktywnego. Jeśli zapisujesz treningi osobno, jak w Calcalou, użyj wartości dla trybu siedzącego, żeby ćwiczenia nie liczyły się podwójnie.",
-  "cta.title": "Zjedzone kontra spalone – licz z Lou."
+  "cta.title": "Zjedzone kontra spalone – licz z Lou.",
+  "form.inches": "Cale"
 }

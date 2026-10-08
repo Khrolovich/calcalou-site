@@ -1,6 +1,6 @@
 {
   "meta.title": "BMR Calculator: Daily Calorie Needs (TDEE) | Calcalou",
-  "meta.description": "Free BMR and TDEE calculator using the Mifflin-St Jeor formula. Enter age, height and weight in metric or imperial units to estimate your basal metabolic rate and maintenance calories.",
+  "meta.description": "Free BMR and TDEE calculator (Mifflin-St Jeor). Enter age, height and weight in metric or imperial units to estimate your BMR and maintenance calories.",
   "meta.og_title": "BMR and daily calorie needs calculator",
   "meta.og_description": "Estimate your BMR and maintenance calories with the Mifflin-St Jeor formula, in kg/cm or lb/ft.",
   "link.footer": "BMR calculator",
@@ -53,7 +53,7 @@
   "method.p2": "TDEE (total daily energy expenditure) is BMR multiplied by an activity factor: 1.2 sedentary, 1.375 lightly active, 1.55 moderately active, 1.725 very active, 1.9 extra active. Imperial values are converted to kilograms and centimetres first.",
   "method.source": "Source: Mifflin MD, St Jeor ST et al. A new predictive equation for resting energy expenditure in healthy individuals. Am J Clin Nutr. 1990;51(2):241–247. The equation was derived from adults aged 19 to 78.",
   "app.title": "Use it in Calcalou",
-  "app.text": "Calcalou has the same calculator built in. It saves the sedentary value as your base burn, can add it to Burned every day and counts the activity you log on top, so you see eaten against burned and what's left for today.",
+  "app.text": "Calcalou uses the same formula with the sedentary factor. It saves that value as your base burn, can add it to Burned every day and counts the activity you log on top, so you see eaten against burned and what's left for today.",
   "faq.title": "Questions, answered.",
   "faq.bmr.q": "What is BMR?",
   "faq.bmr.a": "BMR, or basal metabolic rate, is an estimate of the calories your body burns at complete rest to keep breathing, circulating blood and maintaining body temperature.",
@@ -65,5 +65,6 @@
   "faq.accuracy.a": "It is an estimate for an average person with your age, sex, height and weight. Body composition, health conditions and medication can change your real needs. It is not medical advice: talk to a doctor or a registered dietitian before making big changes to your diet.",
   "faq.activity.q": "Which activity level should I choose?",
   "faq.activity.a": "Pick the level that matches a typical week, not your most active one. If you log workouts separately, as in Calcalou, use the sedentary value so exercise is not counted twice.",
-  "cta.title": "Count eaten against burned with Lou."
+  "cta.title": "Count eaten against burned with Lou.",
+  "form.inches": "Inches"
 }

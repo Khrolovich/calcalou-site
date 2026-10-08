@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>BMR Calculator: Daily Calorie Needs (TDEE) | Calcalou</title>
-  <meta name="description" content="Free BMR and TDEE calculator using the Mifflin-St Jeor formula. Enter age, height and weight in metric or imperial units to estimate your basal metabolic rate and maintenance calories.">
+  <meta name="description" content="Free BMR and TDEE calculator (Mifflin-St Jeor). Enter age, height and weight in metric or imperial units to estimate your BMR and maintenance calories.">
   <meta name="theme-color" content="#FFE2CF">
   <meta name="apple-itunes-app" content="app-id=6757434158">
   <meta property="og:type" content="website">
@@ -182,24 +182,25 @@
     .seg { display: flex; flex-wrap: wrap; gap: 8px; }
     .seg label { position: relative; flex: 1 1 140px; }
     .seg input { position: absolute; opacity: 0; inset: 0; margin: 0; }
-    .seg span { display: block; text-align: center; padding: 11px 12px; border-radius: 14px; background: var(--peach-2); font-weight: 700; cursor: pointer; }
-    .seg input:checked + span { background: var(--ink); color: #fff; }
+    .seg span { display: block; text-align: center; padding: 11px 12px; border-radius: 14px; background: var(--peach-2); border: 1.5px solid #8A847E; font-weight: 700; cursor: pointer; }
+    .seg input:checked + span { background: var(--ink); border-color: var(--ink); color: #fff; }
     .seg input:focus-visible + span { outline: 3px solid var(--ink); outline-offset: 3px; }
     .row { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
     .row[hidden] { display: none; }
     .field { display: grid; min-width: 0; }
-    .input { display: flex; align-items: center; gap: 6px; background: var(--canvas); border: 1.5px solid var(--border); border-radius: 14px; padding: 0 14px; }
+    .input { display: flex; align-items: center; gap: 6px; background: var(--canvas); border: 1.5px solid #8A847E; border-radius: 14px; padding: 0 14px; }
     .input:focus-within { border-color: var(--ink); }
     .input input, .calc select { flex: 1; min-width: 0; width: 100%; border: 0; background: transparent; font: 700 19px var(--font); color: var(--text); padding: 12px 0; font-variant-numeric: tabular-nums; }
     .input input:focus, .calc select:focus { outline: none; }
     .input:has([aria-invalid="true"]) { border-color: var(--brand); }
     .unit { color: var(--text-2); font-weight: 600; }
-    .calc select { width: 100%; font-size: 17px; background: var(--canvas); border: 1.5px solid var(--border); border-radius: 14px; padding: 12px; }
+    .calc select { width: 100%; font-size: 17px; background: var(--canvas); border: 1.5px solid #8A847E; border-radius: 14px; padding: 12px; }
     .calc select:focus-visible { border-color: var(--ink); }
     .err { color: var(--brand); font-weight: 700; font-size: 15px; margin: 0; }
     .calc .btn { justify-self: start; font-size: 17px; border: 0; cursor: pointer; }
     .calc .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
     .out { background: linear-gradient(#2E2B29, var(--ink) 30%); color: #fff; border-radius: 22px; padding: 20px; display: grid; gap: 14px; }
+    .out[hidden] { display: none; }
     .out:focus { outline: 3px solid var(--accent); outline-offset: 3px; }
     .out .readouts { display: block; }
     .out table { width: 100%; border-collapse: collapse; font-size: 15px; color: #DCD7D0; }
@@ -269,8 +270,8 @@
             <label class="field"><span>Weight</span><span class="input"><input name="weightKg" inputmode="decimal" autocomplete="off" maxlength="5" aria-describedby="err-weight"><span class="unit">kg</span></span></label>
           </div>
           <div class="row" data-units="imperial">
-            <label class="field"><span>Height (ft)</span><span class="input"><input name="heightFt" inputmode="numeric" autocomplete="off" maxlength="1" aria-describedby="err-height"><span class="unit">ft</span></span></label>
-            <label class="field"><span>Height (in)</span><span class="input"><input name="heightIn" inputmode="decimal" autocomplete="off" maxlength="4" aria-describedby="err-height"><span class="unit">in</span></span></label>
+            <label class="field"><span>Height</span><span class="input"><input name="heightFt" inputmode="numeric" autocomplete="off" maxlength="1" aria-describedby="err-height"><span class="unit">ft</span></span></label>
+            <label class="field"><span>Inches</span><span class="input"><input name="heightIn" inputmode="decimal" autocomplete="off" maxlength="4" aria-describedby="err-height"><span class="unit">in</span></span></label>
             <label class="field"><span>Weight</span><span class="input"><input name="weightLb" inputmode="decimal" autocomplete="off" maxlength="5" aria-describedby="err-weight"><span class="unit">lb</span></span></label>
           </div>
           <p class="err" id="err-height" hidden>Enter a height from 100 to 250 cm (3 ft 4 in to 8 ft 2 in).</p>
@@ -284,9 +285,9 @@
               <option value="4">Extra active: physical job or training twice a day</option>
             </select>
           </label>
-          <button class="btn" type="submit">Calculate</button>
-          <div aria-live="polite">
-            <div class="out" data-calc-result tabindex="-1" hidden>
+          <button class="btn" type="submit" disabled>Calculate</button>
+          <div>
+            <div class="out" data-calc-result tabindex="-1" role="region" aria-label="Daily calorie needs (TDEE)" hidden>
               <div class="display"><b data-out="tdee"></b><small>Daily calorie needs (TDEE) · kcal/day</small></div>
               <ul class="readouts">
                 <li><i class="dot-goal"></i>BMR (at rest)<b data-out="bmr"></b></li>
@@ -322,7 +323,7 @@
           <p>TDEE (total daily energy expenditure) is BMR multiplied by an activity factor: 1.2 sedentary, 1.375 lightly active, 1.55 moderately active, 1.725 very active, 1.9 extra active. Imperial values are converted to kilograms and centimetres first.</p>
           <small>Source: Mifflin MD, St Jeor ST et al. A new predictive equation for resting energy expenditure in healthy individuals. Am J Clin Nutr. 1990;51(2):241–247. The equation was derived from adults aged 19 to 78.</small>
           <h2>Use it in Calcalou</h2>
-          <p>Calcalou has the same calculator built in. It saves the sedentary value as your base burn, can add it to Burned every day and counts the activity you log on top, so you see eaten against burned and what&#39;s left for today.</p>
+          <p>Calcalou uses the same formula with the sedentary factor. It saves that value as your base burn, can add it to Burned every day and counts the activity you log on top, so you see eaten against burned and what&#39;s left for today.</p>
         </div>
       </div>
     </section>
