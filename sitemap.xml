@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://calcalou.com/es/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/"/>
@@ -44,7 +44,7 @@
   </url>
   <url>
     <loc>https://calcalou.com/fr/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/"/>
@@ -58,7 +58,7 @@
   </url>
   <url>
     <loc>https://calcalou.com/it/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/"/>
@@ -86,7 +86,7 @@
   </url>
   <url>
     <loc>https://calcalou.com/pt-br/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/"/>
@@ -100,7 +100,7 @@
   </url>
   <url>
     <loc>https://calcalou.com/ru/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/"/>
@@ -114,7 +114,7 @@
   </url>
   <url>
     <loc>https://calcalou.com/tr/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/"/>
@@ -128,26 +128,128 @@
   </url>
   <url>
     <loc>https://calcalou.com/bmr-calculator/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/bmr-calculator/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/grundumsatz-rechner/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/calculadora-de-calorias/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calcalou.com/fr/calcul-metabolisme-de-base/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calcalou.com/it/calcolo-metabolismo-basale/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/kalkulator-zapotrzebowania-kalorycznego/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-tmb/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-kaloriy/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/bazal-metabolizma-hesaplama/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/bmr-calculator/"/>
   </url>
   <url>
     <loc>https://calcalou.com/de/grundumsatz-rechner/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/bmr-calculator/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/grundumsatz-rechner/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/calculadora-de-calorias/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calcalou.com/fr/calcul-metabolisme-de-base/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calcalou.com/it/calcolo-metabolismo-basale/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/kalkulator-zapotrzebowania-kalorycznego/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-tmb/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-kaloriy/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/bazal-metabolizma-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/bmr-calculator/"/>
+  </url>
+  <url>
+    <loc>https://calcalou.com/es/calculadora-de-calorias/</loc>
+    <lastmod>2026-10-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/bmr-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/grundumsatz-rechner/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/calculadora-de-calorias/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calcalou.com/fr/calcul-metabolisme-de-base/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calcalou.com/it/calcolo-metabolismo-basale/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/kalkulator-zapotrzebowania-kalorycznego/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-tmb/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-kaloriy/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/bazal-metabolizma-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/bmr-calculator/"/>
+  </url>
+  <url>
+    <loc>https://calcalou.com/fr/calcul-metabolisme-de-base/</loc>
+    <lastmod>2026-10-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/bmr-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/grundumsatz-rechner/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/calculadora-de-calorias/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calcalou.com/fr/calcul-metabolisme-de-base/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calcalou.com/it/calcolo-metabolismo-basale/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/kalkulator-zapotrzebowania-kalorycznego/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-tmb/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-kaloriy/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/bazal-metabolizma-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/bmr-calculator/"/>
+  </url>
+  <url>
+    <loc>https://calcalou.com/it/calcolo-metabolismo-basale/</loc>
+    <lastmod>2026-10-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/bmr-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/grundumsatz-rechner/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/calculadora-de-calorias/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calcalou.com/fr/calcul-metabolisme-de-base/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calcalou.com/it/calcolo-metabolismo-basale/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/kalkulator-zapotrzebowania-kalorycznego/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-tmb/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-kaloriy/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/bazal-metabolizma-hesaplama/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/bmr-calculator/"/>
   </url>
   <url>
     <loc>https://calcalou.com/pl/kalkulator-zapotrzebowania-kalorycznego/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/bmr-calculator/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/grundumsatz-rechner/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/calculadora-de-calorias/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calcalou.com/fr/calcul-metabolisme-de-base/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calcalou.com/it/calcolo-metabolismo-basale/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/kalkulator-zapotrzebowania-kalorycznego/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-tmb/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-kaloriy/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/bazal-metabolizma-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/bmr-calculator/"/>
+  </url>
+  <url>
+    <loc>https://calcalou.com/pt-br/calculadora-tmb/</loc>
+    <lastmod>2026-10-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/bmr-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/grundumsatz-rechner/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/calculadora-de-calorias/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calcalou.com/fr/calcul-metabolisme-de-base/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calcalou.com/it/calcolo-metabolismo-basale/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/kalkulator-zapotrzebowania-kalorycznego/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-tmb/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-kaloriy/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/bazal-metabolizma-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/bmr-calculator/"/>
+  </url>
+  <url>
+    <loc>https://calcalou.com/ru/kalkulyator-kaloriy/</loc>
+    <lastmod>2026-10-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/bmr-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/grundumsatz-rechner/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/calculadora-de-calorias/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calcalou.com/fr/calcul-metabolisme-de-base/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calcalou.com/it/calcolo-metabolismo-basale/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/kalkulator-zapotrzebowania-kalorycznego/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-tmb/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-kaloriy/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/bazal-metabolizma-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/bmr-calculator/"/>
+  </url>
+  <url>
+    <loc>https://calcalou.com/tr/bazal-metabolizma-hesaplama/</loc>
+    <lastmod>2026-10-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/bmr-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/grundumsatz-rechner/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/calculadora-de-calorias/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calcalou.com/fr/calcul-metabolisme-de-base/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calcalou.com/it/calcolo-metabolismo-basale/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/kalkulator-zapotrzebowania-kalorycznego/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-tmb/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-kaloriy/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/bazal-metabolizma-hesaplama/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/bmr-calculator/"/>
   </url>
   <url>

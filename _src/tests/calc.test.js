@@ -7,7 +7,11 @@ const C = require('../../assets/calc.js');
 const L = require('../../assets/landing.js');
 
 const SITE = path.join(__dirname, '..', '..');
-const PAGES = { en: 'bmr-calculator', de: 'de/grundumsatz-rechner', pl: 'pl/kalkulator-zapotrzebowania-kalorycznego' };
+const PAGES = {
+  en: 'bmr-calculator', de: 'de/grundumsatz-rechner', es: 'es/calculadora-de-calorias',
+  fr: 'fr/calcul-metabolisme-de-base', it: 'it/calcolo-metabolismo-basale', pl: 'pl/kalkulator-zapotrzebowania-kalorycznego',
+  'pt-BR': 'pt-br/calculadora-tmb', ru: 'ru/kalkulyator-kaloriy', tr: 'tr/bazal-metabolizma-hesaplama'
+};
 
 function appBaseBurn(male, age, heightCm, weightKg) {
   const bmrBase = 10 * weightKg + 6.25 * heightCm - 5 * age;
@@ -59,7 +63,7 @@ test('the app limits: age 13-120 whole years, 100-250 cm, 30-300 kg', () => {
 test('calculator pages: store links carry ct=calc-<lang>, no landing.js, assets exist', () => {
   for (const [lang, dir] of Object.entries(PAGES)) {
     const html = fs.readFileSync(path.join(SITE, dir, 'index.html'), 'utf8');
-    const links = L.storeLinks('calc-' + lang);
+    const links = L.storeLinks('calc-' + lang.toLowerCase());
     const amp = (u) => u.replace(/&/g, '&amp;');
     assert.ok(html.includes(`data-store="ios" href="${amp(links.ios)}"`), `${lang}: ios link`);
     assert.ok(html.includes(`data-store="android" href="${amp(links.android)}"`), `${lang}: android link`);

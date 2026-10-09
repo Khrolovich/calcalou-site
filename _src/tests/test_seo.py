@@ -3,6 +3,8 @@ import json
 import re
 import subprocess
 import sys
+import shutil
+import tempfile
 import unittest
 from html import unescape
 from pathlib import Path
@@ -56,6 +58,61 @@ class CalculatorHead(unittest.TestCase):
         for _, path, _ in CALC_LOCALES:
             self.assertIn(f"<loc>{BASE}{path}</loc>", sitemap)
             self.assertIn(f'hreflang="x-default" href="{BASE}{CALC_LOCALES[0][1]}"', sitemap)
+
+
+class LocaleCoverage(unittest.TestCase):
+    def test_every_page_set_in_every_locale(self):
+        import check_locales
+        self.assertEqual(check_locales.check(), [])
+
+    def broken(self, rel, old, new, last=False):
+        with tempfile.TemporaryDirectory() as tmp:
+            shutil.copytree(SITE, tmp, dirs_exist_ok=True, ignore=shutil.ignore_patterns(".git", "img"))
+            target = Path(tmp) / rel
+            if old is None:
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_text(new, encoding="utf-8")
+            else:
+                html = target.read_text(encoding="utf-8")
+                self.assertIn(old, html)
+                at = html.rfind(old) if last else html.find(old)
+                target.write_text(html[:at] + new + html[at + len(old):], encoding="utf-8")
+            result = subprocess.run([sys.executable, str(Path(tmp) / "_src" / "check_locales.py")],
+                                    capture_output=True, text=True)
+            return result.returncode, result.stderr
+
+    def test_breakages_are_caught(self):
+        es = "es/calculadora-de-calorias/index.html"
+        es_link = '<a href="/es/calculadora-de-calorias/" hreflang="es" lang="es"'
+        cases = [
+            (es, '<html lang="es">', '<html lang="en"><!-- <html lang="es"> -->'),
+            (es, '<link rel="alternate" hreflang="fr" href="', '<!-- <link rel="alternate" hreflang="fr" href="'),
+            (es, '<li>' + es_link, '<li><a href="/" hreflang="es" lang="es"></a>' + es_link),
+            ("sitemap.xml", "<loc>https://calcalou.com/es/calculadora-de-calorias/</loc>",
+             "<!-- <loc>https://calcalou.com/es/calculadora-de-calorias/</loc> --><loc>x</loc>"),
+            ("es/articulo.html", None, "<html lang=es></html>"),
+            ("de/neu/index.html", None, "<html lang=de></html>"),
+        ]
+        for rel, old, new in cases:
+            with self.subTest(rel=rel, new=new[:40]):
+                code, _ = self.broken(rel, old, new)
+                self.assertEqual(code, 1)
+
+    def test_footer_switcher_is_checked(self):
+        es_footer = '<li><a href="/es/calculadora-de-calorias/" hreflang="es" lang="es" aria-current="page">'
+        code, err = self.broken("es/calculadora-de-calorias/index.html", es_footer,
+                                '<li><a href="/es/" hreflang="es" lang="es" aria-current="page">', last=True)
+        self.assertEqual(code, 1)
+        self.assertIn("footer language switcher", err)
+
+    def test_a_missing_locale_fails(self):
+        import check_locales
+        original = check_locales.page_sets
+        check_locales.page_sets = lambda: {**original(), "calculator": {"en": "/bmr-calculator/"}}
+        try:
+            self.assertTrue(any("site locales" in e for e in check_locales.check()))
+        finally:
+            check_locales.page_sets = original
 
 
 class StaticFiles(unittest.TestCase):

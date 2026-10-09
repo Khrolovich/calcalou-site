@@ -1,7 +1,7 @@
 # Landing page sources (not published: Jekyll skips `_src/`)
 
 - `template.html` + `i18n/<locale>.json` → `python3 _src/build.py` → `/index.html`, `/de/`, `/es/`, `/fr/`, `/it/`, `/pl/`, `/pt-br/`, `/ru/`, `/tr/` (needs `jinja2`).
-- `calc.html` + `i18n/calc/<en|de|pl>.json` → the BMR/TDEE calculator pages `/bmr-calculator/`, `/de/grundumsatz-rechner/`, `/pl/kalkulator-zapotrzebowania-kalorycznego/` (same `build.py`). Formula and limits mirror the app's base-burn dialog (`/assets/calc.js`); store links carry `ct=calc-<lang>`.
+- `calc.html` + `i18n/calc/<code>.json` → the BMR/TDEE calculator in every locale (`CALC_LOCALES` in `build.py`: native slug per language, e.g. `/bmr-calculator/`, `/de/grundumsatz-rechner/`). Formula and limits mirror the app's base-burn dialog (`/assets/calc.js`); store links carry `ct=calc-<lang>`.
 - `make_assets.py` imports images into `/assets/img` from the Calcaloo project: approved 3D Lou renders (`design/mascot/reference/3d-png`), the app icon (approved draft D from `design/icon-refresh`; `--icons-only` refreshes favicons, apple-touch-icon and the press-kit icon/banner), store badges (`vendor/badges`) and store screenshots.
 - **Screenshots are the current 1.4.0 (65) set** (`qa-runs/1.4.0-65-store-screenshots/raw/android-phone/<locale>` + the iPhone Today sample). When the final 1.4.0 set is ready: `python3 _src/make_assets.py --shots <set root>` then `python3 _src/build.py`.
 - `og.html` is the source of `/assets/img/og.jpg` (1200×630, headless Chrome screenshot).
@@ -10,3 +10,4 @@
 - Store routing: `/assets/landing.js` keeps the `?ct=` campaign links and the phone redirect of the previous site; `/get/` forwards its query to `/`.
 - Checks: `node --test _src/tests/*.test.js` (store links, ct routing, pages up to date, assets exist, approved mascot only, legal files untouched).
 - SEO beyond title/description/OG (hreflang, sitemap, robots, schema, verification) is owned by the SEO session: `seo_head.html` (canonical, hreflang, Twitter tags, schema.org graph; included by `template.html`), `seo.py` (writes `/sitemap.xml`; run after `build.py`), checks `python3 -m unittest discover -s _src/tests -p 'test_*.py'`.
+- **Every localized page set exists in every site language** (`build.page_sets()` × `LOCALES`): `python3 _src/check_locales.py` checks pages, `<html lang>`, hreflang clusters, language switchers and the sitemap, and fails on a page that belongs to no set. It needs no jinja2 and runs as the pre-push hook `.githooks/pre-push` (enable once per checkout: `git config core.hooksPath .githooks`) and in the unit tests. A new page type goes into `page_sets()` with all locales, or into `SINGLE_LANGUAGE` if it is deliberately English-only.

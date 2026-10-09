@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Render the landing page for every locale: _src/template.html + _src/i18n/<code>.json -> /<path>/index.html.
+"""Render every page set in every site locale: the landing (_src/template.html + i18n/<code>.json) and the
+BMR calculator (_src/calc.html + i18n/calc/<code>.json). _src/check_locales.py enforces that each set covers LOCALES.
 
 Usage: python3 _src/build.py [--check]   (--check fails if a generated page is out of date)
 """
@@ -9,7 +10,6 @@ import sys
 from pathlib import Path
 from urllib.parse import quote
 
-from jinja2 import Environment, FileSystemLoader, StrictUndefined
 
 SRC = Path(__file__).resolve().parent
 SITE = SRC.parent
@@ -32,9 +32,21 @@ LOCALES = [
 CALC_LOCALES = [
     ("en", "/bmr-calculator/", "imperial"),
     ("de", "/de/grundumsatz-rechner/", "metric"),
+    ("es", "/es/calculadora-de-calorias/", "metric"),
+    ("fr", "/fr/calcul-metabolisme-de-base/", "metric"),
+    ("it", "/it/calcolo-metabolismo-basale/", "metric"),
     ("pl", "/pl/kalkulator-zapotrzebowania-kalorycznego/", "metric"),
+    ("pt-BR", "/pt-br/calculadora-tmb/", "metric"),
+    ("ru", "/ru/kalkulyator-kaloriy/", "metric"),
+    ("tr", "/tr/bazal-metabolizma-hesaplama/", "metric"),
 ]
 CALC_FACTORS = ["1.2", "1.375", "1.55", "1.725", "1.9"]
+
+
+def page_sets():
+    """Every localized page set: name -> {locale code: path}."""
+    return {"landing": {code: path for code, path, *_ in LOCALES},
+            "calculator": {code: path for code, path, _ in CALC_LOCALES}}
 CALC_FAQ = ["bmr", "tdee", "formula", "accuracy", "activity"]
 
 
@@ -75,6 +87,9 @@ def load_strings():
 
 
 def render_all():
+    # Imported here so check_locales.py (pre-push hook) runs on a bare python3 without jinja2.
+    from jinja2 import Environment, FileSystemLoader, StrictUndefined
+
     env = Environment(loader=FileSystemLoader(SRC), autoescape=True, undefined=StrictUndefined,
                       trim_blocks=False, lstrip_blocks=False)
     template = env.get_template("template.html")
@@ -84,7 +99,7 @@ def render_all():
     calc_paths = {code: path for code, path, _ in CALC_LOCALES}
     landing = {code: (path, name, og_locale, gp_code) for code, path, name, og_locale, gp_code, _ in LOCALES}
     locales = [{"code": c, "path": p, "name": n, "short": c.split("-")[0]} for c, p, n, *_ in LOCALES]
-    calc_locales = [{"code": c, "path": p, "name": landing[c][1], "short": c} for c, p, _ in CALC_LOCALES]
+    calc_locales = [{"code": c, "path": p, "name": landing[c][1], "short": c.split("-")[0]} for c, p, _ in CALC_LOCALES]
     year = datetime.date.today().year
     pages = {}
     for code, path, name, og_locale, gp_code, sep in LOCALES:
@@ -101,8 +116,9 @@ def render_all():
         home, name, og_locale, gp_code = landing[code]
         html = calc_template.render(
             lang=code, path=path, home=home, base=BASE, og_locale=og_locale, t=strings[code], c=calc_strings[code],
-            locales=calc_locales, current={"name": name, "short": code}, units=units, factors=CALC_FACTORS,
-            faq_keys=CALC_FAQ, links=store_links(f"calc-{code}"),
+            locales=calc_locales, current={"name": name, "short": code.split("-")[0]}, units=units,
+            factors=[f if code == "en" else f.replace(".", ",") for f in CALC_FACTORS],
+            faq_keys=CALC_FAQ, links=store_links(f"calc-{code.lower()}"),
             gp={"code": gp_code, "w": assets["googlePlay"][gp_code][0]}, year=year)
         pages[SITE / path.strip("/") / "index.html"] = html
     return pages
