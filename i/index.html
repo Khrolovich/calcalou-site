@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex">
+  <title>You’re invited to Calcalou</title>
+  <meta name="theme-color" content="#FFE2CF">
+  <meta property="og:title" content="You’re invited to Calcalou">
+  <meta property="og:description" content="Log food on 3 different days, and you both get 7 days of Premium.">
+  <meta property="og:image" content="https://calcalou.com/assets/img/og.jpg">
+  <link rel="icon" href="/assets/img/favicon-48.png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <style>
+    body { margin: 0; min-height: 100vh; background: #FFE2CF; color: #1C1917; text-align: center;
+      font: 400 17px/1.5 ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif; }
+    main { width: min(440px, 100% - 40px); margin: 0 auto; padding: 32px 0 48px; }
+    picture img { width: 180px; height: auto; margin: 0 auto; display: block; }
+    h1 { font-size: 28px; line-height: 1.2; margin: 4px 0 8px; }
+    p { margin: 0 0 24px; color: #57534E; }
+    .card { background: #fff; border-radius: 18px; padding: 16px 20px 20px; margin: 0 0 24px; box-shadow: 0 3px 0 rgba(28,25,23,.18); }
+    .label { font-size: 13px; font-weight: 700; letter-spacing: .4px; text-transform: uppercase; color: #57534E; }
+    .code { display: block; font-size: 34px; font-weight: 800; letter-spacing: 4px; margin: 4px 0 12px; font-variant-numeric: tabular-nums; }
+    button { font: inherit; font-weight: 800; min-height: 44px; padding: 10px 24px; border: 0; border-radius: 16px; background: #1C1917; color: #fff;
+      cursor: pointer; box-shadow: 0 4px 0 #000; }
+    button:active { transform: translateY(3px); box-shadow: 0 1px 0 #000; }
+    ol { text-align: left; margin: 0 0 24px; padding-left: 24px; color: #1C1917; }
+    li { margin: 0 0 6px; }
+    .stores { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 0 0 24px; }
+    .stores img { height: 50px; width: auto; }
+    a { color: #B93D0A; font-weight: 700; }
+    a:focus-visible, button:focus-visible { outline: 3px solid #B93D0A; outline-offset: 3px; }
+    [hidden] { display: none !important; }
+    @media (prefers-reduced-motion: reduce) { button:active { transform: none; } }
+  </style>
+</head>
+<body>
+  <main>
+    <picture><source type="image/avif" srcset="/assets/img/lou-happy-480.avif"><img src="/assets/img/lou-happy-480.webp" alt="Lou, the Calcalou mascot" width="480" height="450"></picture>
+    <h1>A friend invited you to Calcalou</h1>
+    <p>Log food on 3 different days in your first 14 days, and you both get 7 days of Premium.</p>
+    <div class="card" data-invite hidden>
+      <span class="label">Invite code</span>
+      <output class="code" data-code aria-live="polite"></output>
+      <button type="button" data-copy>Copy</button>
+    </div>
+    <ol data-invite hidden>
+      <li>Copy the code.</li>
+      <li>Get Calcalou.</li>
+      <li>Open it and tap <strong>Paste</strong>, or enter the code.</li>
+    </ol>
+    <div class="stores">
+      <a data-store="ios" href="https://apps.apple.com/app/apple-store/id6757434158?pt=128407090&amp;ct=invite&amp;mt=8"><img src="/assets/img/badge-app-store.svg" alt="Download on the App Store" width="150" height="50"></a>
+      <a data-store="android" href="https://play.google.com/store/apps/details?id=com.khrolovich.calorietracker&amp;referrer=utm_source%3Dinvite%26utm_medium%3Dsocial%26utm_campaign%3Dlaunch"><img src="/assets/img/badge-google-play-en-50.webp" srcset="/assets/img/badge-google-play-en-50.webp 1x, /assets/img/badge-google-play-en-100.webp 2x" alt="Get it on Google Play" width="168" height="50"></a>
+    </div>
+    <a href="/">calcalou.com</a>
+  </main>
+  <script>
+    (function () {
+      var code = String(new URLSearchParams(location.search).get('c') || '').toUpperCase().replace(/[^0-9A-Z]/g, '');
+      if (!/^[0-9A-HJKMNP-TV-Z]{6}$/.test(code)) return;
+      document.querySelector('[data-code]').textContent = code.slice(0, 3) + ' ' + code.slice(3);
+      document.querySelectorAll('[data-invite]').forEach(function (el) { el.hidden = false; });
+      var play = document.querySelector('[data-store="android"]');
+      play.href += encodeURIComponent('&invite=' + code);
+      var copy = document.querySelector('[data-copy]');
+      copy.addEventListener('click', function () {
+        (navigator.clipboard ? navigator.clipboard.writeText(code) : Promise.reject()).then(function () { copy.textContent = 'Copied'; }, function () {
+          getSelection().selectAllChildren(document.querySelector('[data-code]'));
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

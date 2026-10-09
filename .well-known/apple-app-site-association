@@ -5,7 +5,9 @@
         "appIDs": ["55A76299CP.com.khrolovich.calorietracker"],
         "components": [
           { "/": "/app", "comment": "Open the app" },
-          { "/": "/app/*", "comment": "/app/add, /app/scan, /app/challenge/<id>" }
+          { "/": "/app/*", "comment": "/app/add, /app/scan, /app/challenge/<id>" },
+          { "/": "/i/", "exclude": true, "comment": "The web invite page that 404.html forwards /i/<CODE> to" },
+          { "/": "/i/*", "comment": "Invite link /i/<CODE>" }
         ]
       }
     ]

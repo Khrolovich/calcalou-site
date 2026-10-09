@@ -132,7 +132,7 @@ class StaticFiles(unittest.TestCase):
         details = aasa["applinks"]["details"]
         self.assertTrue(all(app_id.startswith("55A76299CP.") for d in details for app_id in d["appIDs"]))
         paths = [c["/"] for d in details for c in d["components"]]
-        self.assertTrue(paths and all(p == "/app" or p.startswith("/app/") for p in paths), paths)
+        self.assertTrue(paths and all(p == "/app" or p.startswith(("/app/", "/i/")) for p in paths), paths)
 
     def test_assetlinks_if_present(self):
         target = SITE / ".well-known" / "assetlinks.json"

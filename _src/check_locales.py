@@ -15,7 +15,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build import BASE, LOCALES, SITE, page_sets  # noqa: E402
 
-SINGLE_LANGUAGE = {"/press/", "/privacy/", "/support/", "/delete-account/", "/links/", "/get/", "/404.html"}
+SINGLE_LANGUAGE = {"/press/", "/privacy/", "/support/", "/delete-account/", "/links/", "/get/", "/i/", "/404.html"}
 DEFAULT_LOCALE = "en"
 SITEMAP_NS = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
 
