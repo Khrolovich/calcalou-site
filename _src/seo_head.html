@@ -9,6 +9,7 @@
   <meta property="og:image:alt" content="{{ t['hero.alt'] }}">
 {%- set org = {"@type": "Organization", "@id": base ~ "/#org", "name": "Calcalou", "url": base ~ "/",
     "logo": base ~ "/assets/img/apple-touch-icon.png", "email": "support@calcalou.com",
+    "sameAs": ["https://www.instagram.com/calcalouapp/", "https://www.tiktok.com/@calcalouapp", "https://www.youtube.com/@calcalouapp"],
     "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "email": "support@calcalou.com", "url": base ~ "/support/"}} %}
 {%- set app = {"@type": "MobileApplication", "@id": base ~ "/#app", "name": "Calcalou", "alternateName": "Calcaloo",
     "url": base ~ path, "description": t['meta.description'], "inLanguage": lang,
