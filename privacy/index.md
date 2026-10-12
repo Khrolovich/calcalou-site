@@ -5,7 +5,7 @@ permalink: /privacy/
 
 # Privacy Policy for Calcalou Calorie Tracker
 
-**Last updated:** October 7, 2026
+**Last updated:** October 12, 2026
 
 **Applies to:** Calcalou Calorie Tracker for iOS and Android, version 1.1 and later
 
@@ -22,9 +22,9 @@ controller** for the processing described here.
 
 ## 2. What this policy covers
 
-This policy describes what the app actually does in versions 1.1 to 1.3: what data it
+This policy describes what the app actually does in versions 1.1 to 1.5: what data it
 collects, who it is sent to, why, how long it is kept, and what you can do about it. Where
-version 1.2 or 1.3 differs, we say so. Where a feature is optional, we say so.
+version 1.2, 1.3 or 1.5 differs, we say so. Where a feature is optional, we say so.
 
 Calcalou is a calorie-tracking tool, not a medical device. It does not diagnose, treat, or
 prevent any condition, and its calorie figures — especially AI photo estimates — are
@@ -41,6 +41,7 @@ When you create an account we process:
 - **Display name** — optional; used to personalise the app.
 - **Account identifier (user ID)** — assigned by Firebase Authentication.
 - **Sign-in method** — email/password, Apple, or Google.
+- **Year of birth** — from version 1.5 (see 3.12).
 
 From version 1.2 an account is required to use the app. In version 1.1 you can use the app
 without an account, but then nothing is synced and you lose your data if you remove the app.
@@ -61,7 +62,7 @@ private area of our cloud database (Google Cloud Firestore, `users/{your user ID
 Security rules restrict that area so that only your own signed-in account can read or
 write it.
 
-### 3.3 Food photos and AI recognition (optional, subscribers only)
+### 3.3 Food photos and AI recognition (optional; Premium, or a free scan where offered, see 3.15)
 
 If you use the AI photo scan, the photo you take or pick is sent over an encrypted
 connection to our server function (Firebase Cloud Functions, region `us-central1`), which
@@ -88,11 +89,17 @@ Alongside each scan we store two small records:
   code, and a timestamp. It contains **no user ID and no image**. It is deleted
   automatically by a retention (TTL) policy.
 - **Server logs** (Google Cloud Logging): when a scan is refused or fails, the log line may
-  hold your user ID, the reason (for example no active subscription, with the entitlement
-  names and expiry date) and up to 200 characters of the model's text answer — never the
-  photo. They are kept for 30 days and are not removed when you delete your account.
+  hold your user ID and the reason (for example no active subscription, with the entitlement
+  names and expiry date) — never the photo or text read from it. They are kept for 30 days
+  and are not removed when you delete your account.
 
 From version 1.2 the app asks for your consent before the first photo is sent.
+
+From version 1.5, when you photograph a menu or a nutrition label, the app reads the text
+on your device. On iPhone and iPad with Apple Intelligence the estimate is made on the
+device too and nothing is sent, unless the device cannot handle that text and you choose to
+send it. Otherwise only that text, not the photo, goes to Google Gemini through our server,
+as with meal photos.
 
 In version 1.1, if analytics is switched on (see 3.4), the name of the first recognised food
 is also sent to Firebase Analytics as an event parameter. From version 1.2 it is not: the
@@ -132,9 +139,12 @@ A report about an AI result also carries that result: the recognised foods, the 
 calories and the model's confidence.
 
 The request — the photo included, if you attached one — is stored in our cloud database
-(`support_requests`), where we read it; it is not forwarded by email. We use it only to
-answer you (by email, from support@calcalou.com) and fix the problem. It is deleted when you
-delete your account; you can ask us at any time to delete it sooner.
+(`support_requests`), where we read it; the request itself is not forwarded by email. When
+a support request arrives, a short alert (time, platform, app version, whether you have
+Premium; no message, name or account ID) is emailed to our support inbox through Resend.
+We use the request only to answer you (by email, from support@calcalou.com) and fix the
+problem. It is deleted when you delete your account; you can ask us at any time to delete
+it sooner.
 
 If the app cannot save the request to our database, it opens your own mail app instead,
 with the message and the same technical details prefilled and no photo. That mail goes
@@ -183,6 +193,10 @@ your account user ID, the product purchased, the purchase and renewal or expiry 
 store receipt and basic device and country data. Our server also asks RevenueCat whether
 your account has an active subscription before it accepts an AI scan.
 
+Our server also sends your account ID to RevenueCat to give Premium days earned through
+invites. On iOS, RevenueCat also collects Apple's Ads attribution token so installs from
+Apple Ads campaigns can be counted (no tracking permission is needed for this basic data).
+
 ### 3.10 Remote configuration
 
 The app fetches feature settings from Firebase Remote Config. This request carries app
@@ -217,11 +231,98 @@ Data Access & Devices → Calcalou. Entries Calcalou has already written stay in
 Health Connect until you delete them there; deleting your Calcalou account does not remove
 them.
 
-### 3.12 Children
+### 3.12 Age check and minimum age (version 1.5 and later)
 
-Calcalou is not directed at children. We do not knowingly collect personal data from
-children under 13 (or under the applicable minimum age in your country). If you believe a
-child has given us data, write to support@calcalou.com and we will delete it.
+Calcalou is for people aged 13 or older. Where the law sets a higher age for processing
+personal data without a parent's consent, that age is the minimum: 14 in Austria,
+Bulgaria, Cyprus, Italy, Lithuania and Spain; 15 in Czechia, France, Greece and Slovenia;
+16 in Croatia, Germany, Hungary, Ireland, Liechtenstein, Luxembourg, Malta, the
+Netherlands, Poland, Romania and Slovakia. We take the country of your App Store or Google
+Play account, your device region if that is not available, and 16 if neither is. We may
+change this list when the law changes.
+
+The first time you sign in with version 1.5 the app asks for your date of birth. The check
+runs on your phone; the full date is not sent to us and is not stored. If you are old
+enough, we store your **year of birth** and the result of the check (passed, the minimum
+age that applied, the country, and when) in your account. We use the year to check your
+age and to pre-fill your age in the base-burn calculator.
+
+If you are below the minimum age: when you are signing up, the account is deleted straight
+away and nothing from the age step is kept (if that deletion fails, the next rule
+applies). If you already had an account, we store the result of the check without a year
+of birth, tell you why, and let you correct the date once. Your diary stays available for
+30 days so you can export or delete it; after that the account and all its data are
+deleted automatically. You can delete it sooner in the app or by writing to
+support@calcalou.com.
+
+The check relies on what you tell us; we do not verify your identity. Legal basis: our
+legitimate interest in complying with children's data rules (Art. 6(1)(f)); for the
+calculator, the contract (Art. 6(1)(b)).
+
+### 3.13 Invites (version 1.5 and later)
+
+Every account has an invite code and link (calcalou.com/i/ followed by the code) under
+Profile → Invite friends. When a friend enters your code, our server stores a record that
+links the two accounts: the code, both account IDs, the date and whether the reward was
+given. To decide the reward it counts the days on which your friend logged food; that
+count is never shown to you.
+
+**What the other person sees.** You see that a friend joined, the date, and whether you
+both got the reward. You never see their email, food, goals or progress, and you see their
+first name only if they choose to show it. Your friend sees your first name only if you
+switch on "Show my first name" (off by default). While it is on, everyone who uses your
+code sees that name, including someone who finds a link you posted publicly. Names are
+short (up to 20 letters). Your friend can likewise choose to show you their first name.
+Either of you can turn it off at any time (Profile → Invite friends or Profile → Privacy);
+the name disappears from the other screen right away. The reward never depends on showing
+a name. Legal basis: your consent (Art. 6(1)(a)); for the invite record and reward, the
+contract and our interest in preventing abuse (Art. 6(1)(b), (f)).
+
+**Reading invite links.** On iPhone the app reads the clipboard only when you tap the
+system Paste button. On Android it reads the Google Play install referrer once after
+install and keeps only the invite code in it.
+
+**Rewards.** When a friend logs food on 3 different days within 14 days, you both get 7
+days of Premium through RevenueCat. An inviter can earn at most 3 rewards a day and 10
+Premium rewards a year. We may refuse invites that look abusive (your own code, several
+accounts).
+
+**If you delete your account**, your code is deleted and invite records no longer carry
+your account ID. The other person keeps their row (shown as "Deleted account") and rewards
+already given stay. A name you shared is erased.
+
+### 3.14 Barcode scanning and Open Food Facts (version 1.5 and later)
+
+When you scan a barcode or type its number, the app sends the number to Open Food Facts
+(world.openfoodfacts.org), a community food database run by a French non-profit, to look
+up the product's name and nutrition. Open Food Facts receives the barcode, your IP address
+and our app name and version; it does not receive your account ID or your diary. It is an
+independent controller; see
+[https://world.openfoodfacts.org/privacy](https://world.openfoodfacts.org/privacy).
+Product data is from Open Food Facts contributors under the Open Database Licence (ODbL).
+The camera image is processed on your device and never uploaded (on Android with Google's
+ML Kit libraries, also used to read menu and label text as described in 3.3; they may send
+technical diagnostics such as device model, OS and app version to Google). We do not keep
+the barcodes you look up; if you log the product, it is saved as a normal diary entry.
+
+### 3.15 Free scans
+
+Where free Photo AI scans are offered (3 per account), our server keeps one record per
+account: your account ID, how many free scans you used and when it was created. It is
+deleted with your account.
+
+### 3.16 Device checks (App Check)
+
+To make sure our servers answer only the genuine app, version 1.5 asks Apple (App Attest)
+or Google (Play Integrity), through Firebase App Check, to confirm that a request comes
+from the real app on a real device. The resulting short-lived token is sent with requests
+for invites and free scans. It vouches for the app, not for you, and is not used for
+advertising. Legal basis: security, legitimate interests (Art. 6(1)(f)).
+
+### 3.17 Children
+
+Calcalou is not for children below the minimum age in 3.12. If you believe a child has
+given us data, write to support@calcalou.com and we will delete it.
 
 ## 4. Why we process this data, and on what legal basis
 
@@ -231,7 +332,7 @@ purpose:
 | Purpose | Data | Legal basis (GDPR Art. 6) |
 |---|---|---|
 | Create and run your account, sync your log across devices | Account data, your log | Performance of a contract (Art. 6(1)(b)) |
-| Recognise food in a photo you submit | Photo, locale | Performance of a contract (Art. 6(1)(b)) for the subscription feature; the photo is only ever sent at your request |
+| Recognise food in a photo you submit | Photo (or the text read from a menu or label), locale | Performance of a contract (Art. 6(1)(b)) for the subscription feature; the photo is only ever sent at your request |
 | Enforce the daily scan limit, prevent abuse, keep the service secure | Usage counter, technical log | Legitimate interests (Art. 6(1)(f)) — running the service sustainably |
 | Manage your subscription and restore purchases | Purchase data | Performance of a contract (Art. 6(1)(b)) |
 | Usage analytics | Analytics events | Consent (Art. 6(1)(a)) — the in-app switch |
@@ -240,6 +341,10 @@ purpose:
 | Crash and stability reports | Diagnostic data | Legitimate interests (Art. 6(1)(f)) — keeping the app working |
 | Answering a support request or a report about an AI result | The request described in 3.6 | Performance of a contract (Art. 6(1)(b)); the optional photo only because you attached it |
 | Keeping push delivery possible | Device push token | Legitimate interests (Art. 6(1)(f)); showing notices and reminders needs the OS notification permission |
+| Check your age and keep Calcalou for people old enough | Year of birth, age-check result (3.12) | Legitimate interests (Art. 6(1)(f)) — complying with children's data rules; for the base-burn calculator, performance of a contract (Art. 6(1)(b)) |
+| Invites and rewards | Invite code, invite records, optional first name (3.13) | Performance of a contract and legitimate interests (Art. 6(1)(b), (f)) — preventing abuse; consent (Art. 6(1)(a)) for showing a first name |
+| Look up a barcode | Barcode number, IP address (3.14) | Performance of a contract (Art. 6(1)(b)) — the lookup is only made at your request |
+| Confirm that requests come from the genuine app | Device-check token (3.16) | Legitimate interests (Art. 6(1)(f)) — keeping the service secure |
 
 We do not sell your personal data, and we do not "share" it for cross-context behavioural
 advertising in the sense of US state privacy laws other than through the AdMob processing
@@ -250,13 +355,16 @@ described in 3.8, which you control through the consent form and, on iOS, ATT.
 | Recipient | What they receive | Role | Where |
 |---|---|---|---|
 | Google (Firebase Authentication, Firestore, Cloud Functions, Remote Config, Cloud Messaging) | Account data, your synced log, AI scan requests | Processor | United States (`us-central1`) |
-| Google (Gemini API) | Food photos submitted for recognition | Processor | United States |
+| Google (Gemini API) | Food photos, or text read from a menu or label, submitted for recognition | Processor | United States |
 | Google (Firebase Analytics, Crashlytics) | Analytics events, crash reports | Processor | United States |
 | Google (AdMob) | Advertising identifier, ad interaction data | Independent controller | United States |
 | RevenueCat, Inc. | Subscription status and receipts | Processor | United States |
 | Cloudflare, Inc. (Email Routing) | Anything you email to support@calcalou.com, passed on to our inbox | Processor | United States |
 | Google (Gmail) | Our email replies to you, and anything you email us | Processor | United States |
 | Apple / Google Play | Your payment; we receive only the subscription status | Independent controllers | Per their own policies |
+| Open Food Facts | Barcode you look up, IP address, app name and version | Independent controller | France |
+| Resend | Support-alert emails to our own inbox, with no personal content | Processor | United States |
+| Apple (App Attest) and Google (Play Integrity), via Firebase App Check | Attestation data about the app and device | Independent controllers | Per their own policies |
 
 Beyond this, we disclose data only where the law requires it.
 
@@ -274,13 +382,18 @@ can ask us for details at support@calcalou.com.
 | Account and synced log | Until you delete your account (see section 9) |
 | Local data on your device | Until you delete it in the app or remove the app |
 | Data read from Apple Health or Health Connect | Not stored: used on the device for display or to pre-fill a field, then discarded |
-| Food photos sent for AI recognition | Not stored — held in memory for the duration of the recognition request only |
+| Food photos and menu or label text sent for AI recognition | Not stored — held in memory for the duration of the recognition request only |
 | AI usage counter (`ai_quota`) | 7 days, then deleted automatically |
 | AI technical log (`ai_recognition_logs`) | Deleted automatically by a retention policy; contains no user identifier |
 | Server logs of refused or failed scans | 30 days (Google Cloud Logging) |
 | Analytics events | Per Firebase Analytics retention settings (currently up to 14 months) |
 | Crash reports | Per Crashlytics retention (currently up to 90 days) |
 | Support requests and AI-result reports, an attached photo included | Until you delete your account, or sooner on request |
+| Year of birth and age-check result | Until you delete your account |
+| Under-age refusal marker (account ID, date) | Until the automatic deletion completes |
+| Invite records | Kept without your account ID after you delete your account |
+| Free-scan record | Until you delete your account |
+| Server logs that carry an account ID (reward-grant failures, Premium checks) | 30 days |
 | Subscription records | Kept by RevenueCat and the stores for as long as required for billing and tax purposes |
 
 ## 8. Security
@@ -297,8 +410,10 @@ ask for more data than the app needs.
 
 **In the app:** Profile → Delete Account. This deletes your entries, settings, achievements,
 gamification progress and your support requests (photos included) from our database, deletes your account from Firebase
-Authentication, and clears the data held on the device. For security, you may be asked to
-sign in again first. The action cannot be undone. If our deletion service cannot be
+Authentication, and clears the data held on the device. Deleting your account also deletes
+your year of birth and age check, your free-scan record and your invite code, and detaches
+your invite records as described in 3.13. For security, you may be asked to sign in again
+first. The action cannot be undone. If our deletion service cannot be
 reached, the app still removes your account and the data above, but your support requests
 stay in our database until you ask us to delete them.
 
