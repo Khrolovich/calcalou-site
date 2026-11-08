@@ -12,7 +12,7 @@ from pathlib import Path
 SRC = Path(__file__).resolve().parent.parent
 SITE = SRC.parent
 sys.path.insert(0, str(SRC))
-from build import BASE, CALC_LOCALES, LOCALES  # noqa: E402
+from build import BASE, LOCALES, page_sets  # noqa: E402
 
 
 class LandingHead(unittest.TestCase):
@@ -40,24 +40,39 @@ class LandingHead(unittest.TestCase):
 
 
 class CalculatorHead(unittest.TestCase):
+    def calculator_sets(self):
+        return {name: pages for name, pages in page_sets().items() if name != "landing"}
+
     def test_canonical_hreflang_faq(self):
-        expected = {code: BASE + path for code, path, _ in CALC_LOCALES} | {"x-default": BASE + CALC_LOCALES[0][1]}
-        for code, path, _ in CALC_LOCALES:
-            html = (SITE / path.strip("/") / "index.html").read_text(encoding="utf-8")
-            self.assertEqual(re.findall(r'rel="canonical" href="([^"]+)"', html), [BASE + path])
-            self.assertEqual(dict(re.findall(r'<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"', html)), expected)
-            self.assertIn(f'<html lang="{code}">', html)
-            raw = re.search(r'<script type="application/ld\+json">(.*?)</script>', html, re.S).group(1)
-            faq = json.loads(raw)["@graph"][0]
-            self.assertEqual(faq["@type"], "FAQPage")
-            visible = re.findall(r"<summary>(.*?)</summary>", html)
-            self.assertEqual([q["name"] for q in faq["mainEntity"]], [unescape(v) for v in visible])
+        for name, pages in self.calculator_sets().items():
+            expected = {code: BASE + path for code, path in pages.items()} | {"x-default": BASE + pages["en"]}
+            for code, path in pages.items():
+                with self.subTest(page=path):
+                    html = (SITE / path.strip("/") / "index.html").read_text(encoding="utf-8")
+                    self.assertEqual(re.findall(r'rel="canonical" href="([^"]+)"', html), [BASE + path])
+                    self.assertEqual(dict(re.findall(r'<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"', html)),
+                                     expected)
+                    self.assertIn(f'<html lang="{code}">', html)
+                    raw = re.search(r'<script type="application/ld\+json">(.*?)</script>', html, re.S).group(1)
+                    faq = json.loads(raw)["@graph"][0]
+                    self.assertEqual(faq["@type"], "FAQPage")
+                    visible = re.findall(r"<summary>(.*?)</summary>", html)
+                    self.assertEqual([q["name"] for q in faq["mainEntity"]], [unescape(v) for v in visible])
+                    self.assertLessEqual(len(unescape(re.search(r"<title>(.*?)</title>", html).group(1))), 64)
+                    description = re.search(r'<meta name="description" content="([^"]+)"', html).group(1)
+                    self.assertLessEqual(len(unescape(description)), 160)
+
+    def test_titles_are_unique(self):
+        titles = [re.search(r"<title>(.*?)</title>", (SITE / p.strip("/") / "index.html").read_text()).group(1)
+                  for pages in page_sets().values() for p in pages.values()]
+        self.assertEqual(len(titles), len(set(titles)))
 
     def test_in_sitemap_with_alternates(self):
         sitemap = (SITE / "sitemap.xml").read_text(encoding="utf-8")
-        for _, path, _ in CALC_LOCALES:
-            self.assertIn(f"<loc>{BASE}{path}</loc>", sitemap)
-            self.assertIn(f'hreflang="x-default" href="{BASE}{CALC_LOCALES[0][1]}"', sitemap)
+        for pages in self.calculator_sets().values():
+            for path in pages.values():
+                self.assertIn(f"<loc>{BASE}{path}</loc>", sitemap)
+            self.assertIn(f'hreflang="x-default" href="{BASE}{pages["en"]}"', sitemap)
 
 
 class LocaleCoverage(unittest.TestCase):

@@ -1,0 +1,18 @@
+{
+  "meta.title": "TDEE-Rechner: Gesamtumsatz berechnen | Calcalou",
+  "meta.description": "Kostenloser TDEE-Rechner: Schätze deinen täglichen Gesamtumsatz aus Grundumsatz und Aktivität (Mifflin-St-Jeor). In kg/cm oder lb/ft.",
+  "meta.og_title": "TDEE-Rechner: täglichen Gesamtumsatz berechnen",
+  "meta.og_description": "Schätze deinen täglichen Gesamtumsatz aus Grundumsatz und Aktivitätslevel, in kg/cm oder lb/ft.",
+  "link.footer": "TDEE-Rechner",
+  "h1": "TDEE-Rechner",
+  "h1.sub": "dein täglicher Gesamtumsatz",
+  "lead": "Schätze, wie viele Kalorien du an einem typischen Tag verbrauchst: deinen Grundumsatz in Ruhe plus Alltagsbewegung und Sport.",
+  "form.label": "TDEE-Rechner",
+  "faq.tdee.q": "Was ist der TDEE?",
+  "faq.tdee.a": "TDEE (Total Daily Energy Expenditure) ist dein täglicher Gesamtumsatz: der Grundumsatz in Ruhe plus Alltagsbewegung und Sport. Er wird oft Erhaltungsbedarf genannt, also die Kalorienmenge, mit der dein Gewicht ungefähr gleich bleibt.",
+  "faq.difference.q": "Was ist der Unterschied zwischen Grundumsatz und TDEE?",
+  "faq.difference.a": "Der Grundumsatz ist die Energie, die dein Körper in völliger Ruhe verbraucht. Der TDEE multipliziert ihn mit einem Aktivitätsfaktor von 1,2 bei wenig oder keinem Sport bis 1,9 bei körperlicher Arbeit oder zweimal täglich Training. Er liegt also immer über dem Grundumsatz.",
+  "faq.use.q": "Wofür kann ich meinen TDEE nutzen?",
+  "faq.use.a": "Als Bezugspunkt für ein tägliches Kalorienziel: Isst du etwa deinen TDEE, sind Aufnahme und Verbrauch ungefähr ausgeglichen; weniger ist ein Defizit, mehr ein Überschuss. Es ist eine erste Schätzung, also vergleiche sie über einige Wochen mit der tatsächlichen Entwicklung deines Gewichts.",
+  "cta.title": "Gegessen und verbrannt im Blick – mit Lou."
+}

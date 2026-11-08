@@ -216,6 +216,9 @@
     .out tr.is-current th, .out tr.is-current td { color: var(--accent-hi); }
     .out thead th { color: #B5AFA9; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; border-top: 0; }
     .out .note { margin: 0; color: #B5AFA9; font-size: 14px; }
+    .out .floor, .out .under { margin: 0; color: var(--accent-hi); font-weight: 700; }
+    .others .chips { margin-top: 18px; }
+    .others .chip a { font-weight: 900; font-size: 17px; }
     .method { padding: 56px 0 24px; }
     .method .copy { max-width: 760px; margin: 0 auto; }
     .method p { color: var(--text-2); font-size: 18px; }
@@ -256,7 +259,7 @@
       <div class="wrap">
         <h1><span>Calculadora de calorías</span> <span>metabolismo basal y gasto diario</span></h1>
         <p class="lead">Estima cuántas calorías gasta tu cuerpo en reposo (TMB) y en un día normal (GET) con la fórmula de Mifflin-St Jeor.</p>
-        <form class="calc" data-calc aria-label="Calculadora de TMB y GET" novalidate>
+        <form class="calc" data-calc="bmr" aria-label="Calculadora de TMB y GET" novalidate>
           <div class="row">
             <fieldset>
               <legend>Sexo</legend>
@@ -336,6 +339,16 @@
           <small>Fuente: Mifflin MD, St Jeor ST et al. A new predictive equation for resting energy expenditure in healthy individuals. Am J Clin Nutr. 1990;51(2):241–247. La ecuación se obtuvo a partir de adultos de 19 a 78 años.</small>
           <h2>Úsala en Calcalou</h2>
           <p>Calcalou usa la misma fórmula con el factor sedentario. Guarda ese valor como tu gasto basal, puede sumarlo cada día a las calorías quemadas y añade la actividad que registres, para que veas lo consumido frente a lo quemado y lo que te queda hoy.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="others more" aria-labelledby="others-title">
+      <div class="wrap">
+        <h2 id="others-title" class="center">Más calculadoras</h2>
+        <div class="chips">
+          <div class="chip"><h3><a href="/es/calculadora-tdee/">Calculadora TDEE</a></h3></div>
+          <div class="chip"><h3><a href="/es/calculadora-deficit-calorico/">Calculadora de déficit calórico</a></h3></div>
         </div>
       </div>
     </section>

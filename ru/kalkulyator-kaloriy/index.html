@@ -216,6 +216,9 @@
     .out tr.is-current th, .out tr.is-current td { color: var(--accent-hi); }
     .out thead th { color: #B5AFA9; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; border-top: 0; }
     .out .note { margin: 0; color: #B5AFA9; font-size: 14px; }
+    .out .floor, .out .under { margin: 0; color: var(--accent-hi); font-weight: 700; }
+    .others .chips { margin-top: 18px; }
+    .others .chip a { font-weight: 900; font-size: 17px; }
     .method { padding: 56px 0 24px; }
     .method .copy { max-width: 760px; margin: 0 auto; }
     .method p { color: var(--text-2); font-size: 18px; }
@@ -256,7 +259,7 @@
       <div class="wrap">
         <h1><span>Калькулятор калорий</span> <span>базальный метаболизм и суточная норма</span></h1>
         <p class="lead">Оцените, сколько калорий ваше тело тратит в покое (основной обмен) и за обычный день (суточная норма), по формуле Миффлина — Сан Жеора.</p>
-        <form class="calc" data-calc aria-label="Калькулятор основного обмена и суточной нормы калорий" novalidate>
+        <form class="calc" data-calc="bmr" aria-label="Калькулятор основного обмена и суточной нормы калорий" novalidate>
           <div class="row">
             <fieldset>
               <legend>Пол</legend>
@@ -336,6 +339,16 @@
           <small>Источник: Mifflin MD, St Jeor ST et al. A new predictive equation for resting energy expenditure in healthy individuals. Am J Clin Nutr. 1990;51(2):241–247. Уравнение выведено на данных взрослых от 19 до 78 лет.</small>
           <h2>Используйте в Calcalou</h2>
           <p>Calcalou использует ту же формулу с коэффициентом для сидячего образа жизни. Приложение сохраняет это значение как ваш базовый расход, может каждый день добавлять его в «сожжено», а записанную вами активность учитывает дополнительно. Так вы видите съеденное и сожжённое и то, что осталось на сегодня.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="others more" aria-labelledby="others-title">
+      <div class="wrap">
+        <h2 id="others-title" class="center">Другие калькуляторы</h2>
+        <div class="chips">
+          <div class="chip"><h3><a href="/ru/kalkulyator-tdee/">Калькулятор TDEE</a></h3></div>
+          <div class="chip"><h3><a href="/ru/kalkulyator-deficita-kaloriy/">Калькулятор дефицита калорий</a></h3></div>
         </div>
       </div>
     </section>

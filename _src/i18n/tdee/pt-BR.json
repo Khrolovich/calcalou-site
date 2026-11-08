@@ -1,0 +1,18 @@
+{
+  "meta.title": "Calculadora TDEE: gasto energético total diário | Calcalou",
+  "meta.description": "Calculadora TDEE grátis: estime quantas calorias você gasta por dia com base na sua TMB e no nível de atividade (Mifflin-St Jeor). Em kg/cm ou lb/ft.",
+  "meta.og_title": "Calculadora TDEE: gasto energético total diário",
+  "meta.og_description": "Estime seu gasto energético total diário com base na TMB e no nível de atividade, em kg/cm ou lb/ft.",
+  "link.footer": "Calculadora TDEE",
+  "h1": "Calculadora TDEE",
+  "h1.sub": "seu gasto energético total diário",
+  "lead": "Estime quantas calorias você gasta num dia comum: sua energia em repouso (TMB) mais o movimento do dia a dia e os exercícios.",
+  "form.label": "Calculadora TDEE",
+  "faq.tdee.q": "O que é TDEE?",
+  "faq.tdee.a": "O TDEE (Total Daily Energy Expenditure), ou gasto energético total, estima todas as calorias que você gasta num dia: sua TMB em repouso mais o movimento do dia a dia e os exercícios. Também é chamado de calorias de manutenção, as que mantêm seu peso mais ou menos estável.",
+  "faq.difference.q": "Qual a diferença entre TMB e TDEE?",
+  "faq.difference.a": "A TMB é a energia que seu corpo usa em repouso total. O TDEE multiplica a TMB por um fator de atividade, de 1,2 com pouco ou nenhum exercício a 1,9 com trabalho físico ou treino duas vezes por dia, então é sempre maior que a TMB.",
+  "faq.use.q": "Para que serve meu TDEE?",
+  "faq.use.a": "Como referência para uma meta diária de calorias: comer aproximadamente o seu TDEE equilibra o que você consome e o que gasta; comer menos é um déficit, comer mais é um superávit. É uma estimativa inicial, então compare-a por algumas semanas com o que realmente acontece com seu peso.",
+  "cta.title": "Calorias consumidas e queimadas, contadas com o Lou."
+}

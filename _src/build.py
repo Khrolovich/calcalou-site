@@ -41,13 +41,36 @@ CALC_LOCALES = [
     ("tr", "/tr/bazal-metabolizma-hesaplama/", "metric"),
 ]
 CALC_FACTORS = ["1.2", "1.375", "1.55", "1.725", "1.9"]
+TDEE_PATHS = {
+    "en": "/tdee-calculator/", "de": "/de/tdee-rechner/", "es": "/es/calculadora-tdee/", "fr": "/fr/calcul-tdee/",
+    "it": "/it/calcolo-tdee/", "pl": "/pl/kalkulator-tdee/", "pt-BR": "/pt-br/calculadora-tdee/",
+    "ru": "/ru/kalkulyator-tdee/", "tr": "/tr/tdee-hesaplama/",
+}
+DEFICIT_PATHS = {
+    "en": "/calorie-deficit-calculator/", "de": "/de/kaloriendefizit-rechner/",
+    "es": "/es/calculadora-deficit-calorico/", "fr": "/fr/calcul-deficit-calorique/",
+    "it": "/it/calcolo-deficit-calorico/", "pl": "/pl/kalkulator-deficytu-kalorycznego/",
+    "pt-BR": "/pt-br/calculadora-deficit-calorico/", "ru": "/ru/kalkulyator-deficita-kaloriy/",
+    "tr": "/tr/kalori-acigi-hesaplama/",
+}
+DEFICITS = [250, 500, 750, 1000]
+# Thousands separator as Intl.NumberFormat(lang) prints it in calc.js (es and pl do not group 4-digit numbers).
+CALC_SEP = {"en": ",", "de": ".", "es": "", "fr": "\u202f", "it": ".", "pl": "", "pt-BR": ".", "ru": "\u00a0", "tr": "."}
+# page set: (mode, i18n folder for strings over i18n/calc, store ct prefix, FAQ keys, {code: path})
+CALC_PAGES = {
+    "calculator": ("bmr", None, "calc", ["bmr", "tdee", "formula", "accuracy", "activity"], None),
+    "tdee": ("tdee", "tdee", "calc-tdee", ["tdee", "difference", "activity", "use", "accuracy"], TDEE_PATHS),
+    "deficit": ("deficit", "deficit", "calc-deficit", ["deficit", "maintenance", "size", "floor", "accuracy"],
+                DEFICIT_PATHS),
+}
 
 
 def page_sets():
     """Every localized page set: name -> {locale code: path}."""
-    return {"landing": {code: path for code, path, *_ in LOCALES},
-            "calculator": {code: path for code, path, _ in CALC_LOCALES}}
-CALC_FAQ = ["bmr", "tdee", "formula", "accuracy", "activity"]
+    sets = {"landing": {code: path for code, path, *_ in LOCALES}}
+    for name, (_, _, _, _, paths) in CALC_PAGES.items():
+        sets[name] = paths or {code: path for code, path, _ in CALC_LOCALES}
+    return sets
 
 
 def store_links(ct):
@@ -59,14 +82,14 @@ def store_links(ct):
     }
 
 
-def load_calc_strings():
-    folder = SRC / "i18n" / "calc"
+def load_calc_strings(name="calc"):
+    folder = SRC / "i18n" / name
     english = json.loads((folder / "en.json").read_text(encoding="utf-8"))
     result = {}
     for code, *_ in CALC_LOCALES:
         strings = json.loads((folder / f"{code}.json").read_text(encoding="utf-8"))
         if set(strings) != set(english) or not all(str(v).strip() for v in strings.values()):
-            raise SystemExit(f"calc/{code}.json: keys differ from calc/en.json or a value is empty")
+            raise SystemExit(f"{name}/{code}.json: keys differ from {name}/en.json or a value is empty")
         result[code] = strings
     return result
 
@@ -96,31 +119,39 @@ def render_all():
     assets = json.loads((SRC / "assets.json").read_text(encoding="utf-8"))
     strings = load_strings()
     calc_strings = load_calc_strings()
-    calc_paths = {code: path for code, path, _ in CALC_LOCALES}
+    sets = page_sets()
+    page_strings = {name: {code: {**calc_strings[code], **extra[code]} for code in calc_strings}
+                    for name, extra in ((name, load_calc_strings(folder) if folder else {c: {} for c in calc_strings})
+                                        for name, (_, folder, *_rest) in CALC_PAGES.items())}
     landing = {code: (path, name, og_locale, gp_code) for code, path, name, og_locale, gp_code, _ in LOCALES}
     locales = [{"code": c, "path": p, "name": n, "short": c.split("-")[0]} for c, p, n, *_ in LOCALES]
-    calc_locales = [{"code": c, "path": p, "name": landing[c][1], "short": c.split("-")[0]} for c, p, _ in CALC_LOCALES]
     year = datetime.date.today().year
     pages = {}
     for code, path, name, og_locale, gp_code, sep in LOCALES:
         gp_w, gp_h = assets["googlePlay"][gp_code]
-        calc = {"path": calc_paths[code], "label": calc_strings[code]["link.footer"]} if code in calc_paths else None
+        calcs = [{"path": sets[name][code], "label": page_strings[name][code]["link.footer"]} for name in CALC_PAGES]
         html = template.render(
             lang=code, path=path, base=BASE, og_locale=og_locale, t=strings[code], locales=locales,
             current={"name": name, "short": code.split("-")[0]}, shots=assets["shots"],
-            gp={"code": gp_code, "w": gp_w}, calc=calc,
+            gp={"code": gp_code, "w": gp_w}, calcs=calcs,
             num=lambda n, s=sep: f"{n:,}".replace(",", s), year=year)
         pages[SITE / path.strip("/") / "index.html"] = html
     calc_template = env.get_template("calc.html")
-    for code, path, units in CALC_LOCALES:
-        home, name, og_locale, gp_code = landing[code]
-        html = calc_template.render(
-            lang=code, path=path, home=home, base=BASE, og_locale=og_locale, t=strings[code], c=calc_strings[code],
-            locales=calc_locales, current={"name": name, "short": code.split("-")[0]}, units=units,
-            factors=[f if code == "en" else f.replace(".", ",") for f in CALC_FACTORS],
-            faq_keys=CALC_FAQ, links=store_links(f"calc-{code.lower()}"),
-            gp={"code": gp_code, "w": assets["googlePlay"][gp_code][0]}, year=year)
-        pages[SITE / path.strip("/") / "index.html"] = html
+    units_by_code = {code: units for code, _, units in CALC_LOCALES}
+    for name, (mode, _, ct, faq_keys, _) in CALC_PAGES.items():
+        locales = [{"code": c, "path": p, "name": landing[c][1], "short": c.split("-")[0]} for c, p in sets[name].items()]
+        for code, path in sets[name].items():
+            home, lang_name, og_locale, gp_code = landing[code]
+            html = calc_template.render(
+                mode=mode, lang=code, path=path, home=home, base=BASE, og_locale=og_locale, t=strings[code],
+                c=page_strings[name][code], locales=locales, current={"name": lang_name, "short": code.split("-")[0]},
+                units=units_by_code[code], factors=[f if code == "en" else f.replace(".", ",") for f in CALC_FACTORS],
+                deficits=DEFICITS, num=lambda n, s=CALC_SEP[code]: f"{n:,}".replace(",", s),
+                others=[{"path": sets[o][code], "label": page_strings[o][code]["link.footer"]}
+                        for o in CALC_PAGES if o != name],
+                faq_keys=faq_keys, links=store_links(f"{ct}-{code.lower()}"),
+                gp={"code": gp_code, "w": assets["googlePlay"][gp_code][0]}, year=year)
+            pages[SITE / path.strip("/") / "index.html"] = html
     return pages
 
 

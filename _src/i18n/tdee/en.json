@@ -1,0 +1,18 @@
+{
+  "meta.title": "TDEE Calculator: Total Daily Energy Expenditure | Calcalou",
+  "meta.description": "Free TDEE calculator: estimate how many calories you burn in a day from your BMR and activity level (Mifflin-St Jeor). Metric or imperial units.",
+  "meta.og_title": "TDEE calculator: total daily energy expenditure",
+  "meta.og_description": "Estimate your total daily energy expenditure from your BMR and activity level, in kg/cm or lb/ft.",
+  "link.footer": "TDEE calculator",
+  "h1": "TDEE calculator",
+  "h1.sub": "total daily energy expenditure",
+  "lead": "Estimate how many calories you burn on a typical day: your energy at rest (BMR) plus everyday movement and exercise.",
+  "form.label": "TDEE calculator",
+  "faq.tdee.q": "What is TDEE?",
+  "faq.tdee.a": "TDEE, total daily energy expenditure, estimates all the calories you burn in a day: your BMR at rest plus everyday movement and exercise. It is often called maintenance calories, the intake that keeps your weight about the same.",
+  "faq.difference.q": "What is the difference between BMR and TDEE?",
+  "faq.difference.a": "BMR is the energy your body uses at complete rest. TDEE multiplies BMR by an activity factor, from 1.2 for little or no exercise to 1.9 for a physical job or training twice a day, so it is always higher than BMR.",
+  "faq.use.q": "What can I do with my TDEE?",
+  "faq.use.a": "Use it as a reference point for a daily calorie goal: eating about your TDEE keeps intake and burn roughly balanced, eating less is a deficit and eating more is a surplus. It is a starting estimate, so compare it with how your weight actually changes over a few weeks.",
+  "cta.title": "Track eaten against burned with Lou."
+}

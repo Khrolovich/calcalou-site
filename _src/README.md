@@ -1,7 +1,8 @@
 # Landing page sources (not published: Jekyll skips `_src/`)
 
 - `template.html` + `i18n/<locale>.json` → `python3 _src/build.py` → `/index.html`, `/de/`, `/es/`, `/fr/`, `/it/`, `/pl/`, `/pt-br/`, `/ru/`, `/tr/` (needs `jinja2`).
-- `calc.html` + `i18n/calc/<code>.json` → the BMR/TDEE calculator in every locale (`CALC_LOCALES` in `build.py`: native slug per language, e.g. `/bmr-calculator/`, `/de/grundumsatz-rechner/`). Formula and limits mirror the app's base-burn dialog (`/assets/calc.js`); store links carry `ct=calc-<lang>`.
+- `calc.html` renders three calculator page sets from one component (`CALC_PAGES` in `build.py`): BMR (`i18n/calc/<code>.json`), TDEE and calorie deficit (`i18n/tdee/`, `i18n/deficit/`: page strings layered over `i18n/calc/`). The deficit options stop at 1,000 kcal and flag intake under 1,200 kcal (the app's `goal_limits.dart`); the deficit page needs age 18+.
+- `calc.html` + `i18n/calc/<code>.json` → the BMR calculator in every locale (`CALC_LOCALES` in `build.py`: native slug per language, e.g. `/bmr-calculator/`, `/de/grundumsatz-rechner/`). Formula and limits mirror the app's base-burn dialog (`/assets/calc.js`); store links carry `ct=calc-<lang>`.
 - `make_assets.py` imports images into `/assets/img` from the Calcaloo project: approved 3D Lou renders (`design/mascot/reference/3d-png`), the app icon (approved draft D from `design/icon-refresh`; `--icons-only` refreshes favicons, apple-touch-icon and the press-kit icon/banner), store badges (`vendor/badges`) and store screenshots.
 - **Screenshots are the current 1.4.0 (65) set** (`qa-runs/1.4.0-65-store-screenshots/raw/android-phone/<locale>` + the iPhone Today sample). When the final 1.4.0 set is ready: `python3 _src/make_assets.py --shots <set root>` then `python3 _src/build.py`.
 - `og.html` is the source of `/assets/img/og.jpg` (1200×630, headless Chrome screenshot).

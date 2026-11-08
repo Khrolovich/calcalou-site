@@ -216,6 +216,9 @@
     .out tr.is-current th, .out tr.is-current td { color: var(--accent-hi); }
     .out thead th { color: #B5AFA9; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; border-top: 0; }
     .out .note { margin: 0; color: #B5AFA9; font-size: 14px; }
+    .out .floor, .out .under { margin: 0; color: var(--accent-hi); font-weight: 700; }
+    .others .chips { margin-top: 18px; }
+    .others .chip a { font-weight: 900; font-size: 17px; }
     .method { padding: 56px 0 24px; }
     .method .copy { max-width: 760px; margin: 0 auto; }
     .method p { color: var(--text-2); font-size: 18px; }
@@ -256,7 +259,7 @@
       <div class="wrap">
         <h1><span>Bazal metabolizma hesaplama</span> <span>ve günlük kalori ihtiyacı</span></h1>
         <p class="lead">Vücudunun dinlenirken (bazal metabolizma) ve sıradan bir günde (günlük kalori ihtiyacı) kaç kalori yaktığını Mifflin-St Jeor formülüyle tahmin et.</p>
-        <form class="calc" data-calc aria-label="Bazal metabolizma ve günlük kalori ihtiyacı hesaplama" novalidate>
+        <form class="calc" data-calc="bmr" aria-label="Bazal metabolizma ve günlük kalori ihtiyacı hesaplama" novalidate>
           <div class="row">
             <fieldset>
               <legend>Cinsiyet</legend>
@@ -336,6 +339,16 @@
           <small>Kaynak: Mifflin MD, St Jeor ST et al. A new predictive equation for resting energy expenditure in healthy individuals. Am J Clin Nutr. 1990;51(2):241–247. Denklem, 19–78 yaş arası yetişkinlerin verileriyle geliştirilmiştir.</small>
           <h2>Calcalou&#39;da kullan</h2>
           <p>Calcalou aynı formülü hareketsiz katsayısıyla kullanır. Bu değeri temel yakımın olarak kaydeder, her gün yakılan kalorilere ekleyebilir ve kaydettiğin aktiviteyi de buna ekler. Böylece yenen ve yakılan kaloriyi, bugün ne kaldığını görürsün.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="others more" aria-labelledby="others-title">
+      <div class="wrap">
+        <h2 id="others-title" class="center">Diğer hesaplayıcılar</h2>
+        <div class="chips">
+          <div class="chip"><h3><a href="/tr/tdee-hesaplama/">TDEE hesaplama</a></h3></div>
+          <div class="chip"><h3><a href="/tr/kalori-acigi-hesaplama/">Kalori açığı hesaplama</a></h3></div>
         </div>
       </div>
     </section>

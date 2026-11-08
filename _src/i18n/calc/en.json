@@ -66,5 +66,6 @@
   "faq.activity.q": "Which activity level should I choose?",
   "faq.activity.a": "Pick the level that matches a typical week, not your most active one. If you log workouts separately, as in Calcalou, use the sedentary value so exercise is not counted twice.",
   "cta.title": "Count eaten against burned with Lou.",
-  "form.inches": "Inches"
+  "form.inches": "Inches",
+  "more.title": "More calculators"
 }

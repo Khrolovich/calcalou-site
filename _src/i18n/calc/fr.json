@@ -66,5 +66,6 @@
   "faq.activity.q": "Quel niveau d'activité choisir ?",
   "faq.activity.a": "Choisissez le niveau qui correspond à une semaine type, pas à la plus active. Si vous saisissez vos entraînements à part, comme dans Calcalou, prenez la valeur sédentaire pour ne pas compter le sport deux fois.",
   "cta.title": "Calories absorbées et brûlées, comptées avec Lou.",
-  "form.inches": "Pouces"
+  "form.inches": "Pouces",
+  "more.title": "Autres calculateurs"
 }

@@ -9,7 +9,7 @@ import sys
 from datetime import date
 from xml.sax.saxutils import quoteattr
 
-from build import BASE, CALC_LOCALES, LOCALES, SITE
+from build import BASE, SITE, page_sets
 
 OTHER_PAGES = [("/press/", "press/index.html"), ("/privacy/", "privacy/index.md"),
                ("/support/", "support/index.md"), ("/delete-account/", "delete-account/index.html")]
@@ -34,7 +34,7 @@ def cluster(pages):
 
 
 def render():
-    urls = cluster(LOCALES) + cluster(CALC_LOCALES)
+    urls = [url for pages in page_sets().values() for url in cluster(list(pages.items()))]
     urls += [f"  <url>\n    <loc>{BASE}{path}</loc>\n    <lastmod>{lastmod(src)}</lastmod>\n  </url>"
              for path, src in OTHER_PAGES if (SITE / src).exists()]
     return ('<?xml version="1.0" encoding="UTF-8"?>\n'

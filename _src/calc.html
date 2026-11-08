@@ -74,6 +74,9 @@
     .out tr.is-current th, .out tr.is-current td { color: var(--accent-hi); }
     .out thead th { color: #B5AFA9; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; border-top: 0; }
     .out .note { margin: 0; color: #B5AFA9; font-size: 14px; }
+    .out .floor, .out .under { margin: 0; color: var(--accent-hi); font-weight: 700; }
+    .others .chips { margin-top: 18px; }
+    .others .chip a { font-weight: 900; font-size: 17px; }
     .method { padding: 56px 0 24px; }
     .method .copy { max-width: 760px; margin: 0 auto; }
     .method p { color: var(--text-2); font-size: 18px; }
@@ -108,7 +111,7 @@
       <div class="wrap">
         <h1><span>{{ c['h1'] }}</span> <span>{{ c['h1.sub'] }}</span></h1>
         <p class="lead">{{ c['lead'] }}</p>
-        <form class="calc" data-calc aria-label="{{ c['form.label'] }}" novalidate>
+        <form class="calc" data-calc="{{ mode }}" aria-label="{{ c['form.label'] }}" novalidate>
           <div class="row">
             <fieldset>
               <legend>{{ c['form.sex'] }}</legend>
@@ -147,8 +150,36 @@
 {%- endfor %}
             </select>
           </label>
+{%- if mode == "deficit" %}
+          <label class="field"><span>{{ c['form.deficit'] }}</span>
+            <select name="deficit">
+{%- for d in deficits %}
+              <option value="{{ d }}"{% if d == 500 %} selected{% endif %}>{{ c['deficit.option']|replace('{n}', num(d)) }}</option>
+{%- endfor %}
+            </select>
+          </label>
+{%- endif %}
           <button class="btn" type="submit" disabled>{{ c['form.submit'] }}</button>
           <div>
+{%- if mode == "deficit" %}
+            <div class="out" data-calc-result tabindex="-1" role="region" aria-label="{{ c['result.intake'] }}" hidden>
+              <div class="display"><b data-out="intake"></b><small>{{ c['result.intake'] }} · {{ c['result.unit'] }}</small></div>
+              <ul class="readouts">
+                <li><i class="dot-burned"></i>{{ c['result.maintenance'] }}<b data-out="tdee"></b></li>
+                <li><i class="dot-eaten"></i>{{ c['result.deficit'] }}<b data-out="deficit"></b></li>
+              </ul>
+              <div aria-live="polite"><p class="floor" data-floor hidden>{{ c['result.floor'] }}</p></div>
+              <table>
+                <caption>{{ c['table.caption'] }}</caption>
+                <thead><tr><th scope="col">{{ c['table.level'] }}</th><th scope="col" style="text-align:right">{{ c['table.kcal'] }}</th></tr></thead>
+                <tbody>
+{%- for d in deficits %}
+                  <tr data-deficit="{{ d }}"><th scope="row">{{ c['table.row']|replace('{n}', num(d)) }}</th><td><span data-intake></span> <span class="under" data-under hidden>({{ c['table.under'] }})</span></td></tr>
+{%- endfor %}
+                </tbody>
+              </table>
+              <p class="note">{{ c['result.note'] }}</p>
+{%- else %}
             <div class="out" data-calc-result tabindex="-1" role="region" aria-label="{{ c['result.tdee'] }}" hidden>
               <div class="display"><b data-out="tdee"></b><small>{{ c['result.tdee'] }} · {{ c['result.unit'] }}</small></div>
               <ul class="readouts">
@@ -165,6 +196,7 @@
                 </tbody>
               </table>
               <p class="note">{{ c['result.note'] }}</p>
+{%- endif %}
             </div>
           </div>
         </form>
@@ -184,6 +216,17 @@
           <small>{{ c['method.source'] }}</small>
           <h2>{{ c['app.title'] }}</h2>
           <p>{{ c['app.text'] }}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="others more" aria-labelledby="others-title">
+      <div class="wrap">
+        <h2 id="others-title" class="center">{{ c['more.title'] }}</h2>
+        <div class="chips">
+{%- for o in others %}
+          <div class="chip"><h3><a href="{{ o.path }}">{{ o.label }}</a></h3></div>
+{%- endfor %}
         </div>
       </div>
     </section>

@@ -1,0 +1,18 @@
+{
+  "meta.title": "TDEE Hesaplama: Günlük Toplam Enerji Harcaması | Calcalou",
+  "meta.description": "Ücretsiz TDEE hesaplama: bazal metabolizmana ve aktivite düzeyine göre günde kaç kalori yaktığını tahmin et (Mifflin-St Jeor). kg/cm veya lb/ft ile.",
+  "meta.og_title": "TDEE hesaplama: günlük toplam enerji harcaması",
+  "meta.og_description": "Bazal metabolizmana ve aktivite düzeyine göre günlük toplam enerji harcamanı tahmin et, kg/cm veya lb/ft ile.",
+  "link.footer": "TDEE hesaplama",
+  "h1": "TDEE hesaplama",
+  "h1.sub": "günlük toplam enerji harcaman",
+  "lead": "Sıradan bir günde kaç kalori yaktığını tahmin et: dinlenirkenki enerjin (bazal metabolizma) artı gündelik hareket ve egzersiz.",
+  "form.label": "TDEE hesaplama",
+  "faq.tdee.q": "TDEE nedir?",
+  "faq.tdee.a": "TDEE (Total Daily Energy Expenditure), yani günlük toplam enerji harcaması, bir günde yaktığın tüm kalorilerin tahminidir: dinlenirkenki bazal metabolizma artı gündelik hareket ve egzersiz. Kilonu aşağı yukarı aynı tutan kalori miktarı olduğu için koruma kalorisi de denir.",
+  "faq.difference.q": "Bazal metabolizma ile TDEE arasındaki fark nedir?",
+  "faq.difference.a": "Bazal metabolizma, vücudunun tam dinlenme halinde kullandığı enerjidir. TDEE bunu, az ya da hiç egzersiz için 1,2'den bedensel iş ya da günde iki antrenman için 1,9'a kadar bir aktivite katsayısıyla çarpar; bu yüzden her zaman bazal metabolizmadan yüksektir.",
+  "faq.use.q": "TDEE'mi ne için kullanabilirim?",
+  "faq.use.a": "Günlük kalori hedefi için bir referans olarak: yaklaşık TDEE'n kadar yemek aldığın ve yaktığın kaloriyi dengeler; daha az yemek kalori açığı, daha fazla yemek kalori fazlası demektir. Bu bir başlangıç tahmini; birkaç hafta boyunca kilonun gerçekte nasıl değiştiğiyle karşılaştır.",
+  "cta.title": "Yenen ve yakılan kaloriler, Lou ile."
+}

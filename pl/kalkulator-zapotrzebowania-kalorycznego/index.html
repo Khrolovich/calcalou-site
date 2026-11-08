@@ -216,6 +216,9 @@
     .out tr.is-current th, .out tr.is-current td { color: var(--accent-hi); }
     .out thead th { color: #B5AFA9; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; border-top: 0; }
     .out .note { margin: 0; color: #B5AFA9; font-size: 14px; }
+    .out .floor, .out .under { margin: 0; color: var(--accent-hi); font-weight: 700; }
+    .others .chips { margin-top: 18px; }
+    .others .chip a { font-weight: 900; font-size: 17px; }
     .method { padding: 56px 0 24px; }
     .method .copy { max-width: 760px; margin: 0 auto; }
     .method p { color: var(--text-2); font-size: 18px; }
@@ -256,7 +259,7 @@
       <div class="wrap">
         <h1><span>Kalkulator zapotrzebowania kalorycznego</span> <span>PPM i CPM</span></h1>
         <p class="lead">Oszacuj, ile kalorii Twoje ciało spala w spoczynku (PPM) i w typowym dniu (CPM), według wzoru Mifflina-St Jeora.</p>
-        <form class="calc" data-calc aria-label="Kalkulator PPM i CPM" novalidate>
+        <form class="calc" data-calc="bmr" aria-label="Kalkulator PPM i CPM" novalidate>
           <div class="row">
             <fieldset>
               <legend>Płeć</legend>
@@ -336,6 +339,16 @@
           <small>Źródło: Mifflin MD, St Jeor ST i wsp. A new predictive equation for resting energy expenditure in healthy individuals. Am J Clin Nutr. 1990;51(2):241–247. Wzór opracowano na podstawie badań z udziałem dorosłych w wieku 19–78 lat.</small>
           <h2>Użyj w Calcalou</h2>
           <p>Calcalou używa tego samego wzoru ze współczynnikiem dla trybu siedzącego. Zapisuje tę wartość jako Twoje spalanie bazowe, może codziennie dodawać ją do spalonych i dolicza zapisaną aktywność. Widzisz zjedzone i spalone kalorie oraz to, co zostało na dziś.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="others more" aria-labelledby="others-title">
+      <div class="wrap">
+        <h2 id="others-title" class="center">Więcej kalkulatorów</h2>
+        <div class="chips">
+          <div class="chip"><h3><a href="/pl/kalkulator-tdee/">Kalkulator TDEE</a></h3></div>
+          <div class="chip"><h3><a href="/pl/kalkulator-deficytu-kalorycznego/">Kalkulator deficytu kalorycznego</a></h3></div>
         </div>
       </div>
     </section>

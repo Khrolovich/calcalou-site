@@ -1,0 +1,18 @@
+{
+  "meta.title": "Calcolo TDEE: dispendio energetico totale | Calcalou",
+  "meta.description": "Calcolo TDEE gratuito: stima quante calorie consumi in un giorno partendo dal metabolismo basale e dal livello di attività (Mifflin-St Jeor).",
+  "meta.og_title": "Calcolo TDEE: dispendio energetico giornaliero totale",
+  "meta.og_description": "Stima il tuo dispendio energetico giornaliero totale dal metabolismo basale e dal livello di attività, in kg/cm o lb/ft.",
+  "link.footer": "Calcolo TDEE",
+  "h1": "Calcolo TDEE",
+  "h1.sub": "il tuo dispendio energetico giornaliero",
+  "lead": "Stima quante calorie consumi in una giornata tipo: l'energia a riposo (metabolismo basale) più il movimento quotidiano e l'attività fisica.",
+  "form.label": "Calcolo TDEE",
+  "faq.tdee.q": "Che cos'è il TDEE?",
+  "faq.tdee.a": "Il TDEE (Total Daily Energy Expenditure), o dispendio energetico totale, stima tutte le calorie che consumi in un giorno: il metabolismo basale a riposo più il movimento quotidiano e l'attività fisica. Si chiama anche fabbisogno di mantenimento, cioè le calorie che mantengono il tuo peso più o meno stabile.",
+  "faq.difference.q": "Che differenza c'è tra metabolismo basale e TDEE?",
+  "faq.difference.a": "Il metabolismo basale è l'energia che il tuo corpo usa a riposo completo. Il TDEE lo moltiplica per un fattore di attività, da 1,2 con poco o nessun esercizio a 1,9 con un lavoro fisico o allenamento due volte al giorno, quindi è sempre più alto.",
+  "faq.use.q": "A cosa serve il mio TDEE?",
+  "faq.use.a": "Come riferimento per un obiettivo calorico giornaliero: mangiare circa quanto il tuo TDEE bilancia calorie assunte e consumate; mangiare meno è un deficit, mangiare di più un surplus. È una stima iniziale, quindi confrontala per qualche settimana con come cambia davvero il tuo peso.",
+  "cta.title": "Calorie mangiate e bruciate, contate con Lou."
+}

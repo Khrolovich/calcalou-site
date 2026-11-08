@@ -8,6 +8,10 @@
   var ACTIVITY = [1.2, 1.375, 1.55, 1.725, 1.9];
   var CM_PER_IN = 2.54;
   var KG_PER_LB = 0.45359237;
+  // calcaloo-app lib/core/goals/goal_limits.dart: maxDailyDeficit and minDailyIntake (NHLBI 1998).
+  var MAX_DEFICIT = 1000;
+  var MIN_INTAKE = 1200;
+  var DEFICITS = [250, 500, 750, 1000];
 
   function parseNumber(raw) {
     var text = String(raw == null ? '' : raw).trim().replace(',', '.');
@@ -33,11 +37,11 @@
     };
   }
 
-  function calculate(input) {
+  function calculate(input, minAge) {
     var age = /^\s*\d+\s*$/.test(String(input.age == null ? '' : input.age)) ? Number(input.age) : null;
     var m = toMetric(input);
     var errors = [];
-    if (age == null || age < 13 || age > 120) errors.push('age');
+    if (age == null || age < (minAge || 13) || age > 120) errors.push('age');
     if (m.heightCm == null || m.heightCm < 100 || m.heightCm > 250) errors.push('height');
     if (m.weightKg == null || m.weightKg < 30 || m.weightKg > 300) errors.push('weight');
     if (input.sex !== 'male' && input.sex !== 'female') errors.push('sex');
@@ -50,12 +54,20 @@
     };
   }
 
+  function deficitPlan(tdee, deficit) {
+    var applied = Math.min(Math.max(deficit, 0), MAX_DEFICIT, tdee);
+    var intake = tdee - applied;
+    return { deficit: applied, intake: intake, belowFloor: intake < MIN_INTAKE };
+  }
+
   function init(doc, win) {
     var form = doc && doc.querySelector('[data-calc]');
     if (!form) return;
     var fmt = new win.Intl.NumberFormat(doc.documentElement.lang);
     var out = doc.querySelector('[data-calc-result]');
+    var mode = form.getAttribute('data-calc');
     var rows = doc.querySelectorAll('[data-level]');
+    var deficitRows = doc.querySelectorAll('[data-deficit]');
     var activity = form.elements.activity;
 
     function value(name) {
@@ -79,7 +91,7 @@
         sex: value('sex'), age: value('age'), units: value('units'),
         heightCm: value('heightCm'), weightKg: value('weightKg'),
         heightFt: value('heightFt'), heightIn: value('heightIn'), weightLb: value('weightLb')
-      });
+      }, mode === 'deficit' ? 18 : 13);
       var fields = { age: ['age'], height: ['heightCm', 'heightFt', 'heightIn'], weight: ['weightKg', 'weightLb'] };
       Object.keys(fields).forEach(function (key) {
         var bad = r.errors.indexOf(key) >= 0;
@@ -95,7 +107,23 @@
       var ok = !r.errors.length;
       out.hidden = !ok;
       if (!ok) return;
-      out.querySelector('[data-out="tdee"]').textContent = fmt.format(r.levels[Number(value('activity'))]);
+      var tdee = r.levels[Number(value('activity'))];
+      if (mode === 'deficit') {
+        var plan = deficitPlan(tdee, Number(value('deficit')));
+        out.querySelector('[data-out="intake"]').textContent = fmt.format(plan.intake);
+        out.querySelector('[data-out="tdee"]').textContent = fmt.format(tdee);
+        out.querySelector('[data-out="deficit"]').textContent = fmt.format(plan.deficit);
+        out.querySelector('[data-floor]').hidden = !plan.belowFloor;
+        for (var d = 0; d < deficitRows.length; d++) {
+          var row = deficitRows[d];
+          var option = deficitPlan(tdee, Number(row.getAttribute('data-deficit')));
+          row.querySelector('[data-intake]').textContent = fmt.format(option.intake);
+          row.querySelector('[data-under]').hidden = !option.belowFloor;
+          row.classList.toggle('is-current', String(option.deficit) === value('deficit'));
+        }
+        return;
+      }
+      out.querySelector('[data-out="tdee"]').textContent = fmt.format(tdee);
       out.querySelector('[data-out="bmr"]').textContent = fmt.format(r.bmr);
       out.querySelector('[data-out="base"]').textContent = fmt.format(r.levels[0]);
       for (var i = 0; i < rows.length; i++) {
@@ -119,5 +147,8 @@
     render(false);
   }
 
-  return { ACTIVITY: ACTIVITY, parseNumber: parseNumber, bmr: bmr, toMetric: toMetric, calculate: calculate, init: init };
+  return {
+    ACTIVITY: ACTIVITY, MAX_DEFICIT: MAX_DEFICIT, MIN_INTAKE: MIN_INTAKE, DEFICITS: DEFICITS,
+    parseNumber: parseNumber, bmr: bmr, toMetric: toMetric, calculate: calculate, deficitPlan: deficitPlan, init: init
+  };
 });

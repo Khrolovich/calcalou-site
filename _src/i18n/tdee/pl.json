@@ -1,0 +1,18 @@
+{
+  "meta.title": "Kalkulator TDEE: całkowite zużycie energii | Calcalou",
+  "meta.description": "Darmowy kalkulator TDEE: oszacuj, ile kalorii spalasz w ciągu dnia, na podstawie PPM i poziomu aktywności (wzór Mifflina-St Jeora). W kg/cm lub lb/ft.",
+  "meta.og_title": "Kalkulator TDEE: całkowite dzienne zużycie energii",
+  "meta.og_description": "Oszacuj całkowite dzienne zużycie energii na podstawie PPM i poziomu aktywności, w kg/cm lub lb/ft.",
+  "link.footer": "Kalkulator TDEE",
+  "h1": "Kalkulator TDEE",
+  "h1.sub": "całkowite dzienne zużycie energii",
+  "lead": "Oszacuj, ile kalorii spalasz w typowym dniu: energię w spoczynku (PPM) plus codzienny ruch i ćwiczenia.",
+  "form.label": "Kalkulator TDEE",
+  "faq.tdee.q": "Czym jest TDEE?",
+  "faq.tdee.a": "TDEE (Total Daily Energy Expenditure), czyli całkowita przemiana materii (CPM), to szacunek wszystkich kalorii spalanych w ciągu dnia: PPM w spoczynku plus codzienny ruch i ćwiczenia. Często nazywa się go zapotrzebowaniem na utrzymanie wagi.",
+  "faq.difference.q": "Czym różni się PPM od TDEE?",
+  "faq.difference.a": "PPM to energia, którą ciało zużywa w całkowitym spoczynku. TDEE to PPM pomnożona przez współczynnik aktywności, od 1,2 przy małej liczbie ćwiczeń do 1,9 przy pracy fizycznej lub treningu dwa razy dziennie, więc zawsze jest wyższy niż PPM.",
+  "faq.use.q": "Do czego mogę użyć swojego TDEE?",
+  "faq.use.a": "Jako punktu odniesienia dla dziennego celu kalorycznego: jedząc mniej więcej tyle, ile wynosi TDEE, równoważysz spożycie i spalanie; mniej to deficyt, więcej to nadwyżka. To wstępny szacunek, więc porównuj go przez kilka tygodni z tym, jak faktycznie zmienia się Twoja waga.",
+  "cta.title": "Zjedzone kontra spalone – licz z Lou."
+}

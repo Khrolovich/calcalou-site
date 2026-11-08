@@ -216,6 +216,9 @@
     .out tr.is-current th, .out tr.is-current td { color: var(--accent-hi); }
     .out thead th { color: #B5AFA9; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; border-top: 0; }
     .out .note { margin: 0; color: #B5AFA9; font-size: 14px; }
+    .out .floor, .out .under { margin: 0; color: var(--accent-hi); font-weight: 700; }
+    .others .chips { margin-top: 18px; }
+    .others .chip a { font-weight: 900; font-size: 17px; }
     .method { padding: 56px 0 24px; }
     .method .copy { max-width: 760px; margin: 0 auto; }
     .method p { color: var(--text-2); font-size: 18px; }
@@ -256,7 +259,7 @@
       <div class="wrap">
         <h1><span>Calcolo del metabolismo basale</span> <span>e del fabbisogno calorico</span></h1>
         <p class="lead">Stima quante calorie consuma il tuo corpo a riposo (metabolismo basale) e in una giornata tipo (fabbisogno calorico) con la formula di Mifflin-St Jeor.</p>
-        <form class="calc" data-calc aria-label="Calcolo del metabolismo basale e del fabbisogno calorico" novalidate>
+        <form class="calc" data-calc="bmr" aria-label="Calcolo del metabolismo basale e del fabbisogno calorico" novalidate>
           <div class="row">
             <fieldset>
               <legend>Sesso</legend>
@@ -336,6 +339,16 @@
           <small>Fonte: Mifflin MD, St Jeor ST et al. A new predictive equation for resting energy expenditure in healthy individuals. Am J Clin Nutr. 1990;51(2):241–247. L&#39;equazione è stata ricavata da adulti tra 19 e 78 anni.</small>
           <h2>Usalo in Calcalou</h2>
           <p>Calcalou usa la stessa formula con il fattore sedentario. Salva quel valore come il tuo consumo base, può aggiungerlo ogni giorno alle calorie bruciate e conta in più l&#39;attività che registri: così vedi calorie mangiate e bruciate e cosa resta per oggi.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="others more" aria-labelledby="others-title">
+      <div class="wrap">
+        <h2 id="others-title" class="center">Altri calcolatori</h2>
+        <div class="chips">
+          <div class="chip"><h3><a href="/it/calcolo-tdee/">Calcolo TDEE</a></h3></div>
+          <div class="chip"><h3><a href="/it/calcolo-deficit-calorico/">Calcolo deficit calorico</a></h3></div>
         </div>
       </div>
     </section>
