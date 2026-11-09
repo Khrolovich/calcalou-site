@@ -1,6 +1,6 @@
 {
   "meta.title": "Bazal Metabolizma ve Günlük Kalori Hesaplama | Calcalou",
-  "meta.description": "Yaş, boy, kilo ve aktiviteye göre bazal metabolizma hızını (BMH) ve günlük kalori ihtiyacını (TDEE) tahmin et. Ücretsiz, kayıt gerekmez.",
+  "meta.description": "Yaş, boy, kilo ve aktiviteye göre bazal metabolizma hızını (BMH) ve günlük kalori ihtiyacını tahmin et. Ücretsiz, kayıt gerekmez.",
   "meta.og_title": "Bazal metabolizma ve günlük kalori ihtiyacı hesaplama",
   "meta.og_description": "Bazal metabolizmanı ve kilonu korumak için gereken kaloriyi Mifflin-St Jeor formülüyle tahmin et, kg/cm veya lb/ft ile.",
   "link.footer": "Bazal metabolizma hesaplama",
@@ -67,5 +67,6 @@
   "faq.activity.a": "En hareketli haftanı değil, sıradan bir haftanı yansıtan düzeyi seç. Antrenmanlarını Calcalou'daki gibi ayrıca kaydediyorsan, egzersiz iki kez sayılmasın diye hareketsiz değerini kullan.",
   "cta.title": "Yenen ve yakılan kaloriler, Lou ile.",
   "form.inches": "İnç",
-  "more.title": "Diğer hesaplayıcılar"
+  "more.title": "Diğer hesaplayıcılar",
+  "tdee.prompt": "Günlük toplam enerji harcamanı ayrıntılı görmek için {link} sayfasını kullan."
 }

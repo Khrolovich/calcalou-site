@@ -77,6 +77,11 @@ test('calculator pages: store links carry the set ct + lang, no landing.js, asse
       for (const other of Object.keys(CT).filter((o) => o !== name)) {
         assert.ok(html.includes(`href="${SETS[other][lang]}"`), `${page}: no link to the ${other} calculator`);
       }
+      if (name === 'calculator') {
+        assert.ok(!/TDEE/.test(html.match(/<title>(.*?)<\/title>/)[1]), `${page}: BMR title competes with the TDEE page`);
+        assert.ok(!/TDEE/.test(html.match(/<meta name="description" content="([^"]*)"/)[1]), `${page}: BMR description says TDEE`);
+        assert.ok(new RegExp(`<p>[^<]*<a href="${SETS.tdee[lang]}">`).test(html), `${page}: no in-text link to the TDEE page`);
+      }
       if (name === 'deficit') {
         for (const d of C.DEFICITS) assert.ok(html.includes(`data-deficit="${d}"`), `${page}: row ${d}`);
         assert.ok(html.includes('data-floor hidden'), `${page}: floor warning`);

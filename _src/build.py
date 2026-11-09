@@ -149,6 +149,7 @@ def render_all():
                 deficits=DEFICITS, num=lambda n, s=CALC_SEP[code]: f"{n:,}".replace(",", s),
                 others=[{"path": sets[o][code], "label": page_strings[o][code]["link.footer"]}
                         for o in CALC_PAGES if o != name],
+                tdee_page={"path": sets["tdee"][code], "label": page_strings["tdee"][code]["link.footer"]},
                 faq_keys=faq_keys, links=store_links(f"{ct}-{code.lower()}"),
                 gp={"code": gp_code, "w": assets["googlePlay"][gp_code][0]}, year=year)
             pages[SITE / path.strip("/") / "index.html"] = html

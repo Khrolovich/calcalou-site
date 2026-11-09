@@ -1,6 +1,6 @@
 {
-  "meta.title": "Calculadora TMB e de calorias diárias (TDEE) | Calcalou",
-  "meta.description": "Estime sua taxa metabólica basal (TMB) e seu gasto calórico diário (TDEE) com base em idade, altura, peso e atividade. Grátis, sem cadastro.",
+  "meta.title": "Calculadora TMB: taxa metabólica basal | Calcalou",
+  "meta.description": "Estime sua taxa metabólica basal (TMB) e seu gasto calórico diário com base em idade, altura, peso e atividade. Grátis, sem cadastro.",
   "meta.og_title": "Calculadora de TMB e gasto calórico diário",
   "meta.og_description": "Estime sua TMB e suas calorias de manutenção com a fórmula de Mifflin-St Jeor, em kg/cm ou lb/ft.",
   "link.footer": "Calculadora TMB",
@@ -67,5 +67,6 @@
   "faq.activity.a": "Escolha o nível de uma semana comum, não da mais ativa. Se você registra os treinos à parte, como no Calcalou, use o valor sedentário para não contar o exercício duas vezes.",
   "cta.title": "Calorias consumidas e queimadas, contadas com o Lou.",
   "form.inches": "Polegadas",
-  "more.title": "Mais calculadoras"
+  "more.title": "Mais calculadoras",
+  "tdee.prompt": "Para ver seu gasto energético total diário em detalhe, use a {link}."
 }

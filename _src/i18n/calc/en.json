@@ -1,13 +1,13 @@
 {
-  "meta.title": "BMR Calculator: Daily Calorie Needs (TDEE) | Calcalou",
-  "meta.description": "Free BMR and TDEE calculator (Mifflin-St Jeor). Enter age, height and weight in metric or imperial units to estimate your BMR and maintenance calories.",
+  "meta.title": "BMR Calculator: Calories Burned at Rest | Calcalou",
+  "meta.description": "Free BMR calculator (Mifflin-St Jeor). Enter age, height and weight in metric or imperial units to estimate your BMR and maintenance calories.",
   "meta.og_title": "BMR and daily calorie needs calculator",
   "meta.og_description": "Estimate your BMR and maintenance calories with the Mifflin-St Jeor formula, in kg/cm or lb/ft.",
   "link.footer": "BMR calculator",
   "h1": "BMR calculator",
   "h1.sub": "and daily calorie needs",
   "lead": "Estimate how many calories your body burns at rest (BMR) and in a typical day (TDEE) with the Mifflin-St Jeor formula.",
-  "form.label": "BMR and TDEE calculator",
+  "form.label": "BMR calculator",
   "form.sex": "Sex",
   "sex.male": "Male",
   "sex.female": "Female",
@@ -67,5 +67,6 @@
   "faq.activity.a": "Pick the level that matches a typical week, not your most active one. If you log workouts separately, as in Calcalou, use the sedentary value so exercise is not counted twice.",
   "cta.title": "Count eaten against burned with Lou.",
   "form.inches": "Inches",
-  "more.title": "More calculators"
+  "more.title": "More calculators",
+  "tdee.prompt": "To see your total daily energy expenditure in detail, use the {link}."
 }

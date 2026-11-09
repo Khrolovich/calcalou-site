@@ -1,13 +1,13 @@
 {
-  "meta.title": "Calculadora de calorías diarias (TMB y TDEE) | Calcalou",
-  "meta.description": "Estima en segundos tu metabolismo basal (TMB) y las calorías que gastas al día (TDEE) según edad, altura, peso y actividad. Gratis y sin registro.",
+  "meta.title": "Calculadora de calorías diarias (TMB) | Calcalou",
+  "meta.description": "Estima en segundos tu metabolismo basal (TMB) y las calorías que gastas al día según edad, altura, peso y actividad. Gratis y sin registro.",
   "meta.og_title": "Calculadora de calorías: metabolismo basal y gasto diario",
   "meta.og_description": "Estima tu TMB y tus calorías de mantenimiento con la fórmula de Mifflin-St Jeor, en kg/cm o lb/ft.",
   "link.footer": "Calculadora de calorías",
   "h1": "Calculadora de calorías",
   "h1.sub": "metabolismo basal y gasto diario",
   "lead": "Estima cuántas calorías gasta tu cuerpo en reposo (TMB) y en un día normal (GET) con la fórmula de Mifflin-St Jeor.",
-  "form.label": "Calculadora de TMB y GET",
+  "form.label": "Calculadora de TMB",
   "form.sex": "Sexo",
   "sex.male": "Hombre",
   "sex.female": "Mujer",
@@ -67,5 +67,6 @@
   "faq.activity.a": "Elige el nivel que corresponde a una semana normal, no a la más activa. Si registras los entrenamientos por separado, como en Calcalou, usa el valor sedentario para no contar el ejercicio dos veces.",
   "cta.title": "Lo consumido y lo quemado, con Lou.",
   "form.inches": "Pulgadas",
-  "more.title": "Más calculadoras"
+  "more.title": "Más calculadoras",
+  "tdee.prompt": "Para ver tu gasto energético total diario en detalle, usa la {link}."
 }

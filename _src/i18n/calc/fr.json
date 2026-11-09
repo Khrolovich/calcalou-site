@@ -1,6 +1,6 @@
 {
   "meta.title": "Calcul du métabolisme de base et besoin calorique | Calcalou",
-  "meta.description": "Estimez votre métabolisme de base et votre dépense calorique journalière (TDEE) selon l'âge, la taille, le poids et l'activité. Gratuit, sans inscription.",
+  "meta.description": "Estimez votre métabolisme de base et votre dépense calorique journalière selon l'âge, la taille, le poids et l'activité. Gratuit, sans inscription.",
   "meta.og_title": "Calcul du métabolisme de base et du besoin calorique",
   "meta.og_description": "Estimez votre métabolisme de base et vos calories d'entretien avec la formule de Mifflin-St Jeor, en kg/cm ou lb/ft.",
   "link.footer": "Calcul du métabolisme de base",
@@ -67,5 +67,6 @@
   "faq.activity.a": "Choisissez le niveau qui correspond à une semaine type, pas à la plus active. Si vous saisissez vos entraînements à part, comme dans Calcalou, prenez la valeur sédentaire pour ne pas compter le sport deux fois.",
   "cta.title": "Calories absorbées et brûlées, comptées avec Lou.",
   "form.inches": "Pouces",
-  "more.title": "Autres calculateurs"
+  "more.title": "Autres calculateurs",
+  "tdee.prompt": "Pour le détail de votre dépense énergétique journalière totale, utilisez le {link}."
 }

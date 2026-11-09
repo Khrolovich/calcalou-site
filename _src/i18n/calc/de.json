@@ -67,5 +67,6 @@
   "faq.activity.a": "Wähle das Level, das zu einer typischen Woche passt, nicht zu deiner aktivsten. Wenn du Training separat einträgst, wie in Calcalou, nimm den Wert für „sitzend“, damit Sport nicht doppelt zählt.",
   "cta.title": "Gegessen und verbrannt im Blick – mit Lou.",
   "form.inches": "Zoll",
-  "more.title": "Weitere Rechner"
+  "more.title": "Weitere Rechner",
+  "tdee.prompt": "Deinen täglichen Gesamtumsatz im Detail zeigt der {link}."
 }

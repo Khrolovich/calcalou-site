@@ -67,5 +67,6 @@
   "faq.activity.a": "Wybierz poziom pasujący do typowego tygodnia, a nie do najbardziej aktywnego. Jeśli zapisujesz treningi osobno, jak w Calcalou, użyj wartości dla trybu siedzącego, żeby ćwiczenia nie liczyły się podwójnie.",
   "cta.title": "Zjedzone kontra spalone – licz z Lou.",
   "form.inches": "Cale",
-  "more.title": "Więcej kalkulatorów"
+  "more.title": "Więcej kalkulatorów",
+  "tdee.prompt": "Całkowite dzienne zużycie energii szczegółowo pokazuje {link}."
 }

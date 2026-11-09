@@ -1,6 +1,6 @@
 {
   "meta.title": "Calcolo metabolismo basale e fabbisogno calorico | Calcalou",
-  "meta.description": "Stima il tuo metabolismo basale e il fabbisogno calorico giornaliero (TDEE) in base a età, altezza, peso e attività. Gratis, senza registrazione.",
+  "meta.description": "Stima il tuo metabolismo basale e il fabbisogno calorico giornaliero in base a età, altezza, peso e attività. Gratis, senza registrazione.",
   "meta.og_title": "Calcolo del metabolismo basale e del fabbisogno calorico",
   "meta.og_description": "Stima metabolismo basale e calorie di mantenimento con la formula di Mifflin-St Jeor, in kg/cm o lb/ft.",
   "link.footer": "Calcolo metabolismo basale",
@@ -67,5 +67,6 @@
   "faq.activity.a": "Scegli il livello di una settimana tipo, non di quella più attiva. Se registri gli allenamenti a parte, come in Calcalou, usa il valore sedentario per non contare l'attività due volte.",
   "cta.title": "Calorie mangiate e bruciate, contate con Lou.",
   "form.inches": "Pollici",
-  "more.title": "Altri calcolatori"
+  "more.title": "Altri calcolatori",
+  "tdee.prompt": "Per vedere nel dettaglio il tuo dispendio energetico giornaliero, usa il {link}."
 }

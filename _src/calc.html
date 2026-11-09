@@ -213,6 +213,10 @@
             <div class="chip"><p>{{ c['method.female'] }}</p></div>
           </div>
           <p>{{ c['method.p2'] }}</p>
+{%- if mode == "bmr" %}
+{%- set before, after = c['tdee.prompt'].split('{link}') %}
+          <p>{{ before }}<a href="{{ tdee_page.path }}">{{ tdee_page.label }}</a>{{ after }}</p>
+{%- endif %}
           <small>{{ c['method.source'] }}</small>
           <h2>{{ c['app.title'] }}</h2>
           <p>{{ c['app.text'] }}</p>
