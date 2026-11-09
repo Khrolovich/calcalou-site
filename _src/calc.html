@@ -224,6 +224,20 @@
       </div>
     </section>
 
+{%- if guide %}
+    <section class="method" aria-labelledby="guide-title">
+      <div class="wrap">
+        <div class="copy">
+          <h2 id="guide-title">{{ guide.title }}</h2>
+{%- for item in guide["items"] %}
+          <h3>{{ item.t }}</h3>
+          <p>{{ item.d }}</p>
+{%- endfor %}
+        </div>
+      </div>
+    </section>
+
+{%- endif %}
     <section class="others more" aria-labelledby="others-title">
       <div class="wrap">
         <h2 id="others-title" class="center">{{ c['more.title'] }}</h2>

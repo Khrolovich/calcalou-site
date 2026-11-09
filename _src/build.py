@@ -32,19 +32,20 @@ LOCALES = [
 CALC_LOCALES = [
     ("en", "/bmr-calculator/", "imperial"),
     ("de", "/de/grundumsatz-rechner/", "metric"),
-    ("es", "/es/calculadora-de-calorias/", "metric"),
+    ("es", "/es/calculadora-metabolismo-basal/", "metric"),
     ("fr", "/fr/calcul-metabolisme-de-base/", "metric"),
     ("it", "/it/calcolo-metabolismo-basale/", "metric"),
-    ("pl", "/pl/kalkulator-zapotrzebowania-kalorycznego/", "metric"),
+    ("pl", "/pl/kalkulator-bmr/", "metric"),
     ("pt-BR", "/pt-br/calculadora-tmb/", "metric"),
-    ("ru", "/ru/kalkulyator-kaloriy/", "metric"),
+    ("ru", "/ru/kalkulyator-osnovnogo-obmena/", "metric"),
     ("tr", "/tr/bazal-metabolizma-hesaplama/", "metric"),
 ]
 CALC_FACTORS = ["1.2", "1.375", "1.55", "1.725", "1.9"]
 TDEE_PATHS = {
-    "en": "/tdee-calculator/", "de": "/de/tdee-rechner/", "es": "/es/calculadora-tdee/", "fr": "/fr/calcul-tdee/",
-    "it": "/it/calcolo-tdee/", "pl": "/pl/kalkulator-tdee/", "pt-BR": "/pt-br/calculadora-tdee/",
-    "ru": "/ru/kalkulyator-tdee/", "tr": "/tr/tdee-hesaplama/",
+    "en": "/tdee-calculator/", "de": "/de/kalorienbedarf-rechner/", "es": "/es/calculadora-de-calorias/",
+    "fr": "/fr/calcul-besoin-calorique/", "it": "/it/calcolo-fabbisogno-calorico/",
+    "pl": "/pl/kalkulator-zapotrzebowania-kalorycznego/", "pt-BR": "/pt-br/calculadora-tdee/",
+    "ru": "/ru/kalkulyator-kaloriy/", "tr": "/tr/gunluk-kalori-ihtiyaci-hesaplama/",
 }
 DEFICIT_PATHS = {
     "en": "/calorie-deficit-calculator/", "de": "/de/kaloriendefizit-rechner/",
@@ -92,6 +93,12 @@ def load_calc_strings(name="calc"):
             raise SystemExit(f"{name}/{code}.json: keys differ from {name}/en.json or a value is empty")
         result[code] = strings
     return result
+
+
+def load_guide(page_set, code):
+    """Optional extra sections for one page in one language (_src/i18n/guides/<set>/<code>.json), or None."""
+    path = SRC / "i18n" / "guides" / page_set / f"{code}.json"
+    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else None
 
 
 def load_strings():
@@ -150,6 +157,7 @@ def render_all():
                 others=[{"path": sets[o][code], "label": page_strings[o][code]["link.footer"]}
                         for o in CALC_PAGES if o != name],
                 tdee_page={"path": sets["tdee"][code], "label": page_strings["tdee"][code]["link.footer"]},
+                guide=load_guide(name, code),
                 faq_keys=faq_keys, links=store_links(f"{ct}-{code.lower()}"),
                 gp={"code": gp_code, "w": assets["googlePlay"][gp_code][0]}, year=year)
             pages[SITE / path.strip("/") / "index.html"] = html

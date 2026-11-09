@@ -1,0 +1,21 @@
+{
+  "title": "Calorie deficit calculator: more details",
+  "items": [
+    {
+      "t": "Calorie deficit calculator in kg or lb",
+      "d": "Enter kilograms and centimetres, or pounds, feet and inches. Both go through the same Mifflin-St Jeor equation, and the deficit is always in kcal per day."
+    },
+    {
+      "t": "Calorie deficit calculator for women",
+      "d": "At the same age, height and weight, women's estimates start 166 kcal lower, so the same deficit leaves a lower intake and reaches the 1,200 kcal flag sooner. For a sedentary 35-year-old woman of 165 cm and 60 kg (maintenance about 1,554 kcal), a 250 kcal deficit leaves 1,304 kcal; a deficit of 500 kcal or more falls under 1,200 kcal and is flagged."
+    },
+    {
+      "t": "Example: a 30-year-old man",
+      "d": "At 180 cm, 80 kg and moderately active, maintenance is about 2,759 kcal: a 250 kcal deficit leaves 2,509 kcal, 500 kcal leaves 2,259 kcal and 1,000 kcal leaves 1,759 kcal."
+    },
+    {
+      "t": "Why your activity level matters",
+      "d": "The deficit is subtracted from your estimated maintenance, so picking a higher activity level than you really have raises every intake figure. Choose the level of a typical week. In Calcalou, base burn uses the sedentary level and the activity you log is added on top."
+    }
+  ]
+}

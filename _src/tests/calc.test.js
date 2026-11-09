@@ -200,3 +200,21 @@ test('runtime: a deficit larger than TDEE is shown as the real difference, never
   assert.equal(p.out.kids['[data-out="intake"]'].textContent, '0');
   assert.equal(p.out.kids['[data-out="deficit"]'].textContent, new Intl.NumberFormat('en').format(tdee));
 });
+
+test("EN guide examples are the calculator's own numbers", () => {
+  const en = (n) => new Intl.NumberFormat('en').format(n);
+  const man = C.calculate({ sex: 'male', age: '30', units: 'metric', heightCm: '180', weightKg: '80' });
+  const woman = C.calculate({ sex: 'female', age: '35', units: 'metric', heightCm: '165', weightKg: '60' });
+  const womanLb = C.calculate({ sex: 'female', age: '35', units: 'imperial', heightFt: '5', heightIn: '5', weightLb: '132' });
+  assert.deepEqual([womanLb.bmr, womanLb.levels[0]], [woman.bmr, woman.levels[0]]);
+  const text = (set) => JSON.stringify(JSON.parse(fs.readFileSync(path.join(SITE, '_src/i18n/guides', set, 'en.json'), 'utf8')));
+  const tdee = text('tdee');
+  for (const n of [woman.bmr, woman.levels[0], man.bmr, man.levels[0], man.levels[2], man.levels[4]]) assert.ok(tdee.includes(en(n)), `tdee guide: ${en(n)}`);
+  assert.ok(tdee.includes(`${Math.round(166 * 1.2)} kcal`) && tdee.includes(`${Math.round(166 * 1.9)} kcal`));
+  const deficit = text('deficit');
+  const w = C.deficitPlan(woman.levels[0], 250);
+  assert.equal(C.deficitPlan(woman.levels[0], 500).belowFloor, true);
+  for (const n of [woman.levels[0], w.intake, man.levels[2], ...[250, 500, 1000].map((d) => C.deficitPlan(man.levels[2], d).intake)]) {
+    assert.ok(deficit.includes(en(n)), `deficit guide: ${en(n)}`);
+  }
+});

@@ -1,0 +1,21 @@
+{
+  "title": "TDEE calculator: more details",
+  "items": [
+    {
+      "t": "TDEE calculator in kg or lb",
+      "d": "Pick metric (kg, cm) or imperial (lb, ft, in). Imperial values are converted with 1 lb = 0.4536 kg and 1 in = 2.54 cm before the equation, so the result is the same either way: a 35-year-old woman of 165 cm and 60 kg, or 5 ft 5 in and 132 lb, gets a BMR of 1,295 kcal and a sedentary TDEE of 1,554 kcal."
+    },
+    {
+      "t": "TDEE for women and men",
+      "d": "The Mifflin-St Jeor equation adds 5 kcal for men and subtracts 161 kcal for women, so at the same age, height and weight a woman's BMR is 166 kcal lower. After the activity factor, the gap is about 199 kcal (sedentary) to 315 kcal (extra active)."
+    },
+    {
+      "t": "Example: a 30-year-old man",
+      "d": "At 180 cm and 80 kg, BMR is 1,780 kcal and TDEE is 2,136 kcal sedentary, 2,759 kcal moderately active and 3,382 kcal extra active."
+    },
+    {
+      "t": "How age changes TDEE",
+      "d": "Each year of age lowers BMR by 5 kcal before the activity factor: about 50 kcal of BMR per decade, or 60 to 95 kcal of TDEE depending on the activity level."
+    }
+  ]
+}
