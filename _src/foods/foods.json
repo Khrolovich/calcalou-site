@@ -1,0 +1,374 @@
+{
+ "locales": {"en": "/calories/", "pl": "/pl/kalorie/"},
+ "foods": [
+  {"key": "banana", "fdc": 173944, "slug": {"en": "banana", "pl": "banan"},
+   "name": {"en": "Banana", "pl": "Banan"},
+   "h1": {"en": "How many calories in a banana?", "pl": "Ile kalorii ma banan?"},
+   "title": {"en": "Calories in a Banana", "pl": "Banan – kalorie"},
+   "headline": "medium",
+   "portions": [
+    {"id": "xs", "match": "extra small", "g": 81, "en": "1 extra small banana (under 15 cm)", "pl": "1 bardzo mały banan (poniżej 15 cm)"},
+    {"id": "small", "match": "small (6", "g": 101, "en": "1 small banana (15–17 cm)", "pl": "1 mały banan (15–17 cm)"},
+    {"id": "medium", "match": "medium", "g": 118, "en": "1 medium banana (18–20 cm)", "pl": "1 średni banan (18–20 cm)"},
+    {"id": "large", "match": "large", "g": 136, "en": "1 large banana (20–22 cm)", "pl": "1 duży banan (20–22 cm)"},
+    {"id": "cup", "match": "cup, sliced", "g": 150, "en": "1 cup sliced", "pl": "1 szklanka plasterków"}
+   ],
+   "compare": ["apple", "grapes", "strawberries", "raisins"],
+   "variants": [],
+   "video": {"id": "9smZhLouzzc", "date": "2026-11-05", "title": "Lou guesses the calories: banana"},
+   "note": {
+    "en": "The USDA figure is for peeled fruit, so weigh it without the skin. Size moves the total a lot: a large banana has well over one and a half times the calories of an extra small one.",
+    "pl": "Wartość USDA dotyczy obranego owocu, więc waż go bez skórki. Wielkość mocno zmienia wynik: duży banan ma ponad półtora raza więcej kalorii niż bardzo mały."
+   }},
+  {"key": "egg", "fdc": 171287, "slug": {"en": "egg", "pl": "jajko"},
+   "name": {"en": "Egg", "pl": "Jajko"},
+   "h1": {"en": "How many calories in an egg?", "pl": "Ile kalorii ma jajko?"},
+   "title": {"en": "Calories in an Egg", "pl": "Jajko – kalorie"},
+   "headline": "large",
+   "portions": [
+    {"id": "small", "match": "small", "g": 38, "en": "1 small egg", "pl": "1 małe jajko"},
+    {"id": "medium", "match": "medium", "g": 44, "en": "1 medium egg", "pl": "1 średnie jajko"},
+    {"id": "large", "match": "large", "g": 50, "en": "1 large egg", "pl": "1 duże jajko"},
+    {"id": "xl", "match": "extra large", "g": 56, "en": "1 extra large egg", "pl": "1 bardzo duże jajko"},
+    {"id": "two", "g": 100, "en": "2 large eggs", "pl": "2 duże jajka"}
+   ],
+   "compare": ["chicken-breast", "cheddar", "almonds"],
+   "variants": [
+    {"fdc": 173424, "en": "Hard-boiled", "pl": "Na twardo"},
+    {"fdc": 173423, "en": "Fried", "pl": "Sadzone"},
+    {"fdc": 172187, "en": "Scrambled", "pl": "Jajecznica"}
+   ],
+   "video": {"id": "vg8cnmJWDrk", "date": "2026-11-09", "title": "Lou guesses the calories: boiled egg"},
+   "note": {
+    "en": "Weights are for the egg without its shell. Boiling adds nothing, so a hard-boiled egg has about the same calories as a raw one. Frying and scrambling add the fat from the pan, which is why the cooked figures below are higher; the exact amount depends on how much butter or oil you use.",
+    "pl": "Masy podano dla jajka bez skorupki. Gotowanie niczego nie dodaje, więc jajko na twardo ma mniej więcej tyle kalorii co surowe. Smażenie i jajecznica dodają tłuszcz z patelni, dlatego wartości poniżej są wyższe; dokładna różnica zależy od ilości masła lub oleju."
+   }},
+  {"key": "avocado", "fdc": 171705, "slug": {"en": "avocado", "pl": "awokado"},
+   "name": {"en": "Avocado", "pl": "Awokado"},
+   "h1": {"en": "How many calories in an avocado?", "pl": "Ile kalorii ma awokado?"},
+   "title": {"en": "Calories in an Avocado", "pl": "Awokado – kalorie"},
+   "headline": "half",
+   "portions": [
+    {"id": "half", "g": 100, "en": "½ avocado (100 g flesh)", "pl": "½ awokado (100 g miąższu)"},
+    {"id": "whole", "match": "1 avocado", "g": 201, "en": "1 whole avocado, without skin and stone", "pl": "1 całe awokado, bez skórki i pestki"},
+    {"id": "cubes", "match": "cup, cubes", "g": 150, "en": "1 cup cubed", "pl": "1 szklanka kostek"},
+    {"id": "tbsp", "g": 15, "en": "1 tablespoon mashed (15 g)", "pl": "1 łyżka rozgniecionego (15 g)"}
+   ],
+   "compare": ["olive-oil", "almonds", "peanut-butter", "banana"],
+   "variants": [],
+   "video": null,
+   "note": {
+    "en": "Avocado gets most of its calories from fat. The USDA value is an average across all commercial varieties, and the fruit differs a lot in size, so weighing the flesh gives a much better number than counting fruit.",
+    "pl": "Awokado zawdzięcza większość kalorii tłuszczowi. Wartość USDA to średnia dla wszystkich odmian handlowych, a owoce bardzo różnią się wielkością, więc zważenie miąższu daje dużo lepszy wynik niż liczenie owoców."
+   }},
+  {"key": "apple", "fdc": 171688, "slug": {"en": "apple", "pl": "jablko"},
+   "name": {"en": "Apple", "pl": "Jabłko"},
+   "h1": {"en": "How many calories in an apple?", "pl": "Ile kalorii ma jabłko?"},
+   "title": {"en": "Calories in an Apple", "pl": "Jabłko – kalorie"},
+   "headline": "medium",
+   "portions": [
+    {"id": "small", "match": "small", "g": 149, "en": "1 small apple (7 cm across)", "pl": "1 małe jabłko (7 cm średnicy)"},
+    {"id": "medium", "match": "medium", "g": 182, "en": "1 medium apple (7.5 cm across)", "pl": "1 średnie jabłko (7,5 cm średnicy)"},
+    {"id": "large", "match": "large", "g": 223, "en": "1 large apple (8 cm across)", "pl": "1 duże jabłko (8 cm średnicy)"},
+    {"id": "cup", "match": "cup, quartered or chopped", "g": 125, "en": "1 cup chopped", "pl": "1 szklanka pokrojonego"}
+   ],
+   "compare": ["banana", "grapes", "strawberries", "orange-juice"],
+   "variants": [],
+   "video": null,
+   "note": {
+    "en": "These figures are for a raw apple with the skin, weighed without the core. Apples differ a lot in size, so weighing one beats guessing from small, medium or large.",
+    "pl": "Te wartości dotyczą surowego jabłka ze skórką, ważonego bez gniazda nasiennego. Jabłka bardzo różnią się wielkością, więc zważenie jednego jest lepsze niż zgadywanie, czy jest małe, średnie czy duże."
+   }},
+  {"key": "orange-juice", "fdc": 169098, "slug": {"en": "orange-juice", "pl": "sok-pomaranczowy"},
+   "name": {"en": "Orange juice", "pl": "Sok pomarańczowy"},
+   "h1": {"en": "How many calories in orange juice?", "pl": "Ile kalorii ma sok pomarańczowy?"},
+   "title": {"en": "Calories in Orange Juice", "pl": "Sok pomarańczowy – kalorie"},
+   "headline": "cup",
+   "portions": [
+    {"id": "orange", "match": "1 fruit yields", "g": 86, "en": "Juice of 1 orange", "pl": "Sok z 1 pomarańczy"},
+    {"id": "small", "g": 200, "en": "1 small glass (200 ml)", "pl": "1 mała szklanka (200 ml)"},
+    {"id": "cup", "match": "1 cup", "g": 248, "en": "1 cup (240 ml)", "pl": "1 szklanka (240 ml)"},
+    {"id": "big", "g": 330, "en": "1 large glass (330 ml)", "pl": "1 duża szklanka (330 ml)"}
+   ],
+   "compare": ["apple", "banana", "grapes", "strawberries"],
+   "variants": [],
+   "video": {"id": "8R-_n3fMemk", "date": "2026-11-06", "title": "Lou guesses the calories: glass of orange juice"},
+   "note": {
+    "en": "The USDA value is for freshly squeezed juice; one millilitre weighs about one gram. Bottled juices, and especially juice drinks with added sugar, have their own values, so check the label. Juice keeps the fruit's sugar but very little fibre: less than half a gram per 100 g.",
+    "pl": "Wartość USDA dotyczy świeżo wyciśniętego soku; mililitr waży około grama. Soki butelkowane, a zwłaszcza napoje z dodatkiem cukru, mają własne wartości, więc sprawdź etykietę. Sok zachowuje cukier z owoców, ale bardzo mało błonnika: mniej niż pół grama w 100 g."
+   }},
+  {"key": "peanut-butter", "fdc": 172470, "slug": {"en": "peanut-butter", "pl": "maslo-orzechowe"},
+   "name": {"en": "Peanut butter", "pl": "Masło orzechowe"},
+   "h1": {"en": "How many calories in peanut butter?", "pl": "Ile kalorii ma masło orzechowe?"},
+   "title": {"en": "Calories in Peanut Butter", "pl": "Masło orzechowe – kalorie"},
+   "headline": "two",
+   "portions": [
+    {"id": "tsp", "g": 5, "en": "1 teaspoon (5 g)", "pl": "1 łyżeczka (5 g)"},
+    {"id": "tbsp", "g": 16, "en": "1 tablespoon (16 g)", "pl": "1 łyżka (16 g)"},
+    {"id": "two", "match": "2 tbsp", "g": 32, "en": "2 tablespoons", "pl": "2 łyżki"},
+    {"id": "slice", "g": 20, "en": "Spread on one slice of bread (20 g)", "pl": "Na jedną kromkę chleba (20 g)"}
+   ],
+   "compare": ["almonds", "avocado", "cheddar", "dark-chocolate"],
+   "variants": [],
+   "video": null,
+   "note": {
+    "en": "The USDA entry here is smooth peanut butter without added salt. Crunchy styles and brands with added sugar or oil have their own values, so the label on your jar is the exact source. The spoon matters too: a heaped tablespoon holds much more than a level one.",
+    "pl": "Wpis USDA dotyczy gładkiego masła orzechowego bez dodatku soli. Wersje z kawałkami orzechów i marki z dodatkiem cukru lub oleju mają własne wartości, więc dokładnym źródłem jest etykieta słoika. Liczy się też łyżka: czubata mieści dużo więcej niż płaska."
+   }},
+  {"key": "strawberries", "fdc": 167762, "slug": {"en": "strawberries", "pl": "truskawki"},
+   "name": {"en": "Strawberries", "pl": "Truskawki"},
+   "h1": {"en": "How many calories in strawberries?", "pl": "Ile kalorii mają truskawki?"},
+   "title": {"en": "Calories in Strawberries", "pl": "Truskawki – kalorie"},
+   "headline": "cup",
+   "portions": [
+    {"id": "medium", "match": "medium", "g": 12, "en": "1 medium strawberry", "pl": "1 średnia truskawka"},
+    {"id": "large", "match": "large", "g": 18, "en": "1 large strawberry", "pl": "1 duża truskawka"},
+    {"id": "cup", "match": "cup, whole", "g": 144, "en": "1 cup whole", "pl": "1 szklanka całych"},
+    {"id": "sliced", "match": "cup, sliced", "g": 166, "en": "1 cup sliced", "pl": "1 szklanka pokrojonych"}
+   ],
+   "compare": ["grapes", "apple", "banana", "raisins"],
+   "variants": [],
+   "video": null,
+   "note": {
+    "en": "Strawberries are mostly water, which is why a full cup has fewer calories than a medium apple. Sweetened frozen strawberries and strawberries in syrup carry added sugar, so read the label.",
+    "pl": "Truskawki to głównie woda, dlatego pełna szklanka ma mniej kalorii niż średnie jabłko. Mrożone słodzone truskawki i truskawki w syropie zawierają dodatkowy cukier, więc czytaj etykietę."
+   }},
+  {"key": "almonds", "fdc": 170567, "slug": {"en": "almonds", "pl": "migdaly"},
+   "name": {"en": "Almonds", "pl": "Migdały"},
+   "h1": {"en": "How many calories in almonds?", "pl": "Ile kalorii mają migdały?"},
+   "title": {"en": "Calories in Almonds", "pl": "Migdały – kalorie"},
+   "headline": "oz",
+   "portions": [
+    {"id": "one", "match": "1 almond", "g": 1.2, "en": "1 almond", "pl": "1 migdał"},
+    {"id": "ten", "g": 12, "en": "10 almonds", "pl": "10 migdałów"},
+    {"id": "oz", "match": "1 oz", "g": 28.35, "en": "1 ounce (about 23 almonds)", "pl": "1 uncja (ok. 23 migdałów)"},
+    {"id": "cup", "match": "cup, whole", "g": 143, "en": "1 cup whole", "pl": "1 szklanka całych"}
+   ],
+   "compare": ["peanut-butter", "dark-chocolate", "raisins", "popcorn"],
+   "variants": [],
+   "video": {"id": "t7ytcmKNCUo", "date": "2026-11-03", "title": "Lou guesses the calories: handful of almonds"},
+   "note": {
+    "en": "The USDA figure is for raw almonds. Roasted, salted and coated almonds have their own values on the label, and oil or honey adds calories. Almonds are small and dense, so a handful is easy to underestimate: weighing once shows what your usual handful really is.",
+    "pl": "Wartość USDA dotyczy surowych migdałów. Migdały prażone, solone i w polewie mają własne wartości na etykiecie, a olej lub miód dodaje kalorii. Migdały są małe i kaloryczne, więc łatwo nie docenić garści: jedno ważenie pokaże, ile naprawdę waży Twoja zwykła garść."
+   }},
+  {"key": "cheddar", "fdc": 328637, "slug": {"en": "cheddar-cheese", "pl": "ser-cheddar"},
+   "name": {"en": "Cheddar cheese", "pl": "Ser cheddar"},
+   "h1": {"en": "How many calories in cheddar cheese?", "pl": "Ile kalorii ma ser cheddar?"},
+   "title": {"en": "Calories in Cheddar Cheese", "pl": "Ser cheddar – kalorie"},
+   "headline": "oz",
+   "portions": [
+    {"id": "cube", "g": 10, "en": "1 cube (2 cm, 10 g)", "pl": "1 kostka (2 cm, 10 g)"},
+    {"id": "slice", "g": 20, "en": "1 thin slice (20 g)", "pl": "1 cienki plaster (20 g)"},
+    {"id": "oz", "g": 28.35, "en": "1 ounce (28 g)", "pl": "1 uncja (28 g)"},
+    {"id": "fifty", "g": 50, "en": "50 g (a snack plate)", "pl": "50 g (talerzyk przekąski)"}
+   ],
+   "compare": ["egg", "peanut-butter", "chicken-breast", "almonds"],
+   "variants": [],
+   "video": null,
+   "note": {
+    "en": "This is regular full-fat cheddar. Reduced-fat cheddar and other cheeses have their own values, so check the label for the exact product.",
+    "pl": "To zwykły, pełnotłusty cheddar. Cheddar o obniżonej zawartości tłuszczu i inne sery mają własne wartości, więc sprawdź etykietę konkretnego produktu."
+   }},
+  {"key": "grapes", "fdc": 2709237, "slug": {"en": "grapes", "pl": "winogrona"},
+   "name": {"en": "Grapes", "pl": "Winogrona"},
+   "h1": {"en": "How many calories in grapes?", "pl": "Ile kalorii mają winogrona?"},
+   "title": {"en": "Calories in Grapes", "pl": "Winogrona – kalorie"},
+   "headline": "cup",
+   "portions": [
+    {"id": "ten", "g": 50, "en": "10 grapes (about 50 g)", "pl": "10 winogron (ok. 50 g)"},
+    {"id": "hundred", "g": 100, "en": "100 g (a small bunch)", "pl": "100 g (mała kiść)"},
+    {"id": "cup", "match": "1 cup", "g": 150, "en": "1 cup", "pl": "1 szklanka"},
+    {"id": "bunch", "g": 250, "en": "1 large bunch (250 g)", "pl": "1 duża kiść (250 g)"}
+   ],
+   "compare": ["raisins", "strawberries", "banana", "apple"],
+   "variants": [],
+   "video": null,
+   "note": {
+    "en": "Grapes differ a lot in size, so counting them is rough; weighing the bunch without the stems is more accurate. Dried, grapes become raisins, which pack the same sugar into far less weight: raisins have more than three times the calories per 100 g.",
+    "pl": "Winogrona bardzo różnią się wielkością, więc liczenie ich jest przybliżone; dokładniej jest zważyć kiść bez szypułek. Po wysuszeniu winogrona stają się rodzynkami, w których ten sam cukier mieści się w dużo mniejszej masie: rodzynki mają ponad trzy razy więcej kalorii w 100 g."
+   }},
+  {"key": "granola", "fdc": 2708461, "slug": {"en": "granola", "pl": "granola"},
+   "name": {"en": "Granola", "pl": "Granola"},
+   "h1": {"en": "How many calories in granola?", "pl": "Ile kalorii ma granola?"},
+   "title": {"en": "Calories in Granola", "pl": "Granola – kalorie"},
+   "headline": "fifty",
+   "portions": [
+    {"id": "thirty", "g": 30, "en": "30 g (a typical label serving)", "pl": "30 g (typowa porcja z etykiety)"},
+    {"id": "fifty", "g": 50, "en": "50 g (a breakfast bowl)", "pl": "50 g (miseczka na śniadanie)"},
+    {"id": "cup", "match": "1 cup", "g": 110, "en": "1 cup", "pl": "1 szklanka"}
+   ],
+   "compare": ["popcorn", "almonds", "raisins", "bagel"],
+   "variants": [],
+   "video": null,
+   "note": {
+    "en": "Granola recipes differ a lot, because each one decides how much oil, honey, nuts and dried fruit go in. Use the USDA value as a general figure and the label for your own box. Milk or yogurt on top is extra.",
+    "pl": "Przepisy na granolę bardzo się różnią, bo każdy inaczej dobiera ilość oleju, miodu, orzechów i suszonych owoców. Traktuj wartość USDA jako ogólną, a dla swojego opakowania korzystaj z etykiety. Mleko lub jogurt to dodatkowe kalorie."
+   }},
+  {"key": "raisins", "fdc": 168165, "slug": {"en": "raisins", "pl": "rodzynki"},
+   "name": {"en": "Raisins", "pl": "Rodzynki"},
+   "h1": {"en": "How many calories in raisins?", "pl": "Ile kalorii mają rodzynki?"},
+   "title": {"en": "Calories in Raisins", "pl": "Rodzynki – kalorie"},
+   "headline": "box",
+   "portions": [
+    {"id": "tbsp", "g": 10, "en": "1 tablespoon (10 g)", "pl": "1 łyżka (10 g)"},
+    {"id": "box", "match": "small box", "g": 43, "en": "1 small box (43 g)", "pl": "1 małe pudełko (43 g)"},
+    {"id": "cup", "match": "1 cup (not packed)", "g": 145, "en": "1 cup, not packed", "pl": "1 szklanka, luźno"}
+   ],
+   "compare": ["grapes", "banana", "almonds", "granola"],
+   "variants": [],
+   "video": null,
+   "note": {
+    "en": "Raisins are grapes with most of the water removed, so the same sugar sits in a much smaller handful. Raisins coated in yogurt or chocolate are a different food with more fat and sugar.",
+    "pl": "Rodzynki to winogrona pozbawione większości wody, więc ten sam cukier mieści się w dużo mniejszej garści. Rodzynki w jogurcie lub czekoladzie to inny produkt, z większą ilością tłuszczu i cukru."
+   }},
+  {"key": "olive-oil", "fdc": 171413, "slug": {"en": "olive-oil", "pl": "oliwa-z-oliwek"},
+   "name": {"en": "Olive oil", "pl": "Oliwa z oliwek"},
+   "h1": {"en": "How many calories in olive oil?", "pl": "Ile kalorii ma oliwa z oliwek?"},
+   "title": {"en": "Calories in Olive Oil", "pl": "Oliwa z oliwek – kalorie"},
+   "headline": "tbsp",
+   "portions": [
+    {"id": "tsp", "match": "1 tsp", "g": 4.5, "en": "1 teaspoon", "pl": "1 łyżeczka"},
+    {"id": "tbsp", "match": "1 tablespoon", "g": 13.5, "en": "1 tablespoon", "pl": "1 łyżka"},
+    {"id": "pan", "g": 27, "en": "A pan drizzle of 2 tablespoons", "pl": "Polanie patelni, 2 łyżki"}
+   ],
+   "compare": ["avocado", "peanut-butter", "almonds", "cheddar"],
+   "variants": [],
+   "video": null,
+   "note": {
+    "en": "Extra virgin, light and refined olive oil are all almost pure fat, so they have the same calories; light refers to the flavour. The hard part is the amount: oil poured straight from the bottle is easy to overdo, and a measuring spoon makes the number honest.",
+    "pl": "Oliwa extra virgin, łagodna i rafinowana to prawie czysty tłuszcz, więc mają tyle samo kalorii; „łagodna” oznacza smak. Trudna jest ilość: przy laniu prosto z butelki łatwo przesadzić, a miarka daje uczciwy wynik."
+   }},
+  {"key": "popcorn", "fdc": 167959, "slug": {"en": "popcorn", "pl": "popcorn"},
+   "name": {"en": "Popcorn", "pl": "Popcorn"},
+   "h1": {"en": "How many calories in popcorn?", "pl": "Ile kalorii ma popcorn?"},
+   "title": {"en": "Calories in Popcorn", "pl": "Popcorn – kalorie"},
+   "headline": "three",
+   "portions": [
+    {"id": "cup", "match": "1 cup", "g": 8, "en": "1 cup, air-popped", "pl": "1 szklanka, bez tłuszczu"},
+    {"id": "three", "g": 24, "en": "3 cups, air-popped", "pl": "3 szklanki, bez tłuszczu"},
+    {"id": "oz", "match": "1 oz", "g": 28.35, "en": "1 ounce, air-popped", "pl": "1 uncja, bez tłuszczu"}
+   ],
+   "compare": ["potato-chips", "almonds", "granola", "dark-chocolate"],
+   "variants": [
+    {"fdc": 170247, "en": "Popped in oil, salted", "pl": "Prażony na oleju, solony"},
+    {"fdc": 167549, "en": "Microwave, regular flavour", "pl": "Z mikrofalówki, klasyczny"}
+   ],
+   "video": {"id": "lDToX2FvuZA", "date": "2026-10-28", "title": "Lou guesses the calories: big bowl of popcorn"},
+   "note": {
+    "en": "Popcorn is light, so one cup weighs only a few grams; that is why a big bowl can still be modest. The cooking method is what changes it: popcorn made in oil and microwave popcorn carry added fat, and butter on top adds more. Cinema popcorn varies by size and topping.",
+    "pl": "Popcorn jest lekki, więc szklanka waży tylko kilka gramów; dlatego nawet duża miska nie musi mieć wielu kalorii. Zmienia to sposób przygotowania: popcorn prażony na oleju i z mikrofalówki ma dodany tłuszcz, a masło na wierzchu dodaje jeszcze więcej. Popcorn z kina różni się w zależności od wielkości i dodatków."
+   }},
+  {"key": "dark-chocolate", "fdc": 170273, "slug": {"en": "dark-chocolate", "pl": "gorzka-czekolada"},
+   "name": {"en": "Dark chocolate", "pl": "Gorzka czekolada"},
+   "h1": {"en": "How many calories in dark chocolate?", "pl": "Ile kalorii ma gorzka czekolada?"},
+   "title": {"en": "Calories in Dark Chocolate", "pl": "Gorzka czekolada – kalorie"},
+   "headline": "twentyfive",
+   "portions": [
+    {"id": "square", "g": 5, "en": "1 small square (5 g)", "pl": "1 mała kostka (5 g)"},
+    {"id": "twentyfive", "g": 25, "en": "A quarter of a 100 g bar", "pl": "Ćwierć tabliczki 100 g"},
+    {"id": "oz", "match": "1 oz", "g": 28.35, "en": "1 ounce", "pl": "1 uncja"},
+    {"id": "bar", "g": 100, "en": "1 bar (100 g)", "pl": "1 tabliczka (100 g)"}
+   ],
+   "compare": ["almonds", "peanut-butter", "potato-chips", "raisins"],
+   "variants": [],
+   "video": null,
+   "note": {
+    "en": "This USDA entry is dark chocolate with 70–85% cocoa solids. Other cocoa levels and milk chocolate have their own values, so check the label of your bar. Square sizes differ by brand, so the bar weight on the wrapper is the reliable reference.",
+    "pl": "Ten wpis USDA dotyczy gorzkiej czekolady z 70–85% kakao. Inne zawartości kakao i czekolada mleczna mają własne wartości, więc sprawdź etykietę swojej tabliczki. Wielkość kostek zależy od marki, więc pewnym punktem odniesienia jest masa tabliczki na opakowaniu."
+   }},
+  {"key": "croissant", "fdc": 174987, "slug": {"en": "croissant", "pl": "croissant"},
+   "name": {"en": "Croissant", "pl": "Croissant"},
+   "h1": {"en": "How many calories in a croissant?", "pl": "Ile kalorii ma croissant?"},
+   "title": {"en": "Calories in a Croissant", "pl": "Croissant – kalorie"},
+   "headline": "medium",
+   "portions": [
+    {"id": "mini", "match": "mini", "g": 28, "en": "1 mini croissant", "pl": "1 mini croissant"},
+    {"id": "small", "match": "small", "g": 42, "en": "1 small croissant", "pl": "1 mały croissant"},
+    {"id": "medium", "match": "medium", "g": 57, "en": "1 medium croissant", "pl": "1 średni croissant"},
+    {"id": "large", "match": "large", "g": 67, "en": "1 large croissant", "pl": "1 duży croissant"}
+   ],
+   "compare": ["bagel", "granola", "dark-chocolate", "potato-chips"],
+   "variants": [],
+   "video": {"id": "788q2jDlrVI", "date": "2026-11-02", "title": "Lou guesses the calories: butter croissant"},
+   "note": {
+    "en": "This is a plain butter croissant. Bakery croissants vary in size, so weigh one if you buy the same kind regularly. Fillings change the number a lot: almond, chocolate and ham-and-cheese croissants are separate foods.",
+    "pl": "To zwykły croissant maślany. Croissanty z piekarni różnią się wielkością, więc zważ jeden, jeśli regularnie kupujesz ten sam rodzaj. Nadzienie bardzo zmienia wynik: croissant z migdałami, czekoladą albo szynką i serem to osobne produkty."
+   }},
+  {"key": "potato-chips", "fdc": 169677, "slug": {"en": "potato-chips", "pl": "chipsy"},
+   "name": {"en": "Potato chips", "pl": "Chipsy ziemniaczane"},
+   "h1": {"en": "How many calories in potato chips?", "pl": "Ile kalorii mają chipsy?"},
+   "title": {"en": "Calories in Potato Chips", "pl": "Chipsy – kalorie"},
+   "headline": "oz",
+   "portions": [
+    {"id": "oz", "match": "1 oz", "g": 28.35, "en": "1 ounce (a single-serve bag)", "pl": "1 uncja (mała paczka)"},
+    {"id": "forty", "g": 40, "en": "40 g (a small bowl)", "pl": "40 g (mała miseczka)"},
+    {"id": "share", "g": 150, "en": "1 sharing bag (150 g)", "pl": "1 duża paczka (150 g)"}
+   ],
+   "compare": ["popcorn", "almonds", "dark-chocolate", "croissant"],
+   "variants": [],
+   "video": null,
+   "note": {
+    "en": "This is plain salted potato chips (crisps). Flavoured, baked and reduced-fat chips have their own values; the label on your bag is the best source. Bags are easy to finish without noticing, so the bag weight is worth a look.",
+    "pl": "To zwykłe solone chipsy ziemniaczane. Chipsy smakowe, pieczone i o obniżonej zawartości tłuszczu mają własne wartości; najlepszym źródłem jest etykieta Twojej paczki. Paczkę łatwo zjeść niepostrzeżenie, więc warto zerknąć na jej masę."
+   }},
+  {"key": "white-rice", "fdc": 2708408, "slug": {"en": "white-rice", "pl": "ryz-bialy"},
+   "name": {"en": "White rice, cooked", "pl": "Ryż biały gotowany"},
+   "h1": {"en": "How many calories in white rice?", "pl": "Ile kalorii ma ryż biały?"},
+   "title": {"en": "Calories in White Rice (Cooked)", "pl": "Ryż biały gotowany – kalorie"},
+   "headline": "cup",
+   "portions": [
+    {"id": "half", "g": 79, "en": "½ cup cooked", "pl": "½ szklanki ugotowanego"},
+    {"id": "cup", "match": "1 cup", "g": 158, "en": "1 cup cooked", "pl": "1 szklanka ugotowanego"},
+    {"id": "plate", "g": 200, "en": "A main-dish portion (200 g)", "pl": "Porcja do obiadu (200 g)"},
+    {"id": "dry", "g": 150, "en": "From 50 g dry rice (about 150 g cooked)", "pl": "Z 50 g suchego ryżu (ok. 150 g po ugotowaniu)"}
+   ],
+   "compare": ["bagel", "chicken-breast", "granola"],
+   "variants": [
+    {"fdc": 2708404, "en": "White rice cooked with oil", "pl": "Ryż biały gotowany z olejem"},
+    {"fdc": 2708414, "en": "Brown rice, no added fat", "pl": "Ryż brązowy, bez tłuszczu"}
+   ],
+   "video": null,
+   "note": {
+    "en": "These numbers are for cooked rice with no fat added. Rice absorbs a lot of water as it cooks, so 100 g of dry rice has far more calories than 100 g of cooked rice; always check which one a label means. Brown rice is close to white per gram, and oil in the pot adds more.",
+    "pl": "Wartości dotyczą ryżu ugotowanego bez dodatku tłuszczu. Ryż podczas gotowania wchłania dużo wody, więc 100 g suchego ryżu ma dużo więcej kalorii niż 100 g ugotowanego; zawsze sprawdzaj, o którą wartość chodzi na etykiecie. Ryż brązowy ma podobną kaloryczność na gram, a olej w garnku dodaje kalorii."
+   }},
+  {"key": "chicken-breast", "fdc": 171477, "slug": {"en": "chicken-breast", "pl": "piers-z-kurczaka"},
+   "name": {"en": "Chicken breast", "pl": "Pierś z kurczaka"},
+   "h1": {"en": "How many calories in chicken breast?", "pl": "Ile kalorii ma pierś z kurczaka?"},
+   "title": {"en": "Calories in Chicken Breast", "pl": "Pierś z kurczaka – kalorie"},
+   "headline": "half",
+   "portions": [
+    {"id": "oz3", "g": 85, "en": "3 ounces cooked (85 g)", "pl": "3 uncje po ugotowaniu (85 g)"},
+    {"id": "half", "match": "0.5 breast", "g": 86, "en": "½ breast, cooked", "pl": "½ piersi, upieczonej"},
+    {"id": "cup", "match": "cup, chopped or diced", "g": 140, "en": "1 cup chopped", "pl": "1 szklanka pokrojonej"},
+    {"id": "plate", "g": 150, "en": "A main-dish portion (150 g)", "pl": "Porcja do obiadu (150 g)"}
+   ],
+   "compare": ["egg", "cheddar", "white-rice"],
+   "variants": [],
+   "video": null,
+   "note": {
+    "en": "These figures are for roasted breast meat without the skin, weighed after cooking. Raw chicken weighs more than cooked because it loses water in the oven, so use raw values only for raw weights. Skin, breading and oil add fat, and the sauce you serve it with counts too.",
+    "pl": "Wartości dotyczą pieczonego mięsa z piersi bez skóry, ważonego po upieczeniu. Surowy kurczak waży więcej niż upieczony, bo traci wodę w piekarniku, więc wartości dla surowego mięsa stosuj tylko do surowej masy. Skóra, panierka i olej dodają tłuszczu, a sos też się liczy."
+   }},
+  {"key": "bagel", "fdc": 174899, "slug": {"en": "bagel", "pl": "bajgiel"},
+   "name": {"en": "Bagel", "pl": "Bajgiel"},
+   "h1": {"en": "How many calories in a bagel?", "pl": "Ile kalorii ma bajgiel?"},
+   "title": {"en": "Calories in a Bagel", "pl": "Bajgiel – kalorie"},
+   "headline": "medium",
+   "portions": [
+    {"id": "mini", "match": "mini", "g": 26, "en": "1 mini bagel", "pl": "1 mini bajgiel"},
+    {"id": "small", "match": "small", "g": 69, "en": "1 small bagel (7.5 cm)", "pl": "1 mały bajgiel (7,5 cm)"},
+    {"id": "medium", "match": "medium", "g": 105, "en": "1 medium bagel (9–10 cm)", "pl": "1 średni bajgiel (9–10 cm)"},
+    {"id": "large", "match": "large", "g": 131, "en": "1 large bagel (11 cm)", "pl": "1 duży bajgiel (11 cm)"}
+   ],
+   "compare": ["croissant", "white-rice", "granola", "egg"],
+   "variants": [
+    {"fdc": 174900, "en": "Toasted", "pl": "Opiekany"}
+   ],
+   "video": {"id": "IN85FmB53wQ", "date": "2026-11-10", "title": "Lou vs the scan: bagel"},
+   "note": {
+    "en": "This is a plain bagel; onion, poppy seed and sesame bagels have their own values. Toasting only removes water, so the calories per bagel stay the same even though the value per 100 g rises. Cream cheese, butter and fillings are extra, and bagels vary in size between bakeries.",
+    "pl": "To zwykły bajgiel; bajgle z cebulą, makiem i sezamem mają własne wartości. Opiekanie usuwa tylko wodę, więc kalorie całego bajgla się nie zmieniają, choć wartość na 100 g rośnie. Serek, masło i dodatki to osobne kalorie, a wielkość bajgli różni się między piekarniami."
+   }}
+ ]
+}

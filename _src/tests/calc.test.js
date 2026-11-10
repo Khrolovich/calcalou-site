@@ -60,8 +60,28 @@ test('the app limits: age 13-120 whole years, 100-250 cm, 30-300 kg', () => {
   assert.deepEqual(errors({ units: 'imperial', weightLb: '67', heightFt: '3', heightIn: '3' }), ['height']);
 });
 
+const isFoodSet = (name) => name === 'foods' || name.startsWith('food-');
+
+test('food pages: store links carry the food ct + lang, no landing.js, assets exist', () => {
+  const foodSets = Object.keys(SETS).filter(isFoodSet);
+  assert.ok(foodSets.length > 1);
+  for (const name of foodSets) {
+    const prefix = name === 'foods' ? 'food-hub' : name;
+    for (const [lang, page] of Object.entries(SETS[name])) {
+      const html = fs.readFileSync(path.join(SITE, page, 'index.html'), 'utf8');
+      const links = L.storeLinks(prefix + '-' + lang.toLowerCase());
+      const amp = (u) => u.replace(/&/g, '&amp;');
+      assert.ok(html.includes(`data-store="ios" href="${amp(links.ios)}"`), `${page}: ios link`);
+      assert.ok(html.includes(`data-store="android" href="${amp(links.android)}"`), `${page}: android link`);
+      assert.ok(!html.includes('landing.js'), `${page}: landing.js would rewrite the ct`);
+      assert.ok(!/\{\{|\}\}|\{n\}|None/.test(html), `${page}: unrendered placeholder`);
+      for (const m of html.matchAll(/\/assets\/[^"\s,]+/g)) assert.ok(fs.existsSync(path.join(SITE, m[0])), `${page}: missing ${m[0]}`);
+    }
+  }
+});
+
 test('calculator pages: store links carry the set ct + lang, no landing.js, assets exist', () => {
-  assert.deepEqual(Object.keys(CT), Object.keys(SETS).filter((name) => name !== 'landing'));
+  assert.deepEqual(Object.keys(CT), Object.keys(SETS).filter((name) => name !== 'landing' && !isFoodSet(name)));
   for (const [name, prefix] of Object.entries(CT)) {
     for (const [lang, page] of Object.entries(SETS[name])) {
       const html = fs.readFileSync(path.join(SITE, page, 'index.html'), 'utf8');

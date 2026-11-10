@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Render every page set in every site locale: the landing (_src/template.html + i18n/<code>.json) and the
-BMR calculator (_src/calc.html + i18n/calc/<code>.json). _src/check_locales.py enforces that each set covers LOCALES.
+"""Render every page set in every site locale: the landing (_src/template.html + i18n/<code>.json), the
+calculators (_src/calc.html + i18n/calc/<code>.json) and the pilot food pages in FOOD_LOCALES (_src/food.html +
+foods/foods.json + the USDA snapshot foods/fdc.json + i18n/food/<code>.json). _src/check_locales.py enforces that each set covers LOCALES.
 
 Usage: python3 _src/build.py [--check]   (--check fails if a generated page is out of date)
 """
 import datetime
 import json
+import re
 import sys
 from pathlib import Path
 from urllib.parse import quote
@@ -65,13 +67,101 @@ CALC_PAGES = {
                 DEFICIT_PATHS),
 }
 
+FOODS = json.loads((SRC / "foods" / "foods.json").read_text(encoding="utf-8"))
+# The food pages are a pilot in these languages only; check_locales.py holds them to this list instead of LOCALES.
+FOOD_LOCALES = FOODS["locales"]
+
+
+def food_paths(food):
+    return {code: hub + food["slug"][code] + "/" for code, hub in FOOD_LOCALES.items()}
+
 
 def page_sets():
     """Every localized page set: name -> {locale code: path}."""
     sets = {"landing": {code: path for code, path, *_ in LOCALES}}
     for name, (_, _, _, _, paths) in CALC_PAGES.items():
         sets[name] = paths or {code: path for code, path, _ in CALC_LOCALES}
+    sets["foods"] = dict(FOOD_LOCALES)
+    for food in FOODS["foods"]:
+        sets["food-" + food["key"]] = food_paths(food)
     return sets
+
+
+def set_locales(name):
+    return set(FOOD_LOCALES) if name == "foods" or name.startswith("food-") else {code for code, *_ in LOCALES}
+
+
+def r0(x):
+    return int(x + 0.5)
+
+
+def r1(x):
+    return int(x * 10 + 0.5) / 10
+
+
+def portion_values(per100, grams):
+    return {"kcal": r0(per100["kcal"] * grams / 100),
+            **{k: r1(per100[k] * grams / 100) for k in ("protein", "carbs", "fat")}}
+
+
+def food_model(fdc):
+    """foods.json joined with the USDA snapshot (_src/foods/fdc.json). Fails when they disagree: a missing entry or
+    nutrient, or a portion whose `match` names no USDA portion of that weight."""
+    errors, models = [], {}
+    keys = {f["key"] for f in FOODS["foods"]}
+    for food in FOODS["foods"]:
+        key, entry = food["key"], fdc.get(str(food["fdc"]))
+        if not entry:
+            errors.append(f"{key}: FDC {food['fdc']} missing from fdc.json (run _src/foods/fetch_fdc.py)")
+            continue
+        per100 = entry["per_100g"]
+        missing = [k for k in ("kcal", "protein", "fat", "carbs") if per100.get(k) is None]
+        if missing:
+            errors.append(f"{key}: FDC {food['fdc']} has no {missing}")
+            continue
+        portions = []
+        for p in food["portions"]:
+            if "match" in p:
+                hits = [g for label, g in entry["portions"] if p["match"].lower() in label.lower()]
+                if not any(abs(g - p["g"]) <= 0.5 for g in hits):
+                    errors.append(f"{key}/{p['id']}: USDA portions matching {p['match']!r} weigh {hits}, "
+                                  f"foods.json says {p['g']}")
+            portions.append({"id": p["id"], "g": p["g"], "usda": "match" in p,
+                             "label": {code: p[code] for code in FOOD_LOCALES}, **portion_values(per100, p["g"])})
+        if food["headline"] not in {p["id"] for p in portions}:
+            errors.append(f"{key}: headline {food['headline']!r} is not one of its portions")
+        unknown = [c for c in food["compare"] if c not in keys or c == key]
+        if unknown:
+            errors.append(f"{key}: compare lists {unknown}")
+        variants = []
+        for v in food["variants"]:
+            ventry = fdc.get(str(v["fdc"]))
+            if not ventry or ventry["per_100g"].get("kcal") is None:
+                errors.append(f"{key}: variant FDC {v['fdc']} missing from fdc.json")
+                continue
+            variants.append({"fdc": v["fdc"], "kcal100": r0(ventry["per_100g"]["kcal"]),
+                             "label": {code: v[code] for code in FOOD_LOCALES}})
+        models[key] = {"food": food, "entry": entry, "per100": per100, "portions": portions, "variants": variants}
+    if errors:
+        raise SystemExit("food pages: " + "; ".join(errors))
+    return models
+
+
+def load_fdc():
+    path = SRC / "foods" / "fdc.json"
+    if not path.exists():
+        raise SystemExit("_src/foods/fdc.json missing: run python3 _src/foods/fetch_fdc.py")
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def fill(text, **values):
+    for name, value in values.items():
+        text = text.replace("{" + name + "}", str(value))
+    return text
+
+
+def short_label(label):
+    return re.sub(r"\s*\([^)]*\)$", "", label)
 
 
 def store_links(ct):
@@ -137,6 +227,8 @@ def render_all():
     for code, path, name, og_locale, gp_code, sep in LOCALES:
         gp_w, gp_h = assets["googlePlay"][gp_code]
         calcs = [{"path": sets[name][code], "label": page_strings[name][code]["link.footer"]} for name in CALC_PAGES]
+        if code in FOOD_LOCALES:
+            calcs.append({"path": FOOD_LOCALES[code], "label": load_food_strings()[code]["hub.link"]})
         html = template.render(
             lang=code, path=path, base=BASE, og_locale=og_locale, t=strings[code], locales=locales,
             current={"name": name, "short": code.split("-")[0]}, shots=assets["shots"],
@@ -161,6 +253,114 @@ def render_all():
                 faq_keys=faq_keys, links=store_links(f"{ct}-{code.lower()}"),
                 gp={"code": gp_code, "w": assets["googlePlay"][gp_code][0]}, year=year)
             pages[SITE / path.strip("/") / "index.html"] = html
+    pages.update(render_foods(env, strings, page_strings, assets, landing, year))
+    return pages
+
+
+def load_food_strings():
+    english = json.loads((SRC / "i18n" / "food" / "en.json").read_text(encoding="utf-8"))
+    result = {}
+    for code in FOOD_LOCALES:
+        strings = json.loads((SRC / "i18n" / "food" / f"{code}.json").read_text(encoding="utf-8"))
+        if set(strings) != set(english) or not all(str(v).strip() for v in strings.values()):
+            raise SystemExit(f"food/{code}.json: keys differ from food/en.json or a value is empty")
+        result[code] = strings
+    return result
+
+
+def food_formatters(code):
+    sep, point = CALC_SEP[code], "." if code == "en" else ","
+    num = lambda n: f"{n:,}".replace(",", sep)  # noqa: E731
+    dec = lambda x: f"{x:.1f}".replace(".", point)  # noqa: E731
+    grams = lambda g: dec(g) if g != int(g) else num(int(g))  # noqa: E731
+    return num, dec, grams
+
+
+def localize_food(model, models, code, sets):
+    food, entry, per100 = model["food"], model["entry"], model["per100"]
+    lc = (lambda s: s[:1].lower() + s[1:]) if code == "en" else (lambda s: s)
+    portions = [{**p, "label": p["label"][code], "short": short_label(p["label"][code]),
+                 "short_lc": lc(short_label(p["label"][code]))} for p in model["portions"]]
+    compare = [model["food"]["key"]] + food["compare"]
+    return {
+        "key": food["key"], "name": food["name"][code], "name_lc": lc(food["name"][code]), "h1": food["h1"][code],
+        "title": food["title"][code], "note": food["note"][code], "video": food["video"],
+        "per100": {k: (r0(v) if k == "kcal" else r1(v)) if v is not None else None for k, v in per100.items()},
+        "portions": portions, "head": next(p for p in portions if p["id"] == food["headline"]),
+        "variants": [{**v, "label": v["label"][code]} for v in model["variants"]],
+        "compare": [{"name": models[k]["food"]["name"][code], "path": sets["food-" + k][code],
+                     "kcal100": r0(models[k]["per100"]["kcal"]), "protein100": r1(models[k]["per100"]["protein"]),
+                     "current": k == food["key"]} for k in compare],
+        "fdc": {"id": food["fdc"], "data_type": entry["data_type"], "description": entry["description"],
+                "fetched_at": entry["fetched_at"]},
+    }
+
+
+def food_ld(food, f, faq, crumbs, lang):
+    graph = [{"@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": i + 1, "name": c["name"], "item": BASE + c["path"]}
+        for i, c in enumerate(crumbs)]}]
+    if food:
+        graph.append({"@type": "FAQPage", "inLanguage": lang, "mainEntity": [
+            {"@type": "Question", "name": q["q"], "acceptedAnswer": {"@type": "Answer", "text": q["a"]}} for q in faq]})
+        if food["video"]:
+            v = food["video"]
+            graph.append({"@type": "VideoObject", "name": v["title"], "description": f["video.text"],
+                          "thumbnailUrl": f"https://i.ytimg.com/vi/{v['id']}/hqdefault.jpg", "uploadDate": v["date"],
+                          "embedUrl": f"https://www.youtube.com/embed/{v['id']}"})
+    return {"@context": "https://schema.org", "@graph": graph}
+
+
+def render_foods(env, strings, page_strings, assets, landing, year):
+    template = env.get_template("food.html")
+    models = food_model(load_fdc())
+    sets = page_sets()
+    food_strings = load_food_strings()
+    pages = {}
+    for code, hub in FOOD_LOCALES.items():
+        f, t = food_strings[code], strings[code]
+        home, lang_name, og_locale, gp_code = landing[code]
+        num, dec, grams = food_formatters(code)
+        in_sentence = (lambda s: s if s.split()[0].isupper() else s[:1].lower() + s[1:]) if code == "en" else str
+        calcs = {name: {"path": sets[name][code], "label": in_sentence(page_strings[name][code]["link.footer"])}
+                 for name in ("tdee", "deficit")}
+        common = dict(lang=code, home=home, base=BASE, og_locale=og_locale, t=t, f=f, fill=fill, num=num, dec=dec,
+                      grams=grams, calcs=calcs, hub={"path": hub, "label": f["hub.link"]}, year=year,
+                      current={"name": lang_name, "short": code.split("-")[0]},
+                      gp={"code": gp_code, "w": assets["googlePlay"][gp_code][0]})
+        foods = sorted((localize_food(m, models, code, sets) for m in models.values()),
+                       key=lambda x: x["name"].casefold().translate(str.maketrans("ąćęłńóśźż", "acelnoszz")))
+        hub_crumbs = [{"name": f["crumb.home"], "path": home}, {"name": f["hub.link"], "path": hub}]
+        pages[SITE / hub.strip("/") / "index.html"] = template.render(
+            **common, food=None, path=hub, rows=[{**x, "path": sets["food-" + x["key"]][code],
+                                                  "kcal100": x["per100"]["kcal"]} for x in foods],
+            locales=[{"code": c, "path": p, "name": landing[c][1], "short": c.split("-")[0]}
+                     for c, p in sets["foods"].items()],
+            meta_title=f["hub.title"], meta_description=f["hub.description"], crumbs=hub_crumbs,
+            ld=food_ld(None, f, [], hub_crumbs, code), links=store_links(f"food-hub-{code.lower()}"))
+        for food in foods:
+            path, head = sets["food-" + food["key"]][code], food["head"]
+            p100 = food["per100"]
+            faq = [{"q": food["h1"], "a": fill(f["faq.portion.a"], portion=head["short"], g=grams(head["g"]),
+                                               kcal=num(head["kcal"]), protein=dec(head["protein"]),
+                                               carbs=dec(head["carbs"]), fat=dec(head["fat"]))},
+                   {"q": fill(f["faq.per100.q"], name=food["name_lc"]),
+                    "a": fill(f["faq.per100.a"], kcal100=num(p100["kcal"]), protein=dec(p100["protein"]),
+                              carbs=dec(p100["carbs"]), fat=dec(p100["fat"]))},
+                   {"q": fill(f["faq.vary.q"], name=food["name_lc"]), "a": food["note"]},
+                   {"q": f["faq.source.q"], "a": fill(f["faq.source.a"], fdc=food["fdc"]["id"],
+                                                      type=food["fdc"]["data_type"],
+                                                      description=food["fdc"]["description"],
+                                                      date=food["fdc"]["fetched_at"])}]
+            crumbs = hub_crumbs + [{"name": food["name"], "path": path}]
+            pages[SITE / path.strip("/") / "index.html"] = template.render(
+                **common, food=food, path=path, faq=faq, crumbs=crumbs,
+                locales=[{"code": c, "path": p, "name": landing[c][1], "short": c.split("-")[0]}
+                         for c, p in sets["food-" + food["key"]].items()],
+                meta_title=fill(f["meta.title"], title=food["title"]),
+                meta_description=fill(f["meta.description"], name=food["name"], kcal100=num(p100["kcal"]),
+                                      portion=head["short_lc"], g=grams(head["g"]), kcal=num(head["kcal"])),
+                ld=food_ld(food, f, faq, crumbs, code), links=store_links(f"food-{food['key']}-{code.lower()}"))
     return pages
 
 

@@ -12,7 +12,7 @@ from pathlib import Path
 SRC = Path(__file__).resolve().parent.parent
 SITE = SRC.parent
 sys.path.insert(0, str(SRC))
-from build import BASE, LOCALES, page_sets  # noqa: E402
+from build import BASE, CALC_PAGES, LOCALES, page_sets  # noqa: E402
 
 
 class LandingHead(unittest.TestCase):
@@ -41,7 +41,7 @@ class LandingHead(unittest.TestCase):
 
 class CalculatorHead(unittest.TestCase):
     def calculator_sets(self):
-        return {name: pages for name, pages in page_sets().items() if name != "landing"}
+        return {name: pages for name, pages in page_sets().items() if name in CALC_PAGES}
 
     def test_canonical_hreflang_faq(self):
         for name, pages in self.calculator_sets().items():
@@ -125,7 +125,19 @@ class LocaleCoverage(unittest.TestCase):
         original = check_locales.page_sets
         check_locales.page_sets = lambda: {**original(), "calculator": {"en": "/bmr-calculator/"}}
         try:
-            self.assertTrue(any("site locales" in e for e in check_locales.check()))
+            self.assertTrue(any("required locales" in e for e in check_locales.check()))
+        finally:
+            check_locales.page_sets = original
+
+    def test_only_food_sets_may_skip_locales(self):
+        import check_locales
+        original = check_locales.page_sets
+        two = {"en": "/calories/", "pl": "/pl/kalorie/"}
+        check_locales.page_sets = lambda: {**original(), "recipes": two, "food-banana": {"en": "/calories/banana/"}}
+        try:
+            errors = check_locales.check()
+            self.assertTrue(any(e.startswith("recipes: locales") for e in errors))
+            self.assertTrue(any(e.startswith("food-banana: locales") for e in errors))
         finally:
             check_locales.page_sets = original
 
