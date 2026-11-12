@@ -11,7 +11,7 @@ const SITE = path.join(__dirname, '..', '..');
 const SETS = JSON.parse(execFileSync('python3', ['-c',
   'import json, sys; sys.path.insert(0, "_src"); from build import page_sets; print(json.dumps(page_sets()))'],
   { cwd: SITE, encoding: 'utf8' }));
-const CT = { calculator: 'calc', tdee: 'calc-tdee', deficit: 'calc-deficit' };
+const CT = { calculator: 'web-calc', tdee: 'web-tdee', deficit: 'web-deficit' };
 
 function appBaseBurn(male, age, heightCm, weightKg) {
   const bmrBase = 10 * weightKg + 6.25 * heightCm - 5 * age;
@@ -66,7 +66,7 @@ test('food pages: store links carry the food ct + lang, no landing.js, assets ex
   const foodSets = Object.keys(SETS).filter(isFoodSet);
   assert.ok(foodSets.length > 1);
   for (const name of foodSets) {
-    const prefix = name === 'foods' ? 'food-hub' : name;
+    const prefix = 'web-' + (name === 'foods' ? 'food-hub' : name);
     for (const [lang, page] of Object.entries(SETS[name])) {
       const html = fs.readFileSync(path.join(SITE, page, 'index.html'), 'utf8');
       const links = L.storeLinks(prefix + '-' + lang.toLowerCase());

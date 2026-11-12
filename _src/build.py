@@ -8,6 +8,7 @@ Usage: python3 _src/build.py [--check]   (--check fails if a generated page is o
 import datetime
 import json
 import re
+import subprocess
 import sys
 from pathlib import Path
 from urllib.parse import quote
@@ -61,9 +62,9 @@ DEFICITS = [250, 500, 750, 1000]
 CALC_SEP = {"en": ",", "de": ".", "es": "", "fr": "\u202f", "it": ".", "pl": "", "pt-BR": ".", "ru": "\u00a0", "tr": "."}
 # page set: (mode, i18n folder for strings over i18n/calc, store ct prefix, FAQ keys, {code: path})
 CALC_PAGES = {
-    "calculator": ("bmr", None, "calc", ["bmr", "tdee", "formula", "accuracy", "activity"], None),
-    "tdee": ("tdee", "tdee", "calc-tdee", ["tdee", "difference", "activity", "use", "accuracy"], TDEE_PATHS),
-    "deficit": ("deficit", "deficit", "calc-deficit", ["deficit", "maintenance", "size", "floor", "accuracy"],
+    "calculator": ("bmr", None, "web-calc", ["bmr", "tdee", "formula", "accuracy", "activity"], None),
+    "tdee": ("tdee", "tdee", "web-tdee", ["tdee", "difference", "activity", "use", "accuracy"], TDEE_PATHS),
+    "deficit": ("deficit", "deficit", "web-deficit", ["deficit", "maintenance", "size", "floor", "accuracy"],
                 DEFICIT_PATHS),
 }
 
@@ -164,12 +165,40 @@ def short_label(label):
     return re.sub(r"\s*\([^)]*\)$", "", label)
 
 
+CHANNELS = {"web": ("calcalou.com", "referral"), "yt": ("youtube", "social"), "tt": ("tiktok", "social"),
+            "ig": ("instagram", "social"), "fb": ("facebook", "social"), "reddit": ("reddit", "social"),
+            "cr": ("creator", "social"), "links": ("linkinbio", "social"), "share": ("app-share", "referral"),
+            "invite": ("app-invite", "referral"), "doctor": ("doctor", "referral")}
+LANDING_CT = "web-site"
+CF_BEACON_TOKEN = ""
+STATIC_PAGES = ("links/index.html", "i/index.html", "press/index.html", "404.html")
+ANALYTICS_BLOCK = re.compile(r"<!-- analytics -->.*?<!-- /analytics -->", re.S)
+
+
+def analytics_block():
+    tag = ('<script defer src="https://static.cloudflareinsights.com/beacon.min.js" '
+           f"data-cf-beacon='{{\"token\": \"{CF_BEACON_TOKEN}\"}}'></script>") if CF_BEACON_TOKEN else ""
+    return f"<!-- analytics -->{tag}<!-- /analytics -->"
+
+
+def static_pages():
+    pages = {}
+    for rel in STATIC_PAGES:
+        html = (SITE / rel).read_text(encoding="utf-8")
+        if not ANALYTICS_BLOCK.search(html):
+            raise SystemExit(f"{rel}: no <!-- analytics --> block")
+        pages[SITE / rel] = ANALYTICS_BLOCK.sub(lambda _: analytics_block(), html)
+    return pages
+
+
 def store_links(ct):
-    """Mirror of storeLinks() in /assets/landing.js, for pages that do not load it."""
+    """Mirror of storeLinks() in /assets/landing.js (scheme: _src/ATTRIBUTION.md), for pages that do not load it."""
+    prefix = ct.split("-")[0]
+    source, medium = CHANNELS.get(prefix, (prefix, "other"))
     return {
         "ios": f"https://apps.apple.com/app/apple-store/id6757434158?pt=128407090&ct={quote(ct, safe='')}&mt=8",
         "android": "https://play.google.com/store/apps/details?id=com.khrolovich.calorietracker&referrer="
-                   + quote(f"utm_source={ct}&utm_medium=social&utm_campaign=launch", safe=""),
+                   + quote(f"utm_source={source}&utm_medium={medium}&utm_campaign={ct}", safe=""),
     }
 
 
@@ -209,9 +238,11 @@ def load_strings():
 def render_all():
     # Imported here so check_locales.py (pre-push hook) runs on a bare python3 without jinja2.
     from jinja2 import Environment, FileSystemLoader, StrictUndefined
+    from markupsafe import Markup
 
     env = Environment(loader=FileSystemLoader(SRC), autoescape=True, undefined=StrictUndefined,
                       trim_blocks=False, lstrip_blocks=False)
+    env.globals["analytics"] = Markup(analytics_block())
     template = env.get_template("template.html")
     assets = json.loads((SRC / "assets.json").read_text(encoding="utf-8"))
     strings = load_strings()
@@ -232,7 +263,7 @@ def render_all():
         html = template.render(
             lang=code, path=path, base=BASE, og_locale=og_locale, t=strings[code], locales=locales,
             current={"name": name, "short": code.split("-")[0]}, shots=assets["shots"],
-            gp={"code": gp_code, "w": gp_w}, calcs=calcs,
+            gp={"code": gp_code, "w": gp_w}, calcs=calcs, links=store_links(LANDING_CT),
             num=lambda n, s=sep: f"{n:,}".replace(",", s), year=year)
         pages[SITE / path.strip("/") / "index.html"] = html
     calc_template = env.get_template("calc.html")
@@ -337,7 +368,7 @@ def render_foods(env, strings, page_strings, assets, landing, year):
             locales=[{"code": c, "path": p, "name": landing[c][1], "short": c.split("-")[0]}
                      for c, p in sets["foods"].items()],
             meta_title=f["hub.title"], meta_description=f["hub.description"], crumbs=hub_crumbs,
-            ld=food_ld(None, f, [], hub_crumbs, code), links=store_links(f"food-hub-{code.lower()}"))
+            ld=food_ld(None, f, [], hub_crumbs, code), links=store_links(f"web-food-hub-{code.lower()}"))
         for food in foods:
             path, head = sets["food-" + food["key"]][code], food["head"]
             p100 = food["per100"]
@@ -360,7 +391,31 @@ def render_foods(env, strings, page_strings, assets, landing, year):
                 meta_title=fill(f["meta.title"], title=food["title"]),
                 meta_description=fill(f["meta.description"], name=food["name"], kcal100=num(p100["kcal"]),
                                       portion=head["short_lc"], g=grams(head["g"]), kcal=num(head["kcal"])),
-                ld=food_ld(food, f, faq, crumbs, code), links=store_links(f"food-{food['key']}-{code.lower()}"))
+                ld=food_ld(food, f, faq, crumbs, code), links=store_links(f"web-food-{food['key']}-{code.lower()}"))
+    return pages | go_pages(env, strings["en"], assets["googlePlay"]["en"][0]) | static_pages()
+
+
+def qr_svg(text, name):
+    from markupsafe import Markup
+
+    cached = SRC / "qr" / f"{name}.svg"
+    if not cached.exists() or f'data-text="{text}"' not in cached.read_text(encoding="utf-8"):
+        cached.parent.mkdir(exist_ok=True)
+        cached.write_text(subprocess.check_output(["swift", str(SRC / "tools" / "qr.swift"), text], text=True),
+                          encoding="utf-8")
+    return Markup(cached.read_text(encoding="utf-8").strip())
+
+
+def go_pages(env, t, gp_w):
+    """Smart links /go/<channel>/ from _src/go.json (scheme: _src/ATTRIBUTION.md)."""
+    template = env.get_template("go.html")
+    pages = {}
+    for channel, ct in json.loads((SRC / "go.json").read_text(encoding="utf-8")).items():
+        if not re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", channel) or not re.fullmatch(r"[A-Za-z0-9_-]{1,40}", ct):
+            raise SystemExit(f"go.json: bad channel or ct: {channel!r}: {ct!r}")
+        url = f"{BASE}/go/{channel}/"
+        pages[SITE / "go" / channel / "index.html"] = template.render(
+            t=t, gp_w=gp_w, ct=ct, links=store_links(ct), qr=qr_svg(url, channel))
     return pages
 
 

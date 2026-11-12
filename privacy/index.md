@@ -5,7 +5,7 @@ permalink: /privacy/
 
 # Privacy Policy for Calcalou Calorie Tracker
 
-**Last updated:** October 12, 2026
+**Last updated:** November 12, 2026
 
 **Applies to:** Calcalou Calorie Tracker for iOS and Android, version 1.1 and later
 
@@ -24,7 +24,8 @@ controller** for the processing described here.
 
 This policy describes what the app actually does in versions 1.1 to 1.5: what data it
 collects, who it is sent to, why, how long it is kept, and what you can do about it. Where
-version 1.2, 1.3 or 1.5 differs, we say so. Where a feature is optional, we say so.
+version 1.2, 1.3 or 1.5 differs, we say so. Where a feature is optional, we say so. It also
+covers our website, calcalou.com (see 3.18).
 
 Calcalou is a calorie-tracking tool, not a medical device. It does not diagnose, treat, or
 prevent any condition, and its calorie figures — especially AI photo estimates — are
@@ -324,6 +325,36 @@ advertising. Legal basis: security, legitimate interests (Art. 6(1)(f)).
 Calcalou is not for children below the minimum age in 3.12. If you believe a child has
 given us data, write to support@calcalou.com and we will delete it.
 
+### 3.18 Our website, calcalou.com
+
+The website has no accounts and sets no cookies of its own.
+
+- **Hosting.** The site is served by GitHub Pages (GitHub, Inc.). Like any web server, it
+  receives your IP address and browser details in order to deliver the pages.
+- **Visit statistics.** On the home, calculator and food pages, our `/go/` links and a few
+  other pages, we count visits with Cloudflare Web Analytics, which Cloudflare describes as
+  working without cookies or other storage on your device. It shows us, as totals, which pages
+  are viewed, which website a visit came from (the referrer your browser sends), and visitors'
+  countries, device types and browsers. What Cloudflare collects and keeps is described in its
+  [Web Analytics information](https://www.cloudflare.com/web-analytics/) and
+  [privacy policy](https://www.cloudflare.com/privacypolicy/).
+- **Links in our profiles.** Links such as `calcalou.com/go/ig/` open a page that is counted as
+  above and then sends a phone on to its app store. The choice of store is made in your browser
+  from its user-agent string; nothing is stored on your device or sent to us.
+- **Store buttons.** The App Store and Google Play links carry a campaign token naming the
+  page or channel (for example `web-calc-en`), so Apple and Google can report to us how many
+  store visits and installs each page brought, as totals. If you install from Google Play,
+  the same values reach the app as the install referrer; the app reads only an invite code
+  from it (3.13), and Firebase Analytics receives it only while usage analytics is switched on
+  (3.4).
+- **Videos.** Pages that show one of our short videos load its preview image from Google's
+  YouTube image server (`i.ytimg.com`), so Google receives your IP address and browser
+  details when the page opens. The player itself loads from `youtube-nocookie.com` only when
+  you tap play.
+
+Legal basis: legitimate interests (Art. 6(1)(f)) — delivering the site and knowing which
+pages and channels bring visitors.
+
 ## 4. Why we process this data, and on what legal basis
 
 For users in the EEA and the UK, the GDPR requires us to name a legal basis for each
@@ -345,6 +376,7 @@ purpose:
 | Invites and rewards | Invite code, invite records, optional first name (3.13) | Performance of a contract and legitimate interests (Art. 6(1)(b), (f)) — preventing abuse; consent (Art. 6(1)(a)) for showing a first name |
 | Look up a barcode | Barcode number, IP address (3.14) | Performance of a contract (Art. 6(1)(b)) — the lookup is only made at your request |
 | Confirm that requests come from the genuine app | Device-check token (3.16) | Legitimate interests (Art. 6(1)(f)) — keeping the service secure |
+| Deliver the website and count visits | IP address and browser details, visit statistics, campaign tokens (3.18) | Legitimate interests (Art. 6(1)(f)) — running the site and knowing which pages and channels bring visitors |
 
 We do not sell your personal data, and we do not "share" it for cross-context behavioural
 advertising in the sense of US state privacy laws other than through the AdMob processing
@@ -360,6 +392,9 @@ described in 3.8, which you control through the consent form and, on iOS, ATT.
 | Google (AdMob) | Advertising identifier, ad interaction data | Independent controller | United States |
 | RevenueCat, Inc. | Subscription status and receipts | Processor | United States |
 | Cloudflare, Inc. (Email Routing) | Anything you email to support@calcalou.com, passed on to our inbox | Processor | United States |
+| Cloudflare, Inc. (Web Analytics) | Visits to calcalou.com: page, referring site or campaign, country, device type and browser | Processor | United States |
+| GitHub, Inc. (GitHub Pages) | IP address and browser details when you open calcalou.com | Hosting provider; see GitHub's privacy statement | United States |
+| Google (YouTube) | IP address and browser details when a page shows a video preview, and when you play a video | Independent controller | United States |
 | Google (Gmail) | Our email replies to you, and anything you email us | Processor | United States |
 | Apple / Google Play | Your payment; we receive only the subscription status | Independent controllers | Per their own policies |
 | Open Food Facts | Barcode you look up, IP address, app name and version | Independent controller | France |
@@ -388,6 +423,7 @@ can ask us for details at support@calcalou.com.
 | Server logs of refused or failed scans | 30 days (Google Cloud Logging) |
 | Analytics events | Per Firebase Analytics retention settings (currently up to 14 months) |
 | Crash reports | Per Crashlytics retention (currently up to 90 days) |
+| Website visit statistics | Per Cloudflare Web Analytics retention (3.18) |
 | Support requests and AI-result reports, an attached photo included | Until you delete your account, or sooner on request |
 | Year of birth and age-check result | Until you delete your account |
 | Under-age refusal marker (account ID, date) | Until the automatic deletion completes |

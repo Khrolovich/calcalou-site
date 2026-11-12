@@ -146,7 +146,7 @@ class Pages(unittest.TestCase):
                                                                                            else ""), html)
                     self.assertIn(f'href="{TDEE_PATHS[code]}"', html)
                     self.assertIn(f'href="{DEFICIT_PATHS[code]}"', html)
-                    self.assertIn(f"ct=food-{food['key']}-{code}&", html)
+                    self.assertIn(f"ct=web-food-{food['key']}-{code}&", html)
                     self.assertEqual("data-yt=" in html, bool(food["video"]))
                     for p in MODELS[food["key"]]["portions"]:
                         if p["g"] != int(p["g"]):

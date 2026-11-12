@@ -8,6 +8,7 @@ them. Any other published HTML/Markdown page must be in SINGLE_LANGUAGE, so a pa
 
 Usage: python3 _src/check_locales.py   (pre-push hook: .githooks/pre-push; also run by the unit tests)
 """
+import json
 import sys
 import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
@@ -17,6 +18,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build import BASE, LOCALES, SITE, page_sets, set_locales  # noqa: E402
 
 SINGLE_LANGUAGE = {"/press/", "/privacy/", "/support/", "/delete-account/", "/links/", "/get/", "/i/", "/404.html"}
+GO_LINKS = {f"/go/{channel}/" for channel in json.loads((Path(__file__).resolve().parent / "go.json").read_text())}
 DEFAULT_LOCALE = "en"
 SITEMAP_NS = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
 
@@ -93,7 +95,7 @@ def check():
     stale = [p for p in SINGLE_LANGUAGE if not (page_file(p) or (SITE / p.strip("/")).is_file())]
     if stale:
         errors.append(f"SINGLE_LANGUAGE lists pages that do not exist: {sorted(stale)}")
-    known = {path for pages in sets.values() for path in pages.values()} | SINGLE_LANGUAGE
+    known = {path for pages in sets.values() for path in pages.values()} | SINGLE_LANGUAGE | GO_LINKS
     for page in sorted(SITE.rglob("*")):
         rel = page.relative_to(SITE)
         if page.suffix not in (".html", ".md") or rel.parts[0].startswith((".", "_")) or rel.parts[0] == "assets":

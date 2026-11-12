@@ -28,21 +28,19 @@
     <picture><source type="image/avif" srcset="/assets/img/lou-happy-480.avif"><img src="/assets/img/lou-happy-480.webp" alt="Lou, the Calcalou mascot" width="480" height="450"></picture>
     <h1>Calcalou</h1>
     <p>Tell Lou what you ate. Lou does the counting.</p>
-    <a class="primary" data-store="ios" href="https://apps.apple.com/app/id6757434158">Get it on the App Store</a>
-    <a class="primary" data-store="android" href="https://play.google.com/store/apps/details?id=com.khrolovich.calorietracker">Get it on Google Play</a>
+    <a class="primary" data-store="ios" href="https://apps.apple.com/app/apple-store/id6757434158?pt=128407090&amp;ct=links&amp;mt=8">Get it on the App Store</a>
+    <a class="primary" data-store="android" href="https://play.google.com/store/apps/details?id=com.khrolovich.calorietracker&amp;referrer=utm_source%3Dlinkinbio%26utm_medium%3Dsocial%26utm_campaign%3Dlinks">Get it on Google Play</a>
     <a href="/">calcalou.com</a>
     <a href="/support/">Help and support</a>
   </main>
+  <script src="/assets/landing.js" data-no-init></script>
   <script>
     (function () {
-      var ct = (new URLSearchParams(location.search).get('ct') || 'links').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40) || 'links';
-      var hrefs = {
-        ios: 'https://apps.apple.com/app/apple-store/id6757434158?pt=128407090&ct=' + ct + '&mt=8',
-        android: 'https://play.google.com/store/apps/details?id=com.khrolovich.calorietracker&referrer=' +
-          encodeURIComponent('utm_source=' + ct + '&utm_medium=social&utm_campaign=links')
-      };
+      var stores = window.CalcalouStores;
+      var hrefs = stores.storeLinks(stores.sanitizeCampaign(new URLSearchParams(location.search).get('ct'), 'links'));
       document.querySelectorAll('[data-store]').forEach(function (a) { a.href = hrefs[a.getAttribute('data-store')]; });
     })();
   </script>
+  <!-- analytics --><!-- /analytics -->
 </body>
 </html>

@@ -2,8 +2,8 @@
 {%- macro shot(key, sizes, alt) -%}{% set d = shots[lang ~ "/" ~ key] %}<div class="shot">{{ pic("shot-" ~ lang ~ "-" ~ key, [320, 480, 640], sizes, d[0], d[1], alt) }}</div>{%- endmacro -%}
 {%- macro stores(cls="stores", lazy=true) -%}
 <div class="{{ cls }}"{% if not lazy %} data-hero-cta{% endif %}>
-  <a data-store="ios" href="https://apps.apple.com/app/id6757434158"><img src="/assets/img/badge-app-store.svg" alt="{{ t['store.ios'] }}" width="150" height="50"{% if lazy %} loading="lazy"{% endif %}></a>
-  <a data-store="android" href="https://play.google.com/store/apps/details?id=com.khrolovich.calorietracker"><img src="/assets/img/badge-google-play-{{ gp.code }}-50.webp" srcset="/assets/img/badge-google-play-{{ gp.code }}-50.webp 1x, /assets/img/badge-google-play-{{ gp.code }}-100.webp 2x" alt="{{ t['store.android'] }}" width="{{ gp.w }}" height="50"{% if lazy %} loading="lazy"{% endif %}></a>
+  <a data-store="ios" href="{{ links.ios }}"><img src="/assets/img/badge-app-store.svg" alt="{{ t['store.ios'] }}" width="150" height="50"{% if lazy %} loading="lazy"{% endif %}></a>
+  <a data-store="android" href="{{ links.android }}"><img src="/assets/img/badge-google-play-{{ gp.code }}-50.webp" srcset="/assets/img/badge-google-play-{{ gp.code }}-50.webp 1x, /assets/img/badge-google-play-{{ gp.code }}-100.webp 2x" alt="{{ t['store.android'] }}" width="{{ gp.w }}" height="50"{% if lazy %} loading="lazy"{% endif %}></a>
 </div>
 {%- endmacro -%}
 <!DOCTYPE html>
@@ -189,10 +189,11 @@
   </footer>
 
   <div class="sticky" data-sticky-cta>
-    <a class="btn" data-store="ios" href="https://apps.apple.com/app/id6757434158"><img src="/assets/img/app-icon-96.png" alt="" width="26" height="26" loading="lazy">{{ t['sticky.ios'] }}</a>
-    <a class="btn" data-store="android" href="https://play.google.com/store/apps/details?id=com.khrolovich.calorietracker"><img src="/assets/img/app-icon-96.png" alt="" width="26" height="26" loading="lazy">{{ t['sticky.android'] }}</a>
+    <a class="btn" data-store="ios" href="{{ links.ios }}"><img src="/assets/img/app-icon-96.png" alt="" width="26" height="26" loading="lazy">{{ t['sticky.ios'] }}</a>
+    <a class="btn" data-store="android" href="{{ links.android }}"><img src="/assets/img/app-icon-96.png" alt="" width="26" height="26" loading="lazy">{{ t['sticky.android'] }}</a>
   </div>
 
   <script src="/assets/landing.js" defer></script>
+  {{ analytics }}
 </body>
 </html>

@@ -1,7 +1,11 @@
 (function (root, factory) {
   var api = factory();
   if (typeof module === 'object' && module.exports) module.exports = api;
-  else api.init(root.document, root);
+  else {
+    root.CalcalouStores = api;
+    var script = root.document.currentScript;
+    if (!script || !script.hasAttribute('data-no-init')) api.init(root.document, root);
+  }
 })(typeof self !== 'undefined' ? self : this, function () {
   'use strict';
 
@@ -11,17 +15,38 @@
   var DEFAULT_CAMPAIGN = 'web-site';
   var PLAY_ENABLED = true;
 
-  function sanitizeCampaign(raw) {
-    var clean = String(raw || DEFAULT_CAMPAIGN).replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40);
-    return clean || DEFAULT_CAMPAIGN;
+  function sanitizeCampaign(raw, fallback) {
+    fallback = fallback || DEFAULT_CAMPAIGN;
+    var clean = String(raw || fallback).replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40);
+    return clean || fallback;
+  }
+
+  var CHANNELS = {
+    web: ['calcalou.com', 'referral'],
+    yt: ['youtube', 'social'],
+    tt: ['tiktok', 'social'],
+    ig: ['instagram', 'social'],
+    fb: ['facebook', 'social'],
+    reddit: ['reddit', 'social'],
+    cr: ['creator', 'social'],
+    links: ['linkinbio', 'social'],
+    share: ['app-share', 'referral'],
+    invite: ['app-invite', 'referral'],
+    doctor: ['doctor', 'referral']
+  };
+
+  function channel(ct) {
+    var prefix = ct.split('-')[0];
+    return CHANNELS[prefix] || [prefix, 'other'];
   }
 
   function storeLinks(ct) {
+    var utm = channel(ct);
     return {
       ios: 'https://apps.apple.com/app/apple-store/id' + APP_STORE_ID + '?pt=' + APP_STORE_PROVIDER +
         '&ct=' + encodeURIComponent(ct) + '&mt=8',
       android: 'https://play.google.com/store/apps/details?id=' + PLAY_PACKAGE + '&referrer=' +
-        encodeURIComponent('utm_source=' + ct + '&utm_medium=social&utm_campaign=launch')
+        encodeURIComponent('utm_source=' + utm[0] + '&utm_medium=' + utm[1] + '&utm_campaign=' + ct)
     };
   }
 
@@ -70,6 +95,7 @@
 
   return {
     sanitizeCampaign: sanitizeCampaign,
+    CHANNELS: CHANNELS,
     storeLinks: storeLinks,
     detectPlatform: detectPlatform,
     init: init
