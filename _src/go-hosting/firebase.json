@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "calcalou-go",
+    "public": "public",
+    "redirects": [
+      {"source": "/go/:channel", "destination": "https://calcalou.com/go/:channel/", "type": 302},
+      {"source": "/go/:channel/", "destination": "https://calcalou.com/go/:channel/", "type": 302},
+      {"source": "**", "destination": "https://calcalou.com/", "type": 302}
+    ]
+  }
+}

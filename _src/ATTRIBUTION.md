@@ -49,3 +49,12 @@ Cloudflare Web Analytics (cookieless, no consent banner) on every generated page
 and run `python3 _src/build.py`; with an empty token no beacon is rendered. Visitors who arrive on a phone
 with `?ct=` go straight to the store, so that traffic shows up in the store consoles by `ct`, not in web
 analytics.
+
+## Server-side click counts (`calcalou-go`)
+
+Bio links point at `https://calcalou-go.web.app/go/<channel>` (Firebase Hosting site `calcalou-go`, project `calorie-tracker-96de2`, config in `_src/go-hosting/`). It 302s to `https://calcalou.com/go/<channel>/`, which picks the store.
+
+- Counting: log-based metric `logging.googleapis.com/user/go_link_clicks`, label `channel`, from Hosting's Cloud Logging (`cloudLoggingEnabled` on the site).
+- Privacy: exclusion `go-links-no-raw` on the `_Default` sink drops every `calcalou-go` request record, so no IP or user agent is stored; the metric still counts them.
+- Read counts: Cloud Console → Metrics Explorer → `go_link_clicks`, group by `channel`.
+- Deploy: `cd _src/go-hosting && firebase deploy --only hosting:calcalou-go`.

@@ -338,9 +338,12 @@ The website has no accounts and sets no cookies of its own.
   countries, device types and browsers. What Cloudflare collects and keeps is described in its
   [Web Analytics information](https://www.cloudflare.com/web-analytics/) and
   [privacy policy](https://www.cloudflare.com/privacypolicy/).
-- **Links in our profiles.** Links such as `calcalou.com/go/ig/` open a page that is counted as
-  above and then sends a phone on to its app store. The choice of store is made in your browser
-  from its user-agent string; nothing is stored on your device or sent to us.
+- **Links in our profiles.** Links such as `calcalou-go.web.app/go/ig` are answered by Firebase
+  Hosting (Google), which receives your IP address and browser details in order to answer and
+  sends you on to the matching page on calcalou.com. From these requests we keep only a running
+  count of clicks per link; the request records themselves, including IP addresses, are not
+  stored. On calcalou.com the page then sends a phone on to its app store. The choice of store
+  is made in your browser from its user-agent string; nothing is stored on your device.
 - **Store buttons.** The App Store and Google Play links carry a campaign token naming the
   page or channel (for example `web-calc-en`), so Apple and Google can report to us how many
   store visits and installs each page brought, as totals. If you install from Google Play,
@@ -393,6 +396,7 @@ described in 3.8, which you control through the consent form and, on iOS, ATT.
 | RevenueCat, Inc. | Subscription status and receipts | Processor | United States |
 | Cloudflare, Inc. (Email Routing) | Anything you email to support@calcalou.com, passed on to our inbox | Processor | United States |
 | Cloudflare, Inc. (Web Analytics) | Visits to calcalou.com: page, referring site or campaign, country, device type and browser | Processor | United States |
+| Google (Firebase Hosting) | IP address and browser details when you open one of our `/go/` profile links; we keep only click counts per link | Processor | United States |
 | GitHub, Inc. (GitHub Pages) | IP address and browser details when you open calcalou.com | Hosting provider; see GitHub's privacy statement | United States |
 | Google (YouTube) | IP address and browser details when a page shows a video preview, and when you play a video | Independent controller | United States |
 | Google (Gmail) | Our email replies to you, and anything you email us | Processor | United States |
