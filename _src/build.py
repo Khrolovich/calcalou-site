@@ -170,7 +170,7 @@ CHANNELS = {"web": ("calcalou.com", "referral"), "yt": ("youtube", "social"), "t
             "cr": ("creator", "social"), "links": ("linkinbio", "social"), "share": ("app-share", "referral"),
             "invite": ("app-invite", "referral"), "doctor": ("doctor", "referral")}
 LANDING_CT = "web-site"
-CF_BEACON_TOKEN = ""
+CF_BEACON_TOKEN = "33026263bdf1424baea5e0156865abde"
 STATIC_PAGES = ("links/index.html", "i/index.html", "press/index.html", "404.html")
 ANALYTICS_BLOCK = re.compile(r"<!-- analytics -->.*?<!-- /analytics -->", re.S)
 

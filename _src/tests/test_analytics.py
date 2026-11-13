@@ -13,7 +13,9 @@ BEACON = "https://static.cloudflareinsights.com/beacon.min.js"
 
 class Beacon(unittest.TestCase):
     def test_no_token_no_beacon(self):
-        for target, html in build.render_all().items():
+        with mock.patch.object(build, "CF_BEACON_TOKEN", ""):
+            pages = build.render_all()
+        for target, html in pages.items():
             with self.subTest(page=str(target)):
                 self.assertNotIn(BEACON, html)
                 self.assertEqual(html.count("<!-- analytics -->"), 1)
