@@ -71,8 +71,8 @@ write it.
 
 If you use the AI photo scan, the photo you take or pick is sent over an encrypted
 connection to our server function (Firebase Cloud Functions, region `us-central1`), which
-forwards it to the **Google Gemini API** (Google LLC) for analysis. Google acts as our
-processor for this request. Gemini returns a list of recognised foods with estimated
+forwards it to a third-party AI service provider for analysis. That provider acts as our
+processor for this request. The service returns a list of recognised foods with estimated
 portions and calories; from version 1.7 it also estimates protein, fat and carbohydrate
 grams where it can. You can change these values and you decide what to save.
 
@@ -83,9 +83,8 @@ What happens to the image:
   (A photo you attach to a support request is different: it is stored with that request,
   see 3.6.)
 - We do not use your photos to train any model of ours.
-- Google handles the image as our processor under the
-  [Gemini API terms](https://ai.google.dev/gemini-api/terms) that apply to our account,
-  which govern how long Google may keep it and what Google may do with it.
+- The provider handles the image as our processor under the terms that apply to our
+  account, which govern how long the provider may keep it and what it may do with it.
 
 Alongside each scan we store two small records:
 
@@ -104,7 +103,7 @@ From version 1.2 the app asks for your consent before the first photo is sent.
 From version 1.5, when you photograph a menu or a nutrition label, the app reads the text
 on your device. On iPhone and iPad with Apple Intelligence the estimate is made on the
 device too and nothing is sent, unless the device cannot handle that text and you choose to
-send it. Otherwise only that text, not the photo, goes to Google Gemini through our server,
+send it. Otherwise only that text, not the photo, goes to the third-party AI service provider through our server,
 as with meal photos.
 
 In version 1.1, if analytics is switched on (see 3.4), the name of the first recognised food
@@ -446,7 +445,7 @@ you control personalisation through the consent form and, on iOS, ATT.
 | Recipient | What they receive | Role | Where |
 |---|---|---|---|
 | Google (Firebase Authentication, Firestore, Cloud Functions, Remote Config, Cloud Messaging) | Account data, your synced log and goals, AI scan requests | Processor | United States (`us-central1`) |
-| Google (Gemini API) | Food photos, or text read from a menu or label, submitted for recognition | Processor | United States |
+| Third-party AI service provider | Food photos, or text read from a menu or label, submitted for recognition | Processor | United States |
 | Google (Firebase Analytics, Crashlytics) | Analytics events, crash reports | Processor | United States |
 | Google (AdMob) | Device or installation identifiers (on Android including the Advertising ID), IP address and approximate location, device and app information, ad interaction data (3.8) | Independent controller | United States |
 | RevenueCat, Inc. | Subscription status and receipts | Processor | United States |
