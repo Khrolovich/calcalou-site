@@ -71,8 +71,8 @@ write it.
 
 If you use the AI photo scan, the photo you take or pick is sent over an encrypted
 connection to our server function (Firebase Cloud Functions, region `us-central1`), which
-forwards it to a third-party AI service provider for analysis. That provider acts as our
-processor for this request. The service returns a list of recognised foods with estimated
+forwards it to third-party AI service providers for analysis. Those providers act as our
+processors for this request. The service returns a list of recognised foods with estimated
 portions and calories; from version 1.7 it also estimates protein, fat and carbohydrate
 grams where it can. You can change these values and you decide what to save.
 
@@ -83,8 +83,9 @@ What happens to the image:
   (A photo you attach to a support request is different: it is stored with that request,
   see 3.6.)
 - We do not use your photos to train any model of ours.
-- The provider handles the image as our processor under the terms that apply to our
-  account, which govern how long the provider may keep it and what it may do with it.
+- The AI service providers process the request (the photo, or the text described below) as
+  our processors. They may process it in any country where they operate, and may keep it for
+  up to 90 days for abuse prevention, security and legal compliance; after that it is deleted.
 
 Alongside each scan we store two small records:
 
@@ -103,7 +104,7 @@ From version 1.2 the app asks for your consent before the first photo is sent.
 From version 1.5, when you photograph a menu or a nutrition label, the app reads the text
 on your device. On iPhone and iPad with Apple Intelligence the estimate is made on the
 device too and nothing is sent, unless the device cannot handle that text and you choose to
-send it. Otherwise only that text, not the photo, goes to the third-party AI service provider through our server,
+send it. Otherwise only that text, not the photo, goes to the third-party AI service providers through our server,
 as with meal photos.
 
 In version 1.1, if analytics is switched on (see 3.4), the name of the first recognised food
@@ -445,7 +446,7 @@ you control personalisation through the consent form and, on iOS, ATT.
 | Recipient | What they receive | Role | Where |
 |---|---|---|---|
 | Google (Firebase Authentication, Firestore, Cloud Functions, Remote Config, Cloud Messaging) | Account data, your synced log and goals, AI scan requests | Processor | United States (`us-central1`) |
-| Third-party AI service provider | Food photos, or text read from a menu or label, submitted for recognition | Processor | United States |
+| Third-party AI service providers | Food photos, or text read from a menu or label, submitted for recognition | Processor | United States and other countries where they operate |
 | Google (Firebase Analytics, Crashlytics) | Analytics events, crash reports | Processor | United States |
 | Google (AdMob) | Device or installation identifiers (on Android including the Advertising ID), IP address and approximate location, device and app information, ad interaction data (3.8) | Independent controller | United States |
 | RevenueCat, Inc. | Subscription status and receipts | Processor | United States |
@@ -464,7 +465,8 @@ Beyond this, we disclose data only where the law requires it.
 
 ## 6. International transfers
 
-The services above process data in the United States. Where data is transferred out of the
+The services above process data in the United States; third-party AI service providers may
+also process it in other countries where they operate. Where data is transferred out of the
 EEA or the UK, the transfer relies on the European Commission's Standard Contractual
 Clauses (and the UK Addendum) as incorporated in our agreements with those providers. You
 can ask us for details at support@calcalou.com.
@@ -478,7 +480,7 @@ can ask us for details at support@calcalou.com.
 | Active calories read from Apple Health or Health Connect | On your device only, up to 90 days; cleared when you turn the connection off |
 | Weight read from Apple Health or Health Connect | Not stored: used on the device to pre-fill the calculator or calculate your protein goal, then discarded |
 | Protein goal (grams per day, grams per kilogram, how it was set) | Until you change it or delete your account |
-| Food photos and menu or label text sent for AI recognition | Not stored — held in memory for the duration of the recognition request only |
+| Food photos and menu or label text sent for AI recognition | Not stored by us — held in memory for the duration of the recognition request only; the AI service providers may keep them for up to 90 days (see 3.3) |
 | AI usage counter (`ai_quota`) | 7 days, then deleted automatically |
 | AI technical log (`ai_recognition_logs`) | Deleted automatically by a retention policy; contains no user identifier |
 | Server logs of refused or failed scans | 30 days (Google Cloud Logging) |
