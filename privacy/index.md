@@ -5,7 +5,7 @@ permalink: /privacy/
 
 # Privacy Policy for Calcalou Calorie Tracker
 
-**Last updated:** November 12, 2026
+**Last updated:** 2026-11-XX
 
 **Applies to:** Calcalou Calorie Tracker for iOS and Android, version 1.1 and later
 
@@ -22,9 +22,9 @@ controller** for the processing described here.
 
 ## 2. What this policy covers
 
-This policy describes what the app actually does in versions 1.1 to 1.5: what data it
+This policy describes what the app actually does in versions 1.1 to 1.7: what data it
 collects, who it is sent to, why, how long it is kept, and what you can do about it. Where
-version 1.2, 1.3 or 1.5 differs, we say so. Where a feature is optional, we say so. It also
+version 1.2, 1.3, 1.5 or 1.7 differs, we say so. Where a feature is optional, we say so. It also
 covers our website, calcalou.com (see 3.18).
 
 Calcalou is a calorie-tracking tool, not a medical device. It does not diagnose, treat, or
@@ -39,27 +39,31 @@ When you create an account we process:
 
 - **Email address** — required to sign in. If you use Sign in with Apple and choose "Hide
   My Email", we only ever see Apple's private relay address.
-- **Display name** — optional; used to personalise the app.
+- **Display name** — optional; the name the app calls you by. From version 1.7 it is stored
+  with your account and synced, so it comes back when you sign in on another device. If you
+  keep the app's default name, it is not stored with your account. If you sign in with Apple
+  or Google, the name that account shares may also be kept with your sign-in record in
+  Firebase Authentication.
 - **Account identifier (user ID)** — assigned by Firebase Authentication.
 - **Sign-in method** — email/password, Apple, or Google.
 - **Year of birth** — from version 1.5 (see 3.12).
 
-From version 1.2 an account is required to use the app. In version 1.1 you can use the app
-without an account, but then nothing is synced and you lose your data if you remove the app.
-When you first sign in to 1.2 on a device that already holds a 1.1 log, that log is added
-to your account.
+You need an account to use the app. When you first sign in on a device that already holds
+a log from version 1.1, that log is added to your account.
 
 ### 3.2 What you log in the app
 
-Your food and activity log: each entry's calories, an optional free-text note (for
+Your food and activity log: each entry's calories, from version 1.7 its protein, fat and
+carbohydrate grams if you or a scan fill them in, an optional free-text note (for
 example a food name you typed or that the AI scan recognised), whether it is food eaten
 or calories burned (including the automatic daily base-burn entry, if you turn base burn
 on), and its date and time; your daily calorie goal and base-burn settings with their
-history; and gamification data (XP and level, longest streak, achievements, challenge
-progress).
+history; from version 1.7 your protein goal (see 3.11), the rings you chose for the main
+screen and the water you log; and gamification data (XP and level, longest streak,
+achievements, challenge progress).
 
-This data is stored **on your device**. When you are signed in, it is also stored in your
-private area of our cloud database (Google Cloud Firestore, `users/{your user ID}`).
+This data is stored **on your device**. It is also stored in your private area of our
+cloud database (Google Cloud Firestore, `users/{your user ID}`).
 Security rules restrict that area so that only your own signed-in account can read or
 write it.
 
@@ -67,9 +71,10 @@ write it.
 
 If you use the AI photo scan, the photo you take or pick is sent over an encrypted
 connection to our server function (Firebase Cloud Functions, region `us-central1`), which
-forwards it to the **Google Gemini API** (Google LLC) for analysis. Google acts as our
-processor for this request. Gemini returns a list of recognised foods with estimated
-portions and calories; you decide what to save.
+forwards it to third-party AI service providers for analysis. Those providers act as our
+processors for this request. The service returns a list of recognised foods with estimated
+portions and calories; from version 1.7 it also estimates protein, fat and carbohydrate
+grams where it can. You can change these values and you decide what to save.
 
 What happens to the image:
 
@@ -78,9 +83,9 @@ What happens to the image:
   (A photo you attach to a support request is different: it is stored with that request,
   see 3.6.)
 - We do not use your photos to train any model of ours.
-- Google handles the image as our processor under the
-  [Gemini API terms](https://ai.google.dev/gemini-api/terms) that apply to our account,
-  which govern how long Google may keep it and what Google may do with it.
+- The AI service providers process the request (the photo, or the text described below) as
+  our processors. They may process it in any country where they operate, and may keep it for
+  up to 90 days for abuse prevention, security and legal compliance; after that it is deleted.
 
 Alongside each scan we store two small records:
 
@@ -99,7 +104,7 @@ From version 1.2 the app asks for your consent before the first photo is sent.
 From version 1.5, when you photograph a menu or a nutrition label, the app reads the text
 on your device. On iPhone and iPad with Apple Intelligence the estimate is made on the
 device too and nothing is sent, unless the device cannot handle that text and you choose to
-send it. Otherwise only that text, not the photo, goes to Google Gemini through our server,
+send it. Otherwise only that text, not the photo, goes to the third-party AI service providers through our server,
 as with meal photos.
 
 In version 1.1, if analytics is switched on (see 3.4), the name of the first recognised food
@@ -116,6 +121,11 @@ coarse (country-level) location derived from IP. Your account user ID is attache
 events while analytics is enabled. When analytics is disabled, no such events are sent.
 From version 1.2 the analytics SDK stays switched off from the first launch until you
 answer the consent question.
+
+From version 1.7 analytics does not collect an advertising identifier: on iOS the analytics
+library is built without IDFA support, and on Android it does not read the Advertising ID.
+Google's advertising consent signals for analytics (ad storage, ad user data and ad
+personalisation) are set to denied.
 
 ### 3.5 Crash and stability reports
 
@@ -162,27 +172,48 @@ app currently sends no push messages.
 
 ### 3.8 Advertising
 
-Unless you have an active Premium subscription, the app shows banner ads supplied by
-**Google AdMob**. To serve, measure and report on those ads, AdMob receives your device's
-advertising identifier (IDFA on iOS, Advertising ID on Android), IP address, device and
-app information, and data about ad views and taps. Google is an independent controller for
-this processing; see Google's own notice at
+**From version 1.7.** The app shows ads only to people who do not have Premium, are 18 or
+older by the year of birth from the age check (3.12), and have used the app for a while:
+currently at least 7 days since installing it and 7 days with an entry you added to the
+diary. The app decides this on your device; until then it does not initialise Google's ad
+software, request ads or show Google's consent form. The ads are small banners supplied by **Google AdMob**, shown only on the
+Profile screen. Subscribers see no ads and no ad requests are made for them.
+
+The app does not ask for permission to track you (App Tracking Transparency, ATT) and does not
+track you across other companies' apps and websites. Every ad request asks Google for
+**non-personalised** ads, so the ads are not chosen from your past activity or a profile
+of you.
+
+Non-personalised ads still use some data. To deliver ads, limit how often you see the same
+ad, count and report views and taps, and detect fraud and abuse, Google's ad software
+processes identifiers for your device or app installation (on Android this includes the
+device's Advertising ID), your IP address and the approximate location derived from it,
+device and app information, and data about ad views and taps. Google is an independent
+controller for this processing; see Google's own notice at
 [https://business.safety.google/privacy/](https://business.safety.google/privacy/).
 
-Your food entries, photos, weight, goals and account details are **never** shared with
-advertisers.
+Your food entries, photos, weight, Health data, goals and account details are **never**
+shared with advertisers.
 
-**Consent (EEA, UK and regulated US states).** Before requesting any ad, the app shows
-Google's consent form (UMP). Your choice decides whether ads are personalised. You can
-reopen the form at any time from Profile → Ad Privacy Options.
+**Consent (EEA, UK and regulated US states).** Where it is required, the app shows Google's
+consent form (UMP) before the first ad request. Ads stay non-personalised whatever you
+choose; if your choice does not allow ads to be requested, the app requests none. Where the
+form applies, you can reopen it at any time from Profile → Ad Privacy Options.
 
-**App Tracking Transparency (iOS).** iOS shows the "Allow app to track" prompt. If you
-**allow**, the IDFA may be used for personalised advertising and ad attribution. If you
-**decline**, no IDFA is available and ads are non-personalised — ads still appear, and
-nothing else in the app changes. You can change this later in iOS Settings → Privacy &
-Security → Tracking.
+**If you allowed tracking in an earlier version (iOS).** iOS keeps that choice after the
+update. Calcalou no longer asks for it and its ad requests stay non-personalised, but
+Google's ad software may still read your device's advertising identifier (IDFA) for the
+purposes above. You can switch it off in iOS Settings → Privacy & Security → Tracking.
 
-Subscribers see no ads and no ad requests are made for them.
+**Versions up to 1.6.** After the first few days the app shows banner ads unless you have
+Premium (in versions 1.4 to 1.6 currently on the Progress and Profile screens). AdMob
+receives your device's advertising identifier (IDFA on iOS, Advertising ID on Android), IP
+address, device and app information, and data about ad views and taps. Where required, the app shows Google's
+consent form, and your choice decides whether ads are personalised. On iOS the app shows
+the "Allow app to track" prompt: if you **allow**, the IDFA may be used for personalised
+advertising and ad attribution; if you **decline**, no IDFA is available and ads are
+non-personalised. You can change this later in iOS Settings → Privacy & Security →
+Tracking. Subscribers see no ads.
 
 ### 3.9 Subscriptions and purchases
 
@@ -213,15 +244,31 @@ on in **Profile**, and the app works the same without it. With your permission i
 - **writes** one entry per day to Apple Health ("Dietary Energy") or Health Connect
   ("Nutrition"): the total calories you logged in Calcalou that day, so other health apps can
   see it;
-- **reads** the active calories burned today ("Active Energy" / "Active calories burned"),
-  only to show that figure on the Today screen. It is not added to your calorie budget;
-- **reads** your most recent weight from the last 30 days ("Weight" / "Body Mass"), only to
-  pre-fill the weight field of the base-burn calculator. You confirm or change it, and only
-  the calculated result you save is kept.
+- **reads** the active calories you burned ("Active Energy" / "Active calories burned"), to
+  show them on the main screen and count them towards the calories you burned that day. The
+  daily figures are kept on your device for up to 90 days, so a finished day keeps its value;
+  they are not uploaded, and they are cleared when you turn the connection off. Whether a
+  day met your goal can depend on them, and the streaks, achievements and challenges built
+  from those days sync with your account (3.2);
+- **reads** your most recent weight from the last 30 days ("Weight" / "Body Mass"), to
+  pre-fill the weight field of the base-burn calculator and, from version 1.7, to calculate
+  your protein goal. In the calculator you confirm or change the weight, and only the
+  calculated result you save is kept; it syncs with your account (3.2).
 
-Data read from Apple Health or Health Connect stays on your device. It is not sent to our
-servers or to any third party, is not included in analytics, crash reports, AI requests or
-advertising, is not sold, and is not used for advertising or to build a profile of you.
+**Your protein goal (version 1.7).** When you use a protein goal and a recent weight is
+available, the goal is calculated from it in grams per kilogram of body weight, and it is
+recalculated from your latest weight each time you open the protein goal page. We do not
+upload the raw weight record or its date. We save your protein goal (grams per day, grams
+per kilogram and how the goal was set) with your account in our cloud database, so it syncs
+across your devices. These values can reveal your approximate weight. If you enter your own
+goal instead (protein goal page → Enter my own), it replaces the weight-based one.
+
+No value read from Apple Health or Health Connect, and no goal calculated from your weight,
+is sent to any third party for its own use, included in crash reports, AI requests or
+advertising, sold, or used to build a profile of you. With usage analytics on (3.4),
+analytics records only whether the connection is on, whether you allowed access and
+technical errors, never the values.
+
 Calcalou's use of information received from Health Connect adheres to the
 [Health Connect Permissions policy](https://support.google.com/googleplay/android-developer/answer/9888170),
 including the Limited Use requirements.
@@ -230,7 +277,8 @@ You can withdraw access at any time: turn the switch off in Profile, or remove C
 access in the Health Connect app (App permissions → Calcalou) or in iOS Settings → Health →
 Data Access & Devices → Calcalou. Entries Calcalou has already written stay in Apple Health or
 Health Connect until you delete them there; deleting your Calcalou account does not remove
-them.
+them. A protein goal already saved stays with your account until you change it or delete
+your account.
 
 ### 3.12 Age check and minimum age (version 1.5 and later)
 
@@ -246,7 +294,8 @@ The first time you sign in with version 1.5 the app asks for your date of birth.
 runs on your phone; the full date is not sent to us and is not stored. If you are old
 enough, we store your **year of birth** and the result of the check (passed, the minimum
 age that applied, the country, and when) in your account. We use the year to check your
-age and to pre-fill your age in the base-burn calculator.
+age, to pre-fill your age in the base-burn calculator and, from version 1.7, to show ads
+only to adults (3.8).
 
 If you are below the minimum age: when you are signing up, the account is deleted straight
 away and nothing from the age step is kept (if that deletion fails, the next rule
@@ -258,7 +307,8 @@ support@calcalou.com.
 
 The check relies on what you tell us; we do not verify your identity. Legal basis: our
 legitimate interest in complying with children's data rules (Art. 6(1)(f)); for the
-calculator, the contract (Art. 6(1)(b)).
+calculator, the contract (Art. 6(1)(b)); for showing ads only to adults, our legitimate
+interest in not showing ads to minors (Art. 6(1)(f)).
 
 ### 3.13 Invites (version 1.5 and later)
 
@@ -311,6 +361,11 @@ the barcodes you look up; if you log the product, it is saved as a normal diary 
 Where free Photo AI scans are offered (3 per account), our server keeps one record per
 account: your account ID, how many free scans you used and when it was created. It is
 deleted with your account.
+
+From version 1.7, while free scans are offered to you, an AI scan request also carries the
+country of your App Store or Google Play account, because free scans and Premium are not
+offered in some countries. Our server uses it only for that check and does not store it.
+The app keeps the last known country on your device.
 
 ### 3.16 Device checks (App Check)
 
@@ -365,17 +420,17 @@ purpose:
 
 | Purpose | Data | Legal basis (GDPR Art. 6) |
 |---|---|---|
-| Create and run your account, sync your log across devices | Account data, your log | Performance of a contract (Art. 6(1)(b)) |
+| Create and run your account, sync your log across devices | Account data, your log and goals (3.2, 3.11) | Performance of a contract (Art. 6(1)(b)) |
 | Recognise food in a photo you submit | Photo (or the text read from a menu or label), locale | Performance of a contract (Art. 6(1)(b)) for the subscription feature; the photo is only ever sent at your request |
 | Enforce the daily scan limit, prevent abuse, keep the service secure | Usage counter, technical log | Legitimate interests (Art. 6(1)(f)) — running the service sustainably |
 | Manage your subscription and restore purchases | Purchase data | Performance of a contract (Art. 6(1)(b)) |
 | Usage analytics | Analytics events | Consent (Art. 6(1)(a)) — the in-app switch |
-| Personalised advertising | Advertising identifier, ad interactions | Consent (Art. 6(1)(a)) — the UMP form and, on iOS, ATT |
+| Personalised advertising (versions up to 1.6 only) | Advertising identifier, ad interactions | Consent (Art. 6(1)(a)) — the UMP form and, on iOS, ATT |
 | Non-personalised advertising | Limited device and ad data | Legitimate interests (Art. 6(1)(f)) — funding a free app |
 | Crash and stability reports | Diagnostic data | Legitimate interests (Art. 6(1)(f)) — keeping the app working |
 | Answering a support request or a report about an AI result | The request described in 3.6 | Performance of a contract (Art. 6(1)(b)); the optional photo only because you attached it |
 | Keeping push delivery possible | Device push token | Legitimate interests (Art. 6(1)(f)); showing notices and reminders needs the OS notification permission |
-| Check your age and keep Calcalou for people old enough | Year of birth, age-check result (3.12) | Legitimate interests (Art. 6(1)(f)) — complying with children's data rules; for the base-burn calculator, performance of a contract (Art. 6(1)(b)) |
+| Check your age and keep Calcalou for people old enough; from version 1.7, show ads only to adults | Year of birth, age-check result (3.12) | Legitimate interests (Art. 6(1)(f)) — complying with children's data rules and not showing ads to minors; for the base-burn calculator, performance of a contract (Art. 6(1)(b)) |
 | Invites and rewards | Invite code, invite records, optional first name (3.13) | Performance of a contract and legitimate interests (Art. 6(1)(b), (f)) — preventing abuse; consent (Art. 6(1)(a)) for showing a first name |
 | Look up a barcode | Barcode number, IP address (3.14) | Performance of a contract (Art. 6(1)(b)) — the lookup is only made at your request |
 | Confirm that requests come from the genuine app | Device-check token (3.16) | Legitimate interests (Art. 6(1)(f)) — keeping the service secure |
@@ -383,16 +438,17 @@ purpose:
 
 We do not sell your personal data, and we do not "share" it for cross-context behavioural
 advertising in the sense of US state privacy laws other than through the AdMob processing
-described in 3.8, which you control through the consent form and, on iOS, ATT.
+described in 3.8. From version 1.7 every ad request is non-personalised; in earlier versions
+you control personalisation through the consent form and, on iOS, ATT.
 
 ## 5. Who your data is sent to
 
 | Recipient | What they receive | Role | Where |
 |---|---|---|---|
-| Google (Firebase Authentication, Firestore, Cloud Functions, Remote Config, Cloud Messaging) | Account data, your synced log, AI scan requests | Processor | United States (`us-central1`) |
-| Google (Gemini API) | Food photos, or text read from a menu or label, submitted for recognition | Processor | United States |
+| Google (Firebase Authentication, Firestore, Cloud Functions, Remote Config, Cloud Messaging) | Account data, your synced log and goals, AI scan requests | Processor | United States (`us-central1`) |
+| Third-party AI service providers | Food photos, or text read from a menu or label, submitted for recognition | Processor | United States and other countries where they operate |
 | Google (Firebase Analytics, Crashlytics) | Analytics events, crash reports | Processor | United States |
-| Google (AdMob) | Advertising identifier, ad interaction data | Independent controller | United States |
+| Google (AdMob) | Device or installation identifiers (on Android including the Advertising ID), IP address and approximate location, device and app information, ad interaction data (3.8) | Independent controller | United States |
 | RevenueCat, Inc. | Subscription status and receipts | Processor | United States |
 | Cloudflare, Inc. (Email Routing) | Anything you email to support@calcalou.com, passed on to our inbox | Processor | United States |
 | Cloudflare, Inc. (Web Analytics) | Visits to calcalou.com: page, referring site or campaign, country, device type and browser | Processor | United States |
@@ -409,7 +465,8 @@ Beyond this, we disclose data only where the law requires it.
 
 ## 6. International transfers
 
-The services above process data in the United States. Where data is transferred out of the
+The services above process data in the United States; third-party AI service providers may
+also process it in other countries where they operate. Where data is transferred out of the
 EEA or the UK, the transfer relies on the European Commission's Standard Contractual
 Clauses (and the UK Addendum) as incorporated in our agreements with those providers. You
 can ask us for details at support@calcalou.com.
@@ -420,8 +477,10 @@ can ask us for details at support@calcalou.com.
 |---|---|
 | Account and synced log | Until you delete your account (see section 9) |
 | Local data on your device | Until you delete it in the app or remove the app |
-| Data read from Apple Health or Health Connect | Not stored: used on the device for display or to pre-fill a field, then discarded |
-| Food photos and menu or label text sent for AI recognition | Not stored — held in memory for the duration of the recognition request only |
+| Active calories read from Apple Health or Health Connect | On your device only, up to 90 days; cleared when you turn the connection off |
+| Weight read from Apple Health or Health Connect | Not stored: used on the device to pre-fill the calculator or calculate your protein goal, then discarded |
+| Protein goal (grams per day, grams per kilogram, how it was set) | Until you change it or delete your account |
+| Food photos and menu or label text sent for AI recognition | Not stored by us — held in memory for the duration of the recognition request only; the AI service providers may keep them for up to 90 days (see 3.3) |
 | AI usage counter (`ai_quota`) | 7 days, then deleted automatically |
 | AI technical log (`ai_recognition_logs`) | Deleted automatically by a retention policy; contains no user identifier |
 | Server logs of refused or failed scans | 30 days (Google Cloud Logging) |
@@ -441,14 +500,14 @@ can ask us for details at support@calcalou.com.
 Everything the app sends travels over TLS. Your synced data sits in Google Cloud
 Firestore, encrypted at rest, behind security rules that allow access only to your own
 signed-in account. The AI recognition endpoint requires a signed-in account and an active
-subscription. Our API keys are held as server-side secrets and never ship in the app.
+subscription, or a free scan where offered (3.15). Our API keys are held as server-side secrets and never ship in the app.
 
 No system is perfectly secure, so we cannot guarantee absolute security — but we do not
 ask for more data than the app needs.
 
 ## 9. Deleting your account and your data
 
-**In the app:** Profile → Delete Account. This deletes your entries, settings, achievements,
+**In the app:** Profile → Delete Account. This deletes your entries, settings and goals, your display name, achievements,
 gamification progress and your support requests (photos included) from our database, deletes your account from Firebase
 Authentication, and clears the data held on the device. Deleting your account also deletes
 your year of birth and age check, your free-scan record and your invite code, and detaches
@@ -482,8 +541,8 @@ We do not sell personal information.
 The fastest ways to act yourself:
 
 - **Analytics:** Profile → Usage analytics
-- **Ad consent:** Profile → Ad Privacy Options
-- **iOS tracking:** Settings → Privacy & Security → Tracking
+- **Ad consent:** Profile → Ad Privacy Options (where Google's consent form applies)
+- **iOS tracking (a permission given to version 1.6 or earlier):** Settings → Privacy & Security → Tracking
 - **Notifications:** your device's notification settings
 - **Everything:** Profile → Delete Account
 
