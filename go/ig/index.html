@@ -38,7 +38,10 @@
   <script>
     (function () {
       var stores = window.CalcalouStores, nav = navigator;
-      var url = stores.storeLinks("ig-a-en-calcaloo")[stores.detectPlatform(nav.userAgent, nav.platform, nav.maxTouchPoints)];
+      stores.init(document, window);
+      var ai = stores.aiSource(location.search, document.referrer, location.pathname);
+      if (ai) document.querySelector('.qr').innerHTML = '<img width="180" height="180" alt="Calcalou AI campaign QR" src="/assets/qr/ai-' + ai + '.svg">';
+      var url = stores.storeLinks(ai ? 'ai_' + ai : "ig-a-en-calcaloo")[stores.detectPlatform(nav.userAgent, nav.platform, nav.maxTouchPoints)];
       if (!url) return;
       var gone = false;
       var go = function () { if (!gone) { gone = true; location.replace(url); } };

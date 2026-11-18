@@ -1,0 +1,50 @@
+{
+  "path": "/de/eiweiss-tracker-app/",
+  "title": "Protein-Tracker-App: Eiweiß tracken, Kalorien & Protein",
+  "summary": "Calcalou: Protein-Tracker-App für iPhone, iPad und Android. Trage Eiweiß neben Kalorien ein, setze ein Ziel nach Körpergewicht und schätze Mahlzeiten per Foto.",
+  "features_title": "Eiweiß tracken in Calcalou",
+  "features": [
+    "Trage bei jedem Eintrag das Eiweiß ein: tippe es kostenlos selbst ein oder fülle es per Barcode oder KI-Fotoscan aus.",
+    "Lege ein tägliches Eiweißziel aus deinem Körpergewicht fest. Calcalou zeigt die Rechnung (Gewicht × Gramm pro Kilogramm), lässt dich sie von 0,8 bis 2,0 g/kg anpassen und akzeptiert deine eigene Zahl.",
+    "Sieh das Eiweiß neben den Kalorien unter Heute, in deiner Wochenübersicht und in der Statistik, und wähle für jedes Widget Eiweiß oder Kalorien.",
+    "KI-Fotoscans schätzen Eiweiß, Fett und Kohlenhydrate für jedes Lebensmittel, alles vor dem Speichern bearbeitbar. Schätzungen können falsch sein; Scans sind Premium, mit Alters- und Regionsgrenzen.",
+    "Barcode-Scannen ist kostenlos. Nährwerte hängen von den Produktdaten ab, also prüfe Etikett und Portion.",
+    "Serien, flexible Erinnerungen und Wassertracking helfen dir, dranzubleiben."
+  ],
+  "sections": [
+    [
+      "So trackst du Eiweiß in Calcalou",
+      "Tippe auf Hinzufügen und gib dann Kalorien, Eiweiß, Fett und Kohlenhydrate für das ein, was du gegessen hast, oder scanne einen Barcode oder ein Foto, um sie auszufüllen. Jedes Feld ist optional, du kannst also nur Eiweiß eintragen. Das Eiweiß erscheint neben den Kalorien unter Heute und in deinen Übersichten."
+    ],
+    [
+      "Lege ein Eiweißziel fest, das zu dir passt",
+      "Wähle Aus dem Gewicht, und Calcalou multipliziert dein Gewicht mit Gramm pro Kilogramm (standardmäßig 1,2) und zeigt die Rechnung. Dein Gewicht stammt aus deinem Profil oder, wenn du sie verbindest, aus Apple Health oder Health Connect. Passe den Faktor von 0,8 bis 2,0 g/kg an oder gib ein eigenes Ziel ein. Ein Ziel ist ein Ausgangspunkt, keine medizinische Beratung; der Eiweißrechner zeigt Referenzbereiche."
+    ],
+    [
+      "Fotos, Barcodes oder von Hand",
+      "Fotoscans nutzen KI, um Kalorien, Eiweiß, Fett und Kohlenhydrate für jedes Lebensmittel zu schätzen. Prüfe das Ergebnis: Portionen, Öle und gemischte Gerichte sind leicht falsch eingeschätzt, und ein fehlender Wert ist nicht null. Barcode-Scannen und manuelles Eintragen sind kostenlos; Produktdaten variieren, also prüfe das Etikett."
+    ],
+    [
+      "Wer es nutzen kann",
+      "Calcalou ist für Personen ab 13 Jahren, vorbehaltlich lokaler Altersvorgaben. In Version 1.7 erfordern KI-Scans und Premium-Käufe ein Alter ab 18 Jahren und eine berechtigte Region. Eine Anmeldung ist erforderlich. Calcalou ist eine allgemeine Wellness-App, kein Medizinprodukt."
+    ]
+  ],
+  "faq": [
+    [
+      "Wie trackt man Eiweiß am besten?",
+      "Nutze die Methode, die du durchhältst. Trage das Eiweiß bei jeder Mahlzeit ein, prüfe die Etiketten bei verpackten Lebensmitteln und sieh Foto-Schätzungen als Ausgangspunkte, die du bearbeiten kannst. In Calcalou kannst du Eiweiß eintippen, einen Barcode scannen oder einen KI-Fotoscan nutzen."
+    ],
+    [
+      "Wie viel Eiweiß sollte ich pro Tag essen?",
+      "Das hängt von deinem Körper, deinen Zielen und deiner Gesundheit ab. Für Erwachsene liegt die EFSA-Referenzzufuhr bei 0,83 g pro kg Körpergewicht; das Positionspapier der International Society of Sports Nutrition (Internationale Gesellschaft für Sporternährung) von 2026 nennt 1,2–1,6 g pro kg zum Abnehmen und 1,6–2,2 g pro kg bei Krafttraining. Der Eiweißrechner zeigt alle drei. Das ist keine medizinische Beratung."
+    ],
+    [
+      "Zählt Calcalou Eiweiß aus einem Foto?",
+      "Ja. In Version 1.7 schätzt ein KI-Fotoscan Kalorien, Eiweiß, Fett und Kohlenhydrate für jedes erkannte Lebensmittel. Schätzungen können falsch sein, also prüfe und bearbeite sie vor dem Speichern."
+    ],
+    [
+      "Ist Eiweiß-Tracking kostenlos?",
+      "Eiweiß von Hand eintragen, Barcode-Scannen und Eiweißziele sind kostenlos. KI-Fotoscans sind Premium; wo angeboten, kann ein Konto einmalig bis zu 3 kostenlose Scans ausprobieren. Preise und Verfügbarkeit siehst du in der App und im Store."
+    ]
+  ]
+}

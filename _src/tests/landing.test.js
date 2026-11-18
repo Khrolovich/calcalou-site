@@ -29,7 +29,7 @@ test('storeLinks: App Store pt+ct, Play referrer utm_source/medium from the ct p
 });
 
 test('build.py store_links mirrors storeLinks for every channel and an unknown one', () => {
-  const cts = Object.keys(L.CHANNELS).map((p) => p + '-x-1').concat(['reels', 'web-site', 'invite']);
+  const cts = Object.keys(L.CHANNELS).map((p) => p + '-x-1').concat(['reels', 'web-site', 'invite'], L.AI_ASSISTANTS.map((a) => 'ai_' + a));
   const py = JSON.parse(execFileSync('python3', ['-c',
     'import json, sys; sys.path.insert(0, "_src"); from build import store_links; print(json.dumps([store_links(c) for c in sys.argv[1:]]))',
     ...cts], { cwd: SITE, encoding: 'utf8' }));

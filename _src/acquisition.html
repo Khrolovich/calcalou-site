@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="canonical" href="{{ base }}{{ path }}">
+  <link rel="describedby" href="/llms.txt">
+{% for code, locale in locales.items() %}
+  <link rel="alternate" hreflang="{{ code }}" href="{{ base }}{{ locale.path }}">
+{% endfor %}
+{% if locales %}  <link rel="alternate" hreflang="x-default" href="{{ base }}{{ locales.en.path }}">{% endif %}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:url" content="{{ base }}{{ path }}">
+  <meta property="og:image" content="{{ base }}/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/assets/guide.css">
+  <script type="application/ld+json">{{ ld | tojson }}</script>
+  {{ analytics }}
+</head>
+<body>
+  <a class="skip" href="#main">{{ title }}</a>
+  <header>
+    <a class="brand" href="{{ t.home }}"><img src="/assets/img/app-icon-96.png" alt="" width="36" height="36">Calcalou</a>
+{% if locales %}
+    <details class="lang"><summary>{{ t.name }}</summary><ul>
+{% for code, locale in locales.items() %}
+      <li><a href="{{ locale.path }}" hreflang="{{ code }}" lang="{{ code }}"{% if code == lang %} aria-current="page"{% endif %}>{{ locale.name }}</a></li>
+{% endfor %}
+    </ul></details>
+{% endif %}
+  </header>
+  <main id="main">
+    <article>
+      <p class="eyebrow">Calcalou · {{ t.updated }}</p>
+      <h1>{{ title }}</h1>
+      <p class="lead">{{ description }}</p>
+      <p class="notice">{{ t.version }}</p>
+{% if product %}
+      <h2>{{ t.features_title }}</h2>
+      <ul class="features">{% for feature in t.features %}<li>{{ feature }}</li>{% endfor %}</ul>
+{% for section in sections %}
+      <h2>{{ section.title }}</h2>
+      <p>{{ section.text }}</p>
+{% endfor %}
+{% else %}
+      <p class="disclosure">Written by the Calcalou Team. This is a product guide, not an independent test or an accuracy ranking. Competitor information was checked against the linked official sources on 17 November 2026. Plans, languages and availability can change.</p>
+{% for section in sections %}
+      <h2>{{ section.title }}</h2>
+      <p>{{ section.text }}</p>
+{% endfor %}
+{% if rows %}
+      <div class="table-wrap" role="region" aria-label="Feature comparison" tabindex="0"><table>
+        <thead><tr><th scope="col">Decision</th><th scope="col">Calcalou 1.7</th><th scope="col">{{ competitor }}</th></tr></thead>
+        <tbody>{% for row in rows %}<tr>{% for cell in row %}{% if loop.first %}<th scope="row">{{ cell }}</th>{% else %}<td>{{ cell }}</td>{% endif %}{% endfor %}</tr>{% endfor %}</tbody>
+      </table></div>
+{% endif %}
+      <h2>Official sources</h2>
+      <ul>{% for label, url in sources %}<li><a href="{{ url }}">{{ label }}</a></li>{% endfor %}</ul>
+{% endif %}
+      <section id="faq">
+        <h2>{{ t.faq_title }}</h2>
+{% for question, answer in faq %}
+        <details><summary>{{ question }}</summary><p>{{ answer }}</p></details>
+{% endfor %}
+      </section>
+      <h2>{{ t.stores }}</h2>
+      <div class="stores"><a data-store="ios" href="{{ links.ios }}">App Store</a><a data-store="android" href="{{ links.android }}">Google Play</a></div>
+      <nav aria-label="Calcalou"><h2>{{ t.more }}</h2><ul>
+{% for label, href, english in related %}<li><a href="{{ href }}">{{ label }}</a>{% if english and lang != 'en' %} <span lang="en">(English)</span>{% endif %}</li>{% endfor %}
+      </ul></nav>
+    </article>
+  </main>
+  <footer>
+{% if locales %}
+    <ul class="langs">{% for code, locale in locales.items() %}<li><a href="{{ locale.path }}" hreflang="{{ code }}" lang="{{ code }}"{% if code == lang %} aria-current="page"{% endif %}>{{ locale.name }}</a></li>{% endfor %}</ul>
+{% endif %}
+    <p><a href="/privacy/">{{ t.privacy }}</a> · <a href="/support/">{{ t.support }}</a> · © 2026 Calcalou</p>
+  </footer>
+  <script src="/assets/landing.js"></script>
+</body>
+</html>

@@ -3,5 +3,15 @@
   "ig": "ig-a-en-calcaloo",
   "tt": "tt-a-en-calcaloo",
   "fb": "fb-a-en-calcaloo",
-  "site": "web-go"
+  "site": "web-go",
+  "ai": "web-ai",
+  "ai-chatgpt": "ai_chatgpt",
+  "ai-gemini": "ai_gemini",
+  "ai-claude": "ai_claude",
+  "ai-perplexity": "ai_perplexity",
+  "ai-copilot": "ai_copilot",
+  "ai-you": "ai_you",
+  "ai-poe": "ai_poe",
+  "ai-meta": "ai_meta",
+  "ai-deepseek": "ai_deepseek"
 }

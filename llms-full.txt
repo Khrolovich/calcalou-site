@@ -1,0 +1,112 @@
+# Calcalou
+
+> Calcalou is a calorie and protein tracker for iPhone, iPad and Android, with Lou, a friendly mascot that helps make daily logging a habit.
+
+This guide describes version 1.7. Store rollout may differ by platform and country; check the version available to you before downloading for a specific feature.
+
+## Product facts
+
+- Log calories and protein manually for free.
+- Scan product barcodes for free. Nutrition values depend on the product data available; check the label and portion size.
+- Set a protein goal from your body weight: Calcalou shows the calculation (weight × grams per kilogram), lets you adjust it and accepts your own number.
+- Estimate a meal from a photo with AI, including calories, protein, fat and carbs for each food when available. Review and edit the result before saving.
+- Add water by the glass or as a custom amount in ml.
+- Set several reminders, each with its own time and days of the week.
+- Keep a logging streak with Lou and follow today's calories or protein in a widget on your Home Screen. Widget features differ by platform.
+- Export your diary as a CSV for a month, quarter, year or all time.
+- Use the app in 41 interface languages in version 1.7. Sign-in is required to keep your diary in your account.
+
+## Questions
+
+### Is Calcalou free?
+
+Manual calorie and protein logging, barcode scanning and water tracking are free. AI scans are Premium; where offered, an account can try up to 3 free scans once. Subscription prices and eligibility are shown in the app and store.
+
+### Does a photo scan count protein?
+
+In version 1.7, AI photo scans can estimate calories, protein, fat and carbs for each detected food. Estimates can be wrong, especially for portions, oils and mixed dishes. Missing nutrition values are not zero: check or enter them manually.
+
+### Who can use Calcalou?
+
+Calcalou is for ages 13 and up, subject to local age requirements. In version 1.7, AI scans and Premium purchases require age 18 or above and an eligible region. Calcalou is a general wellness app, not a medical device.
+
+### Can I use it without signing in?
+
+Sign-in is required. Your diary is associated with your account; use the same sign-in method when returning on another device.
+
+## Pages
+
+- [What is Calcalou? Calorie and protein tracker](https://calcalou.com/what-is-calcalou/)
+- [Protein Tracker App: Log Protein and Calories](https://calcalou.com/protein-tracker-app/)
+- [Protein calculator](https://calcalou.com/protein-calculator/)
+- [Calcalou vs MyFitnessPal](https://calcalou.com/compare/calcalou-vs-myfitnesspal/)
+- [Calcalou vs Lose It!](https://calcalou.com/compare/calcalou-vs-lose-it/)
+- [Calcalou vs Cronometer](https://calcalou.com/compare/calcalou-vs-cronometer/)
+- [Calcalou vs Cal AI](https://calcalou.com/compare/calcalou-vs-cal-ai/)
+- [How to choose the best protein tracker for you](https://calcalou.com/best-protein-tracker/)
+- [Privacy policy](https://calcalou.com/privacy/)
+- [Support](https://calcalou.com/support/)
+- [App Store](https://apps.apple.com/app/id6757434158)
+- [Google Play](https://play.google.com/store/apps/details?id=com.khrolovich.calorietracker)
+
+## Localized product guides
+
+- [English](https://calcalou.com/what-is-calcalou/)
+- [Polski](https://calcalou.com/pl/co-to-jest-calcalou/)
+- [Deutsch](https://calcalou.com/de/was-ist-calcalou/)
+- [Español](https://calcalou.com/es/que-es-calcalou/)
+- [Français](https://calcalou.com/fr/quest-ce-que-calcalou/)
+- [Italiano](https://calcalou.com/it/cose-calcalou/)
+- [Português (Brasil)](https://calcalou.com/pt-br/o-que-e-calcalou/)
+- [Русский](https://calcalou.com/ru/chto-takoe-calcalou/)
+- [Türkçe](https://calcalou.com/tr/calcalou-nedir/)
+- [Українська](https://calcalou.com/uk/shcho-take-calcalou/)
+
+## Localized protein tracker pages
+
+- [English](https://calcalou.com/protein-tracker-app/)
+- [Polski](https://calcalou.com/pl/aplikacja-do-liczenia-bialka/)
+- [Deutsch](https://calcalou.com/de/eiweiss-tracker-app/)
+- [Español](https://calcalou.com/es/app-para-contar-proteinas/)
+- [Français](https://calcalou.com/fr/application-suivi-proteines/)
+- [Italiano](https://calcalou.com/it/app-per-contare-le-proteine/)
+- [Português (Brasil)](https://calcalou.com/pt-br/app-para-contar-proteinas/)
+- [Русский](https://calcalou.com/ru/prilozhenie-dlya-podschyota-belka/)
+- [Türkçe](https://calcalou.com/tr/protein-takip-uygulamasi/)
+- [Українська](https://calcalou.com/uk/zastosunok-dlya-pidrakhunku-bilka/)
+
+Checked 2026-11-17. Published by the Calcalou Team. This summary does not establish independent ratings or comparative accuracy.
+
+## Choosing a tracker
+
+### Calcalou vs MyFitnessPal
+
+Calcalou focuses on calories, protein and a daily habit with Lou. MyFitnessPal offers a broad food diary, integrations and several paid planning tools.
+
+Consider Calcalou 1.7 if free barcode scanning and manual protein logging with a weight-based protein goal are your priorities. Consider MyFitnessPal if its food database, existing partner connections or Premium+ meal planning fit the way you already track.
+
+Official sources: https://support.myfitnesspal.com/hc/en-us/articles/34889191368077-The-difference-between-Free-Premium-and-Premium
+
+### Calcalou vs Lose It!
+
+Calcalou and Lose It! both help you log food. Calcalou 1.7 pairs calorie and protein tracking with Lou; Lose It! offers a diary with search and camera logging.
+
+Consider Calcalou 1.7 for free manual protein entries, a weight-based protein goal and free barcode scanning (Calcalou's barcode scanning is free; check Lose It!'s current plan). Consider Lose It! if you prefer its diary or already have foods and routines saved there. Try foods you eat often before moving your routine.
+
+Official sources: https://loseit.zendesk.com/hc/en-us/articles/47771695186580-How-to-Use-Snap-It, https://loseit.zendesk.com/hc/en-us/articles/49210381551380-How-to-Log-Food-in-Lose-It
+
+### Calcalou vs Cronometer
+
+Calcalou 1.7 focuses on calories, protein and a habit with Lou. Cronometer fits better for detailed vitamin and nutrient records. Both have free barcodes.
+
+Consider Calcalou 1.7 if you want calories and protein together, water tracking and a friendly daily routine. Choose Cronometer if detailed micronutrient analysis is central to your decision. Free barcodes are not unique to Calcalou: Cronometer Basic includes them too.
+
+Official sources: https://cronometer.com/features/free-nutrition-tracking-app.html
+
+### Calcalou vs Cal AI
+
+Calcalou 1.7 and Cal AI both offer photo calorie and macro estimates. Calcalou adds free manual calorie and protein logging, free barcodes and Lou.
+
+Consider Calcalou 1.7 if free manual entries and barcodes, a weight-based protein goal and Lou appeal to you. Consider Cal AI if its photo-first workflow fits your routine. The Calcalou Team has not run a controlled head-to-head accuracy test and do not claim either app is more accurate.
+
+Official sources: https://www.calai.app/

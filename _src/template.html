@@ -61,6 +61,9 @@
         <p class="lead">{{ t['hero.lead'] }}</p>
         {{ stores(lazy=false) }}
         <p class="fine">{{ t['hero.fine'] }}</p>
+{%- if t['rollout'] %}
+        <p class="fine">{{ t['rollout'] }}</p>
+{%- endif %}
       </div>
       <div class="stage">
         {{ lou("happy", "(min-width: 960px) 380px, 250px", t['hero.alt'], lazy=false, high=true) }}
@@ -119,6 +122,19 @@
       </div>
     </section>
 
+    <section class="more protein" id="protein" aria-labelledby="protein-title">
+      <div class="wrap">
+        <h2 id="protein-title" class="center">{{ t['protein.title'] }}</h2>
+        <p class="sub center">{{ t['protein.sub'] }}</p>
+        <div class="chips">
+{%- for k in ["c1", "c2", "c3"] %}
+          <div class="chip"><h3>{{ t['protein.' ~ k ~ '.t'] }}</h3><p>{{ t['protein.' ~ k ~ '.d'] }}</p></div>
+{%- endfor %}
+        </div>
+        <p class="center"><a href="{{ protein_guide }}">{{ t['protein.guide'] }}</a> · <a href="{{ protein_calc }}">{{ t['protein.calc'] }}</a></p>
+      </div>
+    </section>
+
     <section class="moods" aria-labelledby="moods-title">
       <div class="wrap center">
         <h2 id="moods-title">{{ t['moods.title'] }}</h2>
@@ -135,7 +151,7 @@
       <div class="wrap">
         <h2 id="more-title" class="center">{{ t['more.title'] }}</h2>
         <div class="chips">
-{%- for k in ["widgets", "siri", "health", "sync", "lang", "privacy"] %}
+{%- for k in ["widgets", "water", "reminders", "export", "siri", "health", "sync", "lang", "privacy"] %}
           <div class="chip"><h3>{{ t['more.' ~ k ~ '.t'] }}</h3><p>{{ t['more.' ~ k ~ '.d'] }}</p></div>
 {%- endfor %}
         </div>
@@ -146,7 +162,7 @@
       <div class="wrap">
         <h2 id="faq-title" class="center">{{ t['faq.title'] }}</h2>
         <div class="list">
-{%- for k in ["free", "lou", "accuracy", "devices"] %}
+{%- for k in ["free", "protein", "lou", "accuracy", "devices"] %}
           <details><summary>{{ t['faq.' ~ k ~ '.q'] }}</summary><p>{{ t['faq.' ~ k ~ '.a'] }}</p></details>
 {%- endfor %}
           <details><summary>{{ t['faq.data.q'] }}</summary><p>{{ t['faq.data.a'] }} <a href="/delete-account/">{{ t['faq.data.link'] }}</a></p></details>
@@ -183,6 +199,7 @@
         <li><a href="{{ l.path }}" hreflang="{{ l.code }}" lang="{{ l.code }}"{% if l.code == lang %} aria-current="page"{% endif %}>{{ l.name }}</a></li>
 {%- endfor %}
       </ul>
+      <p lang="en">Featured: <a href="https://goodpickmedia.com/editions/2026-11-16-a-little-help-around-mealtime/apps/calcalou/" rel="noopener">App of the Week — GoodPick Media</a></p>
       <p>{{ t['footer.disclaimer'] }}</p>
       <p>© {{ year }} Calcalou</p>
     </div>

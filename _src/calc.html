@@ -31,7 +31,15 @@
 {%- set _ = faq["mainEntity"].append({"@type": "Question", "name": c['faq.' ~ k ~ '.q'],
     "acceptedAnswer": {"@type": "Answer", "text": c['faq.' ~ k ~ '.a']}}) %}
 {%- endfor %}
-  <script type="application/ld+json">{{ {"@context": "https://schema.org", "@graph": [faq]} | tojson }}</script>
+{%- set graph = [faq] %}
+{%- if mode == "protein" %}
+{%- set _ = graph.append({"@type": "WebApplication", "@id": base ~ path ~ "#calculator", "name": c['h1'], "url": base ~ path,
+    "description": c['meta.description'], "inLanguage": lang, "applicationCategory": "HealthApplication",
+    "operatingSystem": "Any", "browserRequirements": "Requires JavaScript",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+    "isPartOf": {"@type": "WebSite", "name": "Calcalou", "url": base ~ "/"}}) %}
+{%- endif %}
+  <script type="application/ld+json">{{ {"@context": "https://schema.org", "@graph": graph} | tojson }}</script>
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
   <link rel="icon" href="/assets/img/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="icon" href="/assets/img/favicon-48.png" sizes="48x48">
@@ -112,6 +120,31 @@
         <h1><span>{{ c['h1'] }}</span> <span>{{ c['h1.sub'] }}</span></h1>
         <p class="lead">{{ c['lead'] }}</p>
         <form class="calc" data-calc="{{ mode }}" aria-label="{{ c['form.label'] }}" novalidate>
+{%- if mode == "protein" %}
+          <div class="row">
+            <fieldset>
+              <legend>{{ c['form.units'] }}</legend>
+              <div class="seg">
+                <label><input type="radio" name="units" value="metric"{% if units == "metric" %} checked{% endif %}><span>{{ c['units.metric'] }}</span></label>
+                <label><input type="radio" name="units" value="imperial"{% if units == "imperial" %} checked{% endif %}><span>{{ c['units.imperial'] }}</span></label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="row" data-units="metric"{% if units != "metric" %} hidden{% endif %}>
+            {{ field("weightKg", "weight", c['form.weight'], c['unit.kg']) }}
+          </div>
+          <div class="row" data-units="imperial"{% if units != "imperial" %} hidden{% endif %}>
+            {{ field("weightLb", "weight", c['form.weight'], c['unit.lb']) }}
+          </div>
+          <p class="err" id="err-weight" hidden>{{ c['err.weight'] }}</p>
+          <label class="field"><span>{{ c['form.goal'] }}</span>
+            <select name="goal">
+{%- for i in range(3) %}
+              <option value="{{ i }}"{% if i == 0 %} selected{% endif %}>{{ c['goal.short.' ~ i] }}</option>
+{%- endfor %}
+            </select>
+          </label>
+{%- else %}
           <div class="row">
             <fieldset>
               <legend>{{ c['form.sex'] }}</legend>
@@ -159,9 +192,28 @@
             </select>
           </label>
 {%- endif %}
+{%- endif %}
           <button class="btn" type="submit" disabled>{{ c['form.submit'] }}</button>
           <div>
-{%- if mode == "deficit" %}
+{%- if mode == "protein" %}
+            <div class="out" data-calc-result tabindex="-1" role="region" aria-label="{{ c['result.protein'] }}" hidden>
+              <div class="display"><b data-out="range"></b><small>{{ c['result.protein'] }} · {{ c['result.unit'] }}</small></div>
+              <ul class="readouts">
+                <li><i class="dot-goal"></i>{{ c['result.gkg'] }}<b data-out="gkg"></b></li>
+                <li><i class="dot-burned"></i>{{ c['result.weight'] }}<b data-out="weight"></b></li>
+              </ul>
+              <div aria-live="polite"><p class="floor" data-capped hidden>{{ c['result.capped'] }}</p></div>
+              <table>
+                <caption>{{ c['table.caption'] }}</caption>
+                <thead><tr><th scope="col">{{ c['table.level'] }}</th><th scope="col" style="text-align:right">{{ c['table.gkg'] }}</th><th scope="col" style="text-align:right">{{ c['table.grams'] }}</th></tr></thead>
+                <tbody>
+{%- for i in range(3) %}
+                  <tr data-goal="{{ i }}"><th scope="row">{{ c['goal.short.' ~ i] }}</th><td data-gkg></td><td data-grams></td></tr>
+{%- endfor %}
+                </tbody>
+              </table>
+              <p class="note">{{ c['result.note'] }}</p>
+{%- elif mode == "deficit" %}
             <div class="out" data-calc-result tabindex="-1" role="region" aria-label="{{ c['result.intake'] }}" hidden>
               <div class="display"><b data-out="intake"></b><small>{{ c['result.intake'] }} · {{ c['result.unit'] }}</small></div>
               <ul class="readouts">
@@ -209,8 +261,14 @@
           <h2 id="method-title">{{ c['method.title'] }}</h2>
           <p>{{ c['method.p1'] }}</p>
           <div class="chips">
+{%- if mode == "protein" %}
+            <div class="chip"><p>{{ c['method.r0'] }}</p></div>
+            <div class="chip"><p>{{ c['method.r1'] }}</p></div>
+            <div class="chip"><p>{{ c['method.r2'] }}</p></div>
+{%- else %}
             <div class="chip"><p>{{ c['method.male'] }}</p></div>
             <div class="chip"><p>{{ c['method.female'] }}</p></div>
+{%- endif %}
           </div>
           <p>{{ c['method.p2'] }}</p>
 {%- if mode == "bmr" %}
@@ -220,6 +278,9 @@
           <small>{{ c['method.source'] }}</small>
           <h2>{{ c['app.title'] }}</h2>
           <p>{{ c['app.text'] }}</p>
+{%- if t['rollout'] %}
+          <p class="fine">{{ t['rollout'] }}</p>
+{%- endif %}
         </div>
       </div>
     </section>
@@ -295,7 +356,12 @@
     </div>
   </footer>
 
+  <script src="/assets/landing.js"></script>
+{%- if mode == "protein" %}
+  <script src="/assets/protein.js" defer></script>
+{%- else %}
   <script src="/assets/calc.js" defer></script>
+{%- endif %}
   {{ analytics }}
 </body>
 </html>

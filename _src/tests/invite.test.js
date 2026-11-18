@@ -24,12 +24,19 @@ function render(search) {
   const node = (name) => (els[name] ??= { hidden: true, textContent: '', href: '', addEventListener() {} });
   const invite = [node('card'), node('steps')];
   const doc = {
+    referrer: '', documentElement: {setAttribute() {}},
     querySelector: (sel) => node(sel),
-    querySelectorAll: (sel) => (sel === '[data-invite]' ? invite : []),
+    querySelectorAll: (sel) => sel === '[data-invite]' ? invite : sel === '[data-store]' ? [
+      Object.assign(node('[data-store="ios"]'), {getAttribute: () => 'ios'}),
+      Object.assign(node('[data-store="android"]'), {getAttribute: () => 'android'})] : [],
   };
+  node('[data-store="ios"]').href = L.storeLinks('invite').ios;
   node('[data-store="android"]').href = L.storeLinks('invite').android;
   const script = /<script>([\s\S]*?)<\/script>/.exec(html)[1];
-  vm.runInNewContext(script, { document: doc, location: { search }, URLSearchParams, navigator: {}, Promise });
+  const location = {search, pathname: '/i/', href: 'https://calcalou.com/i/' + search,
+    replace() {throw new Error('Unexpected invite-page redirect');}};
+  const window = {CalcalouStores: L, URL, URLSearchParams, location, navigator: {userAgent: 'Android'}};
+  vm.runInNewContext(script, { window, document: doc, location, URL, URLSearchParams, navigator: {}, Promise });
   return { code: node('[data-code]').textContent, shown: !invite[0].hidden, play: node('[data-store="android"]').href };
 }
 
@@ -46,6 +53,16 @@ test('a missing or malformed code shows only the badges', () => {
     assert.equal(r.shown, false, search);
     assert.equal(r.play, L.storeLinks('invite').android, search);
   }
+});
+
+test('AI attribution and an invite code both survive inside the Play install referrer', () => {
+  const r = render('?c=k7q2m9&utm_source=claude&ct=ai_claude');
+  const url = new URL(r.play);
+  const referrer = new URLSearchParams(url.searchParams.get('referrer'));
+  assert.equal(referrer.get('utm_source'), 'claude');
+  assert.equal(referrer.get('utm_medium'), 'ai_assistant');
+  assert.equal(referrer.get('utm_campaign'), 'ai_claude');
+  assert.equal(referrer.get('invite'), 'K7Q2M9');
 });
 
 test('404.html forwards /i/<CODE> to the invite page and still forwards /app', () => {

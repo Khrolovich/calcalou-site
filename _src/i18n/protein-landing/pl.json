@@ -1,0 +1,50 @@
+{
+  "path": "/pl/aplikacja-do-liczenia-bialka/",
+  "title": "Aplikacja do liczenia białka: Kalorie i białko w Calcalou",
+  "summary": "Calcalou to aplikacja do liczenia białka na iPhone'a, iPada i Androida. Zapisuj białko obok kalorii, ustaw cel z masy ciała i szacuj posiłki ze zdjęcia.",
+  "features_title": "Liczenie białka w Calcalou",
+  "features": [
+    "Zapisuj białko przy każdym wpisie: wpisz je samodzielnie za darmo albo uzupełnij z kodu kreskowego lub skanu zdjęcia przez AI.",
+    "Ustaw dzienny cel białka z masy ciała. Calcalou pokazuje obliczenie (waga × gramy na kilogram), pozwala zmieniać je od 0,8 do 2,0 g/kg i przyjmuje Twoją własną wartość.",
+    "Zobacz białko obok kalorii na ekranie Dzisiaj, w podsumowaniu tygodnia i w Statystykach oraz wybierz białko lub kalorie dla każdego widgetu.",
+    "Skany zdjęć przez AI szacują białko, tłuszcz i węglowodany dla każdego produktu, wszystko do edycji przed zapisem. Szacunki mogą być błędne; skany są w Premium, z ograniczeniami wieku i regionu.",
+    "Skanowanie kodów kreskowych jest darmowe. Wartości odżywcze zależą od danych produktu, więc sprawdź etykietę i porcję.",
+    "Serie, elastyczne przypomnienia i śledzenie wody pomagają Ci zapisywać regularnie."
+  ],
+  "sections": [
+    [
+      "Jak liczyć białko w Calcalou",
+      "Dotknij Dodaj, a potem wpisz kalorie, białko, tłuszcz i węglowodany tego, co zjadłeś, albo zeskanuj kod kreskowy lub zdjęcie, aby je uzupełnić. Każde pole jest opcjonalne, więc możesz zapisać samo białko. Białko widać obok kalorii na ekranie Dzisiaj i w podsumowaniach."
+    ],
+    [
+      "Ustaw cel białka, który do Ciebie pasuje",
+      "Wybierz Z masy ciała, a Calcalou pomnoży Twoją wagę przez gramy na kilogram (domyślnie 1,2) i pokaże obliczenie. Waga pochodzi z Twojego profilu albo, jeśli ją połączysz, z Apple Health lub Health Connect. Zmień współczynnik od 0,8 do 2,0 g/kg albo wpisz własny cel. Cel to punkt wyjścia, nie porada medyczna; kalkulator białka pokazuje zakresy referencyjne."
+    ],
+    [
+      "Zdjęcia, kody kreskowe lub ręcznie",
+      "Skany zdjęć używają AI do oszacowania kalorii, białka, tłuszczu i węglowodanów dla każdego produktu. Sprawdź wynik: porcje, oleje i potrawy mieszane łatwo ocenić źle, a brakująca wartość to nie zero. Skanowanie kodów kreskowych i ręczne wpisy są darmowe; dane produktów bywają różne, więc sprawdź etykietę."
+    ],
+    [
+      "Kto może z tego korzystać",
+      "Calcalou jest dla osób od 13 lat, z zastrzeżeniem lokalnych wymogów wiekowych. W wersji 1.7 skany AI i zakupy Premium wymagają wieku 18 lat lub więcej oraz kwalifikującego się regionu. Wymagane jest logowanie. Calcalou to aplikacja ogólnie wspierająca dobre samopoczucie, nie wyrób medyczny."
+    ]
+  ],
+  "faq": [
+    [
+      "Jak najlepiej śledzić białko?",
+      "Wybierz metodę, której będziesz się trzymać. Zapisuj białko przy każdym posiłku, sprawdzaj etykiety na produktach pakowanych i traktuj szacunki ze zdjęć jako punkt wyjścia, który możesz edytować. W Calcalou możesz wpisać białko, zeskanować kod kreskowy lub użyć skanu zdjęcia przez AI."
+    ],
+    [
+      "Ile białka powinienem jeść dziennie?",
+      "To zależy od Twojego ciała, celów i zdrowia. Dla dorosłych referencyjne spożycie EFSA to 0,83 g na kg masy ciała; stanowisko Międzynarodowe Towarzystwo Żywienia Sportowego z 2026 roku podaje 1,2–1,6 g na kg przy redukcji wagi i 1,6–2,2 g na kg przy treningu oporowym. Kalkulator białka pokazuje wszystkie trzy. To ogólna informacja, nie porada medyczna."
+    ],
+    [
+      "Czy Calcalou liczy białko ze zdjęcia?",
+      "Tak. W wersji 1.7 skan zdjęcia przez AI szacuje kalorie, białko, tłuszcz i węglowodany dla każdego rozpoznanego produktu. Szacunki mogą być błędne, więc sprawdź je i edytuj przed zapisem."
+    ],
+    [
+      "Czy liczenie białka jest darmowe?",
+      "Ręczne zapisywanie białka, skanowanie kodów kreskowych i cele białka są darmowe. Skany zdjęć przez AI są w Premium; tam, gdzie jest to dostępne, konto może jednorazowo wypróbować do 3 darmowych skanów. Ceny i warunki dostępności widać w aplikacji i sklepie."
+    ]
+  ]
+}

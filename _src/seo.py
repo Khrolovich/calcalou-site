@@ -10,12 +10,18 @@ from datetime import date
 from xml.sax.saxutils import quoteattr
 
 from build import BASE, SITE, page_sets
+from acquisition import ENGLISH_PATHS
 
 OTHER_PAGES = [("/press/", "press/index.html"), ("/privacy/", "privacy/index.md"),
                ("/support/", "support/index.md"), ("/delete-account/", "delete-account/index.html")]
+OTHER_PAGES += [(path, path.strip("/") + "/index.html") for path in ENGLISH_PATHS]
 
 
 def lastmod(rel_path):
+    pending = subprocess.run(["git", "-C", str(SITE), "status", "--porcelain", "--", rel_path],
+                             capture_output=True, text=True).stdout.strip()
+    if pending:
+        return date.today().isoformat()
     out = subprocess.run(["git", "-C", str(SITE), "log", "-1", "--format=%cs", "--", rel_path],
                          capture_output=True, text=True).stdout.strip()
     return out or date.today().isoformat()

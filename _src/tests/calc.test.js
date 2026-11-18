@@ -62,7 +62,19 @@ test('the app limits: age 13-120 whole years, 100-250 cm, 30-300 kg', () => {
 
 const isFoodSet = (name) => name === 'foods' || name.startsWith('food-');
 
-test('food pages: store links carry the food ct + lang, no landing.js, assets exist', () => {
+function assertCampaignPreserved(links, page) {
+  const anchors = [{href: links.ios, getAttribute: () => 'ios'}, {href: links.android, getAttribute: () => 'android'}];
+  const doc = {querySelectorAll: () => anchors, documentElement: {setAttribute() {}},
+    querySelector: (selector) => selector === '[data-store="ios"]' ? anchors[0] : null};
+  for (const search of ['', '?ct=' + new URL(links.ios).searchParams.get('ct')]) {
+    let redirects = 0;
+    L.init(doc, {URLSearchParams, location: {search, pathname: page, replace() {redirects++;}}, navigator: {userAgent: 'iPhone'}});
+    assert.equal(redirects, 0, page);
+    assert.deepEqual(anchors.map((a) => a.href), [links.ios, links.android]);
+  }
+}
+
+test('food pages preserve their campaign with attribution loaded, and assets exist', () => {
   const foodSets = Object.keys(SETS).filter(isFoodSet);
   assert.ok(foodSets.length > 1);
   for (const name of foodSets) {
@@ -73,15 +85,15 @@ test('food pages: store links carry the food ct + lang, no landing.js, assets ex
       const amp = (u) => u.replace(/&/g, '&amp;');
       assert.ok(html.includes(`data-store="ios" href="${amp(links.ios)}"`), `${page}: ios link`);
       assert.ok(html.includes(`data-store="android" href="${amp(links.android)}"`), `${page}: android link`);
-      assert.ok(!html.includes('landing.js'), `${page}: landing.js would rewrite the ct`);
+      assertCampaignPreserved(links, page);
       assert.ok(!/\{\{|\}\}|\{n\}|None/.test(html), `${page}: unrendered placeholder`);
       for (const m of html.matchAll(/\/assets\/[^"\s,]+/g)) assert.ok(fs.existsSync(path.join(SITE, m[0])), `${page}: missing ${m[0]}`);
     }
   }
 });
 
-test('calculator pages: store links carry the set ct + lang, no landing.js, assets exist', () => {
-  assert.deepEqual(Object.keys(CT), Object.keys(SETS).filter((name) => name !== 'landing' && !isFoodSet(name)));
+test('calculator pages preserve their campaign with attribution loaded, and assets exist', () => {
+  assert.ok(Object.keys(CT).every((name) => SETS[name]));
   for (const [name, prefix] of Object.entries(CT)) {
     for (const [lang, page] of Object.entries(SETS[name])) {
       const html = fs.readFileSync(path.join(SITE, page, 'index.html'), 'utf8');
@@ -89,7 +101,7 @@ test('calculator pages: store links carry the set ct + lang, no landing.js, asse
       const amp = (u) => u.replace(/&/g, '&amp;');
       assert.ok(html.includes(`data-store="ios" href="${amp(links.ios)}"`), `${page}: ios link`);
       assert.ok(html.includes(`data-store="android" href="${amp(links.android)}"`), `${page}: android link`);
-      assert.ok(!html.includes('landing.js'), `${page}: landing.js would rewrite the ct and redirect ?ct= visitors`);
+      assertCampaignPreserved(links, page);
       assert.ok(html.includes('src="/assets/calc.js"'));
       assert.ok(!/\{\{|\}\}|\{n\}/.test(html), `${page}: unrendered placeholder`);
       for (const m of html.matchAll(/\/assets\/[^"\s,]+/g)) assert.ok(fs.existsSync(path.join(SITE, m[0])), `${page}: missing ${m[0]}`);

@@ -16,8 +16,10 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build import BASE, LOCALES, SITE, page_sets, set_locales  # noqa: E402
+from acquisition import ENGLISH_PATHS
 
 SINGLE_LANGUAGE = {"/press/", "/privacy/", "/support/", "/delete-account/", "/links/", "/get/", "/i/", "/404.html"}
+SINGLE_LANGUAGE.update(ENGLISH_PATHS)
 GO_LINKS = {f"/go/{channel}/" for channel in json.loads((Path(__file__).resolve().parent / "go.json").read_text())}
 DEFAULT_LOCALE = "en"
 SITEMAP_NS = "{http://www.sitemaps.org/schemas/sitemap/0.9}"

@@ -1,0 +1,50 @@
+{
+  "path": "/fr/application-suivi-proteines/",
+  "title": "Application de suivi des protéines : Calories & Protéines",
+  "summary": "Calcalou : suivi des protéines sur iPhone, iPad et Android. Notez protéines et calories, fixez un objectif selon votre poids, estimez vos repas par photo.",
+  "features_title": "Le suivi des protéines dans Calcalou",
+  "features": [
+    "Notez les protéines à chaque saisie : saisissez-les vous-même gratuitement, ou remplissez-les par code-barres ou par scan photo IA.",
+    "Fixez un objectif quotidien de protéines selon votre poids. Calcalou montre le calcul (poids × grammes par kilogramme), vous laisse l'ajuster de 0,8 à 2,0 g/kg et accepte votre propre valeur.",
+    "Voyez les protéines à côté des calories dans Aujourd'hui, dans votre résumé hebdomadaire et dans les Statistiques, et choisissez protéines ou calories pour chaque widget.",
+    "Les scans photo par IA estiment protéines, lipides et glucides de chaque aliment, le tout modifiable avant d'enregistrer. Les estimations peuvent être fausses ; les scans sont Premium, avec des limites d'âge et de région.",
+    "Le scan de codes-barres est gratuit. Les valeurs nutritionnelles dépendent des données du produit, vérifiez donc l'étiquette et la portion.",
+    "Les séries, les rappels flexibles et le suivi de l'eau vous aident à continuer à noter vos repas."
+  ],
+  "sections": [
+    [
+      "Comment suivre les protéines dans Calcalou",
+      "Touchez Ajouter, puis saisissez calories, protéines, lipides et glucides de ce que vous avez mangé, ou scannez un code-barres ou une photo pour les remplir. Chaque champ est facultatif, vous pouvez donc noter les protéines seules. Les protéines s'affichent à côté des calories dans Aujourd'hui et dans vos résumés."
+    ],
+    [
+      "Fixez un objectif de protéines qui vous convient",
+      "Choisissez Selon le poids et Calcalou multiplie votre poids par des grammes par kilogramme (1,2 par défaut) et montre le calcul. Votre poids vient de votre profil ou, si vous les connectez, d'Apple Health ou de Health Connect. Ajustez le facteur de 0,8 à 2,0 g/kg ou saisissez votre propre objectif. Un objectif est un point de départ, pas un avis médical ; le calculateur de protéines montre des plages de référence."
+    ],
+    [
+      "Photos, codes-barres ou à la main",
+      "Les scans photo utilisent l'IA pour estimer calories, protéines, lipides et glucides de chaque aliment. Vérifiez le résultat : les portions, les huiles et les plats mélangés sont faciles à mal évaluer, et une valeur manquante n'est pas zéro. Le scan de codes-barres et la saisie manuelle sont gratuits ; les données produit varient, vérifiez donc l'étiquette."
+    ],
+    [
+      "Qui peut l'utiliser",
+      "Calcalou s'adresse aux personnes de 13 ans et plus, sous réserve des exigences d'âge locales. Dans la version 1.7, les scans IA et les achats Premium exigent 18 ans ou plus et une région éligible. La connexion est obligatoire. Calcalou est une application de bien-être générale, pas un dispositif médical."
+    ]
+  ],
+  "faq": [
+    [
+      "Quelle est la meilleure façon de suivre les protéines ?",
+      "Utilisez la méthode que vous tiendrez dans la durée. Notez les protéines à chaque repas, vérifiez les étiquettes des aliments emballés et traitez les estimations par photo comme des points de départ modifiables. Dans Calcalou, vous pouvez saisir les protéines, scanner un code-barres ou utiliser un scan photo IA."
+    ],
+    [
+      "De combien de protéines dois-je manger par jour ?",
+      "Cela dépend de votre corps, de vos objectifs et de votre santé. Pour les adultes, l'apport de référence de l'EFSA est de 0,83 g par kg de poids corporel ; la prise de position 2026 de la Société internationale de nutrition sportive donne 1,2–1,6 g par kg pour la perte de poids et 1,6–2,2 g par kg avec l'entraînement en résistance. Le calculateur de protéines montre les trois. Ceci n'est pas un avis médical."
+    ],
+    [
+      "Calcalou compte-t-il les protéines à partir d'une photo ?",
+      "Oui. Dans la version 1.7, un scan photo IA estime calories, protéines, lipides et glucides de chaque aliment détecté. Les estimations peuvent être fausses, vérifiez-les et modifiez-les avant d'enregistrer."
+    ],
+    [
+      "Le suivi des protéines est-il gratuit ?",
+      "Noter les protéines à la main, scanner les codes-barres et les objectifs de protéines sont gratuits. Les scans photo IA sont Premium ; là où c'est proposé, un compte peut essayer jusqu'à 3 scans gratuits, une seule fois. Les prix et l'éligibilité sont indiqués dans l'app et dans le store."
+    ]
+  ]
+}

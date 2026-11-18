@@ -37,6 +37,7 @@
   <script>
     (function () {
       var stores = window.CalcalouStores;
+      if (stores.aiSource(location.search, document.referrer, location.pathname)) stores.init(document, window);
       var hrefs = stores.storeLinks(stores.sanitizeCampaign(new URLSearchParams(location.search).get('ct'), 'links'));
       document.querySelectorAll('[data-store]').forEach(function (a) { a.href = hrefs[a.getAttribute('data-store')]; });
     })();

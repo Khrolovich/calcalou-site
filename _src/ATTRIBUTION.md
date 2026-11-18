@@ -42,6 +42,12 @@ Channel names: `yt`, `ig`, `tt`, `fb`, `site`, `creator-<name>` (ct `cr-<name>-<
 A new channel is a new row in `CHANNELS` and in `build.py`; the node tests fail until both match. Every
 `<a href>` to a store on any page must carry these parameters (`landing.test.js` scans all HTML).
 
+AI campaigns are an exception to the hyphen-prefix rule: `ai_<assistant>` maps an allowlisted assistant
+to Play `utm_source=<assistant>`, `utm_medium=ai_assistant`, `utm_campaign=ai_<assistant>` and Apple
+`ct=ai_<assistant>`. Recognized AI referrers, `utm_source`, `/go/ai?src=…` and `/go/ai-<assistant>/` preserve
+that attribution across store buttons, internal navigation, QR codes and invites. No browser storage is
+used. [AI-ACQUISITION.md](AI-ACQUISITION.md) describes the source files, checks and reporting limits.
+
 ## Web analytics
 
 Cloudflare Web Analytics (cookieless, no consent banner) on every generated page, the `/go/` links and on

@@ -1,0 +1,50 @@
+{
+  "path": "/protein-tracker-app/",
+  "title": "Protein Tracker App: Log Protein and Calories",
+  "summary": "Calcalou is a protein tracker app for iPhone, iPad and Android. Log protein beside calories, set a goal from your body weight and estimate meals from a photo.",
+  "features_title": "Protein tracking in Calcalou",
+  "features": [
+    "Log protein with every entry: type it yourself for free, or fill it from a barcode or an AI photo scan.",
+    "Set a daily protein goal from your body weight. Calcalou shows the calculation (weight × grams per kilogram), lets you adjust it from 0.8 to 2.0 g/kg and accepts your own number.",
+    "See protein next to calories on Today, in your weekly summary and in Stats, and choose protein or calories for each widget.",
+    "AI photo scans estimate protein, fat and carbs for each food, all editable before you save. Estimates can be wrong; scans are Premium, with age and region limits.",
+    "Barcode scanning is free. Nutrition values depend on the product data, so check the label and portion.",
+    "Streaks, flexible reminders and water tracking help you keep logging."
+  ],
+  "sections": [
+    [
+      "How to track protein in Calcalou",
+      "Tap Add, then enter calories, protein, fat and carbs for what you ate, or scan a barcode or a photo to fill them in. Every field is optional, so you can log protein alone. Protein shows beside calories on Today and in your summaries."
+    ],
+    [
+      "Set a protein goal that fits you",
+      "Choose From body weight and Calcalou multiplies your weight by grams per kilogram (1.2 by default) and shows the calculation. Your weight comes from your profile or, if you connect it, Apple Health or Health Connect. Adjust the factor from 0.8 to 2.0 g/kg or enter your own goal. A goal is a starting point, not medical advice; the protein calculator shows reference ranges."
+    ],
+    [
+      "Photos, barcodes or by hand",
+      "Photo scans use AI to estimate calories, protein, fat and carbs for each food. Review the result: portions, oils and mixed dishes are easy to misjudge, and a missing value is not zero. Barcode scanning and manual logging are free; product data varies, so check the label."
+    ],
+    [
+      "Who can use it",
+      "Calcalou is for ages 13 and up, subject to local age requirements. In version 1.7, AI scans and Premium purchases require age 18 or above and an eligible region. Sign-in is required. Calcalou is a general wellness app, not a medical device."
+    ]
+  ],
+  "faq": [
+    [
+      "What is the best way to track protein?",
+      "Use the method you will keep doing. Log protein with each meal, check labels on packaged food and treat photo estimates as starting points you can edit. In Calcalou you can type protein, scan a barcode or use an AI photo scan."
+    ],
+    [
+      "How much protein should I eat per day?",
+      "It depends on your body, goals and health. For adults the EFSA reference intake is 0.83 g per kg of body weight; the 2026 International Society of Sports Nutrition position stand gives 1.2–1.6 g per kg for weight loss and 1.6–2.2 g per kg with resistance training. The protein calculator shows all three. This is general guidance, not medical advice."
+    ],
+    [
+      "Does Calcalou count protein from a photo?",
+      "Yes. In version 1.7, an AI photo scan estimates calories, protein, fat and carbs for each detected food. Estimates can be wrong, so check and edit them before saving."
+    ],
+    [
+      "Is protein tracking free?",
+      "Logging protein by hand, barcode scanning and protein goals are free. AI photo scans are Premium; where offered, an account can try up to 3 free scans once. Prices and eligibility are shown in the app and store."
+    ]
+  ]
+}

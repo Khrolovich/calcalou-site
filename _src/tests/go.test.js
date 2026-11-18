@@ -14,7 +14,7 @@ const UA = {
   desktop: ['Mozilla/5.0 (Macintosh)', 'MacIntel', 0],
 };
 
-function run(channel, device, beacon) {
+function run(channel, device, beacon, search = '') {
   const html = fs.readFileSync(path.join(SITE, 'go', channel, 'index.html'), 'utf8');
   const code = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].pop()[1];
   const replaced = [];
@@ -22,14 +22,19 @@ function run(channel, device, beacon) {
   const listeners = {};
   const el = { addEventListener: (type, fn) => { listeners[type] = fn; } };
   const [userAgent, platform, maxTouchPoints] = UA[device];
+  const location = {search, pathname: '/go/' + channel + '/', href: 'https://calcalou.com/go/' + channel + '/' + search,
+    replace: (u) => replaced.push(u)};
+  const navigator = {userAgent, platform, maxTouchPoints};
+  const anchors = ['ios', 'android'].map((store) => ({href: L.storeLinks(GO[channel])[store], getAttribute: () => store}));
+  const qr = {};
+  const document = {referrer: '', documentElement: {setAttribute() {}}, querySelectorAll: (sel) => sel === '[data-store]' ? anchors : [],
+    querySelector: (sel) => sel === '[data-store="ios"]' ? anchors[0] : sel === '.qr' ? qr : sel === 'script[data-cf-beacon]' && beacon ? el : null};
   vm.runInNewContext(code, {
-    window: { CalcalouStores: L },
-    navigator: { userAgent, platform, maxTouchPoints },
-    location: { replace: (u) => replaced.push(u) },
-    document: { querySelector: () => (beacon ? el : null) },
+    window: {CalcalouStores: L, URL, URLSearchParams, location, navigator},
+    navigator, location, document,
     setTimeout: (fn) => timers.push(fn),
   });
-  return { replaced, timers, listeners };
+  return { replaced, timers, listeners, anchors, qr };
 }
 
 test('go pages send phones to their store with the channel ct, desktop stays', () => {
@@ -49,4 +54,12 @@ test('with the beacon, the redirect waits for it once, with a timeout fallback',
   r.timers.forEach((fn) => fn());
   r.listeners.error();
   assert.deepEqual(r.replaced, [L.storeLinks(ct).ios]);
+});
+
+test('generic AI smart links preserve the chosen assistant in redirect, badges and desktop QR', () => {
+  const phone = run('ai', 'android', false, '?src=claude');
+  assert.deepEqual(phone.replaced, [L.storeLinks('ai_claude').android]);
+  const desk = run('ai', 'desktop', false, '?src=claude');
+  assert.equal(desk.anchors[0].href, L.storeLinks('ai_claude').ios);
+  assert.match(desk.qr.innerHTML, /ai-claude\.svg/);
 });

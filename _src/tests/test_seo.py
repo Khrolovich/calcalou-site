@@ -62,6 +62,18 @@ class CalculatorHead(unittest.TestCase):
                     description = re.search(r'<meta name="description" content="([^"]+)"', html).group(1)
                     self.assertLessEqual(len(unescape(description)), 160)
 
+    def test_acquisition_and_landing_meta_lengths(self):
+        for name, pages in page_sets().items():
+            if name in CALC_PAGES or name.startswith("food"):
+                continue
+            for path in pages.values():
+                path = path if isinstance(path, str) else path[0]
+                with self.subTest(page=path):
+                    html = (SITE / path.strip("/") / "index.html").read_text(encoding="utf-8")
+                    self.assertLessEqual(len(unescape(re.search(r"<title>(.*?)</title>", html).group(1))), 64)
+                    description = re.search(r'<meta name="description" content="([^"]+)"', html).group(1)
+                    self.assertLessEqual(len(unescape(description)), 160)
+
     def test_titles_are_unique(self):
         titles = [re.search(r"<title>(.*?)</title>", (SITE / p.strip("/") / "index.html").read_text()).group(1)
                   for pages in page_sets().values() for p in pages.values()]

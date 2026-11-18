@@ -16,6 +16,8 @@ class Beacon(unittest.TestCase):
         with mock.patch.object(build, "CF_BEACON_TOKEN", ""):
             pages = build.render_all()
         for target, html in pages.items():
+            if target.suffix != ".html":
+                continue
             with self.subTest(page=str(target)):
                 self.assertNotIn(BEACON, html)
                 self.assertEqual(html.count("<!-- analytics -->"), 1)
@@ -25,6 +27,8 @@ class Beacon(unittest.TestCase):
             pages = build.render_all()
         self.assertGreater(len(pages), 80)
         for target, html in pages.items():
+            if target.suffix != ".html":
+                continue
             with self.subTest(page=str(target)):
                 self.assertEqual(html.count(BEACON), 1)
                 self.assertIn("""data-cf-beacon='{"token": "0123abcd"}'""", html)

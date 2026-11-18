@@ -12,6 +12,7 @@ import subprocess
 import sys
 from pathlib import Path
 from urllib.parse import quote
+import acquisition
 
 
 SRC = Path(__file__).resolve().parent
@@ -60,12 +61,14 @@ DEFICIT_PATHS = {
 DEFICITS = [250, 500, 750, 1000]
 # Thousands separator as Intl.NumberFormat(lang) prints it in calc.js (es and pl do not group 4-digit numbers).
 CALC_SEP = {"en": ",", "de": ".", "es": "", "fr": "\u202f", "it": ".", "pl": "", "pt-BR": ".", "ru": "\u00a0", "tr": "."}
+PROTEIN_PATHS = acquisition.PROTEIN_CALC_PATHS
 # page set: (mode, i18n folder for strings over i18n/calc, store ct prefix, FAQ keys, {code: path})
 CALC_PAGES = {
     "calculator": ("bmr", None, "web-calc", ["bmr", "tdee", "formula", "accuracy", "activity"], None),
     "tdee": ("tdee", "tdee", "web-tdee", ["tdee", "difference", "activity", "use", "accuracy"], TDEE_PATHS),
     "deficit": ("deficit", "deficit", "web-deficit", ["deficit", "maintenance", "size", "floor", "accuracy"],
                 DEFICIT_PATHS),
+    "protein": ("protein", "protein", "web-protein", ["how", "need", "active", "cap", "accuracy"], PROTEIN_PATHS),
 }
 
 FOODS = json.loads((SRC / "foods" / "foods.json").read_text(encoding="utf-8"))
@@ -82,6 +85,8 @@ def page_sets():
     sets = {"landing": {code: path for code, path, *_ in LOCALES}}
     for name, (_, _, _, _, paths) in CALC_PAGES.items():
         sets[name] = paths or {code: path for code, path, _ in CALC_LOCALES}
+    sets["product"] = {code: t["path"] for code, t in acquisition.PRODUCT.items()}
+    sets["protein-landing"] = {code: p["path"] for code, p in acquisition.PROTEIN.items()}
     sets["foods"] = dict(FOOD_LOCALES)
     for food in FOODS["foods"]:
         sets["food-" + food["key"]] = food_paths(food)
@@ -89,6 +94,8 @@ def page_sets():
 
 
 def set_locales(name):
+    if name in ("product", "protein-landing"):
+        return set(acquisition.PRODUCT)
     return set(FOOD_LOCALES) if name == "foods" or name.startswith("food-") else {code for code, *_ in LOCALES}
 
 
@@ -195,10 +202,13 @@ def store_links(ct):
     """Mirror of storeLinks() in /assets/landing.js (scheme: _src/ATTRIBUTION.md), for pages that do not load it."""
     prefix = ct.split("-")[0]
     source, medium = CHANNELS.get(prefix, (prefix, "other"))
+    if ct.startswith("ai_") and ct[3:] in ("chatgpt", "gemini", "claude", "perplexity", "copilot", "you", "poe", "meta", "deepseek"):
+        source, medium = ct[3:], "ai_assistant"
     return {
         "ios": f"https://apps.apple.com/app/apple-store/id6757434158?pt=128407090&ct={quote(ct, safe='')}&mt=8",
         "android": "https://play.google.com/store/apps/details?id=com.khrolovich.calorietracker&referrer="
-                   + quote(f"utm_source={source}&utm_medium={medium}&utm_campaign={ct}", safe=""),
+                   + quote(f"utm_source={source}&utm_medium={medium}&utm_campaign={ct}", safe="")
+                   + (f"&utm_source={source}&utm_medium=ai_assistant&utm_campaign={ct}" if medium == "ai_assistant" else ""),
     }
 
 
@@ -220,6 +230,10 @@ def load_guide(page_set, code):
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else None
 
 
+IOS_17_PENDING = True
+ROLLOUT = json.loads((SRC / "i18n" / "rollout.json").read_text(encoding="utf-8"))
+
+
 def load_strings():
     english = json.loads((SRC / "i18n" / "en.json").read_text(encoding="utf-8"))
     result = {}
@@ -231,7 +245,7 @@ def load_strings():
         empty = [k for k, v in strings.items() if not str(v).strip()]
         if empty:
             raise SystemExit(f"{code}.json: empty values {empty}")
-        result[code] = strings
+        result[code] = {**strings, "rollout": ROLLOUT[code] if IOS_17_PENDING else ""}
     return result
 
 
@@ -258,12 +272,15 @@ def render_all():
     for code, path, name, og_locale, gp_code, sep in LOCALES:
         gp_w, gp_h = assets["googlePlay"][gp_code]
         calcs = [{"path": sets[name][code], "label": page_strings[name][code]["link.footer"]} for name in CALC_PAGES]
+        calcs.append({"path": acquisition.PRODUCT[code]["path"], "label": acquisition.PRODUCT[code]["title"]})
+        calcs.append({"path": acquisition.PROTEIN[code]["path"], "label": strings[code]['protein.guide']})
         if code in FOOD_LOCALES:
             calcs.append({"path": FOOD_LOCALES[code], "label": load_food_strings()[code]["hub.link"]})
         html = template.render(
             lang=code, path=path, base=BASE, og_locale=og_locale, t=strings[code], locales=locales,
             current={"name": name, "short": code.split("-")[0]}, shots=assets["shots"],
             gp={"code": gp_code, "w": gp_w}, calcs=calcs, links=store_links(LANDING_CT),
+            protein_guide=acquisition.PROTEIN[code]["path"], protein_calc=acquisition.PROTEIN_CALC_PATHS[code],
             num=lambda n, s=sep: f"{n:,}".replace(",", s), year=year)
         pages[SITE / path.strip("/") / "index.html"] = html
     calc_template = env.get_template("calc.html")
@@ -285,6 +302,12 @@ def render_all():
                 gp={"code": gp_code, "w": assets["googlePlay"][gp_code][0]}, year=year)
             pages[SITE / path.strip("/") / "index.html"] = html
     pages.update(render_foods(env, strings, page_strings, assets, landing, year))
+    pages.update({SITE / path.strip("/") / "index.html": html
+                  for path, html in acquisition.render(env, BASE, store_links).items()})
+    pages[SITE / "llms.txt"] = acquisition.llms(BASE) + f"\n- [Expanded guide]({BASE}/llms-full.txt)\n"
+    pages[SITE / "llms-full.txt"] = acquisition.llms(BASE) + "\n## Choosing a tracker\n\n" + "\n\n".join(
+        f"### Calcalou vs {c['name']}\n\n{c['summary']}\n\n{c['choose']}\n\nOfficial sources: "
+        + ", ".join(url for _, url in c["sources"]) for c in acquisition.COMPARISONS.values()) + "\n"
     return pages
 
 
@@ -416,6 +439,8 @@ def go_pages(env, t, gp_w):
         url = f"{BASE}/go/{channel}/"
         pages[SITE / "go" / channel / "index.html"] = template.render(
             t=t, gp_w=gp_w, ct=ct, links=store_links(ct), qr=qr_svg(url, channel))
+        if ct.startswith("ai_"):
+            pages[SITE / "assets" / "qr" / f"{channel}.svg"] = str(qr_svg(url, channel)) + "\n"
     return pages
 
 

@@ -55,14 +55,21 @@
     </div>
     <a href="/">calcalou.com</a>
   </main>
+  <script src="/assets/landing.js" data-no-init></script>
   <script>
     (function () {
+      var stores = window.CalcalouStores;
+      if (stores.aiSource(location.search, document.referrer, location.pathname)) stores.init(document, window);
       var code = String(new URLSearchParams(location.search).get('c') || '').toUpperCase().replace(/[^0-9A-Z]/g, '');
       if (!/^[0-9A-HJKMNP-TV-Z]{6}$/.test(code)) return;
       document.querySelector('[data-code]').textContent = code.slice(0, 3) + ' ' + code.slice(3);
       document.querySelectorAll('[data-invite]').forEach(function (el) { el.hidden = false; });
       var play = document.querySelector('[data-store="android"]');
-      play.href += encodeURIComponent('&invite=' + code);
+      var target = new URL(play.href);
+      var referrer = new URLSearchParams(target.searchParams.get('referrer'));
+      referrer.set('invite', code);
+      target.searchParams.set('referrer', referrer.toString());
+      play.href = target.href;
       var copy = document.querySelector('[data-copy]');
       copy.addEventListener('click', function () {
         (navigator.clipboard ? navigator.clipboard.writeText(code) : Promise.reject()).then(function () { copy.textContent = 'Copied'; }, function () {

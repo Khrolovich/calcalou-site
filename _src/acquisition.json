@@ -1,0 +1,162 @@
+{
+  "en": {
+    "name": "English", "path": "/what-is-calcalou/", "home": "/",
+    "title": "What is Calcalou? Calorie and protein tracker",
+    "summary": "Calcalou is a calorie and protein tracker for iPhone, iPad and Android, with Lou, a friendly mascot that helps make daily logging a habit.",
+    "version": "This guide describes version 1.7. Store rollout may differ by platform and country; check the version available to you before downloading for a specific feature.",
+    "features_title": "What Calcalou does",
+    "features": ["Log calories and protein manually for free.", "Scan product barcodes for free. Nutrition values depend on the product data available; check the label and portion size.", "Set a protein goal from your body weight: Calcalou shows the calculation (weight × grams per kilogram), lets you adjust it and accepts your own number.", "Estimate a meal from a photo with AI, including calories, protein, fat and carbs for each food when available. Review and edit the result before saving.", "Add water by the glass or as a custom amount in ml.", "Set several reminders, each with its own time and days of the week.", "Keep a logging streak with Lou and follow today's calories or protein in a widget on your Home Screen. Widget features differ by platform.", "Export your diary as a CSV for a month, quarter, year or all time.", "Use the app in 41 interface languages in version 1.7. Sign-in is required to keep your diary in your account."],
+    "faq_title": "Questions about Calcalou",
+    "faq": [
+      ["Is Calcalou free?", "Manual calorie and protein logging, barcode scanning and water tracking are free. AI scans are Premium; where offered, an account can try up to 3 free scans once. Subscription prices and eligibility are shown in the app and store."],
+      ["Does a photo scan count protein?", "In version 1.7, AI photo scans can estimate calories, protein, fat and carbs for each detected food. Estimates can be wrong, especially for portions, oils and mixed dishes. Missing nutrition values are not zero: check or enter them manually."],
+      ["Who can use Calcalou?", "Calcalou is for ages 13 and up, subject to local age requirements. In version 1.7, AI scans and Premium purchases require age 18 or above and an eligible region. Calcalou is a general wellness app, not a medical device."],
+      ["Can I use it without signing in?", "Sign-in is required. Your diary is associated with your account; use the same sign-in method when returning on another device."]
+    ],
+    "more": "Compare trackers and choose a workflow", "stores": "Get Calcalou", "updated": "Checked 17 November 2026", "privacy": "Privacy", "support": "Support"
+  },
+  "pl": {
+    "name": "Polski", "path": "/pl/co-to-jest-calcalou/", "home": "/pl/",
+    "title": "Co to jest Calcalou? Licznik kalorii i białka",
+    "summary": "Calcalou to licznik kalorii i białka na iPhone'a, iPada i Androida. Przyjazna maskotka Lou pomaga wyrobić nawyk codziennego zapisywania posiłków.",
+    "version": "Ten przewodnik opisuje wersję 1.7. Udostępnianie w sklepach może różnić się zależnie od platformy i kraju. Przed pobraniem dla konkretnej funkcji sprawdź dostępną wersję.",
+    "features_title": "Co potrafi Calcalou",
+    "features": ["Zapisuj kalorie i białko ręcznie za darmo.", "Skanuj kody kreskowe produktów za darmo. Wartości odżywcze zależą od dostępnych danych produktu; sprawdź etykietę i wielkość porcji.", "Ustaw cel białka z masy ciała: Calcalou pokazuje obliczenie (waga × gramy na kilogram), pozwala je zmieniać i przyjmuje Twoją własną wartość.", "Oszacuj posiłek ze zdjęcia przez AI, w tym kalorie, białko, tłuszcz i węglowodany dla każdego produktu, gdy są dostępne. Przejrzyj i edytuj wynik przed zapisem.", "Dodawaj wodę szklankami lub w dowolnej ilości w ml.", "Ustaw kilka przypomnień, każde z własną godziną i dniami tygodnia.", "Utrzymuj serię zapisów z Lou i śledź dzisiejsze kalorie lub białko w widgecie na ekranie głównym. Funkcje widgetów różnią się zależnie od platformy.", "Eksportuj dziennik jako plik CSV z miesiąca, kwartału, roku lub całego okresu.", "Korzystaj z aplikacji w 41 językach interfejsu w wersji 1.7. Logowanie jest wymagane, aby Twój dziennik był przechowywany na koncie."],
+    "faq_title": "Pytania o Calcalou",
+    "faq": [
+      ["Czy Calcalou jest bezpłatne?", "Ręczne zapisywanie kalorii i białka, skanowanie kodów kreskowych oraz zapisywanie wody są bezpłatne. Skany AI są w Premium; tam, gdzie są oferowane, konto może jednorazowo wypróbować do 3 bezpłatnych skanów. Ceny i warunki subskrypcji znajdziesz w aplikacji i sklepie."],
+      ["Czy skan zdjęcia liczy białko?", "W wersji 1.7 AI może oszacować kalorie, białko, tłuszcz i węglowodany dla każdego rozpoznanego produktu. Wyniki bywają niedokładne, zwłaszcza dla porcji, oleju i dań mieszanych. Brak wartości nie oznacza zera: sprawdź je lub wpisz ręcznie."],
+      ["Kto może korzystać z Calcalou?", "Calcalou jest dla osób od 13 lat, z uwzględnieniem lokalnych wymogów wiekowych. W wersji 1.7 skany AI i zakup Premium wymagają ukończenia 18 lat i dostępności w danym regionie. To aplikacja wspierająca codzienne nawyki, a nie wyrób medyczny."],
+      ["Czy można korzystać bez logowania?", "Logowanie jest wymagane. Dziennik jest przypisany do konta; na innym urządzeniu użyj tej samej metody logowania."]
+    ],
+    "more": "Porównaj aplikacje i sposób zapisywania", "stores": "Pobierz Calcalou", "updated": "Sprawdzono 17 listopada 2026", "privacy": "Prywatność", "support": "Pomoc"
+  },
+  "de": {
+    "name": "Deutsch", "path": "/de/was-ist-calcalou/", "home": "/de/",
+    "title": "Was ist Calcalou? Kalorien- und Proteintracker",
+    "summary": "Calcalou ist ein Kalorien- und Proteintracker für iPhone, iPad und Android. Das Maskottchen Lou hilft, das tägliche Eintragen zur Gewohnheit zu machen.",
+    "version": "Dieser Leitfaden beschreibt Version 1.7. Die Veröffentlichung im Store kann je nach Plattform und Land abweichen. Prüfe vor dem Download für eine bestimmte Funktion die verfügbare Version.",
+    "features_title": "Was Calcalou bietet",
+    "features": ["Kalorien und Eiweiß kostenlos von Hand eintragen.", "Produkt-Barcodes kostenlos scannen. Nährwerte hängen von den verfügbaren Produktdaten ab; prüfe Etikett und Portionsgröße.", "Ein Eiweißziel aus deinem Körpergewicht festlegen: Calcalou zeigt die Rechnung (Gewicht × Gramm pro Kilogramm), lässt dich sie anpassen und akzeptiert deine eigene Zahl.", "Eine Mahlzeit per KI-Foto schätzen, mit Kalorien, Eiweiß, Fett und Kohlenhydraten für jedes Lebensmittel, wenn verfügbar. Prüfe und bearbeite das Ergebnis vor dem Speichern.", "Wasser glasweise oder als eigene Menge in ml hinzufügen.", "Mehrere Erinnerungen festlegen, jede mit eigener Uhrzeit und eigenen Wochentagen.", "Mit Lou eine Eintrags-Serie halten und die heutigen Kalorien oder das heutige Eiweiß in einem Widget auf dem Home-Bildschirm verfolgen. Widget-Funktionen unterscheiden sich je nach Plattform.", "Dein Tagebuch als CSV für einen Monat, ein Quartal, ein Jahr oder den gesamten Zeitraum exportieren.", "Die App in Version 1.7 in 41 Oberflächensprachen nutzen. Eine Anmeldung ist erforderlich, damit dein Tagebuch in deinem Konto gespeichert bleibt."],
+    "faq_title": "Fragen zu Calcalou",
+    "faq": [
+      ["Ist Calcalou kostenlos?", "Manuelle Kalorien- und Proteineinträge, Barcodescans und Wassererfassung sind kostenlos. KI-Scans gehören zu Premium; wo angeboten, kann ein Konto einmalig bis zu 3 Scans kostenlos testen. Preise und Voraussetzungen stehen in der App und im Store."],
+      ["Erfasst ein Fotoscan Protein?", "In Version 1.7 können KI-Fotoscans Kalorien, Protein, Fett und Kohlenhydrate je erkanntem Lebensmittel schätzen. Die Werte können falsch sein, besonders bei Portionen, Öl und gemischten Gerichten. Fehlende Nährwerte sind nicht null: Prüfe sie oder trage sie selbst ein."],
+      ["Wer kann Calcalou nutzen?", "Calcalou ist ab 13 Jahren nutzbar, vorbehaltlich örtlicher Altersvorgaben. In Version 1.7 sind KI-Scans und Premium-Käufe erst ab 18 Jahren und in unterstützten Regionen verfügbar. Calcalou ist eine Wellness-App und kein Medizinprodukt."],
+      ["Geht es ohne Anmeldung?", "Eine Anmeldung ist erforderlich. Dein Tagebuch gehört zu deinem Konto; verwende auf einem anderen Gerät dieselbe Anmeldemethode."]
+    ],
+    "more": "Tracker und Erfassungsmethoden vergleichen", "stores": "Calcalou herunterladen", "updated": "Geprüft am 17. November 2026", "privacy": "Datenschutz", "support": "Hilfe"
+  },
+  "es": {
+    "name": "Español", "path": "/es/que-es-calcalou/", "home": "/es/",
+    "title": "¿Qué es Calcalou? Contador de calorías y proteínas",
+    "summary": "Calcalou es un contador de calorías y proteínas para iPhone, iPad y Android. Lou, una mascota cercana, te ayuda a convertir el registro diario en un hábito.",
+    "version": "Esta guía describe la versión 1.7. La publicación en las tiendas puede variar según la plataforma y el país; comprueba la versión disponible antes de descargarla por una función concreta.",
+    "features_title": "Qué hace Calcalou",
+    "features": ["Registra calorías y proteínas a mano gratis.", "Escanea códigos de barras de productos gratis. Los valores nutricionales dependen de los datos disponibles del producto; revisa la etiqueta y el tamaño de la ración.", "Fija una meta de proteína a partir de tu peso corporal: Calcalou muestra el cálculo (peso × gramos por kilogramo), te deja ajustarla y acepta tu propio número.", "Estima una comida a partir de una foto con IA, con calorías, proteínas, grasa y carbohidratos de cada alimento cuando estén disponibles. Revisa y edita el resultado antes de guardar.", "Añade agua por vasos o como una cantidad personalizada en ml.", "Configura varios recordatorios, cada uno con su propia hora y días de la semana.", "Mantén una racha de registro con Lou y sigue las calorías o proteínas de hoy en un widget de tu pantalla de inicio. Las funciones de los widgets varían según la plataforma.", "Exporta tu diario como CSV de un mes, un trimestre, un año o todo el periodo.", "Usa la app en 41 idiomas de interfaz en la versión 1.7. Es obligatorio iniciar sesión para guardar tu diario en tu cuenta."],
+    "faq_title": "Preguntas sobre Calcalou",
+    "faq": [
+      ["¿Calcalou es gratis?", "El registro manual de calorías y proteínas, los códigos de barras y el registro de agua son gratis. Los escaneos con IA son Premium; donde se ofrezca, una cuenta puede probar hasta 3 escaneos gratis una sola vez. Consulta precios y requisitos en la app y la tienda."],
+      ["¿Una foto permite contar proteínas?", "En la versión 1.7, la IA puede estimar calorías, proteínas, grasas y carbohidratos por alimento detectado. Puede equivocarse, sobre todo con porciones, aceites y platos mixtos. Un valor ausente no es cero: compruébalo o introdúcelo manualmente."],
+      ["¿Quién puede usar Calcalou?", "Calcalou es para mayores de 13 años, sujeto a los requisitos locales de edad. En la versión 1.7, los escaneos con IA y las compras Premium requieren 18 años y una región compatible. Es una app de bienestar general, no un producto sanitario."],
+      ["¿Puedo usarla sin iniciar sesión?", "Es necesario iniciar sesión. Tu diario está asociado a tu cuenta; usa el mismo método de acceso en otro dispositivo."]
+    ],
+    "more": "Compara aplicaciones y formas de registrar", "stores": "Descarga Calcalou", "updated": "Revisado el 17 de noviembre de 2026", "privacy": "Privacidad", "support": "Ayuda"
+  },
+  "fr": {
+    "name": "Français", "path": "/fr/quest-ce-que-calcalou/", "home": "/fr/",
+    "title": "Calcalou : compteur de calories et de protéines",
+    "summary": "Calcalou est un compteur de calories et de protéines pour iPhone, iPad et Android. Lou, une mascotte bienveillante, aide à faire du suivi une habitude.",
+    "version": "Ce guide décrit la version 1.7. Le déploiement dans les boutiques peut varier selon la plateforme et le pays ; vérifiez la version disponible avant de télécharger pour une fonction précise.",
+    "features_title": "Ce que fait Calcalou",
+    "features": ["Notez calories et protéines manuellement, gratuitement.", "Scannez les codes-barres des produits gratuitement. Les valeurs nutritionnelles dépendent des données produit disponibles ; vérifiez l'étiquette et la taille de la portion.", "Fixez un objectif de protéines selon votre poids : Calcalou montre le calcul (poids × grammes par kilogramme), vous laisse l'ajuster et accepte votre propre valeur.", "Estimez un repas à partir d'une photo avec l'IA, avec calories, protéines, lipides et glucides de chaque aliment lorsque disponibles. Vérifiez et modifiez le résultat avant d'enregistrer.", "Ajoutez de l'eau par verre ou en quantité au choix en ml.", "Réglez plusieurs rappels, chacun avec son heure et ses jours de la semaine.", "Gardez une série de saisies avec Lou et suivez les calories ou protéines du jour dans un widget sur votre écran d'accueil. Les widgets diffèrent selon la plateforme.", "Exportez votre journal en CSV pour un mois, un trimestre, une année ou toute la période.", "Utilisez l'app dans 41 langues d'interface dans la version 1.7. La connexion est obligatoire pour conserver votre journal dans votre compte."],
+    "faq_title": "Questions sur Calcalou",
+    "faq": [
+      ["Calcalou est-il gratuit ?", "La saisie manuelle des calories et protéines, les codes-barres et le suivi de l'eau sont gratuits. Les scans IA sont réservés à Premium ; là où c'est proposé, un compte peut essayer jusqu'à 3 scans gratuits, une seule fois. Les prix et conditions figurent dans l'app et la boutique."],
+      ["Un scan photo compte-t-il les protéines ?", "Dans la version 1.7, l'IA peut estimer calories, protéines, lipides et glucides pour chaque aliment détecté. Les estimations peuvent être fausses, notamment pour les portions, huiles et plats composés. Une valeur absente n'est pas zéro : vérifiez-la ou saisissez-la à la main."],
+      ["Qui peut utiliser Calcalou ?", "Calcalou s'adresse aux personnes de 13 ans et plus, sous réserve des règles locales. Dans la version 1.7, les scans IA et les achats Premium nécessitent 18 ans et une région éligible. C'est une app de bien-être général, pas un dispositif médical."],
+      ["Puis-je l'utiliser sans me connecter ?", "La connexion est obligatoire. Votre journal est associé à votre compte ; utilisez la même méthode de connexion sur un autre appareil."]
+    ],
+    "more": "Comparer les applications et les méthodes de saisie", "stores": "Télécharger Calcalou", "updated": "Vérifié le 17 novembre 2026", "privacy": "Confidentialité", "support": "Assistance"
+  },
+  "it": {
+    "name": "Italiano", "path": "/it/cose-calcalou/", "home": "/it/",
+    "title": "Cos'è Calcalou? Contacalorie e proteine",
+    "summary": "Calcalou è un contacalorie e un diario delle proteine per iPhone, iPad e Android. Lou, mascotte amichevole, ti aiuta a fare della registrazione un'abitudine.",
+    "version": "Questa guida descrive la versione 1.7. La disponibilità negli store può variare per piattaforma e paese; verifica la versione disponibile prima di scaricare l'app per una funzione specifica.",
+    "features_title": "Cosa fa Calcalou",
+    "features": ["Registra calorie e proteine manualmente, gratis.", "Scansiona i codici a barre dei prodotti gratis. I valori nutrizionali dipendono dai dati disponibili del prodotto; controlla l'etichetta e la dimensione della porzione.", "Imposta un obiettivo di proteine dal tuo peso: Calcalou mostra il calcolo (peso × grammi per chilogrammo), ti lascia regolarlo e accetta un numero tuo.", "Stima un pasto da una foto con l'IA, con calorie, proteine, grassi e carboidrati per ogni alimento quando disponibili. Controlla e modifica il risultato prima di salvare.", "Aggiungi acqua a bicchieri o come quantità a scelta in ml.", "Imposta più promemoria, ognuno con il suo orario e i suoi giorni della settimana.", "Mantieni una serie di registrazioni con Lou e segui le calorie o le proteine di oggi in un widget nella schermata Home. Le funzioni dei widget cambiano a seconda della piattaforma.", "Esporta il tuo diario in CSV per un mese, un trimestre, un anno o tutto il periodo.", "Usa l'app in 41 lingue dell'interfaccia nella versione 1.7. L'accesso è obbligatorio per conservare il diario nel tuo account."],
+    "faq_title": "Domande su Calcalou",
+    "faq": [
+      ["Calcalou è gratuito?", "La registrazione manuale di calorie e proteine, i codici a barre e il diario dell'acqua sono gratuiti. Le scansioni IA sono Premium; dove è offerto, un account può provare fino a 3 scansioni gratuite una sola volta. Prezzi e requisiti sono indicati nell'app e nello store."],
+      ["Una foto permette di contare le proteine?", "Nella versione 1.7 l'IA può stimare calorie, proteine, grassi e carboidrati per ogni alimento rilevato. Può sbagliare, soprattutto con porzioni, oli e piatti misti. Un valore mancante non è zero: controllalo o inseriscilo a mano."],
+      ["Chi può usare Calcalou?", "Calcalou è per persone dai 13 anni in su, nel rispetto dei requisiti locali. Nella versione 1.7 le scansioni IA e gli acquisti Premium richiedono almeno 18 anni e una regione idonea. È un'app per il benessere generale, non un dispositivo medico."],
+      ["Posso usarlo senza accedere?", "L'accesso è obbligatorio. Il diario è associato al tuo account; usa lo stesso metodo di accesso su un altro dispositivo."]
+    ],
+    "more": "Confronta app e metodi di registrazione", "stores": "Scarica Calcalou", "updated": "Verificato il 17 novembre 2026", "privacy": "Privacy", "support": "Assistenza"
+  },
+  "pt-BR": {
+    "name": "Português (Brasil)", "path": "/pt-br/o-que-e-calcalou/", "home": "/pt-br/",
+    "title": "O que é Calcalou? Contador de calorias e proteínas",
+    "summary": "Calcalou é um contador de calorias e proteínas para iPhone, iPad e Android. Lou, uma mascote amigável, ajuda a transformar o registro diário em hábito.",
+    "version": "Este guia descreve a versão 1.7. O lançamento nas lojas pode variar por plataforma e país; confira a versão disponível antes de baixar por causa de uma função específica.",
+    "features_title": "O que o Calcalou faz",
+    "features": ["Registre calorias e proteína manualmente, de graça.", "Escaneie códigos de barras de produtos de graça. Os valores nutricionais dependem dos dados disponíveis do produto; confira o rótulo e o tamanho da porção.", "Defina uma meta de proteína pelo seu peso: o Calcalou mostra a conta (peso × gramas por quilo), deixa você ajustar e aceita o seu próprio número.", "Estime uma refeição a partir de uma foto com IA, incluindo calorias, proteína, gordura e carboidratos de cada alimento quando disponíveis. Revise e edite o resultado antes de salvar.", "Adicione água por copo ou como outra quantidade em ml.", "Defina vários lembretes, cada um com seu horário e seus dias da semana.", "Mantenha uma sequência de registros com o Lou e acompanhe as calorias ou a proteína de hoje em um widget na tela de início. Os recursos de widget variam conforme a plataforma.", "Exporte seu diário em CSV de um mês, trimestre, ano ou de todo o período.", "Use o app em 41 idiomas de interface na versão 1.7. O login é obrigatório para manter seu diário na sua conta."],
+    "faq_title": "Perguntas sobre o Calcalou",
+    "faq": [
+      ["O Calcalou é gratuito?", "O registro manual de calorias e proteínas, os códigos de barras e o registro de água são gratuitos. Os scans com IA são Premium; onde houver essa oferta, uma conta pode testar até 3 scans gratuitos uma única vez. Preços e requisitos aparecem no app e na loja."],
+      ["Uma foto permite contar proteínas?", "Na versão 1.7, a IA pode estimar calorias, proteínas, gorduras e carboidratos por alimento detectado. Pode errar, especialmente com porções, óleos e pratos mistos. Um valor ausente não é zero: confira ou preencha manualmente."],
+      ["Quem pode usar o Calcalou?", "O Calcalou é para pessoas a partir de 13 anos, sujeito às exigências locais de idade. Na versão 1.7, scans com IA e compras Premium exigem 18 anos e uma região elegível. É um app de bem-estar geral, não um dispositivo médico."],
+      ["Posso usar sem entrar na conta?", "É necessário entrar na conta. Seu diário está associado a ela; use o mesmo método de acesso em outro dispositivo."]
+    ],
+    "more": "Compare apps e formas de registrar", "stores": "Baixe o Calcalou", "updated": "Conferido em 17 de novembro de 2026", "privacy": "Privacidade", "support": "Ajuda"
+  },
+  "ru": {
+    "name": "Русский", "path": "/ru/chto-takoe-calcalou/", "home": "/ru/",
+    "title": "Что такое Calcalou? Счётчик калорий и белка",
+    "summary": "Calcalou — счётчик калорий и белка для iPhone, iPad и Android. Дружелюбный маскот Lou помогает превратить ежедневные записи в привычку.",
+    "version": "Здесь описана версия 1.7. Выпуск в магазинах может различаться по платформам и странам; перед скачиванием ради конкретной функции проверьте доступную версию.",
+    "features_title": "Что умеет Calcalou",
+    "features": ["Бесплатно записывайте калории и белок вручную.", "Бесплатно сканируйте штрихкоды продуктов. Значения питательной ценности зависят от доступных данных о продукте; сверяйтесь с этикеткой и размером порции.", "Задайте цель по белку по весу тела: Calcalou показывает расчёт (вес × граммы на килограмм), позволяет менять значение и принимает ваше собственное число.", "Оценивайте блюдо по фото с помощью ИИ: калории, а также белки, жиры и углеводы для каждого продукта, когда они доступны. Перед сохранением проверьте и поправьте результат.", "Добавляйте воду стаканами или своим объёмом в мл.", "Настройте несколько напоминаний — у каждого своё время и свои дни недели.", "Сохраняйте серию записей вместе с Lou и следите за калориями или белком за сегодня в виджете на главном экране. Возможности виджетов зависят от платформы.", "Экспортируйте дневник в CSV за месяц, квартал, год или за всё время.", "Пользуйтесь приложением на 41 языке интерфейса в версии 1.7. Вход обязателен, чтобы дневник хранился в вашем аккаунте."],
+    "faq_title": "Вопросы о Calcalou",
+    "faq": [
+      ["Calcalou бесплатный?", "Ручной учёт калорий и белка, штрихкоды и учёт воды бесплатны. ИИ-сканы входят в Premium; там, где это предлагается, аккаунт может один раз попробовать до 3 бесплатных сканов. Цены и условия подписки указаны в приложении и магазине."],
+      ["Можно ли посчитать белок по фото?", "В версии 1.7 ИИ может оценить калории, белки, жиры и углеводы каждого распознанного продукта. Оценки могут ошибаться, особенно для порций, масла и сложных блюд. Отсутствующее значение — не ноль: проверьте его или введите вручную."],
+      ["Кому доступен Calcalou?", "Calcalou — для пользователей от 13 лет с учётом местных возрастных требований. В версии 1.7 ИИ-сканы и покупка Premium доступны с 18 лет в поддерживаемых регионах. Это приложение для повседневного самоконтроля, не медицинское изделие."],
+      ["Можно пользоваться без входа?", "Вход обязателен. Дневник привязан к аккаунту; на другом устройстве используйте тот же способ входа."]
+    ],
+    "more": "Сравнения приложений и способов учёта", "stores": "Скачать Calcalou", "updated": "Проверено 17 ноября 2026", "privacy": "Конфиденциальность", "support": "Поддержка"
+  },
+  "tr": {
+    "name": "Türkçe", "path": "/tr/calcalou-nedir/", "home": "/tr/",
+    "title": "Calcalou nedir? Kalori ve protein takibi",
+    "summary": "Calcalou, iPhone, iPad ve Android için bir kalori ve protein takip uygulamasıdır. Maskot Lou, günlük kaydı alışkanlığa dönüştürmenize yardımcı olur.",
+    "version": "Bu rehber 1.7 sürümünü anlatır. Mağazaya çıkış platforma ve ülkeye göre değişebilir; belirli bir özellik için indirmeden önce mevcut sürümü kontrol edin.",
+    "features_title": "Calcalou neler yapar?",
+    "features": ["Kalori ve proteini elle ücretsiz kaydet.", "Ürün barkodlarını ücretsiz tara. Besin değerleri mevcut ürün verilerine bağlıdır; etiketi ve porsiyon boyutunu kontrol et.", "Vücut ağırlığından bir protein hedefi belirle: Calcalou hesabı gösterir (ağırlık × kilogram başına gram), ayarlamana izin verir ve kendi sayını kabul eder.", "Bir öğünü yapay zekâyla fotoğraftan tahmin et; mevcut olduğunda her yiyecek için kalori, protein, yağ ve karbonhidrat dahil. Kaydetmeden önce sonucu gözden geçir ve düzenle.", "Suyu bardak bardak ya da ml cinsinden özel bir miktarla ekle.", "Her birinin kendi saati ve haftanın kendi günleri olan birden fazla hatırlatıcı kur.", "Lou ile kayıt serisi tut ve bugünkü kalori ya da proteini Ana Ekran'daki bir widget'ta izle. Widget özellikleri platforma göre değişir.", "Günlüğünü ay, çeyrek, yıl ya da tüm zamanlar için CSV olarak dışa aktar.", "Uygulamayı 1.7 sürümünde 41 arayüz dilinde kullan. Günlüğünü hesabında tutmak için giriş yapmak zorunludur."],
+    "faq_title": "Calcalou hakkında sorular",
+    "faq": [
+      ["Calcalou ücretsiz mi?", "Elle kalori ve protein kaydı, barkod tarama ve su takibi ücretsizdir. Yapay zekâ taramaları Premium kapsamındadır; sunulduğu yerlerde bir hesap bir defaya mahsus en fazla 3 ücretsiz tarama deneyebilir. Fiyatlar ve koşullar uygulamada ve mağazada gösterilir."],
+      ["Fotoğraf taraması proteini hesaplar mı?", "1.7 sürümünde yapay zekâ her algılanan besin için kalori, protein, yağ ve karbonhidrat tahmini yapabilir. Özellikle porsiyonlar, yağlar ve karışık yemeklerde yanılabilir. Eksik değer sıfır değildir: kontrol edin veya elle girin."],
+      ["Calcalou'yu kimler kullanabilir?", "Calcalou, yerel yaş şartlarına bağlı olarak 13 yaş ve üzeri içindir. 1.7 sürümünde yapay zekâ taramaları ve Premium satın alımları için 18 yaş ve uygun bir bölge gerekir. Genel sağlıklı yaşam uygulamasıdır, tıbbi cihaz değildir."],
+      ["Giriş yapmadan kullanabilir miyim?", "Giriş yapmanız gerekir. Günlük hesabınıza bağlıdır; başka bir cihazda aynı giriş yöntemini kullanın."]
+    ],
+    "more": "Uygulamaları ve kayıt yöntemlerini karşılaştırın", "stores": "Calcalou'yu indirin", "updated": "17 Kasım 2026 tarihinde kontrol edildi", "privacy": "Gizlilik", "support": "Destek"
+  },
+  "uk": {
+    "name": "Українська", "path": "/uk/shcho-take-calcalou/", "home": "/",
+    "title": "Що таке Calcalou? Лічильник калорій і білка",
+    "summary": "Calcalou — лічильник калорій і білка для iPhone, iPad та Android. Дружній маскот Lou допомагає перетворити щоденні записи на звичку.",
+    "version": "Тут описано версію 1.7. Випуск у магазинах може відрізнятися залежно від платформи та країни; перед завантаженням заради певної функції перевірте доступну версію.",
+    "features_title": "Що вміє Calcalou",
+    "features": ["Безкоштовно записуйте калорії та білок вручну.", "Безкоштовно скануйте штрихкоди продуктів. Значення поживної цінності залежать від доступних даних про продукт; перевіряйте етикетку й розмір порції.", "Задайте ціль білка за вагою тіла: Calcalou показує розрахунок (вага × грами на кілограм), дає змінювати значення і приймає ваше власне число.", "Оцінюйте страву за фото за допомогою ШІ, зокрема калорії, білки, жири та вуглеводи для кожного продукту, коли ці дані доступні. Перед збереженням перевірте й виправте результат.", "Додавайте воду склянками або власним обсягом у мл.", "Налаштуйте кілька нагадувань — у кожного свій час і свої дні тижня.", "Підтримуйте серію записів разом із Lou та стежте за калоріями чи білком на сьогодні у віджеті на головному екрані. Можливості віджетів залежать від платформи.", "Експортуйте щоденник у CSV за місяць, квартал, рік або за весь час.", "Користуйтеся застосунком 41 мовою інтерфейсу у версії 1.7. Вхід обов'язковий, щоб щоденник зберігався у вашому обліковому записі."],
+    "faq_title": "Запитання про Calcalou",
+    "faq": [
+      ["Calcalou безкоштовний?", "Ручний облік калорій і білка, штрихкоди та облік води безкоштовні. ШІ-сканування входить до Premium; там, де це пропонується, обліковий запис може один раз спробувати до 3 безкоштовних сканувань. Ціни й умови підписки вказані в застосунку та магазині."],
+      ["Чи можна порахувати білок за фото?", "У версії 1.7 ШІ може оцінити калорії, білки, жири й вуглеводи кожного розпізнаного продукту. Оцінки можуть бути хибними, особливо для порцій, олії та складних страв. Відсутнє значення — не нуль: перевірте його або введіть вручну."],
+      ["Кому доступний Calcalou?", "Calcalou — для користувачів від 13 років з урахуванням місцевих вікових вимог. У версії 1.7 ШІ-сканування та купівля Premium доступні з 18 років у підтримуваних регіонах. Це застосунок для повсякденного самоконтролю, не медичний виріб."],
+      ["Чи можна користуватися без входу?", "Вхід обов'язковий. Щоденник прив'язаний до облікового запису; на іншому пристрої використовуйте той самий спосіб входу."]
+    ],
+    "more": "Порівняння застосунків і способів обліку", "stores": "Завантажити Calcalou", "updated": "Перевірено 17 листопада 2026", "privacy": "Конфіденційність", "support": "Підтримка"
+  }
+}

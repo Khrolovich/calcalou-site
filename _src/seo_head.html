@@ -18,7 +18,7 @@
     "installUrl": ["https://apps.apple.com/app/id6757434158", "https://play.google.com/store/apps/details?id=com.khrolovich.calorietracker"],
     "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "category": "free"}} %}
 {%- set faq = {"@type": "FAQPage", "inLanguage": lang, "mainEntity": []} %}
-{%- for k in ["free", "lou", "accuracy", "devices", "data"] %}
+{%- for k in ["free", "protein", "lou", "accuracy", "devices", "data"] %}
 {%- set _ = faq["mainEntity"].append({"@type": "Question", "name": t['faq.' ~ k ~ '.q'],
     "acceptedAnswer": {"@type": "Answer", "text": t['faq.' ~ k ~ '.a']}}) %}
 {%- endfor %}

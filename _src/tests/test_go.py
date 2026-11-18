@@ -27,7 +27,7 @@ class GoLinks(unittest.TestCase):
                 self.assertIn('<meta name="robots" content="noindex">', html)
                 self.assertIn(f'data-store="ios" href="{links["ios"].replace("&", "&amp;")}"', html)
                 self.assertIn(f'data-store="android" href="{links["android"].replace("&", "&amp;")}"', html)
-                self.assertIn(f"storeLinks({json.dumps(ct)})", html)
+                self.assertIn(f"storeLinks(ai ? 'ai_' + ai : {json.dumps(ct)})", html)
                 self.assertLess(html.index("<!-- analytics -->"), html.index("</head>"))
                 self.assertIn(f'<svg xmlns="http://www.w3.org/2000/svg" data-text="{BASE}/go/{channel}/"', html)
                 self.assertTrue((SRC / "qr" / f"{channel}.svg").is_file())

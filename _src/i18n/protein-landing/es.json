@@ -1,0 +1,50 @@
+{
+  "path": "/es/app-para-contar-proteinas/",
+  "title": "App para contar proteínas: Calorías y proteínas en Calcalou",
+  "summary": "Calcalou: app para contar proteínas en iPhone, iPad y Android. Registra proteínas y calorías, fija una meta según tu peso y estima comidas con una foto.",
+  "features_title": "Contar proteínas en Calcalou",
+  "features": [
+    "Registra las proteínas en cada entrada: escríbelas tú gratis o rellénalas con un código de barras o un escaneo de foto con IA.",
+    "Fija una meta diaria de proteínas a partir de tu peso corporal. Calcalou muestra el cálculo (peso × gramos por kilogramo), te deja ajustarla de 0,8 a 2,0 g/kg y acepta tu propio número.",
+    "Mira las proteínas junto a las calorías en Hoy, en tu resumen semanal y en Estadísticas, y elige proteínas o calorías para cada widget.",
+    "Los escaneos de fotos con IA estiman proteínas, grasa y carbohidratos de cada alimento, todo editable antes de guardar. Las estimaciones pueden fallar; los escaneos son Premium, con límites de edad y de región.",
+    "Escanear códigos de barras es gratis. Los valores nutricionales dependen de los datos del producto, así que revisa la etiqueta y la ración.",
+    "Las rachas, los recordatorios flexibles y el registro de agua te ayudan a seguir registrando."
+  ],
+  "sections": [
+    [
+      "Cómo contar proteínas en Calcalou",
+      "Toca Añadir y luego introduce calorías, proteínas, grasa y carbohidratos de lo que comiste, o escanea un código de barras o una foto para rellenarlos. Todos los campos son opcionales, así que puedes registrar solo las proteínas. Las proteínas aparecen junto a las calorías en Hoy y en tus resúmenes."
+    ],
+    [
+      "Fija una meta de proteína que se ajuste a ti",
+      "Elige Según el peso y Calcalou multiplica tu peso por los gramos por kilogramo (1,2 por defecto) y muestra el cálculo. Tu peso viene de tu perfil o, si lo conectas, de Apple Health o Health Connect. Ajusta el factor de 0,8 a 2,0 g/kg o introduce tu propia meta. Una meta es un punto de partida, no consejo médico; la calculadora de proteínas muestra rangos de referencia."
+    ],
+    [
+      "Fotos, códigos de barras o a mano",
+      "Los escaneos de fotos usan IA para estimar calorías, proteínas, grasa y carbohidratos de cada alimento. Revisa el resultado: las raciones, los aceites y los platos mixtos son fáciles de calcular mal, y un valor que falta no es cero. Escanear códigos de barras y registrar a mano son gratis; los datos de los productos varían, así que revisa la etiqueta."
+    ],
+    [
+      "Quién puede usarla",
+      "Calcalou es para personas de 13 años o más, sujeto a los requisitos de edad locales. En la versión 1.7, los escaneos con IA y las compras Premium requieren 18 años o más y una región admitida. Es obligatorio iniciar sesión. Calcalou es una app general de bienestar, no un producto sanitario."
+    ]
+  ],
+  "faq": [
+    [
+      "¿Cuál es la mejor forma de contar proteínas?",
+      "Usa el método que vayas a mantener. Registra las proteínas en cada comida, revisa las etiquetas de los alimentos envasados y trata las estimaciones de las fotos como puntos de partida que puedes editar. En Calcalou puedes escribir las proteínas, escanear un código de barras o usar un escaneo de foto con IA."
+    ],
+    [
+      "¿Cuántas proteínas debo comer al día?",
+      "Depende de tu cuerpo, tus metas y tu salud. Para adultos, la ingesta de referencia de la EFSA es de 0,83 g por kg de peso corporal; el posicionamiento de 2026 de la Sociedad Internacional de Nutrición Deportiva da 1,2–1,6 g por kg para perder peso y 1,6–2,2 g por kg con entrenamiento de resistencia. La calculadora de proteínas muestra los tres. Esto no es consejo médico."
+    ],
+    [
+      "¿Calcalou cuenta las proteínas de una foto?",
+      "Sí. En la versión 1.7, un escaneo de foto con IA estima calorías, proteínas, grasa y carbohidratos de cada alimento detectado. Las estimaciones pueden fallar, así que revísalas y edítalas antes de guardar."
+    ],
+    [
+      "¿Es gratis contar proteínas?",
+      "Registrar proteínas a mano, escanear códigos de barras y las metas de proteína son gratis. Los escaneos de fotos con IA son Premium; donde esté disponible, una cuenta puede probar hasta 3 escaneos gratis una sola vez. Los precios y la disponibilidad se muestran en la app y en la tienda."
+    ]
+  ]
+}

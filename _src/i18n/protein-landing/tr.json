@@ -1,0 +1,50 @@
+{
+  "path": "/tr/protein-takip-uygulamasi/",
+  "title": "Kalori ve Protein: protein takip uygulaması",
+  "summary": "Calcalou, iPhone, iPad ve Android için protein takip uygulaması. Proteini kalorinin yanında kaydet, kiloya göre hedef belirle, öğünleri fotoğraftan tahmin et.",
+  "features_title": "Calcalou'da protein takibi",
+  "features": [
+    "Her kayıtla proteini gir: kendin ücretsiz yaz ya da bir barkoddan veya yapay zekâ fotoğraf taramasından doldur.",
+    "Vücut ağırlığından günlük bir protein hedefi belirle. Calcalou hesabı gösterir (ağırlık × kilogram başına gram), 0,8 ile 2,0 g/kg arasında ayarlamana izin verir ve kendi sayını kabul eder.",
+    "Proteini Bugün ekranında, haftalık özetinde ve İstatistikler'de kalorinin yanında gör; her widget için protein ya da kaloriyi seç.",
+    "Yapay zekâ fotoğraf taramaları her yiyecek için protein, yağ ve karbonhidratı tahmin eder; kaydetmeden önce hepsi düzenlenebilir. Tahminler yanlış olabilir; taramalar Premium'dur, yaş ve bölge sınırları vardır.",
+    "Barkod tarama ücretsizdir. Besin değerleri ürün verilerine bağlıdır, bu yüzden etiketi ve porsiyonu kontrol et.",
+    "Seriler, esnek hatırlatıcılar ve su takibi kayıt tutmaya devam etmene yardımcı olur."
+  ],
+  "sections": [
+    [
+      "Calcalou'da protein nasıl takip edilir",
+      "Ekle'ye dokun, ardından yediğin şeyin kalori, protein, yağ ve karbonhidratını gir ya da doldurmak için bir barkod veya fotoğraf tara. Her alan isteğe bağlıdır, yani yalnızca proteini kaydedebilirsin. Protein, Bugün ekranında ve özetlerde kalorinin yanında görünür."
+    ],
+    [
+      "Sana uygun bir protein hedefi belirle",
+      "\"Vücut ağırlığından\" seçeneğini seç; Calcalou ağırlığını kilogram başına gramla (varsayılan 1,2) çarpar ve hesabı gösterir. Ağırlığın profilinden ya da bağlarsan Apple Health veya Health Connect'ten gelir. Katsayıyı 0,8 ile 2,0 g/kg arasında ayarla ya da kendi hedefini gir. Hedef bir başlangıç noktasıdır, tıbbi tavsiye değildir; protein hesaplayıcı referans aralıklarını gösterir."
+    ],
+    [
+      "Fotoğraf, barkod ya da elle",
+      "Fotoğraf taramaları, her yiyecek için kalori, protein, yağ ve karbonhidratı tahmin etmek üzere yapay zekâ kullanır. Sonucu gözden geçir: porsiyonlar, yağlar ve karışık yemekler kolayca yanlış tahmin edilir ve eksik bir değer sıfır demek değildir. Barkod tarama ve elle kayıt ücretsizdir; ürün verileri değişebilir, bu yüzden etiketi kontrol et."
+    ],
+    [
+      "Kimler kullanabilir",
+      "Calcalou, yerel yaş gerekliliklerine tabi olarak 13 yaş ve üzeri içindir. 1.7 sürümünde yapay zekâ taramaları ve Premium satın alımları 18 yaş ve üzerini ve uygun bir bölgeyi gerektirir. Giriş yapmak zorunludur. Calcalou genel bir sağlıklı yaşam uygulamasıdır, tıbbi cihaz değildir."
+    ]
+  ],
+  "faq": [
+    [
+      "Protein takibi yapmanın en iyi yolu nedir?",
+      "Sürdüreceğin yöntemi kullan. Her öğünle proteini kaydet, paketli gıdalarda etiketleri kontrol et ve fotoğraf tahminlerini düzenleyebileceğin başlangıç noktaları olarak gör. Calcalou'da proteini yazabilir, bir barkod tarayabilir ya da yapay zekâ fotoğraf taraması kullanabilirsin."
+    ],
+    [
+      "Günde ne kadar protein yemeliyim?",
+      "Bedenine, hedeflerine ve sağlığına bağlıdır. Yetişkinler için EFSA referans alımı vücut ağırlığının kg'ı başına 0,83 g'dır; 2026 Uluslararası Spor Beslenmesi Derneği görüş bildirisi kilo verme için kg başına 1,2–1,6 g, direnç antrenmanıyla birlikte kg başına 1,6–2,2 g verir. Protein hesaplayıcı üçünü de gösterir. Bu genel bir bilgidir, tıbbi tavsiye değildir."
+    ],
+    [
+      "Calcalou fotoğraftan protein sayar mı?",
+      "Evet. 1.7 sürümünde bir yapay zekâ fotoğraf taraması, algılanan her yiyecek için kalori, protein, yağ ve karbonhidratı tahmin eder. Tahminler yanlış olabilir, bu yüzden kaydetmeden önce kontrol et ve düzenle."
+    ],
+    [
+      "Protein takibi ücretsiz mi?",
+      "Proteini elle kaydetmek, barkod tarama ve protein hedefleri ücretsizdir. Yapay zekâ fotoğraf taramaları Premium'dur; sunulan yerlerde bir hesap, 3 ücretsiz taramayı bir kez deneyebilir. Fiyatlar ve uygunluk uygulamada ve mağazada gösterilir."
+    ]
+  ]
+}
