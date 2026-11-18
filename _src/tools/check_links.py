@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Offline link check for the built site: every internal href/src resolves to a file, every #fragment to an id.
+"""Offline link check for the built site: every internal href/src and og/twitter image resolves to a file, every #fragment to an id.
 
 Usage: python3 _src/tools/check_links.py [--external]   (--external also prints the distinct external URLs and
 their HTTP status with curl; needs network)
@@ -12,13 +12,13 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 SITE = Path(__file__).resolve().parents[2]
-ATTR = re.compile(r'(?:href|src)="([^"]+)"')
+ATTR = re.compile(r'(?:href|src)="([^"]+)"|<meta (?:property|name)="(?:og|twitter):image" content="([^"]+)"')
 IDS = re.compile(r'\sid="([^"]+)"')
 pages = [p for p in SITE.rglob("*.html") if not {"_src", ".git", "node_modules"} & set(p.parts)]
 errors, external = [], set()
 for page in pages:
     html = page.read_text(encoding="utf-8")
-    for raw in ATTR.findall(html):
+    for raw in (a or b for a, b in ATTR.findall(html)):
         if "'" in raw or "{" in raw:  # URL fragments inside inline scripts
             continue
         url = urlparse(unescape(raw))

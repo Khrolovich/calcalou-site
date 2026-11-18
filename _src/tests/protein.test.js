@@ -81,7 +81,8 @@ test('landing pages link the protein landing and calculator, and carry the prote
   for (const [lang, page] of Object.entries(SETS.landing)) {
     const html = fs.readFileSync(path.join(SITE, page, 'index.html'), 'utf8');
     assert.ok(html.includes(`href="${SETS['protein-landing'][lang]}"`), `${page}: protein landing link`);
-    assert.ok(html.includes(`href="${SETS.protein[lang]}"`), `${page}: protein calculator link`);
+    if (SETS.protein[lang]) assert.ok(html.includes(`href="${SETS.protein[lang]}"`), `${page}: protein calculator link`);
+    else assert.ok(!html.includes('href="undefined"') && !html.includes('href="None"'), `${page}: no calculator, no dead link`);
     const faq = JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1])['@graph'].find((e) => e['@type'] === 'FAQPage');
     assert.equal(faq.mainEntity.length, 6, page);
     for (const q of faq.mainEntity) assert.ok(html.includes(`<summary>${q.name.replace(/&/g, '&amp;').replace(/'/g, '&#39;')}</summary>`) || html.includes(q.name), `${page}: FAQ ${q.name} not visible`);

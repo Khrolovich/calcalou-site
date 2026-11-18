@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Every localized page set must exist in every site language, and its pages must link to each other.
 
-For each set in build.page_sets(): one page per code in build.set_locales(set) (build.LOCALES, except the
-pilot food pages, held to build.FOOD_LOCALES), <html lang> matches, the hreflang
+For each set in build.page_sets(): one page per code in build.set_locales(set) (build.LOCALES; the home page
+build.HOME_LOCALES; the pilot food pages build.FOOD_LOCALES), <html lang> matches, the hreflang
 cluster and both language switchers (header and footer) list exactly that set's pages, and sitemap.xml lists
 them. Any other published HTML/Markdown page must be in SINGLE_LANGUAGE, so a page added in one language fails.
 
@@ -15,7 +15,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from build import BASE, LOCALES, SITE, page_sets, set_locales  # noqa: E402
+from build import BASE, SITE, page_sets, set_locales  # noqa: E402
 from acquisition import ENGLISH_PATHS
 
 SINGLE_LANGUAGE = {"/press/", "/privacy/", "/support/", "/delete-account/", "/links/", "/get/", "/i/", "/404.html"}

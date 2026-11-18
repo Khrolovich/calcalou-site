@@ -258,5 +258,27 @@
   "source": {
     "android": "qa-runs/1.4.0-65-store-screenshots/raw/android-phone",
     "iosToday": "qa-runs/1.4.0-65-store-screenshots-v2/samples/ios-iphone/en-US/iphone69_01_today.png"
+  },
+  "home": {
+    "today": [
+      1080,
+      2347
+    ],
+    "card": [
+      960,
+      916
+    ],
+    "scan": [
+      960,
+      1578
+    ],
+    "barcode": [
+      960,
+      1489
+    ],
+    "achievements": [
+      960,
+      1207
+    ]
   }
 }

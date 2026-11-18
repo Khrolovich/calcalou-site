@@ -1,0 +1,254 @@
+{%- from "macros.html" import pic, lou -%}
+{%- set phone_sizes = "(min-width: 960px) 300px, 230px" -%}
+{%- set tile_sizes = "(min-width: 960px) 440px, calc(100vw - 72px)" -%}
+{%- macro tile(key, alt, cls="tile") -%}{% set d = home[key] %}<div class="{{ cls }}">{{ pic("home-" ~ key, [480, 720, 960], tile_sizes, d[0], d[1], alt) }}</div>{%- endmacro -%}
+{%- macro phone(key, alt, sizes=phone_sizes, cls="phone", lazy=true, high=false) -%}{% set d = home[key] %}<div class="{{ cls }}">{{ pic("home-" ~ key, [360, 540, 720] + ([1080] if key == "today" else []), sizes, d[0], d[1], alt, "", lazy, high) }}</div>{%- endmacro -%}
+{%- set en = lang == "en" -%}
+{%- set hero_lou_sizes = "(min-width: 960px) 300px, 200px" -%}
+{%- set tile_lou_sizes = "(min-width: 960px) 260px, 50vw" -%}
+{%- macro ring(pct, cls) -%}<svg viewBox="0 0 120 120" aria-hidden="true"><circle class="track" cx="60" cy="60" r="52"/><circle class="{{ cls }}" cx="60" cy="60" r="52" pathLength="100" stroke-dasharray="{{ pct }} 100"/></svg>{%- endmacro -%}
+{%- macro today_card() -%}
+<div class="today">
+  <p class="today-head"><b>{{ h['card.title'] }}</b><span class="ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>{{ h['card.goal_reached'] }}</span></p>
+  <div class="rings">
+    <p class="ring">{{ ring(69, "bar kcal") }}<span><b>{{ num(620) }}</b><small>{{ h['card.kcal_left'] }}</small></span></p>
+    <p class="ring">{{ ring(100, "bar pro") }}<span><b>{{ num(124) }}&nbsp;<i>{{ h['card.g'] }}</i></b><small>{{ h['card.protein'] }}</small></span></p>
+  </div>
+  <dl class="macros"><div><dt>{{ h['card.eaten'] }}</dt><dd>{{ num(1380) }}&nbsp;{{ h['card.kcal'] }}</dd></div><div><dt>{{ h['card.fat'] }}</dt><dd>{{ num(42) }}&nbsp;{{ h['card.g'] }}</dd></div><div><dt>{{ h['card.carbs'] }}</dt><dd>{{ num(126) }}&nbsp;{{ h['card.g'] }}</dd></div></dl>
+</div>
+{%- endmacro -%}
+{%- macro protein_card() -%}
+<div class="today pcard">
+  <p class="today-head"><b>{{ h['card.protein'] }}</b><span class="ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>{{ h['card.goal_reached'] }}</span></p>
+  <p class="pbig"><b>{{ num(124) }}&nbsp;<i>{{ h['card.g'] }}</i></b><span>{{ h['card.goal'] }} {{ num(120) }}&nbsp;{{ h['card.g'] }}</span></p>
+  <p class="pbar" aria-hidden="true"><i></i></p>
+  <ul class="meals">
+{%- for time, key, grams in [("08:10", "yogurt", 11.9), ("13:05", "salmon", 43), ("16:10", "shake", 30), ("19:30", "bowl", 39.1)] %}
+    <li><small>{{ time }}</small><span>{{ h['meal.' ~ key] }}</span><b>{{ dec(grams) if grams != grams|int else num(grams) }}&nbsp;{{ h['card.g'] }}</b></li>
+{%- endfor %}
+  </ul>
+</div>
+{%- endmacro -%}
+{%- macro lou_tile(key, mood, icon) -%}
+<div class="tile lou-tile lt-{{ key }}">
+  {{ lou(mood, tile_lou_sizes, h[key ~ '.lou_alt'], "lou") }}
+  <p class="chip" aria-hidden="true"><svg viewBox="0 0 24 24">{{ icon|safe }}</svg><span>{{ caller() }}</span></p>
+</div>
+{%- endmacro -%}
+{%- macro stores(cls="stores", lazy=true) -%}
+<div class="{{ cls }}"{% if not lazy %} data-hero-cta{% endif %}>
+  <a data-store="ios" href="{{ links.ios }}"><img src="/assets/img/badge-app-store.svg" alt="{{ t['store.ios'] }}" width="150" height="50"{% if lazy %} loading="lazy"{% endif %}></a>
+  <a data-store="android" href="{{ links.android }}"><img src="/assets/img/badge-google-play-{{ gp.code }}-50.webp" srcset="/assets/img/badge-google-play-{{ gp.code }}-50.webp 1x, /assets/img/badge-google-play-{{ gp.code }}-100.webp 2x" alt="{{ t['store.android'] }}" width="{{ gp.w }}" height="50"{% if lazy %} loading="lazy"{% endif %}></a>
+</div>
+{%- endmacro -%}
+<!DOCTYPE html>
+<html lang="{{ lang }}" data-platform="other">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{ t['meta.title'] }}</title>
+  <meta name="description" content="{{ t['meta.description'] }}">
+  <meta name="theme-color" content="#FFE2CF">
+  <meta name="apple-itunes-app" content="app-id=6757434158">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calcalou">
+  <meta property="og:url" content="{{ base }}{{ path }}">
+  <meta property="og:locale" content="{{ og_locale }}">
+  <meta property="og:title" content="{{ t['meta.og_title'] }}">
+  <meta property="og:description" content="{{ t['meta.og_description'] }}">
+  <meta property="og:image" content="{{ base }}{{ og_image(lang) }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+{% include "seo_head.html" %}
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/assets/img/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/assets/img/favicon-48.png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+{%- if en %}
+  <link rel="preload" as="image" type="image/avif" imagesrcset="/assets/img/home-today-360.avif 360w, /assets/img/home-today-540.avif 540w, /assets/img/home-today-720.avif 720w, /assets/img/home-today-1080.avif 1080w" imagesizes="(min-width: 960px) 330px, 250px" fetchpriority="high">
+{%- else %}
+  <link rel="preload" as="image" type="image/avif" imagesrcset="/assets/img/lou-happy-240.avif 240w, /assets/img/lou-happy-480.avif 480w, /assets/img/lou-happy-760.avif 760w" imagesizes="{{ hero_lou_sizes }}" fetchpriority="high">
+{%- endif %}
+{% include "styles.html" %}
+{% include "styles_home2.html" %}
+</head>
+<body class="home2">
+  <a class="skip" href="#main">{{ t['a11y.skip'] }}</a>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="{{ path }}"><img src="/assets/img/app-icon-96.png" alt="" width="34" height="34">Calcalou</a>
+      <nav aria-label="{{ t['a11y.main_nav'] }}">
+        <a class="hide-sm" href="#protein">{{ h['nav.protein'] }}</a>
+        <a class="hide-sm" href="#features">{{ t['nav.features'] }}</a>
+        <a class="hide-sm" href="#faq">{{ t['nav.faq'] }}</a>
+        <details class="lang">
+          <summary aria-label="{{ current.short|upper }} · {{ t['a11y.language'] }}: {{ current.name }}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" fill="none" stroke="currentColor" stroke-width="2"/></svg>{{ current.short }}</summary>
+          <ul>
+{%- for l in locales %}
+            <li><a href="{{ l.path }}" hreflang="{{ l.code }}" lang="{{ l.code }}"{% if l.code == lang %} aria-current="page"{% endif %}>{{ l.name }}</a></li>
+{%- endfor %}
+          </ul>
+        </details>
+        <a class="btn sm" href="#get">{{ t['nav.get'] }}</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hx" id="get">
+      <div class="wrap hx-grid">
+        <div class="hx-copy">
+          <span class="eyebrow">{{ h['hero.eyebrow'] }}</span>
+          <h1><span>{{ h['hero.title1'] }}</span> <span>{{ h['hero.title2'] }}</span></h1>
+          <p class="hx-lead">{{ h['hero.lead'] }}</p>
+          {{ stores(lazy=false) }}
+          <p class="hx-fine">{{ t['hero.fine'] }}</p>
+{%- if t['rollout'] %}
+          <p class="hx-fine">{{ t['rollout'] }}</p>
+{%- endif %}
+          <a class="award" href="https://goodpickmedia.com/editions/2026-11-16-a-little-help-around-mealtime/apps/calcalou/" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.6l-5.4 2.9 1.1-6.1-4.5-4.2 6.1-.8z" fill="currentColor"/></svg><span><small>{{ h['featured.label'] }}</small><b>{{ h['featured.title'] }}</b> · {{ h['featured.by'] }}</span></a>
+        </div>
+        <div class="hx-visual{% if not en %} hx-card{% endif %}">
+          <div class="glow" aria-hidden="true"></div>
+{%- if en %}
+          {{ phone("today", h['hero.phone_alt'], "(min-width: 960px) 330px, 250px", "phone hx-phone", lazy=false, high=true) }}
+          {{ lou("happy", "(min-width: 960px) 190px, 128px", h['hero.lou_alt'], "lou hx-lou") }}
+{%- else %}
+          {{ lou("happy", hero_lou_sizes, h['hero.lou_alt'], "lou hx-lou-big", lazy=false, high=true) }}
+          {{ today_card() }}
+{%- endif %}
+        </div>
+      </div>
+    </section>
+
+    <section class="pro" id="protein" aria-labelledby="protein-title">
+      <div class="wrap">
+        <div class="pro-card">
+          <div class="pro-head">
+            <div>
+              <span class="eyebrow dark">{{ h['protein.eyebrow'] }}</span>
+              <h2 id="protein-title">{{ h['protein.title'] }}</h2>
+              <p class="pro-sub">{{ h['protein.sub'] }}</p>
+            </div>
+            <figure class="widget">
+              {% if en %}{{ tile("card", h['protein.card_alt']) }}{% else %}{{ protein_card() }}{% endif %}
+{%- if en %}
+              <figcaption>{{ h['protein.card_caption'] }}</figcaption>
+{%- endif %}
+            </figure>
+          </div>
+          <ol class="pro-points">
+            <li><h3>{{ h['protein.c1.t'] }}</h3><p class="formula"><small>{{ h['protein.example'] }}</small> {{ h['protein.formula'] }}</p><p>{{ h['protein.c1.d'] }}</p></li>
+            <li><h3>{{ h['protein.c2.t'] }}</h3><p>{{ h['protein.c2.d'] }}</p></li>
+            <li><h3>{{ h['protein.c3.t'] }}</h3><p>{{ h['protein.c3.d'] }}</p></li>
+          </ol>
+          <p class="pro-cta">{% if protein_calc %}<a class="pill solid" href="{{ protein_calc }}">{{ h['protein.calc'] }}</a> {% endif %}<a class="pill" href="{{ protein_guide }}">{{ h['protein.guide'] }}</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="how" id="features" aria-labelledby="features-title">
+      <div class="wrap">
+        <div class="center">
+          <span class="eyebrow">{{ h['features.eyebrow'] }}</span>
+          <h2 id="features-title">{{ h['features.title'] }}</h2>
+          <p class="sub">{{ h['features.sub'] }}</p>
+        </div>
+{%- for key in ["scan", "barcode"] %}
+        <article class="row">
+          <div class="row-copy">
+            <p class="kicker">{{ h[key ~ '.kicker'] }}</p>
+            <h3>{{ h[key ~ '.title'] }}</h3>
+            <p>{{ h[key ~ '.text'] }}</p>
+            <span class="tag">{{ h[key ~ '.tag'] }}</span>
+          </div>
+          <div class="row-stage">
+{%- if en %}{{ tile(key, h[key ~ '.alt']) }}
+{%- elif key == "scan" %}{% call lou_tile("scan", "curious", '<path d="M4 8.5A2.5 2.5 0 0 1 6.5 6h1.8l1.4-2h4.6l1.4 2h1.8A2.5 2.5 0 0 1 20 8.5v8a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 16.5z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12.5" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/>') %}<small>{{ h['scan.chip'] }}</small><b>{{ num(690) }}&nbsp;<i>{{ h['card.kcal'] }}</i></b><em>{{ h['card.protein'] }} {{ num(43) }}&nbsp;{{ h['card.g'] }}</em>{% endcall %}
+{%- else %}{% call lou_tile("barcode", "surprised", '<path d="M4 5v14M7 5v14M10.5 5v14M13 5v14M17 5v14M20 5v14" stroke="currentColor" stroke-width="2"/>') %}<small>{{ h['barcode.chip'] }}</small><b>{{ num(111) }}&nbsp;<i>{{ h['card.kcal'] }}</i></b><em>{{ h['card.protein'] }} {{ dec(11.9) }}&nbsp;{{ h['card.g'] }}</em>{% endcall %}
+{%- endif %}</div>
+        </article>
+{%- endfor %}
+        <article class="row">
+          <div class="row-copy">
+            <p class="kicker">{{ h['streak.kicker'] }}</p>
+            <h3>{{ h['streak.title'] }}</h3>
+            <p>{{ h['streak.text'] }}</p>
+          </div>
+          <div class="row-stage">
+{%- if en %}{{ tile("achievements", h['streak.alt']) }}
+{%- else %}{% call lou_tile("streak", "encouraging", '<path d="M12 3c1 3.5 5 5.6 5 10a5 5 0 0 1-10 0c0-2.2 1-3.6 2.2-4.8.2 1.6 1 2.6 2 3C11.8 9 11 6 12 3z" fill="currentColor"/>') %}<small>{{ h['streak.level'] }}</small><b>{{ num(31) }}</b><small>{{ h['streak.chip'] }}</small>{% endcall %}
+{%- endif %}</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="kit" aria-labelledby="more-title">
+      <div class="wrap">
+        <h2 id="more-title" class="center">{{ h['more.title'] }}</h2>
+        <ul class="kit-grid">
+{%- for k in ["widgets", "water", "reminders", "export", "health", "sync", "lang", "privacy"] %}
+          <li><h3>{{ t['more.' ~ k ~ '.t'] }}</h3><p>{{ t['more.' ~ k ~ '.d'] }}</p></li>
+{%- endfor %}
+        </ul>
+      </div>
+    </section>
+
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <h2 id="faq-title" class="center">{{ t['faq.title'] }}</h2>
+        <div class="list">
+{%- for k in ["free", "protein", "lou", "accuracy", "devices"] %}
+          <details><summary>{{ t['faq.' ~ k ~ '.q'] }}</summary><p>{{ t['faq.' ~ k ~ '.a'] }}</p></details>
+{%- endfor %}
+          <details><summary>{{ t['faq.data.q'] }}</summary><p>{{ t['faq.data.a'] }} <a href="/delete-account/">{{ t['faq.data.link'] }}</a></p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="end" aria-labelledby="final-title">
+      <div class="wrap end-card">
+        {{ lou("celebrating", "(min-width: 960px) 220px, 170px", h['final.alt'], "lou end-lou") }}
+        <h2 id="final-title">{{ h['final.title'] }}</h2>
+        <p class="sub">{{ t['hero.fine'] }}</p>
+        {{ stores() }}
+{%- if t['rollout'] %}
+        <p class="hx-fine">{{ t['rollout'] }}</p>
+{%- endif %}
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <ul>
+        <li><a href="/privacy/">{{ t['footer.privacy'] }}</a></li>
+        <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">{{ t['footer.terms'] }}</a></li>
+        <li><a href="/support/">{{ t['footer.support'] }}</a></li>
+        <li><a href="/delete-account/">{{ t['footer.delete'] }}</a></li>
+{%- for calc in calcs %}
+        <li><a href="{{ calc.path }}">{{ calc.label }}</a></li>
+{%- endfor %}
+        <li><a href="mailto:support@calcalou.com">support@calcalou.com</a></li>
+      </ul>
+      <ul class="langs" aria-label="{{ t['a11y.language'] }}">
+{%- for l in locales %}
+        <li><a href="{{ l.path }}" hreflang="{{ l.code }}" lang="{{ l.code }}"{% if l.code == lang %} aria-current="page"{% endif %}>{{ l.name }}</a></li>
+{%- endfor %}
+      </ul>
+      <p>{{ h['featured.label'] }}: <a href="https://goodpickmedia.com/editions/2026-11-16-a-little-help-around-mealtime/apps/calcalou/" rel="noopener">{{ h['featured.title'] }} — {{ h['featured.by'] }}</a></p>
+      <p>{{ t['footer.disclaimer'] }}</p>
+      <p>© {{ year }} Calcalou</p>
+    </div>
+  </footer>
+
+  <div class="sticky" data-sticky-cta>
+    <a class="btn" data-store="ios" href="{{ links.ios }}"><img src="/assets/img/app-icon-96.png" alt="" width="26" height="26" loading="lazy">{{ t['sticky.ios'] }}</a>
+    <a class="btn" data-store="android" href="{{ links.android }}"><img src="/assets/img/app-icon-96.png" alt="" width="26" height="26" loading="lazy">{{ t['sticky.android'] }}</a>
+  </div>
+
+  <script src="/assets/landing.js" defer></script>
+  {{ analytics }}
+</body>
+</html>

@@ -12,7 +12,7 @@ from pathlib import Path
 SRC = Path(__file__).resolve().parent.parent
 SITE = SRC.parent
 sys.path.insert(0, str(SRC))
-from build import BASE, CALC_PAGES, LOCALES, page_sets  # noqa: E402
+from build import BASE, CALC_PAGES, HOME_LOCALES, page_sets  # noqa: E402
 
 
 class LandingHead(unittest.TestCase):
@@ -20,16 +20,17 @@ class LandingHead(unittest.TestCase):
         return (SITE / path.strip("/") / "index.html").read_text(encoding="utf-8")
 
     def test_canonical_and_hreflang(self):
-        expected = {code: BASE + path for code, path, *_ in LOCALES} | {"x-default": BASE + "/"}
-        for _, path, *_ in LOCALES:
+        expected = {code: BASE + path for code, path, *_ in HOME_LOCALES} | {"x-default": BASE + "/"}
+        for _, path, *_ in HOME_LOCALES:
             html = self.page(path)
             self.assertEqual(re.findall(r'rel="canonical" href="([^"]+)"', html), [BASE + path])
             alternates = dict(re.findall(r'<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"', html))
             self.assertEqual(alternates, expected, path)
 
     def test_jsonld(self):
-        for code, path, *_ in LOCALES:
-            raw = re.search(r'<script type="application/ld\+json">(.*?)</script>', self.page(path), re.S).group(1)
+        for code, path, *_ in HOME_LOCALES:
+            html = self.page(path)
+            raw = re.search(r'<script type="application/ld\+json">(.*?)</script>', html, re.S).group(1)
             graph = json.loads(raw)["@graph"]
             self.assertEqual([g["@type"] for g in graph], ["Organization", "MobileApplication", "FAQPage"])
             app = graph[1]
@@ -37,6 +38,8 @@ class LandingHead(unittest.TestCase):
             self.assertEqual(app["offers"]["price"], "0")
             self.assertNotIn("aggregateRating", app)
             self.assertTrue(all(q["name"] and q["acceptedAnswer"]["text"] for q in graph[2]["mainEntity"]))
+            visible = [unescape(q) for q in re.findall(r"<summary>(.*?)</summary>", html)]
+            self.assertEqual([q["name"] for q in graph[2]["mainEntity"]], visible, path)
 
 
 class CalculatorHead(unittest.TestCase):
@@ -188,5 +191,13 @@ class StaticFiles(unittest.TestCase):
         self.assertFalse((SITE / "app").exists(), "/app/* must reach 404.html, which forwards to the landing")
 
 
+class PressKit(unittest.TestCase):
+    def test_stated_zip_size_matches_file(self):
+        html = (SITE / "press" / "index.html").read_text(encoding="utf-8")
+        stated = re.search(r"\(ZIP, ([0-9.]+)&nbsp;MB\)", html).group(1)
+        self.assertEqual(stated, f"{(SITE / 'press' / 'calcalou-press-kit.zip').stat().st_size / 1e6:.1f}")
+
+
 if __name__ == "__main__":
     unittest.main()
+

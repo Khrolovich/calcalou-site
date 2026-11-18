@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render every page set in every site locale: the landing (_src/template.html + i18n/<code>.json), the
+"""Render every page set in every site locale: the home (_src/template_home2.html + i18n/<code>.json + i18n/home2/<code>.json), the
 calculators (_src/calc.html + i18n/calc/<code>.json) and the pilot food pages in FOOD_LOCALES (_src/food.html +
 foods/foods.json + the USDA snapshot foods/fdc.json + i18n/food/<code>.json). _src/check_locales.py enforces that each set covers LOCALES.
 
@@ -31,6 +31,15 @@ LOCALES = [
     ("ru", "/ru/", "Русский", "ru_RU", "ru", " "),
     ("tr", "/tr/", "Türkçe", "tr_TR", "tr", "."),
 ]
+# The home page also ships in uk, which has no calculators or food pages yet. No uk Google Play badge is vendored.
+HOME_LOCALES = LOCALES + [("uk", "/uk/", "Українська", "uk_UA", "en", " ")]
+OG_LOCALES = {code for code, *_ in HOME_LOCALES}
+
+
+def og_image(code):
+    """Share image path for a page in this language (rendered by _src/og/make_og.py); English for the rest."""
+    return f"/assets/img/og-{code.lower()}.jpg" if code in OG_LOCALES - {"en"} else "/assets/img/og.jpg"
+
 
 # code, path, default units
 CALC_LOCALES = [
@@ -82,7 +91,7 @@ def food_paths(food):
 
 def page_sets():
     """Every localized page set: name -> {locale code: path}."""
-    sets = {"landing": {code: path for code, path, *_ in LOCALES}}
+    sets = {"landing": {code: path for code, path, *_ in HOME_LOCALES}}
     for name, (_, _, _, _, paths) in CALC_PAGES.items():
         sets[name] = paths or {code: path for code, path, _ in CALC_LOCALES}
     sets["product"] = {code: t["path"] for code, t in acquisition.PRODUCT.items()}
@@ -96,6 +105,8 @@ def page_sets():
 def set_locales(name):
     if name in ("product", "protein-landing"):
         return set(acquisition.PRODUCT)
+    if name == "landing":
+        return {code for code, *_ in HOME_LOCALES}
     return set(FOOD_LOCALES) if name == "foods" or name.startswith("food-") else {code for code, *_ in LOCALES}
 
 
@@ -180,6 +191,7 @@ LANDING_CT = "web-site"
 CF_BEACON_TOKEN = "33026263bdf1424baea5e0156865abde"
 STATIC_PAGES = ("links/index.html", "i/index.html", "press/index.html", "404.html")
 ANALYTICS_BLOCK = re.compile(r"<!-- analytics -->.*?<!-- /analytics -->", re.S)
+ROLLOUT_BLOCK = re.compile(r"<!-- rollout -->.*?<!-- /rollout -->", re.S)
 
 
 def analytics_block():
@@ -194,6 +206,8 @@ def static_pages():
         html = (SITE / rel).read_text(encoding="utf-8")
         if not ANALYTICS_BLOCK.search(html):
             raise SystemExit(f"{rel}: no <!-- analytics --> block")
+        rollout = ROLLOUT["en"] if IOS_17_PENDING else ""
+        html = ROLLOUT_BLOCK.sub(lambda _: f"<!-- rollout -->{rollout}<!-- /rollout -->", html)
         pages[SITE / rel] = ANALYTICS_BLOCK.sub(lambda _: analytics_block(), html)
     return pages
 
@@ -234,18 +248,18 @@ IOS_17_PENDING = True
 ROLLOUT = json.loads((SRC / "i18n" / "rollout.json").read_text(encoding="utf-8"))
 
 
-def load_strings():
-    english = json.loads((SRC / "i18n" / "en.json").read_text(encoding="utf-8"))
+def load_strings(folder=SRC / "i18n"):
+    english = json.loads((folder / "en.json").read_text(encoding="utf-8"))
     result = {}
-    for code, *_ in LOCALES:
-        strings = json.loads((SRC / "i18n" / f"{code}.json").read_text(encoding="utf-8"))
+    for code, *_ in HOME_LOCALES:
+        strings = json.loads((folder / f"{code}.json").read_text(encoding="utf-8"))
         missing, extra = set(english) - set(strings), set(strings) - set(english)
         if missing or extra:
-            raise SystemExit(f"{code}.json: missing {sorted(missing)} extra {sorted(extra)}")
+            raise SystemExit(f"{folder.name}/{code}.json: missing {sorted(missing)} extra {sorted(extra)}")
         empty = [k for k, v in strings.items() if not str(v).strip()]
         if empty:
-            raise SystemExit(f"{code}.json: empty values {empty}")
-        result[code] = {**strings, "rollout": ROLLOUT[code] if IOS_17_PENDING else ""}
+            raise SystemExit(f"{folder.name}/{code}.json: empty values {empty}")
+        result[code] = strings
     return result
 
 
@@ -257,31 +271,38 @@ def render_all():
     env = Environment(loader=FileSystemLoader(SRC), autoescape=True, undefined=StrictUndefined,
                       trim_blocks=False, lstrip_blocks=False)
     env.globals["analytics"] = Markup(analytics_block())
-    template = env.get_template("template.html")
+    env.globals["og_image"] = og_image
+    home2 = env.get_template("template_home2.html")
+    home2_strings = load_strings(SRC / "i18n" / "home2")
     assets = json.loads((SRC / "assets.json").read_text(encoding="utf-8"))
-    strings = load_strings()
+    strings = {code: {**s, "rollout": ROLLOUT[code] if IOS_17_PENDING else ""} for code, s in load_strings().items()}
     calc_strings = load_calc_strings()
     sets = page_sets()
     page_strings = {name: {code: {**calc_strings[code], **extra[code]} for code in calc_strings}
                     for name, extra in ((name, load_calc_strings(folder) if folder else {c: {} for c in calc_strings})
                                         for name, (_, folder, *_rest) in CALC_PAGES.items())}
     landing = {code: (path, name, og_locale, gp_code) for code, path, name, og_locale, gp_code, _ in LOCALES}
-    locales = [{"code": c, "path": p, "name": n, "short": c.split("-")[0]} for c, p, n, *_ in LOCALES]
+    short = lambda c: "ua" if c == "uk" else c.split("-")[0]  # noqa: E731
+    locales = [{"code": c, "path": p, "name": n, "short": short(c)} for c, p, n, *_ in HOME_LOCALES]
     year = datetime.date.today().year
     pages = {}
-    for code, path, name, og_locale, gp_code, sep in LOCALES:
+    for code, path, name, og_locale, gp_code, sep in HOME_LOCALES:
         gp_w, gp_h = assets["googlePlay"][gp_code]
-        calcs = [{"path": sets[name][code], "label": page_strings[name][code]["link.footer"]} for name in CALC_PAGES]
+        calcs = [{"path": sets[name][code], "label": page_strings[name][code]["link.footer"]}
+                 for name in CALC_PAGES if code in sets[name]]
         calcs.append({"path": acquisition.PRODUCT[code]["path"], "label": acquisition.PRODUCT[code]["title"]})
         calcs.append({"path": acquisition.PROTEIN[code]["path"], "label": strings[code]['protein.guide']})
         if code in FOOD_LOCALES:
             calcs.append({"path": FOOD_LOCALES[code], "label": load_food_strings()[code]["hub.link"]})
-        html = template.render(
-            lang=code, path=path, base=BASE, og_locale=og_locale, t=strings[code], locales=locales,
-            current={"name": name, "short": code.split("-")[0]}, shots=assets["shots"],
+        h = home2_strings[code]
+        html = home2.render(
+            h=h, home=assets["home"], lang=code, path=path, base=BASE, og_locale=og_locale, locales=locales,
+            t=strings[code] | {k: v for k, v in h.items() if k.startswith("meta.")},
+            current={"name": name, "short": short(code)},
             gp={"code": gp_code, "w": gp_w}, calcs=calcs, links=store_links(LANDING_CT),
-            protein_guide=acquisition.PROTEIN[code]["path"], protein_calc=acquisition.PROTEIN_CALC_PATHS[code],
-            num=lambda n, s=sep: f"{n:,}".replace(",", s), year=year)
+            protein_guide=acquisition.PROTEIN[code]["path"], protein_calc=acquisition.PROTEIN_CALC_PATHS.get(code),
+            num=lambda n, s=sep: f"{n:,}".replace(",", s),
+            dec=lambda x, p="." if code == "en" else ",": f"{x:.1f}".replace(".", p), year=year)
         pages[SITE / path.strip("/") / "index.html"] = html
     calc_template = env.get_template("calc.html")
     units_by_code = {code: units for code, _, units in CALC_LOCALES}

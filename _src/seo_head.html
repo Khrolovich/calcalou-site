@@ -5,8 +5,8 @@
   <link rel="alternate" hreflang="x-default" href="{{ base }}/">
   <meta name="twitter:title" content="{{ t['meta.og_title'] }}">
   <meta name="twitter:description" content="{{ t['meta.og_description'] }}">
-  <meta name="twitter:image" content="{{ base }}/assets/img/og.jpg">
-  <meta property="og:image:alt" content="{{ t['hero.alt'] }}">
+  <meta name="twitter:image" content="{{ base }}{{ og_image(lang) }}">
+  <meta property="og:image:alt" content="{{ h['hero.title1'] }} {{ h['hero.title2'] }} {{ h['protein.card_alt'] }}">
 {%- set org = {"@type": "Organization", "@id": base ~ "/#org", "name": "Calcalou", "url": base ~ "/",
     "logo": base ~ "/assets/img/apple-touch-icon.png", "email": "support@calcalou.com",
     "sameAs": ["https://www.instagram.com/calcalouapp/", "https://www.tiktok.com/@calcalouapp", "https://www.youtube.com/@calcalouapp"],

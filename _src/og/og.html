@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- Source of /assets/img/og*.jpg (1200x630). Rendered by _src/og/make_og.py; keep the headline and card inside the centre 600 px column (square crops). -->
+<html lang="{{ lang }}">
+<head>
+<meta charset="utf-8">
+<title>og</title>
+<style>
+  @font-face { font-family: "Nunito"; src: url("{{ fonts }}/Nunito-VF.ttf"); font-weight: 200 1000; }
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body { position: relative; font-family: "Nunito", sans-serif;
+    background: radial-gradient(60% 70% at 50% 18%, rgba(255,255,255,.10), rgba(255,255,255,0) 70%), linear-gradient(#A8380A 0%, #C2490C 55%, #E2631D 100%); }
+  h1 { position: absolute; left: 300px; top: 34px; width: 600px; margin: 0; text-align: center; font-weight: 900; line-height: 1.04; letter-spacing: -.01em; color: #fff; }
+  h1 span { display: table; margin: 0 auto; white-space: nowrap; }
+  h1 span + span { color: #FFE2CF; }
+  .card { position: absolute; left: 330px; width: 540px; border-radius: 40px; overflow: hidden; background: #F8F4F0;
+    box-shadow: 0 30px 60px -20px rgba(60,15,0,.55), 0 2px 6px rgba(60,15,0,.2); }
+  .shot { top: 236px; height: 520px; }
+  .shot img { display: block; width: 562px; margin: -15px 0 0 -11px; }
+  .html { top: 236px; padding: 14px; box-sizing: border-box; overflow: visible; }
+  .lou { position: absolute; right: -14px; top: -78px; width: 150px; filter: drop-shadow(0 8px 10px rgba(60,15,0,.25)); }
+  .today { font-family: ui-rounded, "SF Pro Rounded", -apple-system, sans-serif; padding: 26px 28px 24px; border-radius: 30px; background: #fff; color: #1C1917; }
+  .today p { margin: 0; }
+  .today-head { display: flex; align-items: center; gap: 14px; font-size: 28px; padding-right: 120px; }
+  .today-head b { font-weight: 900; letter-spacing: -.01em; }
+  .ok { display: inline-flex; align-items: center; gap: 7px; padding: 7px 14px 7px 10px; border-radius: 999px; background: #DCFCE7; color: #166534; font-size: 19px; font-weight: 800; white-space: nowrap; }
+  .ok svg { width: 22px; height: 22px; }
+  .rings { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin: 22px 10px 20px; }
+  .ring { position: relative; display: grid; place-items: center; aspect-ratio: 1; }
+  .ring svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
+  .ring circle { fill: none; stroke-width: 10; stroke-linecap: round; }
+  .ring .track { stroke: #EAE6E0; }
+  .ring .bar { stroke: #EA580C; }
+  .ring span { position: relative; display: grid; justify-items: center; max-width: 62%; text-align: center; line-height: 1.1; }
+  .ring b { font-size: 50px; font-weight: 900; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+  .ring i { font-style: normal; font-size: .6em; }
+  .ring small { font-size: 18px; font-weight: 700; color: #57534E; margin-top: 4px; }
+  .macros { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 0; }
+  .macros div { background: #FBF8F4; border-radius: 20px; padding: 12px 8px; text-align: center; }
+  .macros dt { font-size: 17px; font-weight: 700; color: #57534E; }
+  .macros dd { margin: 3px 0 0; font-size: 23px; font-weight: 900; white-space: nowrap; }
+</style>
+</head>
+<body>
+  <h1><span>{{ h['hero.title1'] }}</span><span>{{ h['hero.title2'] }}</span></h1>
+{%- if lang == "en" %}
+  <div class="card shot"><img src="{{ site }}/assets/img/home-card-960.webp" alt=""></div>
+{%- else %}
+  <div class="card html">
+    <img class="lou" src="{{ lou }}" alt="">
+    <div class="today">
+      <p class="today-head"><b>{{ h['card.title'] }}</b><span class="ok"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>{{ h['card.goal_reached'] }}</span></p>
+      <div class="rings">
+        <p class="ring"><svg viewBox="0 0 120 120"><circle class="track" cx="60" cy="60" r="52"/><circle class="bar" cx="60" cy="60" r="52" pathLength="100" stroke-dasharray="69 100"/></svg><span><b>{{ num(620) }}</b><small>{{ h['card.kcal_left'] }}</small></span></p>
+        <p class="ring"><svg viewBox="0 0 120 120"><circle class="track" cx="60" cy="60" r="52"/><circle class="bar" cx="60" cy="60" r="52" pathLength="100" stroke-dasharray="100 100"/></svg><span><b>{{ num(124) }}&nbsp;<i>{{ h['card.g'] }}</i></b><small>{{ h['card.protein'] }}</small></span></p>
+      </div>
+      <dl class="macros"><div><dt>{{ h['card.eaten'] }}</dt><dd>{{ num(1380) }}&nbsp;{{ h['card.kcal'] }}</dd></div><div><dt>{{ h['card.fat'] }}</dt><dd>{{ num(42) }}&nbsp;{{ h['card.g'] }}</dd></div><div><dt>{{ h['card.carbs'] }}</dt><dd>{{ num(126) }}&nbsp;{{ h['card.g'] }}</dd></div></dl>
+    </div>
+  </div>
+{%- endif %}
+<script>
+  document.fonts.ready.then(() => {
+    const h1 = document.querySelector("h1"), lines = [...h1.children];
+    let size = 64;
+    do { h1.style.fontSize = size + "px"; } while (lines.some(l => l.offsetWidth > 600) && --size >= 44);
+    const r = document.documentElement;
+    r.dataset.fit = size >= 44 ? "ok" : "overflow";
+    r.dataset.size = size;
+    r.dataset.font = [...document.fonts].every(f => f.status === "loaded") && document.fonts.size > 0 ? "ok" : "missing";
+  });
+</script>
+</body>
+</html>

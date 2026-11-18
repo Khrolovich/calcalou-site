@@ -17,10 +17,20 @@ SITE = Path(__file__).resolve().parent.parent
 PROJECT = SITE.parent.parent
 OUT = SITE / "assets" / "img"
 MASCOT = PROJECT / "design" / "mascot" / "reference" / "3d-png"
+MASCOT_CROP = (102, 132, 922, 900)
 ICON_DIR = PROJECT / "design" / "icon-refresh" / "assets"
 ICON_DRAFT = "D"
 SHOTS_ANDROID = PROJECT / "qa-runs" / "1.4.0-65-store-screenshots" / "raw" / "android-phone"
 SHOT_IOS_TODAY = PROJECT / "qa-runs" / "1.4.0-65-store-screenshots-v2" / "samples" / "ios-iphone" / "en-US" / "iphone69_01_today.png"
+STORE_17 = PROJECT / "design" / "store-1.7"
+HOME_RAW = STORE_17 / "v4" / "raw" / "ios" / "iphone-large" / "en-US"
+HOME_ART = STORE_17 / "v4" / "out" / "ios"
+TILE = (480, 720, 960)
+HOME = {"today": (HOME_RAW / "01.png", (360, 540, 720, 1080), None),
+        "card": (HOME_ART / "iphone-large" / "en-US" / "02.png", TILE, (0, 700, 1320, 1960)),
+        "scan": (HOME_ART / "iphone-large" / "en-US" / "01.png", TILE, (0, 640, 1320, 2810)),
+        "barcode": (HOME_ART / "iphone-medium" / "en-US" / "03.png", TILE, (0, 600, 1206, 2470)),
+        "achievements": (HOME_ART / "iphone-large" / "en-US" / "05.png", TILE, (0, 900, 1320, 2560))}
 BADGES = Path(__file__).resolve().parent / "vendor" / "badges"
 
 LOCALES = {"en": "en-US", "de": "de-DE", "es": "es-ES", "fr": "fr-FR", "it": "it", "pl": "pl", "pt-BR": "pt-BR", "ru": "ru", "tr": "tr"}
@@ -40,15 +50,10 @@ def resized(img, width):
 
 
 def mascot():
-    union = None
-    for f in MASCOT.glob("mascot_*.png"):
-        b = Image.open(f).getbbox()
-        union = b if union is None else (min(union[0], b[0]), min(union[1], b[1]), max(union[2], b[2]), max(union[3], b[3]))
     for mood in MOODS:
-        img = Image.open(MASCOT / f"mascot_{mood}.png").convert("RGBA").crop(union)
+        img = Image.open(MASCOT / f"mascot_{mood}.png").convert("RGBA").crop(MASCOT_CROP)
         for w in (240, 480, 760):
             save_both(resized(img, w), f"lou-{mood}-{w}", 82)
-    return union
 
 
 def shots(android_root, ios_today):
@@ -60,6 +65,19 @@ def shots(android_root, ios_today):
             for w in WIDTHS:
                 save_both(resized(img, w), f"shot-{lang}-{key}-{w}")
             meta[f"{lang}/{key}"] = [WIDTHS[-1], round(img.height * WIDTHS[-1] / img.width)]
+    return meta
+
+
+def home():
+    meta = {}
+    for key, (src, widths, box) in HOME.items():
+        img = Image.open(src).convert("RGB")
+        img = img.crop(box) if box else img
+        if widths[-1] > img.width:
+            raise SystemExit(f"{src}: {widths[-1]} px would upscale a {img.width} px source")
+        for w in widths:
+            save_both(resized(img, w), f"home-{key}-{w}", 82)
+        meta[key] = [widths[-1], round(img.height * widths[-1] / img.width)]
     return meta
 
 
@@ -90,16 +108,21 @@ def icons():
     return full
 
 
-def refresh_press_kit(icon):
-    """Swap the icon and the banner (= og.jpg) inside /press/calcalou-press-kit.zip, keeping every other entry."""
+def refresh_press_kit(icon=None):
+    """Swap the app icon (when given) and every lou/lou-<mood>.png from MASCOT inside
+    /press/calcalou-press-kit.zip, keeping every other entry."""
     kit = SITE / "press" / "calcalou-press-kit.zip"
     if not kit.exists():
         return
-    buf = io.BytesIO()
-    icon.save(buf, "PNG", optimize=True)
-    replacements = {"calcalou-press-kit/app-icon/calcalou-app-icon-1024.png": buf.getvalue(),
-                    "calcalou-press-kit/calcalou-banner-1200x630.jpg": (OUT / "og.jpg").read_bytes()}
+    replacements = {}
+    if icon:
+        buf = io.BytesIO()
+        icon.save(buf, "PNG", optimize=True)
+        replacements["calcalou-press-kit/app-icon/calcalou-app-icon-1024.png"] = buf.getvalue()
     with zipfile.ZipFile(kit) as src:
+        for name in src.namelist():
+            if name.startswith("calcalou-press-kit/lou/lou-") and name.endswith(".png"):
+                replacements[name] = (MASCOT / f"mascot_{Path(name).stem[4:]}.png").read_bytes()
         entries = [(info, replacements.get(info.filename, src.read(info))) for info in src.infolist()]
     with zipfile.ZipFile(kit, "w", zipfile.ZIP_DEFLATED) as dst:
         for info, data in entries:
@@ -109,6 +132,8 @@ def refresh_press_kit(icon):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--icons-only", action="store_true", help="refresh only the icon set")
+    parser.add_argument("--home", action="store_true", help="refresh only the en home images (home-*)")
+    parser.add_argument("--mascot", action="store_true", help="refresh only the Lou images (lou-*) and the press kit's Lou files")
     parser.add_argument("--shots", type=Path, help="screenshot set root (android-phone/<locale>/, ios-iphone/en-US/)")
     args = parser.parse_args()
     android_root, ios_today = SHOTS_ANDROID, SHOT_IOS_TODAY
@@ -116,13 +141,23 @@ def main():
         android_root = args.shots / "android-phone"
         ios_today = args.shots / "ios-iphone" / "en-US" / "iphone69_01_today.png"
     OUT.mkdir(parents=True, exist_ok=True)
+    assets_json = Path(__file__).resolve().parent / "assets.json"
+    if args.home:
+        meta = json.loads(assets_json.read_text())
+        meta["home"] = home()
+        assets_json.write_text(json.dumps(meta, indent=2) + "\n")
+        return
+    if args.mascot:
+        mascot()
+        refresh_press_kit()
+        return
     refresh_press_kit(icons())
     if args.icons_only:
         return
     mascot()
-    meta = {"shots": shots(android_root, ios_today), "googlePlay": badges(),
+    meta = {"shots": shots(android_root, ios_today), "googlePlay": badges(), "home": home(),
             "source": {"android": str(android_root.relative_to(PROJECT)), "iosToday": str(ios_today.relative_to(PROJECT))}}
-    (Path(__file__).resolve().parent / "assets.json").write_text(json.dumps(meta, indent=2) + "\n")
+    assets_json.write_text(json.dumps(meta, indent=2) + "\n")
     print(f"assets written to {OUT.relative_to(SITE)}")
 
 
