@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ d.title }}</title>
+  <meta name="description" content="{{ d.description }}">
+  <link rel="canonical" href="{{ base }}{{ path }}">
+{% for code, locale in locales.items() %}
+  <link rel="alternate" hreflang="{{ code }}" href="{{ base }}{{ locale.path }}">
+{% endfor %}
+  <link rel="alternate" hreflang="x-default" href="{{ base }}{{ locales.en.path }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ d.title }}">
+  <meta property="og:description" content="{{ d.description }}">
+  <meta property="og:url" content="{{ base }}{{ path }}">
+  <meta property="og:image" content="{{ base }}{{ og_image(lang) }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/assets/guide.css">
+  {{ analytics }}
+</head>
+<body>
+  <a class="skip" href="#main">{{ d.title }}</a>
+  <header>
+    <a class="brand" href="{{ home }}"><img src="/assets/img/app-icon-96.png" alt="" width="36" height="36">Calcalou</a>
+    <details class="lang"><summary>{{ locales[lang].name }}</summary><ul>
+{% for code, locale in locales.items() %}
+      <li><a href="{{ locale.path }}" hreflang="{{ code }}" lang="{{ code }}"{% if code == lang %} aria-current="page"{% endif %}>{{ locale.name }}</a></li>
+{% endfor %}
+    </ul></details>
+  </header>
+  <main id="main">
+    <article>
+      <p class="eyebrow">Calcalou · {{ d.updated }}</p>
+      <h1>{{ d.title }}</h1>
+      <p class="lead">{{ d.description }}</p>
+{% for title, paragraphs in d.sections %}
+      <h2>{{ loop.index }}. {{ title }}</h2>
+{% for text in paragraphs %}
+      <p>{{ text | md_links }}</p>
+{% endfor %}
+{% endfor %}
+    </article>
+  </main>
+  <footer>
+    <ul class="langs">{% for code, locale in locales.items() %}<li><a href="{{ locale.path }}" hreflang="{{ code }}" lang="{{ code }}"{% if code == lang %} aria-current="page"{% endif %}>{{ locale.name }}</a></li>{% endfor %}</ul>
+    <p><a href="/privacy/">{{ t['footer.privacy'] }}</a> · <a href="{{ path }}">{{ t['footer.terms'] }}</a> · <a href="/support/">{{ t['footer.support'] }}</a> · © 2026 Calcalou</p>
+  </footer>
+</body>
+</html>

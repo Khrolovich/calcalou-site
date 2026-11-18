@@ -224,7 +224,7 @@
     <div class="wrap">
       <ul>
         <li><a href="/privacy/">{{ t['footer.privacy'] }}</a></li>
-        <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">{{ t['footer.terms'] }}</a></li>
+        <li><a href="{{ terms_path(lang) }}">{{ t['footer.terms'] }}</a></li>
         <li><a href="/support/">{{ t['footer.support'] }}</a></li>
         <li><a href="/delete-account/">{{ t['footer.delete'] }}</a></li>
 {%- for calc in calcs %}

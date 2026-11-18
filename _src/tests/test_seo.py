@@ -77,6 +77,19 @@ class CalculatorHead(unittest.TestCase):
                     description = re.search(r'<meta name="description" content="([^"]+)"', html).group(1)
                     self.assertLessEqual(len(unescape(description)), 160)
 
+    def test_terms_pages_and_footer_links(self):
+        eula = "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+        for code, path in page_sets()["terms"].items():
+            with self.subTest(code=code):
+                html = (SITE / path.strip("/") / "index.html").read_text(encoding="utf-8")
+                self.assertIn(f'href="{eula}"', html)
+                self.assertIn("support@calcalou.com", html)
+                self.assertEqual(html.count("<h2>"), 15)
+        for code, path, *_ in HOME_LOCALES:
+            home = (SITE / path.strip("/") / "index.html").read_text(encoding="utf-8")
+            self.assertIn(f'<a href="{page_sets()["terms"][code]}">', home)
+            self.assertNotIn(eula, home)
+
     def test_titles_are_unique(self):
         titles = [re.search(r"<title>(.*?)</title>", (SITE / p.strip("/") / "index.html").read_text()).group(1)
                   for pages in page_sets().values() for p in pages.values()]

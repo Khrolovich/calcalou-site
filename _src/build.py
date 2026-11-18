@@ -89,9 +89,13 @@ def food_paths(food):
     return {code: hub + food["slug"][code] + "/" for code, hub in FOOD_LOCALES.items()}
 
 
+TERMS_PATHS = {code: path + "terms/" for code, path, *_ in HOME_LOCALES}
+
+
 def page_sets():
     """Every localized page set: name -> {locale code: path}."""
     sets = {"landing": {code: path for code, path, *_ in HOME_LOCALES}}
+    sets["terms"] = dict(TERMS_PATHS)
     for name, (_, _, _, _, paths) in CALC_PAGES.items():
         sets[name] = paths or {code: path for code, path, _ in CALC_LOCALES}
     sets["product"] = {code: t["path"] for code, t in acquisition.PRODUCT.items()}
@@ -105,7 +109,7 @@ def page_sets():
 def set_locales(name):
     if name in ("product", "protein-landing"):
         return set(acquisition.PRODUCT)
-    if name == "landing":
+    if name in ("landing", "terms"):
         return {code for code, *_ in HOME_LOCALES}
     return set(FOOD_LOCALES) if name == "foods" or name.startswith("food-") else {code for code, *_ in LOCALES}
 
@@ -263,6 +267,23 @@ def load_strings(folder=SRC / "i18n"):
     return result
 
 
+def md_links(text):
+    from markupsafe import Markup, escape
+    return Markup(re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", r'<a href="\2">\1</a>', str(escape(text))))
+
+
+def terms_pages(env, strings):
+    locales = {code: {"path": TERMS_PATHS[code], "name": name} for code, _, name, *_ in HOME_LOCALES}
+    template = env.get_template("terms.html")
+    pages = {}
+    for code, path in TERMS_PATHS.items():
+        data = json.loads((SRC / "i18n" / "terms" / f"{code}.json").read_text(encoding="utf-8"))
+        pages[SITE / path.strip("/") / "index.html"] = template.render(
+            lang=code, base=BASE, path=path, t=strings[code], d=data, locales=locales,
+            home=dict((c, p) for c, p, *_ in HOME_LOCALES)[code])
+    return pages
+
+
 def render_all():
     # Imported here so check_locales.py (pre-push hook) runs on a bare python3 without jinja2.
     from jinja2 import Environment, FileSystemLoader, StrictUndefined
@@ -272,10 +293,13 @@ def render_all():
                       trim_blocks=False, lstrip_blocks=False)
     env.globals["analytics"] = Markup(analytics_block())
     env.globals["og_image"] = og_image
+    env.globals["terms_path"] = TERMS_PATHS.get
+    env.filters["md_links"] = md_links
     home2 = env.get_template("template_home2.html")
     home2_strings = load_strings(SRC / "i18n" / "home2")
     assets = json.loads((SRC / "assets.json").read_text(encoding="utf-8"))
     strings = {code: {**s, "rollout": ROLLOUT[code] if IOS_17_PENDING else ""} for code, s in load_strings().items()}
+    env.globals["terms_label"] = lambda code: strings[code]["footer.terms"]
     calc_strings = load_calc_strings()
     sets = page_sets()
     page_strings = {name: {code: {**calc_strings[code], **extra[code]} for code in calc_strings}
@@ -323,6 +347,7 @@ def render_all():
                 gp={"code": gp_code, "w": assets["googlePlay"][gp_code][0], "as_w": assets["appStore"][gp_code][0]}, year=year)
             pages[SITE / path.strip("/") / "index.html"] = html
     pages.update(render_foods(env, strings, page_strings, assets, landing, year))
+    pages.update(terms_pages(env, strings))
     pages.update({SITE / path.strip("/") / "index.html": html
                   for path, html in acquisition.render(env, BASE, store_links).items()})
     pages[SITE / "llms.txt"] = acquisition.llms(BASE) + f"\n- [Expanded guide]({BASE}/llms-full.txt)\n"

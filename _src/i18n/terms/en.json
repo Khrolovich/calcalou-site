@@ -1,0 +1,64 @@
+{
+  "title": "Terms of Use for Calcalou",
+  "description": "The terms for using Calcalou, the calorie and protein tracker: subscriptions, AI estimates, acceptable use, your content, account deletion and liability.",
+  "updated": "Last updated 18 November 2026",
+  "sections": [
+    ["Who we are and what you agree to", [
+      "Calcalou (the app, \"Calcalou\") and the website calcalou.com are developed and operated by Vladimir Khrolovich, an independent developer (\"we\", \"us\"). By downloading Calcalou, creating an account or using the app or the website, you agree to these Terms. If you do not agree, do not use them.",
+      "These Terms work together with our [Privacy Policy](/privacy/). Where a feature or an app version is described, it applies to the version available to you."
+    ]],
+    ["Eligibility and your account", [
+      "Calcalou is for people aged 13 and over, subject to the age requirements in your country. AI photo scans and Premium purchases are for people aged 18 and over, and only where they are offered.",
+      "Sign-in is required. You are responsible for keeping your sign-in details secure and for everything done under your account. Give accurate information and tell us if you think your account has been misused."
+    ]],
+    ["Not medical advice", [
+      "Calcalou is a general wellness and food-logging tool. It is not a medical device and does not diagnose, treat, cure or prevent any condition. Calorie and protein figures, targets, calculations, streaks and suggestions are general estimates, not personal medical, nutritional or dietetic advice.",
+      "Talk to a qualified health professional before you change your diet, start an exercise or weight programme, or if you are pregnant, have a medical condition or an eating disorder, or are under 18. Never ignore or delay professional advice because of something in Calcalou."
+    ]],
+    ["AI and food data are estimates", [
+      "AI photo scans and food, barcode and nutrition data are approximate. Portions, oils, sauces and mixed dishes are especially hard to judge, and product data from third parties can be incomplete or wrong. A missing value is not zero.",
+      "Check labels and weighed amounts when accuracy matters, and review and edit every result before you save it. We do not guarantee that any estimate or data is accurate, complete or suitable for your purpose. You decide what to log and what to do with it."
+    ]],
+    ["Subscriptions and purchases", [
+      "Calcalou Premium and other paid features are sold as subscriptions or purchases through the Apple App Store or Google Play. The price, billing period, any free trial or introductory offer and the features included are shown in the app and in the store before you buy.",
+      "Payment is taken by Apple or Google, not by us. Subscriptions renew automatically for the same period unless you cancel in your store account settings before the current period ends, within the time the store sets. Deleting the app or your Calcalou account does not cancel a subscription. A free trial or introductory price, where offered, turns into the regular paid price unless you cancel in time.",
+      "Billing, renewals, cancellation and refunds are handled by the store under its own terms; we cannot cancel a store subscription or refund a store payment ourselves. Prices, offers and the features included in a plan can change; the store's rules decide when a change reaches an existing subscription."
+    ]],
+    ["Acceptable use", [
+      "Use Calcalou only for lawful, personal purposes. Do not misuse it: do not break the law or anyone's rights; reverse engineer, copy or resell the app; interfere with it or its security; access it by automated means such as scraping or bots; get around limits, free-scan allowances, invite rewards or age checks; harass others or impersonate anyone; or upload content that is unlawful, harmful or that you have no right to share.",
+      "We may limit, suspend or end access if you break these Terms or if we must do so by law."
+    ]],
+    ["Your content", [
+      "What you enter or upload, such as diary entries, goals, photos and settings, stays yours. You give us a worldwide, non-exclusive licence to store, process and display it only as needed to run and improve Calcalou for you, including sending a photo to an AI service when you ask for a scan, as described in the [Privacy Policy](/privacy/).",
+      "You are responsible for your content and promise that you have the right to submit it."
+    ]],
+    ["Our rights", [
+      "Calcalou, its design, text, the mascot Lou, the name and the logo belong to us or our licensors and are protected by law. We give you a limited, personal, non-exclusive, non-transferable, revocable licence to use the app on your own devices for your own non-commercial use, under these Terms. Third-party components stay under their own licences. All other rights are reserved."
+    ]],
+    ["Account deletion and ending use", [
+      "You can stop using Calcalou at any time. You can delete your account in the app (Profile → Delete account) or by email, as described on the [account deletion page](/delete-account/). Deleting your account removes your data as described there and in the Privacy Policy, and does not cancel a store subscription: cancel that in the store first.",
+      "We may suspend or end your account if you break these Terms, if the law requires it, or if we stop offering the app."
+    ]],
+    ["Availability and changes to the app", [
+      "We try to keep Calcalou working, but it is provided as available. It may be interrupted, change or lose features, or be discontinued, and some features differ by platform, country, age and app version."
+    ]],
+    ["Disclaimer and limits of liability", [
+      "To the fullest extent the law allows, Calcalou and the website are provided \"as is\" and \"as available\", without warranties of any kind, express or implied, including accuracy, fitness for a particular purpose and uninterrupted or error-free operation.",
+      "To the fullest extent the law allows, we are not liable for indirect, incidental, special, consequential or punitive losses, or for lost data, profits or opportunities, or for any health, dietary, weight or other outcome or decision based on Calcalou or its estimates. Our total liability for any claim relating to Calcalou is limited to the amount you paid for it in the 12 months before the claim.",
+      "Nothing in these Terms limits liability that cannot be limited by law, such as for fraud, for death or personal injury caused by negligence, or your mandatory rights as a consumer."
+    ]],
+    ["App Store and Google Play terms", [
+      "For iPhone and iPad, your use of the app is also subject to Apple's [Standard Licensed Application End User License Agreement](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) (the Apple EULA). Apple is not responsible for the app, its maintenance, support or any claims about it, and Apple and its subsidiaries are third-party beneficiaries of the Apple EULA.",
+      "For Android, your use of Google Play and of purchases made there is also subject to Google's terms. If these Terms conflict with the Apple EULA for the App Store version, the Apple EULA prevails to the extent required."
+    ]],
+    ["Changes to these Terms", [
+      "We may update these Terms, for example when features or the law change. We post the new version here with its date, and for material changes we may also tell you in the app or by email. If you keep using Calcalou after a change takes effect, you accept the new Terms; if you do not accept them, stop using Calcalou and delete your account."
+    ]],
+    ["Governing law and disputes", [
+      "These Terms are governed by the law of the country where the developer is established, without its conflict-of-law rules, and disputes go to the courts there. This does not take away the mandatory consumer protection of your country of residence or your right to bring a claim in your local courts. Please write to us first so we can try to sort a problem out informally."
+    ]],
+    ["Contact", [
+      "Questions about these Terms: support@calcalou.com."
+    ]]
+  ]
+}

@@ -81,7 +81,7 @@
 {% if locales %}
     <ul class="langs">{% for code, locale in locales.items() %}<li><a href="{{ locale.path }}" hreflang="{{ code }}" lang="{{ code }}"{% if code == lang %} aria-current="page"{% endif %}>{{ locale.name }}</a></li>{% endfor %}</ul>
 {% endif %}
-    <p><a href="/privacy/">{{ t.privacy }}</a> · <a href="/support/">{{ t.support }}</a> · © 2026 Calcalou</p>
+    <p><a href="/privacy/">{{ t.privacy }}</a> · <a href="{{ terms_path(lang) }}">{{ terms_label(lang) }}</a> · <a href="/support/">{{ t.support }}</a> · © 2026 Calcalou</p>
   </footer>
   <script src="/assets/landing.js"></script>
 </body>
