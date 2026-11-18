@@ -325,7 +325,7 @@
       <div class="wrap">
         <h2 id="final-title">{{ c['cta.title'] }}</h2>
         <div class="stores">
-          <a data-store="ios" href="{{ links.ios }}"><img src="/assets/img/badge-app-store.svg" alt="{{ t['store.ios'] }}" width="150" height="50" loading="lazy"></a>
+          <a data-store="ios" href="{{ links.ios }}"><img src="/assets/img/badge-app-store-{{ gp.code }}.svg" alt="{{ t['store.ios'] }}" width="{{ gp.as_w }}" height="50" loading="lazy"></a>
           <a data-store="android" href="{{ links.android }}"><img src="/assets/img/badge-google-play-{{ gp.code }}-50.webp" srcset="/assets/img/badge-google-play-{{ gp.code }}-50.webp 1x, /assets/img/badge-google-play-{{ gp.code }}-100.webp 2x" alt="{{ t['store.android'] }}" width="{{ gp.w }}" height="50" loading="lazy"></a>
         </div>
         <p class="fine">{{ t['hero.fine'] }}</p>

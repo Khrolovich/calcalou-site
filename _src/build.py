@@ -31,8 +31,8 @@ LOCALES = [
     ("ru", "/ru/", "Русский", "ru_RU", "ru", " "),
     ("tr", "/tr/", "Türkçe", "tr_TR", "tr", "."),
 ]
-# The home page also ships in uk, which has no calculators or food pages yet. No uk Google Play badge is vendored.
-HOME_LOCALES = LOCALES + [("uk", "/uk/", "Українська", "uk_UA", "en", " ")]
+# The home page also ships in uk, which has no calculators or food pages yet.
+HOME_LOCALES = LOCALES + [("uk", "/uk/", "Українська", "uk_UA", "uk", " ")]
 OG_LOCALES = {code for code, *_ in HOME_LOCALES}
 
 
@@ -299,7 +299,7 @@ def render_all():
             h=h, home=assets["home"], lang=code, path=path, base=BASE, og_locale=og_locale, locales=locales,
             t=strings[code] | {k: v for k, v in h.items() if k.startswith("meta.")},
             current={"name": name, "short": short(code)},
-            gp={"code": gp_code, "w": gp_w}, calcs=calcs, links=store_links(LANDING_CT),
+            gp={"code": gp_code, "w": gp_w, "as_w": assets["appStore"][gp_code][0]}, calcs=calcs, links=store_links(LANDING_CT),
             protein_guide=acquisition.PROTEIN[code]["path"], protein_calc=acquisition.PROTEIN_CALC_PATHS.get(code),
             num=lambda n, s=sep: f"{n:,}".replace(",", s),
             dec=lambda x, p="." if code == "en" else ",": f"{x:.1f}".replace(".", p), year=year)
@@ -320,7 +320,7 @@ def render_all():
                 tdee_page={"path": sets["tdee"][code], "label": page_strings["tdee"][code]["link.footer"]},
                 guide=load_guide(name, code),
                 faq_keys=faq_keys, links=store_links(f"{ct}-{code.lower()}"),
-                gp={"code": gp_code, "w": assets["googlePlay"][gp_code][0]}, year=year)
+                gp={"code": gp_code, "w": assets["googlePlay"][gp_code][0], "as_w": assets["appStore"][gp_code][0]}, year=year)
             pages[SITE / path.strip("/") / "index.html"] = html
     pages.update(render_foods(env, strings, page_strings, assets, landing, year))
     pages.update({SITE / path.strip("/") / "index.html": html
@@ -402,7 +402,7 @@ def render_foods(env, strings, page_strings, assets, landing, year):
         common = dict(lang=code, home=home, base=BASE, og_locale=og_locale, t=t, f=f, fill=fill, num=num, dec=dec,
                       grams=grams, calcs=calcs, hub={"path": hub, "label": f["hub.link"]}, year=year,
                       current={"name": lang_name, "short": code.split("-")[0]},
-                      gp={"code": gp_code, "w": assets["googlePlay"][gp_code][0]})
+                      gp={"code": gp_code, "w": assets["googlePlay"][gp_code][0], "as_w": assets["appStore"][gp_code][0]})
         foods = sorted((localize_food(m, models, code, sets) for m in models.values()),
                        key=lambda x: x["name"].casefold().translate(str.maketrans("ąćęłńóśźż", "acelnoszz")))
         hub_crumbs = [{"name": f["crumb.home"], "path": home}, {"name": f["hub.link"], "path": hub}]

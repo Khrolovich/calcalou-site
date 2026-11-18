@@ -4,6 +4,7 @@ store screenshots, app icon, store badges). Re-run when the final store screensh
 
     python3 _src/make_assets.py [--shots <dir with android-phone/<locale>/ and ios-iphone/en-US/>]
 """
+import re
 import argparse
 import io
 import json
@@ -84,6 +85,12 @@ def home():
 def badges():
     meta = {}
     shutil.copy(BADGES / "app-store-en.svg", OUT / "badge-app-store.svg")
+    app_store = {}
+    for svg in sorted(BADGES.glob("app-store-*.svg")):
+        lang = svg.stem.replace("app-store-", "")
+        shutil.copy(svg, OUT / f"badge-app-store-{lang}.svg")
+        _, _, w, h = map(float, re.search(r'viewBox="([^"]+)"', svg.read_text()).group(1).split())
+        app_store[lang] = [round(w * 50 / h), 50]
     for png in BADGES.glob("google-play-*.png"):
         img = Image.open(png).convert("RGBA")
         img = img.crop(img.getchannel("A").point(lambda v: 255 if v > 10 else 0).getbbox())
@@ -92,7 +99,7 @@ def badges():
             scaled = img.resize((round(img.width * height / img.height), height), Image.LANCZOS)
             scaled.save(OUT / f"badge-google-play-{lang}-{height}.webp", quality=90, method=6)
         meta[lang] = [round(img.width * 50 / img.height), 50]
-    return meta
+    return meta, app_store
 
 
 def icons():
@@ -134,6 +141,7 @@ def main():
     parser.add_argument("--icons-only", action="store_true", help="refresh only the icon set")
     parser.add_argument("--home", action="store_true", help="refresh only the en home images (home-*)")
     parser.add_argument("--mascot", action="store_true", help="refresh only the Lou images (lou-*) and the press kit's Lou files")
+    parser.add_argument("--badges", action="store_true", help="refresh only the store badges (App Store and Google Play)")
     parser.add_argument("--shots", type=Path, help="screenshot set root (android-phone/<locale>/, ios-iphone/en-US/)")
     args = parser.parse_args()
     android_root, ios_today = SHOTS_ANDROID, SHOT_IOS_TODAY
@@ -147,6 +155,11 @@ def main():
         meta["home"] = home()
         assets_json.write_text(json.dumps(meta, indent=2) + "\n")
         return
+    if args.badges:
+        meta = json.loads(assets_json.read_text())
+        meta["googlePlay"], meta["appStore"] = badges()
+        assets_json.write_text(json.dumps(meta, indent=2) + "\n")
+        return
     if args.mascot:
         mascot()
         refresh_press_kit()
@@ -155,7 +168,8 @@ def main():
     if args.icons_only:
         return
     mascot()
-    meta = {"shots": shots(android_root, ios_today), "googlePlay": badges(), "home": home(),
+    gp_badges, app_badges = badges()
+    meta = {"shots": shots(android_root, ios_today), "googlePlay": gp_badges, "appStore": app_badges, "home": home(),
             "source": {"android": str(android_root.relative_to(PROJECT)), "iosToday": str(ios_today.relative_to(PROJECT))}}
     assets_json.write_text(json.dumps(meta, indent=2) + "\n")
     print(f"assets written to {OUT.relative_to(SITE)}")

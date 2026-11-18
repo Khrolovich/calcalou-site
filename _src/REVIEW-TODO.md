@@ -16,3 +16,7 @@ The site deploys only when 1.7 is live (it states 1.7 features and carries the 1
 ## 18.11 live
 - Live at 6c6b113. IndexNow POST (116 sitemap URLs, key 0d795eff…) returned 200. Live smoke: 116/116 sitemap URLs 200 with canonical, hreflang matching the sitemap and valid JSON-LD (only /delete-account/ has no canonical, as before). Live Lighthouse mobile on / and /protein-calculator/: 100/100/96/100 (96 = Cloudflare beacon CORS console error).
 - Still open: the Codex pass after 2026-11-20 (item 1 above); set `IOS_17_PENDING = False` when iOS 1.7 is live.
+
+## 1.8 backlog (site)
+- og: og.jpg (en) uses the older bubble card, the 9 other locales use the Today/goal-reached card: unify (also add an icon + name lockup, widen the headline column). Backlog only; see design/store-1.7/v4/NOTES-1.8.md.
+- Localized official store badges (9 Apple SVGs, 1 Google Play uk): `_src/BADGES-NEEDED.md`.
