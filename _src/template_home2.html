@@ -104,9 +104,6 @@
           <p class="hx-lead">{{ h['hero.lead'] }}</p>
           {{ stores(lazy=false) }}
           <p class="hx-fine">{{ t['hero.fine'] }}</p>
-{%- if t['rollout'] %}
-          <p class="hx-fine">{{ t['rollout'] }}</p>
-{%- endif %}
           <a class="award" href="https://goodpickmedia.com/editions/2026-11-16-a-little-help-around-mealtime/apps/calcalou/" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.6l-5.4 2.9 1.1-6.1-4.5-4.2 6.1-.8z" fill="currentColor"/></svg><span><small>{{ h['featured.label'] }}</small><b>{{ h['featured.title'] }}</b> · {{ h['featured.by'] }}</span></a>
         </div>
         <div class="hx-visual{% if not en %} hx-card{% endif %}">
@@ -213,9 +210,6 @@
         <h2 id="final-title">{{ h['final.title'] }}</h2>
         <p class="sub">{{ t['hero.fine'] }}</p>
         {{ stores() }}
-{%- if t['rollout'] %}
-        <p class="hx-fine">{{ t['rollout'] }}</p>
-{%- endif %}
       </div>
     </section>
   </main>

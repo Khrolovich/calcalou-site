@@ -195,7 +195,6 @@ LANDING_CT = "web-site"
 CF_BEACON_TOKEN = "33026263bdf1424baea5e0156865abde"
 STATIC_PAGES = ("links/index.html", "i/index.html", "press/index.html", "404.html")
 ANALYTICS_BLOCK = re.compile(r"<!-- analytics -->.*?<!-- /analytics -->", re.S)
-ROLLOUT_BLOCK = re.compile(r"<!-- rollout -->.*?<!-- /rollout -->", re.S)
 
 
 def analytics_block():
@@ -210,8 +209,6 @@ def static_pages():
         html = (SITE / rel).read_text(encoding="utf-8")
         if not ANALYTICS_BLOCK.search(html):
             raise SystemExit(f"{rel}: no <!-- analytics --> block")
-        rollout = ROLLOUT["en"] if IOS_17_PENDING else ""
-        html = ROLLOUT_BLOCK.sub(lambda _: f"<!-- rollout -->{rollout}<!-- /rollout -->", html)
         pages[SITE / rel] = ANALYTICS_BLOCK.sub(lambda _: analytics_block(), html)
     return pages
 
@@ -248,8 +245,6 @@ def load_guide(page_set, code):
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else None
 
 
-IOS_17_PENDING = True
-ROLLOUT = json.loads((SRC / "i18n" / "rollout.json").read_text(encoding="utf-8"))
 
 
 def load_strings(folder=SRC / "i18n"):
@@ -298,7 +293,7 @@ def render_all():
     home2 = env.get_template("template_home2.html")
     home2_strings = load_strings(SRC / "i18n" / "home2")
     assets = json.loads((SRC / "assets.json").read_text(encoding="utf-8"))
-    strings = {code: {**s, "rollout": ROLLOUT[code] if IOS_17_PENDING else ""} for code, s in load_strings().items()}
+    strings = load_strings()
     env.globals["terms_label"] = lambda code: strings[code]["footer.terms"]
     calc_strings = load_calc_strings()
     sets = page_sets()
