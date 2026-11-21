@@ -244,9 +244,11 @@ on in **Profile**, and the app works the same without it. With your permission i
 - **writes** one entry per day to Apple Health ("Dietary Energy") or Health Connect
   ("Nutrition"): the total calories you logged in Calcalou that day, so other health apps can
   see it;
-- **reads** the active calories you burned ("Active Energy" / "Active calories burned"), to
-  show them on the main screen and count them towards the calories you burned that day. The
-  daily figures are kept on your device for up to 90 days, so a finished day keeps its value;
+- **reads** the calories you burned: active calories ("Active Energy" / "Active calories
+  burned") and, from version 1.8, if you choose to count them, resting calories and related
+  energy data such as "Resting Energy", "Total calories burned" and "Basal metabolic rate". It
+  uses them to show the calories you burned on the main screen and count them towards your
+  day. The daily figures are kept on your device for up to 90 days, so a finished day keeps its value;
   they are not uploaded, and they are cleared when you turn the connection off. Whether a
   day met your goal can depend on them, and the streaks, achievements and challenges built
   from those days sync with your account (3.2);
@@ -477,7 +479,7 @@ can ask us for details at support@calcalou.com.
 |---|---|
 | Account and synced log | Until you delete your account (see section 9) |
 | Local data on your device | Until you delete it in the app or remove the app |
-| Active calories read from Apple Health or Health Connect | On your device only, up to 90 days; cleared when you turn the connection off |
+| Calories burned read from Apple Health or Health Connect (active and resting calories, total calories burned, basal metabolic rate) | On your device only, up to 90 days; cleared when you turn the connection off |
 | Weight read from Apple Health or Health Connect | Not stored: used on the device to pre-fill the calculator or calculate your protein goal, then discarded |
 | Protein goal (grams per day, grams per kilogram, how it was set) | Until you change it or delete your account |
 | Food photos and menu or label text sent for AI recognition | Not stored by us — held in memory for the duration of the recognition request only; the AI service providers may keep them for up to 90 days (see 3.3) |
