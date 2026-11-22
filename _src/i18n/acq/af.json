@@ -1,0 +1,41 @@
+{
+  "title": "Wat is Calcalou? Kalorie- en proteïenteller",
+  "summary": "Calcalou is ’n kalorie- en proteïenteller vir iPhone, iPad en Android, met Lou, ’n vriendelike gelukbringer wat help om daaglikse aantekening ’n gewoonte te maak.",
+  "version": "Hierdie gids beskryf weergawe 1.7. Die vrystelling in die winkels kan volgens platform en land verskil; kyk watter weergawe vir jou beskikbaar is voordat jy aflaai vir ’n spesifieke funksie.",
+  "features_title": "Wat Calcalou doen",
+  "features": [
+    "Teken kalorieë en proteïen gratis met die hand aan.",
+    "Skandeer produkstrepieskodes gratis. Voedingswaardes hang af van die beskikbare produkdata; kyk na die etiket en porsiegrootte.",
+    "Stel ’n proteïendoelwit volgens jou liggaamsgewig: Calcalou wys die berekening (gewig × gram per kilogram), laat jou dit aanpas en aanvaar jou eie getal.",
+    "Skat ’n maaltyd vanaf ’n foto met KI, insluitend kalorieë, proteïen, vet en koolhidrate vir elke kos waar beskikbaar. Gaan die resultaat na en wysig dit voordat jy stoor.",
+    "Voeg water by per glas of as ’n eie hoeveelheid in ml.",
+    "Stel verskeie herinneringe, elk met sy eie tyd en dae van die week.",
+    "Hou ’n aantekenreeks saam met Lou en volg vandag se kalorieë of proteïen in ’n legstuk op jou tuisskerm. Legstukfunksies verskil volgens platform.",
+    "Voer jou dagboek uit as ’n CSV vir ’n maand, kwartaal, jaar of alle tyd.",
+    "Gebruik die toep in 41 koppelvlaktale in weergawe 1.7. Aanmelding is nodig om jou dagboek in jou rekening te hou."
+  ],
+  "faq_title": "Vrae oor Calcalou",
+  "faq": [
+    [
+      "Is Calcalou gratis?",
+      "Handmatige aantekening van kalorieë en proteïen, strepieskode-skandering en waterdophou is gratis. KI-skanderings is Premium; waar dit aangebied word, kan ’n rekening een keer tot 3 gratis skanderings probeer. Intekenpryse en geskiktheid word in die toep en die winkel gewys."
+    ],
+    [
+      "Tel ’n fotoskandering proteïen?",
+      "In weergawe 1.7 kan KI-fotoskanderings kalorieë, proteïen, vet en koolhidrate vir elke herkende kos skat. Skattings kan verkeerd wees, veral vir porsies, olies en gemengde geregte. Ontbrekende voedingswaardes is nie nul nie: gaan dit na of voer dit self in."
+    ],
+    [
+      "Wie kan Calcalou gebruik?",
+      "Calcalou is vir ouderdomme 13 en ouer, onderhewig aan plaaslike ouderdomsvereistes. In weergawe 1.7 vereis KI-skanderings en Premium-aankope ’n ouderdom van 18 of ouer en ’n geskikte streek. Calcalou is ’n algemene welstandstoep, nie ’n mediese toestel nie."
+    ],
+    [
+      "Kan ek dit gebruik sonder om aan te meld?",
+      "Aanmelding is nodig. Jou dagboek is aan jou rekening gekoppel; gebruik dieselfde aanmeldmetode wanneer jy op ’n ander toestel terugkeer."
+    ]
+  ],
+  "more": "Vergelyk tellers en kies ’n werkwyse",
+  "stores": "Kry Calcalou",
+  "updated": "Nagegaan op 17 November 2026",
+  "privacy": "Privaatheid",
+  "support": "Ondersteuning"
+}

@@ -1,0 +1,49 @@
+{
+  "title": "Proteïen-volgtoep: teken proteïen en kalorieë aan",
+  "summary": "Calcalou is ’n proteïen-volgtoep vir iPhone, iPad en Android. Teken proteïen langs kalorieë aan, stel ’n doelwit volgens jou liggaamsgewig en skat maaltye vanaf ’n foto.",
+  "features_title": "Proteïen dophou in Calcalou",
+  "features": [
+    "Teken proteïen by elke inskrywing aan: tik dit gratis self in, of vul dit in vanaf ’n strepieskode of ’n KI-fotoskandering.",
+    "Stel ’n daaglikse proteïendoelwit volgens jou liggaamsgewig. Calcalou wys die berekening (gewig × gram per kilogram), laat jou dit aanpas van 0,8 tot 2,0 g/kg en aanvaar jou eie getal.",
+    "Sien proteïen langs kalorieë op Vandag, in jou weeklikse opsomming en in Statistiek, en kies proteïen of kalorieë vir elke legstuk.",
+    "KI-fotoskanderings skat proteïen, vet en koolhidrate vir elke kos, alles wysigbaar voordat jy stoor. Skattings kan verkeerd wees; skanderings is Premium, met ouderdoms- en streekbeperkings.",
+    "Strepieskode-skandering is gratis. Voedingswaardes hang af van die produkdata, so kyk na die etiket en porsie.",
+    "Reekse, buigsame herinneringe en waterdophou help jou om aan te hou aanteken."
+  ],
+  "sections": [
+    [
+      "Hoe om proteïen in Calcalou dop te hou",
+      "Tik Voeg by en voer dan kalorieë, proteïen, vet en koolhidrate in vir wat jy geëet het, of skandeer ’n strepieskode of ’n foto om dit in te vul. Elke veld is opsioneel, so jy kan net proteïen aanteken. Proteïen verskyn langs kalorieë op Vandag en in jou opsommings."
+    ],
+    [
+      "Stel ’n proteïendoelwit wat by jou pas",
+      "Kies Volgens liggaamsgewig en Calcalou vermenigvuldig jou gewig met gram per kilogram (1,2 by verstek) en wys die berekening. Jou gewig kom uit jou profiel of, as jy dit koppel, uit Apple Health of Health Connect. Pas die faktor aan van 0,8 tot 2,0 g/kg of voer jou eie doelwit in. ’n Doelwit is ’n beginpunt, nie mediese advies nie; die proteïensakrekenaar wys verwysingsbereike."
+    ],
+    [
+      "Foto’s, strepieskodes of met die hand",
+      "Fotoskanderings gebruik KI om kalorieë, proteïen, vet en koolhidrate vir elke kos te skat. Gaan die resultaat na: porsies, olies en gemengde geregte word maklik verkeerd geskat, en ’n ontbrekende waarde is nie nul nie. Strepieskode-skandering en handmatige aantekening is gratis; produkdata verskil, so kyk na die etiket."
+    ],
+    [
+      "Wie kan dit gebruik",
+      "Calcalou is vir ouderdomme 13 en ouer, onderhewig aan plaaslike ouderdomsvereistes. In weergawe 1.7 vereis KI-skanderings en Premium-aankope ’n ouderdom van 18 of ouer en ’n geskikte streek. Aanmelding is nodig. Calcalou is ’n algemene welstandstoep, nie ’n mediese toestel nie."
+    ]
+  ],
+  "faq": [
+    [
+      "Wat is die beste manier om proteïen dop te hou?",
+      "Gebruik die metode wat jy sal volhou. Teken proteïen by elke maaltyd aan, kyk na etikette op verpakte kos en behandel fotoskattings as beginpunte wat jy kan wysig. In Calcalou kan jy proteïen intik, ’n strepieskode skandeer of ’n KI-fotoskandering gebruik."
+    ],
+    [
+      "Hoeveel proteïen moet ek per dag eet?",
+      "Dit hang af van jou liggaam, doelwitte en gesondheid. Vir volwassenes is die EFSA-verwysingsinname 0,83 g per kg liggaamsgewig; die 2026-standpunt van die International Society of Sports Nutrition gee 1,2–1,6 g per kg vir gewigsverlies en 1,6–2,2 g per kg met weerstandsoefening. Die proteïensakrekenaar wys al drie. Dit is algemene riglyne, nie mediese advies nie."
+    ],
+    [
+      "Tel Calcalou proteïen vanaf ’n foto?",
+      "Ja. In weergawe 1.7 skat ’n KI-fotoskandering kalorieë, proteïen, vet en koolhidrate vir elke herkende kos. Skattings kan verkeerd wees, so gaan dit na en wysig dit voordat jy stoor."
+    ],
+    [
+      "Is proteïen dophou gratis?",
+      "Om proteïen met die hand aan te teken, strepieskode-skandering en proteïendoelwitte is gratis. KI-fotoskanderings is Premium; waar dit aangebied word, kan ’n rekening een keer tot 3 gratis skanderings probeer. Pryse en geskiktheid word in die toep en die winkel gewys."
+    ]
+  ]
+}

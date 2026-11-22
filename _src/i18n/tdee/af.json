@@ -1,0 +1,18 @@
+{
+  "meta.title": "TDEE-sakrekenaar: totale daaglikse energieverbruik | Calcalou",
+  "meta.description": "Gratis TDEE-sakrekenaar: skat hoeveel kalorieë jy per dag verbrand volgens jou BMR en aktiwiteitsvlak (Mifflin-St Jeor). Metrieke of imperiale eenhede.",
+  "meta.og_title": "TDEE-sakrekenaar: totale daaglikse energieverbruik",
+  "meta.og_description": "Skat jou totale daaglikse energieverbruik volgens jou BMR en aktiwiteitsvlak, in kg/cm of lb/ft.",
+  "link.footer": "TDEE-sakrekenaar",
+  "h1": "TDEE-sakrekenaar",
+  "h1.sub": "totale daaglikse energieverbruik",
+  "lead": "Skat hoeveel kalorieë jy op ’n gewone dag verbrand: jou energie in rus (BMR) plus alledaagse beweging en oefening.",
+  "form.label": "TDEE-sakrekenaar",
+  "faq.tdee.q": "Wat is TDEE?",
+  "faq.tdee.a": "TDEE, totale daaglikse energieverbruik, skat al die kalorieë wat jy in ’n dag verbrand: jou BMR in rus plus alledaagse beweging en oefening. Dit word dikwels instandhoudingskalorieë genoem, die inname wat jou gewig min of meer dieselfde hou.",
+  "faq.difference.q": "Wat is die verskil tussen BMR en TDEE?",
+  "faq.difference.a": "BMR is die energie wat jou liggaam in volkome rus gebruik. TDEE vermenigvuldig BMR met ’n aktiwiteitsfaktor, van 1,2 vir min of geen oefening tot 1,9 vir fisiese werk of oefening twee keer per dag, so dit is altyd hoër as BMR.",
+  "faq.use.q": "Wat kan ek met my TDEE doen?",
+  "faq.use.a": "Gebruik dit as ’n verwysingspunt vir ’n daaglikse kaloriedoelwit: as jy ongeveer jou TDEE eet, bly inname en verbranding min of meer in balans, minder eet is ’n tekort en meer eet is ’n surplus. Dit is ’n beginskatting, so vergelyk dit met hoe jou gewig oor ’n paar weke werklik verander.",
+  "cta.title": "Hou geëet teenoor verbrand dop saam met Lou."
+}
