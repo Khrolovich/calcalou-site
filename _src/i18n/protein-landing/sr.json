@@ -1,0 +1,49 @@
+{
+  "title": "Aplikacija za praćenje proteina: beleži proteine i kalorije",
+  "summary": "Calcalou je aplikacija za praćenje proteina za iPhone, iPad i Android. Beleži proteine pored kalorija, postavi cilj prema telesnoj težini i proceni obroke sa fotografije.",
+  "features_title": "Praćenje proteina u Calcalou",
+  "features": [
+    "Beleži proteine uz svaki unos: upiši ih sam besplatno ili ih popuni preko bar-koda ili AI skeniranja fotografije.",
+    "Postavi dnevni cilj proteina prema telesnoj težini. Calcalou prikazuje proračun (težina × grami po kilogramu), omogućava prilagođavanje od 0,8 do 2,0 g/kg i prihvata tvoj broj.",
+    "Prati proteine pored kalorija na ekranu Danas, u nedeljnom pregledu i u Statistici, a za svaki vidžet izaberi proteine ili kalorije.",
+    "AI skeniranje fotografija procenjuje proteine, masti i ugljene hidrate za svaku namirnicu, sve može da se izmeni pre čuvanja. Procene mogu biti netačne; skeniranje je deo Premium paketa, uz ograničenja za uzrast i region.",
+    "Skeniranje bar-kodova je besplatno. Nutritivne vrednosti zavise od podataka o proizvodu, zato proveri deklaraciju i porciju.",
+    "Nizovi, fleksibilni podsetnici i praćenje vode pomažu ti da nastaviš da beležiš."
+  ],
+  "sections": [
+    [
+      "Kako pratiti proteine u Calcalou",
+      "Dodirni Dodaj i unesi kalorije, proteine, masti i ugljene hidrate za ono što si pojeo, ili skeniraj bar-kod ili fotografiju da se popune. Svako polje je opciono, pa možeš da zabeležiš samo proteine. Proteini se prikazuju pored kalorija na ekranu Danas i u pregledima."
+    ],
+    [
+      "Postavi cilj proteina koji ti odgovara",
+      "Izaberi Prema telesnoj težini i Calcalou množi tvoju težinu gramima po kilogramu (podrazumevano 1,2) i prikazuje proračun. Težina dolazi iz tvog profila ili, ako ih povežeš, iz Apple Health-a ili Health Connect-a. Prilagodi faktor od 0,8 do 2,0 g/kg ili unesi sopstveni cilj. Cilj je polazna tačka, a ne medicinski savet; kalkulator proteina prikazuje referentne opsege."
+    ],
+    [
+      "Fotografije, bar-kodovi ili ručno",
+      "Skeniranje fotografija koristi AI za procenu kalorija, proteina, masti i ugljenih hidrata za svaku namirnicu. Proveri rezultat: porcije, ulja i mešana jela lako je pogrešno proceniti, a vrednost koja nedostaje nije nula. Skeniranje bar-kodova i ručno beleženje su besplatni; podaci o proizvodima se razlikuju, zato proveri deklaraciju."
+    ],
+    [
+      "Ko može da je koristi",
+      "Calcalou je namenjen korisnicima od 13 godina naviše, uz lokalne zahteve u pogledu uzrasta. U verziji 1.7 AI skeniranje i kupovine Premium paketa zahtevaju uzrast od 18 godina ili više i podržan region. Prijava je obavezna. Calcalou je aplikacija za opšte dobro zdravlje, a ne medicinsko sredstvo."
+    ]
+  ],
+  "faq": [
+    [
+      "Koji je najbolji način za praćenje proteina?",
+      "Onaj kog ćeš se držati. Beleži proteine uz svaki obrok, proveravaj deklaracije pakovane hrane i procene sa fotografija shvati kao polaznu tačku koju možeš da izmeniš. U Calcalou možeš da upišeš proteine, skeniraš bar-kod ili koristiš AI skeniranje fotografije."
+    ],
+    [
+      "Koliko proteina treba da jedem dnevno?",
+      "Zavisi od tvog tela, ciljeva i zdravlja. Za odrasle je referentni unos EFSA 0,83 g po kg telesne težine; stav International Society of Sports Nutrition iz 2026. navodi 1,2–1,6 g po kg za mršavljenje i 1,6–2,2 g po kg uz trening sa otporom. Kalkulator proteina prikazuje sva tri. To su opšte smernice, a ne medicinski savet."
+    ],
+    [
+      "Da li Calcalou računa proteine sa fotografije?",
+      "Da. U verziji 1.7 AI skeniranje fotografije procenjuje kalorije, proteine, masti i ugljene hidrate za svaku prepoznatu namirnicu. Procene mogu biti netačne, zato ih proveri i izmeni pre čuvanja."
+    ],
+    [
+      "Da li je praćenje proteina besplatno?",
+      "Ručno beleženje proteina, skeniranje bar-kodova i ciljevi proteina su besplatni. AI skeniranje fotografija je deo Premium paketa; gde je ponuđeno, nalog može jednom da isproba do 3 besplatna skeniranja. Cene i uslovi su prikazani u aplikaciji i prodavnici."
+    ]
+  ]
+}

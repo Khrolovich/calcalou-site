@@ -1,0 +1,18 @@
+{
+  "meta.title": "TDEE kalkulator: ukupna dnevna potrošnja energije | Calcalou",
+  "meta.description": "Besplatni TDEE kalkulator: proceni koliko kalorija dnevno trošiš prema BMR-u i nivou aktivnosti (Mifflin-St Jeor). Metričke ili imperijalne jedinice.",
+  "meta.og_title": "TDEE kalkulator: ukupna dnevna potrošnja energije",
+  "meta.og_description": "Proceni ukupnu dnevnu potrošnju energije prema BMR-u i nivou aktivnosti, u kg/cm ili lb/ft.",
+  "link.footer": "TDEE kalkulator",
+  "h1": "TDEE kalkulator",
+  "h1.sub": "ukupna dnevna potrošnja energije",
+  "lead": "Proceni koliko kalorija trošiš tokom običnog dana: energiju u mirovanju (BMR) plus svakodnevno kretanje i vežbanje.",
+  "form.label": "TDEE kalkulator",
+  "faq.tdee.q": "Šta je TDEE?",
+  "faq.tdee.a": "TDEE, ukupna dnevna potrošnja energije, procenjuje sve kalorije koje potrošiš tokom dana: BMR u mirovanju plus svakodnevno kretanje i vežbanje. Često se naziva kalorijama za održavanje, odnosno unosom koji tvoju težinu održava približno istom.",
+  "faq.difference.q": "Koja je razlika između BMR-a i TDEE-a?",
+  "faq.difference.a": "BMR je energija koju tvoje telo troši u potpunom mirovanju. TDEE množi BMR faktorom aktivnosti, od 1,2 za malo ili nimalo vežbanja do 1,9 za fizički posao ili trening dva puta dnevno, pa je uvek veći od BMR-a.",
+  "faq.use.q": "Šta mogu da uradim sa svojim TDEE-om?",
+  "faq.use.a": "Koristi ga kao polaznu tačku za dnevni cilj kalorija: ako jedeš otprilike koliko iznosi tvoj TDEE, unos i potrošnja su približno u ravnoteži, manje je deficit, a više je suficit. To je početna procena, zato je uporedi sa tim kako se tvoja težina stvarno menja tokom nekoliko nedelja.",
+  "cta.title": "Prati pojedeno naspram sagorelog uz Lou."
+}
