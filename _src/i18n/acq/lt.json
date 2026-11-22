@@ -1,0 +1,41 @@
+{
+  "title": "Kas yra Calcalou? Kalorijų ir baltymų skaičiuoklė",
+  "summary": "Calcalou – tai kalorijų ir baltymų skaičiuoklė, skirta iPhone, iPad ir Android, su Lou – draugišku talismanu, padedančiu kasdienį įrašymą paversti įpročiu.",
+  "version": "Šis vadovas aprašo 1.7 versiją. Išleidimas parduotuvėse gali skirtis pagal platformą ir šalį; jei jums reikia konkrečios funkcijos, prieš atsisiųsdami patikrinkite jums prieinamą versiją.",
+  "features_title": "Ką daro Calcalou",
+  "features": [
+    "Įrašykite kalorijas ir baltymus ranka nemokamai.",
+    "Nemokamai skenuokite produktų brūkšninius kodus. Maistinė vertė priklauso nuo turimų produkto duomenų; patikrinkite etiketę ir porcijos dydį.",
+    "Nustatykite baltymų tikslą pagal kūno svorį: Calcalou parodo skaičiavimą (svoris × gramai kilogramui), leidžia jį keisti ir priima jūsų skaičių.",
+    "Įvertinkite patiekalą iš nuotraukos su DI, įskaitant kiekvieno produkto kalorijas, baltymus, riebalus ir angliavandenius, kai jie prieinami. Prieš išsaugodami peržiūrėkite ir pataisykite rezultatą.",
+    "Pridėkite vandenį stiklinėmis arba savo kiekiu ml.",
+    "Nustatykite kelis priminimus, kiekvieną su savo laiku ir savaitės dienomis.",
+    "Išlaikykite įrašymo seriją su Lou ir stebėkite šiandienos kalorijas ar baltymus pradžios ekrano valdiklyje. Valdiklių funkcijos skiriasi priklausomai nuo platformos.",
+    "Eksportuokite dienoraštį kaip CSV už mėnesį, ketvirtį, metus ar visą laiką.",
+    "Naudokite programėlę 41 sąsajos kalba 1.7 versijoje. Norint saugoti dienoraštį paskyroje, reikia prisijungti."
+  ],
+  "faq_title": "Klausimai apie Calcalou",
+  "faq": [
+    [
+      "Ar Calcalou nemokama?",
+      "Kalorijų ir baltymų įrašymas ranka, brūkšninių kodų skenavimas ir vandens sekimas nemokami. DI skenavimas yra Premium; kur siūloma, paskyra gali vieną kartą išbandyti iki 3 nemokamų nuskaitymų. Prenumeratos kainos ir tinkamumas rodomi programėlėje ir parduotuvėje."
+    ],
+    [
+      "Ar nuotraukos skenavimas skaičiuoja baltymus?",
+      "1.7 versijoje DI nuotraukų skenavimas gali įvertinti kiekvieno atpažinto produkto kalorijas, baltymus, riebalus ir angliavandenius. Įvertinimai gali būti netikslūs, ypač porcijų, aliejaus ir mišrių patiekalų atveju. Trūkstamos maistinės vertės nėra nulis: patikrinkite arba įveskite jas ranka."
+    ],
+    [
+      "Kas gali naudotis Calcalou?",
+      "Calcalou skirta naudotojams nuo 13 metų, atsižvelgiant į vietinius amžiaus reikalavimus. 1.7 versijoje DI skenavimui ir Premium pirkiniams reikia būti 18 metų ar vyresniam ir tinkamo regiono. Calcalou – bendros gerovės programėlė, o ne medicinos priemonė."
+    ],
+    [
+      "Ar galiu naudotis neprisijungęs?",
+      "Prisijungti būtina. Jūsų dienoraštis susietas su jūsų paskyra; grįždami kitame įrenginyje naudokite tą patį prisijungimo būdą."
+    ]
+  ],
+  "more": "Palyginkite skaičiuokles ir pasirinkite savo būdą",
+  "stores": "Atsisiųskite Calcalou",
+  "updated": "Patikrinta 2026 m. lapkričio 17 d.",
+  "privacy": "Privatumas",
+  "support": "Pagalba"
+}

@@ -1,0 +1,49 @@
+{
+  "title": "Baltymų sekimo programėlė: įrašykite baltymus ir kalorijas",
+  "summary": "Calcalou – tai baltymų sekimo programėlė, skirta iPhone, iPad ir Android. Įrašykite baltymus šalia kalorijų, nustatykite tikslą pagal kūno svorį ir įvertinkite patiekalus iš nuotraukos.",
+  "features_title": "Baltymų sekimas Calcalou",
+  "features": [
+    "Įrašykite baltymus prie kiekvieno įrašo: įveskite patys nemokamai arba užpildykite pagal brūkšninį kodą ar DI nuotraukos skenavimą.",
+    "Nustatykite dienos baltymų tikslą pagal kūno svorį. Calcalou parodo skaičiavimą (svoris × gramai kilogramui), leidžia jį keisti nuo 0,8 iki 2,0 g/kg ir priima jūsų skaičių.",
+    "Matykite baltymus šalia kalorijų ekrane „Šiandien“, savaitės suvestinėje ir statistikoje, o kiekvienam valdikliui pasirinkite baltymus arba kalorijas.",
+    "DI nuotraukų skenavimas įvertina kiekvieno produkto baltymus, riebalus ir angliavandenius, viską galima redaguoti prieš išsaugant. Įvertinimai gali būti netikslūs; skenavimas yra Premium, su amžiaus ir regiono apribojimais.",
+    "Brūkšninių kodų skenavimas nemokamas. Maistinė vertė priklauso nuo produkto duomenų, todėl patikrinkite etiketę ir porciją.",
+    "Serijos, lankstūs priminimai ir vandens sekimas padeda nenustoti įrašinėti."
+  ],
+  "sections": [
+    [
+      "Kaip sekti baltymus Calcalou",
+      "Bakstelėkite „Pridėti“ ir įveskite to, ką suvalgėte, kalorijas, baltymus, riebalus ir angliavandenius arba nuskenuokite brūkšninį kodą ar nuotrauką, kad jie būtų užpildyti. Visi laukai neprivalomi, todėl galite įrašyti tik baltymus. Baltymai rodomi šalia kalorijų ekrane „Šiandien“ ir suvestinėse."
+    ],
+    [
+      "Nustatykite jums tinkamą baltymų tikslą",
+      "Pasirinkite „Pagal kūno svorį“, ir Calcalou padaugins jūsų svorį iš gramų kilogramui (numatytasis 1,2) bei parodys skaičiavimą. Svoris imamas iš jūsų paskyros arba, jei prijungsite, iš Apple Health ar Health Connect. Keiskite koeficientą nuo 0,8 iki 2,0 g/kg arba įveskite savo tikslą. Tikslas yra atspirties taškas, o ne medicininis patarimas; baltymų skaičiuoklė rodo referencinius intervalus."
+    ],
+    [
+      "Nuotraukos, brūkšniniai kodai arba ranka",
+      "Nuotraukų skenavimas naudoja DI kiekvieno produkto kalorijoms, baltymams, riebalams ir angliavandeniams įvertinti. Patikrinkite rezultatą: porcijas, aliejų ir mišrius patiekalus lengva įvertinti neteisingai, o trūkstama reikšmė nėra nulis. Brūkšninių kodų skenavimas ir rankinis įrašymas nemokami; produktų duomenys skiriasi, todėl patikrinkite etiketę."
+    ],
+    [
+      "Kas gali naudotis",
+      "Calcalou skirta naudotojams nuo 13 metų, atsižvelgiant į vietinius amžiaus reikalavimus. 1.7 versijoje DI skenavimui ir Premium pirkiniams reikia būti 18 metų ar vyresniam ir tinkamo regiono. Reikia prisijungti. Calcalou – bendros gerovės programėlė, o ne medicinos priemonė."
+    ]
+  ],
+  "faq": [
+    [
+      "Koks geriausias būdas sekti baltymus?",
+      "Tas, kurio laikysitės. Įrašykite baltymus prie kiekvieno valgio, tikrinkite fasuoto maisto etiketes ir nuotraukų įvertinimus laikykite atspirties tašku, kurį galite redaguoti. Calcalou galite įvesti baltymus, nuskenuoti brūkšninį kodą arba naudoti DI nuotraukos skenavimą."
+    ],
+    [
+      "Kiek baltymų turėčiau suvalgyti per dieną?",
+      "Tai priklauso nuo jūsų kūno, tikslų ir sveikatos. Suaugusiesiems EFSA referencinis suvartojimas yra 0,83 g kūno svorio kilogramui; 2026 m. International Society of Sports Nutrition pozicija nurodo 1,2–1,6 g kilogramui svoriui mesti ir 1,6–2,2 g kilogramui su jėgos treniruotėmis. Baltymų skaičiuoklė rodo visus tris. Tai bendros rekomendacijos, o ne medicininis patarimas."
+    ],
+    [
+      "Ar Calcalou skaičiuoja baltymus iš nuotraukos?",
+      "Taip. 1.7 versijoje DI nuotraukos skenavimas įvertina kiekvieno atpažinto produkto kalorijas, baltymus, riebalus ir angliavandenius. Įvertinimai gali būti netikslūs, todėl prieš išsaugodami juos patikrinkite ir pataisykite."
+    ],
+    [
+      "Ar baltymų sekimas nemokamas?",
+      "Baltymų įrašymas ranka, brūkšninių kodų skenavimas ir baltymų tikslai nemokami. DI nuotraukų skenavimas yra Premium; kur siūloma, paskyra gali vieną kartą išbandyti iki 3 nemokamų nuskaitymų. Kainos ir tinkamumas rodomi programėlėje ir parduotuvėje."
+    ]
+  ]
+}

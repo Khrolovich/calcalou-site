@@ -1,0 +1,18 @@
+{
+  "meta.title": "TDEE skaičiuoklė: bendras dienos energijos sąnaudų kiekis | Calcalou",
+  "meta.description": "Nemokama TDEE skaičiuoklė: įvertinkite, kiek kalorijų sudeginate per dieną pagal BMR ir aktyvumo lygį (Mifflin-St Jeor). Metriniai arba imperiniai vienetai.",
+  "meta.og_title": "TDEE skaičiuoklė: bendras dienos energijos sąnaudų kiekis",
+  "meta.og_description": "Įvertinkite bendrą dienos energijos sąnaudų kiekį pagal BMR ir aktyvumo lygį, kg/cm arba lb/ft vienetais.",
+  "link.footer": "TDEE skaičiuoklė",
+  "h1": "TDEE skaičiuoklė",
+  "h1.sub": "bendras dienos energijos sąnaudų kiekis",
+  "lead": "Įvertinkite, kiek kalorijų sudeginate įprastą dieną: ramybės energija (BMR) plius kasdienis judėjimas ir sportas.",
+  "form.label": "TDEE skaičiuoklė",
+  "faq.tdee.q": "Kas yra TDEE?",
+  "faq.tdee.a": "TDEE, bendras dienos energijos sąnaudų kiekis, įvertina visas kalorijas, kurias sudeginate per dieną: jūsų BMR ramybės būsenoje plius kasdienis judėjimas ir sportas. Jis dažnai vadinamas palaikomosiomis kalorijomis – suvartojimu, kuris išlaiko svorį maždaug tokį patį.",
+  "faq.difference.q": "Kuo skiriasi BMR ir TDEE?",
+  "faq.difference.a": "BMR – tai energija, kurią kūnas naudoja visiškos ramybės būsenoje. TDEE padaugina BMR iš aktyvumo koeficiento – nuo 1,2, kai mažai arba visai nesportuojate, iki 1,9 fizinio darbo ar treniruočių du kartus per dieną atveju, todėl jis visada didesnis už BMR.",
+  "faq.use.q": "Ką galiu daryti su savo TDEE?",
+  "faq.use.a": "Naudokite jį kaip atskaitos tašką dienos kalorijų tikslui: valgant maždaug tiek, kiek siekia jūsų TDEE, suvartojimas ir sudeginimas maždaug subalansuoti, valgant mažiau – deficitas, valgant daugiau – perteklius. Tai pradinis įvertinimas, todėl palyginkite jį su tuo, kaip jūsų svoris iš tikrųjų keičiasi per kelias savaites.",
+  "cta.title": "Sekite suvalgytą ir sudegintą kiekį su Lou."
+}
