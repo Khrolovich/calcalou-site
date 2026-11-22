@@ -1,0 +1,49 @@
+{
+  "title": "App per controlar proteïnes: registra proteïnes i calories",
+  "summary": "Calcalou és una app per controlar proteïnes per a iPhone, iPad i Android. Registra les proteïnes al costat de les calories, fixa un objectiu a partir del teu pes i estima àpats a partir d’una foto.",
+  "features_title": "Control de proteïnes a Calcalou",
+  "features": [
+    "Registra les proteïnes amb cada entrada: escriu-les tu mateix gratis o omple-les amb un codi de barres o un escaneig de foto amb IA.",
+    "Fixa un objectiu diari de proteïnes a partir del teu pes. Calcalou mostra el càlcul (pes × grams per quilo), et permet ajustar-lo entre 0,8 i 2,0 g/kg i accepta el teu propi número.",
+    "Mira les proteïnes al costat de les calories a Avui, al resum setmanal i a Estadístiques, i tria proteïnes o calories per a cada giny.",
+    "Els escanejos de fotos amb IA estimen proteïnes, greixos i hidrats de cada aliment, tot editable abans de desar. Les estimacions poden fallar; els escanejos són Premium, amb límits d’edat i de regió.",
+    "L’escaneig de codis de barres és gratis. Els valors nutricionals depenen de les dades del producte, així que revisa l’etiqueta i la ració.",
+    "Les ratxes, els recordatoris flexibles i el control de l’aigua t’ajuden a continuar registrant."
+  ],
+  "sections": [
+    [
+      "Com controlar les proteïnes a Calcalou",
+      "Toca Afegeix i introdueix les calories, proteïnes, greixos i hidrats del que has menjat, o escaneja un codi de barres o una foto per omplir-los. Tots els camps són opcionals, així que pots registrar només proteïnes. Les proteïnes apareixen al costat de les calories a Avui i als resums."
+    ],
+    [
+      "Fixa un objectiu de proteïnes adaptat a tu",
+      "Tria A partir del pes corporal i Calcalou multiplica el teu pes pels grams per quilo (1,2 per defecte) i mostra el càlcul. El pes prové del teu perfil o, si els connectes, d’Apple Health o Health Connect. Ajusta el factor entre 0,8 i 2,0 g/kg o introdueix el teu propi objectiu. Un objectiu és un punt de partida, no consell mèdic; la calculadora de proteïnes mostra intervals de referència."
+    ],
+    [
+      "Fotos, codis de barres o a mà",
+      "Els escanejos de fotos fan servir IA per estimar calories, proteïnes, greixos i hidrats de cada aliment. Revisa el resultat: les racions, els olis i els plats combinats són fàcils d’estimar malament, i un valor que falta no és zero. L’escaneig de codis de barres i el registre manual són gratis; les dades dels productes varien, així que revisa l’etiqueta."
+    ],
+    [
+      "Qui la pot fer servir",
+      "Calcalou és per a persones a partir de 13 anys, segons els requisits d’edat locals. A la versió 1.7, els escanejos amb IA i les compres de Premium requereixen tenir 18 anys o més i una regió compatible. Cal iniciar sessió. Calcalou és una app de benestar general, no un dispositiu mèdic."
+    ]
+  ],
+  "faq": [
+    [
+      "Quina és la millor manera de controlar les proteïnes?",
+      "La que mantindràs. Registra les proteïnes a cada àpat, revisa les etiquetes dels aliments envasats i considera les estimacions per foto com a punts de partida que pots editar. A Calcalou pots escriure les proteïnes, escanejar un codi de barres o fer servir un escaneig de foto amb IA."
+    ],
+    [
+      "Quanta proteïna he de menjar al dia?",
+      "Depèn del teu cos, els teus objectius i la teva salut. Per als adults, la ingesta de referència de l’EFSA és de 0,83 g per kg de pes corporal; la declaració de posició de 2026 de la International Society of Sports Nutrition dona 1,2–1,6 g per kg per perdre pes i 1,6–2,2 g per kg amb entrenament de resistència. La calculadora de proteïnes mostra les tres opcions. És orientació general, no consell mèdic."
+    ],
+    [
+      "Calcalou compta les proteïnes d’una foto?",
+      "Sí. A la versió 1.7, un escaneig de foto amb IA estima les calories, proteïnes, greixos i hidrats de cada aliment detectat. Les estimacions poden fallar, així que revisa-les i edita-les abans de desar."
+    ],
+    [
+      "El control de proteïnes és gratuït?",
+      "Registrar proteïnes a mà, escanejar codis de barres i els objectius de proteïnes són gratis. Els escanejos de fotos amb IA són Premium; on s’ofereix, un compte pot provar fins a 3 escanejos gratis una sola vegada. Els preus i les condicions es mostren a l’app i a la botiga."
+    ]
+  ]
+}

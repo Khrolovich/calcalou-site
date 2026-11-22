@@ -1,0 +1,18 @@
+{
+  "meta.title": "Calculadora TDEE: despesa energètica diària total | Calcalou",
+  "meta.description": "Calculadora TDEE gratuïta: estima quantes calories cremes en un dia a partir del BMR i el nivell d’activitat (Mifflin-St Jeor). Unitats mètriques o imperials.",
+  "meta.og_title": "Calculadora TDEE: despesa energètica diària total",
+  "meta.og_description": "Estima la teva despesa energètica diària total a partir del BMR i el nivell d’activitat, en kg/cm o lb/ft.",
+  "link.footer": "Calculadora TDEE",
+  "h1": "Calculadora TDEE",
+  "h1.sub": "despesa energètica diària total",
+  "lead": "Estima quantes calories cremes en un dia normal: l’energia en repòs (BMR) més el moviment quotidià i l’exercici.",
+  "form.label": "Calculadora TDEE",
+  "faq.tdee.q": "Què és el TDEE?",
+  "faq.tdee.a": "El TDEE, la despesa energètica diària total, estima totes les calories que cremes en un dia: el BMR en repòs més el moviment quotidià i l’exercici. Sovint s’anomena calories de manteniment, la ingesta que manté el teu pes més o menys igual.",
+  "faq.difference.q": "Quina diferència hi ha entre el BMR i el TDEE?",
+  "faq.difference.a": "El BMR és l’energia que el cos fa servir en repòs absolut. El TDEE multiplica el BMR per un factor d’activitat, des d’1,2 per a poc o gens d’exercici fins a 1,9 per a una feina física o entrenament dues vegades al dia, així que sempre és més alt que el BMR.",
+  "faq.use.q": "Què puc fer amb el meu TDEE?",
+  "faq.use.a": "Fes-lo servir com a punt de referència per a un objectiu diari de calories: menjar més o menys el teu TDEE manté la ingesta i la despesa equilibrades, menjar-ne menys és un dèficit i menjar-ne més és un superàvit. És una estimació inicial, així que compara-la amb com canvia de veritat el teu pes al llarg d’unes setmanes.",
+  "cta.title": "Controla el que menges i el que cremes amb Lou."
+}
