@@ -1,0 +1,49 @@
+{
+  "title": "Zülal izləmə tətbiqi: zülal və kalorini qeyd edin",
+  "summary": "Calcalou iPhone, iPad və Android üçün zülal izləmə tətbiqidir. Zülalı kalorilərin yanında qeyd edin, bədən çəkinizə görə hədəf qoyun və yeməkləri şəkildən təxmin edin.",
+  "features_title": "Calcalou-da zülalın izlənməsi",
+  "features": [
+    "Hər qeydlə zülalı yazın: özünüz pulsuz daxil edin və ya barkoddan, yaxud Sİ şəkil skanından doldurun.",
+    "Bədən çəkinizə görə gündəlik zülal hədəfi qoyun. Calcalou hesablamanı (çəki × kiloqram başına qram) göstərir, onu 0,8-dən 2,0 q/kq-a qədər tənzimləməyə imkan verir və öz rəqəminizi də qəbul edir.",
+    "Zülalı Bu gün ekranında, həftəlik xülasədə və Statistikada kalorilərin yanında görün və hər vidjet üçün zülal və ya kalori seçin.",
+    "Sİ şəkil skanları hər qida üçün zülal, yağ və karbohidratları təxmin edir, hamısı yadda saxlamazdan əvvəl redaktə oluna bilər. Təxminlər səhv ola bilər; skanlar Premium-dur, yaş və region məhdudiyyətləri ilə.",
+    "Barkod skanı pulsuzdur. Qida dəyərləri məhsul məlumatlarından asılıdır, ona görə etiketi və porsiyanı yoxlayın.",
+    "Seriyalar, çevik xatırlatmalar və suyun izlənməsi qeyd etməyə davam etməyə kömək edir."
+  ],
+  "sections": [
+    [
+      "Calcalou-da zülalı necə izləmək olar",
+      "Əlavə et düyməsinə toxunun və yediyiniz üçün kalori, zülal, yağ və karbohidratları daxil edin və ya onları doldurmaq üçün barkod, yaxud şəkil skan edin. Bütün sahələr ixtiyaridir, ona görə yalnız zülalı da qeyd edə bilərsiniz. Zülal Bu gün ekranında və xülasələrdə kalorilərin yanında görünür."
+    ],
+    [
+      "Sizə uyğun zülal hədəfi qoyun",
+      "Bədən çəkisinə görə seçin və Calcalou çəkinizi kiloqram başına qrama (standart olaraq 1,2) vurur və hesablamanı göstərir. Çəkiniz profilinizdən və ya qoşsanız, Apple Health, yaxud Health Connect-dən götürülür. Əmsalı 0,8-dən 2,0 q/kq-a qədər tənzimləyin və ya öz hədəfinizi daxil edin. Hədəf başlanğıc nöqtəsidir, tibbi məsləhət deyil; zülal kalkulyatoru istinad diapazonlarını göstərir."
+    ],
+    [
+      "Şəkillər, barkodlar və ya əllə",
+      "Şəkil skanları hər qida üçün kalori, zülal, yağ və karbohidratları təxmin etmək üçün Sİ-dən istifadə edir. Nəticəni yoxlayın: porsiyaları, yağları və qarışıq yeməkləri səhv qiymətləndirmək asandır, çatışmayan dəyər isə sıfır deyil. Barkod skanı və əllə qeyd pulsuzdur; məhsul məlumatları fərqlənir, ona görə etiketi yoxlayın."
+    ],
+    [
+      "Kim istifadə edə bilər",
+      "Calcalou yerli yaş tələblərinə uyğun olaraq 13 yaşdan yuxarı şəxslər üçündür. 1.7 versiyasında Sİ skanları və Premium alışları ən azı 18 yaş və onların təklif olunduğu region tələb edir. Hesaba daxil olmaq tələb olunur. Calcalou ümumi sağlamlıq tətbiqidir, tibbi cihaz deyil."
+    ]
+  ],
+  "faq": [
+    [
+      "Zülalı izləməyin ən yaxşı yolu hansıdır?",
+      "Davam etdirəcəyiniz yol. Hər yeməklə zülalı qeyd edin, qablaşdırılmış qidaların etiketini yoxlayın və şəkil təxminlərinə redaktə edə biləcəyiniz başlanğıc nöqtəsi kimi baxın. Calcalou-da zülalı yaza, barkod skan edə və ya Sİ şəkil skanından istifadə edə bilərsiniz."
+    ],
+    [
+      "Gündə nə qədər zülal yeməliyəm?",
+      "Bu, bədəninizdən, hədəflərinizdən və sağlamlığınızdan asılıdır. Böyüklər üçün EFSA-nın istinad qəbulu bədən çəkisinin hər kq-ı üçün 0,83 q-dır; International Society of Sports Nutrition-un 2026-cı il mövqe bəyanatı arıqlama üçün hər kq-a 1,2–1,6 q, güc məşqi ilə isə 1,6–2,2 q verir. Zülal kalkulyatoru hər üçünü göstərir. Bu, ümumi tövsiyədir, tibbi məsləhət deyil."
+    ],
+    [
+      "Calcalou şəkildən zülalı hesablayırmı?",
+      "Bəli. 1.7 versiyasında Sİ şəkil skanı aşkar edilən hər qida üçün kalori, zülal, yağ və karbohidratları təxmin edir. Təxminlər səhv ola bilər, ona görə yadda saxlamazdan əvvəl onları yoxlayın və redaktə edin."
+    ],
+    [
+      "Zülalın izlənməsi pulsuzdurmu?",
+      "Zülalın əllə qeydi, barkod skanı və zülal hədəfləri pulsuzdur. Sİ şəkil skanları Premium-dur; təklif olunan yerlərdə hesab bir dəfə 3-ə qədər pulsuz skanı sınaya bilər. Qiymətlər və şərtlər tətbiqdə və mağazada göstərilir."
+    ]
+  ]
+}

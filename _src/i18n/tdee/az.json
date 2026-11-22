@@ -1,0 +1,18 @@
+{
+  "meta.title": "TDEE kalkulyatoru: ümumi gündəlik enerji sərfi | Calcalou",
+  "meta.description": "Pulsuz TDEE kalkulyatoru: BMR və fəallıq səviyyənizə görə gündə nə qədər kalori yandırdığınızı təxmin edin (Mifflin-St Jeor). Metrik və ya ingilis vahidləri.",
+  "meta.og_title": "TDEE kalkulyatoru: ümumi gündəlik enerji sərfi",
+  "meta.og_description": "Ümumi gündəlik enerji sərfinizi BMR və fəallıq səviyyənizə görə kq/sm və ya funt/fut ilə təxmin edin.",
+  "link.footer": "TDEE kalkulyatoru",
+  "h1": "TDEE kalkulyatoru",
+  "h1.sub": "ümumi gündəlik enerji sərfi",
+  "lead": "Adi gündə nə qədər kalori yandırdığınızı təxmin edin: istirahətdəki enerji (BMR) üstəgəl gündəlik hərəkət və idman.",
+  "form.label": "TDEE kalkulyatoru",
+  "faq.tdee.q": "TDEE nədir?",
+  "faq.tdee.a": "TDEE, ümumi gündəlik enerji sərfi, gün ərzində yandırdığınız bütün kaloriləri təxmin edir: istirahətdəki BMR üstəgəl gündəlik hərəkət və idman. Ona çox vaxt saxlama kaloriləri, yəni çəkini təxminən eyni saxlayan qəbul deyilir.",
+  "faq.difference.q": "BMR və TDEE arasında fərq nədir?",
+  "faq.difference.a": "BMR bədəninizin tam istirahətdə sərf etdiyi enerjidir. TDEE BMR-i fəallıq əmsalına vurur: az və ya heç idman olmayanda 1,2-dən fiziki iş və ya gündə iki dəfə məşq olanda 1,9-a qədər, ona görə həmişə BMR-dən yüksəkdir.",
+  "faq.use.q": "TDEE-mlə nə edə bilərəm?",
+  "faq.use.a": "Onu gündəlik kalori hədəfi üçün istinad nöqtəsi kimi istifadə edin: təxminən TDEE qədər yeyəndə qəbul və yandırma təqribən balansda olur, az yemək defisit, çox yemək isə artım deməkdir. Bu, ilkin təxmindir, ona görə onu bir neçə həftə ərzində çəkinizin real dəyişməsi ilə müqayisə edin.",
+  "cta.title": "Lou ilə yeyilənlə yandırılanı izləyin."
+}

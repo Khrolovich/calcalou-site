@@ -1,0 +1,41 @@
+{
+  "title": "Calcalou nədir? Kalori və zülal sayğacı",
+  "summary": "Calcalou iPhone, iPad və Android üçün kalori və zülal sayğacıdır; gündəlik qeydi vərdişə çevirməyə kömək edən mehriban maskot Lou ilə.",
+  "version": "Bu bələdçi 1.7 versiyasını təsvir edir. Mağazalarda yayım platformaya və ölkəyə görə fərqlənə bilər; müəyyən funksiya üçün yükləməzdən əvvəl sizə əlçatan versiyanı yoxlayın.",
+  "features_title": "Calcalou nə edir",
+  "features": [
+    "Kalori və zülalı əllə pulsuz qeyd edin.",
+    "Məhsul barkodlarını pulsuz skan edin. Qida dəyərləri mövcud məhsul məlumatlarından asılıdır; etiketi və porsiya ölçüsünü yoxlayın.",
+    "Bədən çəkinizə görə zülal hədəfi qoyun: Calcalou hesablamanı (çəki × kiloqram başına qram) göstərir, onu tənzimləməyə imkan verir və öz rəqəminizi də qəbul edir.",
+    "Sİ ilə yeməyi şəkildən təxmin edin, mümkün olduqda hər qida üçün kalori, zülal, yağ və karbohidratlar daxil olmaqla. Yadda saxlamazdan əvvəl nəticəni yoxlayın və redaktə edin.",
+    "Suyu stəkanla və ya ml ilə öz miqdarınızla əlavə edin.",
+    "Hər biri öz vaxtı və həftə günləri ilə bir neçə xatırlatma qurun.",
+    "Lou ilə qeyd seriyasını qoruyun və bugünkü kalori və ya zülalı Əsas ekrandakı vidjetdə izləyin. Vidjet funksiyaları platformaya görə fərqlənir.",
+    "Gündəliyinizi ay, rüb, il və ya bütün dövr üçün CSV kimi ixrac edin.",
+    "Tətbiqdən 41 interfeys dilində istifadə edin (1.7 versiyası). Gündəliyi hesabınızda saxlamaq üçün hesaba daxil olmaq tələb olunur."
+  ],
+  "faq_title": "Calcalou haqqında suallar",
+  "faq": [
+    [
+      "Calcalou pulsuzdurmu?",
+      "Kalori və zülalın əllə qeydi, barkod skanı və suyun izlənməsi pulsuzdur. Sİ skanları Premium-dur; təklif olunan yerlərdə hesab bir dəfə 3-ə qədər pulsuz skanı sınaya bilər. Abunəlik qiymətləri və şərtlər tətbiqdə və mağazada göstərilir."
+    ],
+    [
+      "Şəkil skanı zülalı hesablayırmı?",
+      "1.7 versiyasında Sİ şəkil skanları aşkar edilən hər qida üçün kalori, zülal, yağ və karbohidratları təxmin edə bilir. Təxminlər, xüsusilə porsiyalar, yağlar və qarışıq yeməklər üçün səhv ola bilər. Çatışmayan qida dəyərləri sıfır deyil: onları yoxlayın və ya əllə daxil edin."
+    ],
+    [
+      "Calcalou-dan kim istifadə edə bilər?",
+      "Calcalou yerli yaş tələblərinə uyğun olaraq 13 yaşdan yuxarı şəxslər üçündür. 1.7 versiyasında Sİ skanları və Premium alışları ən azı 18 yaş və onların təklif olunduğu region tələb edir. Calcalou ümumi sağlamlıq tətbiqidir, tibbi cihaz deyil."
+    ],
+    [
+      "Hesaba daxil olmadan istifadə edə bilərəmmi?",
+      "Hesaba daxil olmaq tələb olunur. Gündəliyiniz hesabınızla əlaqələndirilib; başqa cihazda qayıdanda eyni giriş üsulundan istifadə edin."
+    ]
+  ],
+  "more": "Tətbiqləri müqayisə edin və öz yolunuzu seçin",
+  "stores": "Calcalou-nu əldə edin",
+  "updated": "Yoxlanılıb: 17 noyabr 2026",
+  "privacy": "Məxfilik",
+  "support": "Dəstək"
+}
