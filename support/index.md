@@ -5,7 +5,7 @@ permalink: /support/
 
 # Calcalou Support
 
-**Last updated:** October 7, 2026
+**Last updated:** November 22, 2026
 
 ## Contact us
 
@@ -54,9 +54,20 @@ from the address on the account and we will delete it within 30 days.
 
 ### How do I turn off ads?
 
-A Premium subscription removes banner ads. If you are in the EEA or the UK you can also
-change how ads are personalised at **Profile → Ad Privacy Options**; on iOS, tracking is
-controlled in **Settings → Privacy & Security → Tracking**.
+A Premium subscription removes banner ads and stops ad requests. Ads are small banners on the
+Profile screen, shown only after you have used the app for a while.
+
+**Version 1.7 and later:** every ad request is non-personalised, so ads are not chosen from your
+past activity or a profile of you, and the app does not show the iOS tracking prompt (App
+Tracking Transparency). Where Google's consent form applies (EEA, UK and some US states) you can
+reopen it at **Profile → Ad Privacy Options**. If you allowed tracking in an earlier version,
+iOS keeps that choice: switch it off in **Settings → Privacy & Security → Tracking**.
+
+**Version 1.6 and earlier:** ads can be personalised, depending on your choice in Google's
+consent form (**Profile → Ad Privacy Options**, where it applies) and, on iOS, on the "Allow app
+to track" prompt (**Settings → Privacy & Security → Tracking**).
+
+The details are in the [Privacy Policy](/privacy/).
 
 ### How accurate is the AI photo scan?
 

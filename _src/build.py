@@ -289,6 +289,7 @@ def render_all():
     env.globals["analytics"] = Markup(analytics_block())
     env.globals["og_image"] = og_image
     env.globals["terms_path"] = TERMS_PATHS.get
+    env.globals["about"] = lambda code: acquisition.PRODUCT[code]
     env.filters["md_links"] = md_links
     home2 = env.get_template("template_home2.html")
     home2_strings = load_strings(SRC / "i18n" / "home2")

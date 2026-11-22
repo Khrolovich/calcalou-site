@@ -201,6 +201,7 @@
 {%- endfor %}
           <details><summary>{{ t['faq.data.q'] }}</summary><p>{{ t['faq.data.a'] }} <a href="/delete-account/">{{ t['faq.data.link'] }}</a></p></details>
         </div>
+        <p class="faq-more"><a href="{{ about(lang).path }}">{{ about(lang).title }}</a></p>
       </div>
     </section>
 
@@ -220,6 +221,7 @@
         <li><a href="/privacy/">{{ t['footer.privacy'] }}</a></li>
         <li><a href="{{ terms_path(lang) }}">{{ t['footer.terms'] }}</a></li>
         <li><a href="/support/">{{ t['footer.support'] }}</a></li>
+        <li><a href="/press/">{{ t['footer.press'] }}</a></li>
         <li><a href="/delete-account/">{{ t['footer.delete'] }}</a></li>
 {%- for calc in calcs %}
         <li><a href="{{ calc.path }}">{{ calc.label }}</a></li>
