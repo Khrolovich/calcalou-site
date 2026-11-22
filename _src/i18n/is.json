@@ -100,7 +100,7 @@
   "protein.c2.t": "Prótein fyrir hverja fæðu á mynd",
   "protein.c2.d": "Myndskönnun með gervigreind metur prótein, fitu og kolvetni fyrir hverja fæðu við hlið hitaeininganna. Breyttu hvaða gildi sem er áður en þú vistar; matið getur verið rangt.",
   "protein.c3.t": "Ókeypis strikamerki og handvirk skráning",
-  "protein.c3.d": "Skannaðu strikamerki eða skrifaðu hitaeiningar og prótein sjálf/ur, hvort tveggja ókeypis. Vörugögn eru misjöfn, svo athugaðu merkimiðann.",
+  "protein.c3.d": "Skannaðu strikamerki eða skrifaðu hitaeiningar og prótein inn handvirkt, hvort tveggja ókeypis. Vörugögn eru misjöfn, svo athugaðu merkimiðann.",
   "protein.guide": "Próteinapp",
   "protein.calc": "Próteinreiknivél",
   "faq.protein.q": "Getur Calcalou fylgst með próteini?",

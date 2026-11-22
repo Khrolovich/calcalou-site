@@ -21,7 +21,7 @@
   "table.under": "undir 1.200",
   "result.note": "Áætlun, ekki mæling eða áætlun um mataræði. Ekki fyrir meðgöngu eða brjóstagjöf. Talaðu við lækni eða næringarfræðing áður en þú gerir mikla breytingu á mataræðinu.",
   "method.p1": "Hitaeiningaskortur þýðir að borða færri hitaeiningar en líkaminn notar. Reiknivélin áætlar fyrst viðhaldshitaeiningarnar þínar (TDEE): BMR samkvæmt Mifflin-St Jeor-jöfnunni, margfaldað með virknistuðli.",
-  "method.p2": "Virknistuðlar: 1,2 kyrrseta, 1,375 lítið virk(ur), 1,55 miðlungs virk(ur), 1,725 mjög virk(ur), 1,9 afar virk(ur). Síðan dregur reiknivélin skortinn sem þú velur frá. Valkostirnir enda við 1.000 kcal á dag og öll inntaka undir 1.200 kcal á dag er merkt: sömu mörk og Calcalou notar, byggð á klínískum leiðbeiningum NHLBI.",
+  "method.p2": "Virknistuðlar: 1,2 kyrrseta, 1,375 lítil virkni, 1,55 miðlungs virkni, 1,725 mikil virkni, 1,9 afar mikil virkni. Síðan dregur reiknivélin skortinn sem þú velur frá. Valkostirnir enda við 1.000 kcal á dag og öll inntaka undir 1.200 kcal á dag er merkt: sömu mörk og Calcalou notar, byggð á klínískum leiðbeiningum NHLBI.",
   "method.source": "Heimildir: Mifflin MD, St Jeor ST et al. A new predictive equation for resting energy expenditure in healthy individuals. Am J Clin Nutr. 1990;51(2):241–247. NHLBI. Clinical Guidelines on the Identification, Evaluation, and Treatment of Overweight and Obesity in Adults. 1998.",
   "app.title": "Settu skortsmarkmið í Calcalou",
   "app.text": "Í Calcalou getur þú sett daglegan skort sem markmið. Appið takmarkar hann við 1.000 kcal, varar við þegar grunnbrennsla mínus skortur fer undir 1.200 kcal og sýnir borðað á móti brenndu, með grunnbrennslunni og hreyfingunni sem þú skráir, svo þú sérð hvað er eftir í dag.",
