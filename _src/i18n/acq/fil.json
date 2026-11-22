@@ -1,0 +1,41 @@
+{
+  "title": "Ano ang Calcalou? Calorie at protein tracker",
+  "summary": "Ang Calcalou ay calorie at protein tracker para sa iPhone, iPad at Android, kasama si Lou, isang friendly na mascot na tumutulong na gawing ugali ang pang-araw-araw na pag-log.",
+  "version": "Inilalarawan ng gabay na ito ang bersyon 1.7. Puwedeng mag-iba ang paglabas sa store ayon sa platform at bansa; tingnan ang bersyong available sa iyo bago mag-download para sa isang partikular na feature.",
+  "features_title": "Ano ang ginagawa ng Calcalou",
+  "features": [
+    "Mag-log ng calories at protina nang mano-mano, libre.",
+    "Mag-scan ng barcode ng produkto nang libre. Nakadepende ang nutrition value sa available na data ng produkto; tingnan ang label at laki ng serving.",
+    "Magtakda ng protein goal batay sa timbang mo: ipinapakita ng Calcalou ang kuwenta (timbang × gramo bawat kilo), hinahayaan kang i-adjust ito at tinatanggap ang sarili mong numero.",
+    "Tantyahin ang pagkain mula sa litrato gamit ang AI, kasama ang calories, protina, taba at carbs ng bawat pagkain kapag available. Suriin at i-edit ang resulta bago mag-save.",
+    "Magdagdag ng tubig ayon sa baso o bilang sariling dami sa ml.",
+    "Magtakda ng ilang paalala, bawat isa may sariling oras at mga araw ng linggo.",
+    "Panatilihin ang logging streak kasama si Lou at sundan ang calories o protina ngayong araw sa widget sa Home Screen mo. Nag-iiba ang mga feature ng widget ayon sa platform.",
+    "I-export ang diary mo bilang CSV para sa isang buwan, quarter, taon o lahat ng panahon.",
+    "Gamitin ang app sa 41 wika ng interface sa bersyon 1.7. Kailangang mag-sign in para manatili ang diary mo sa account mo."
+  ],
+  "faq_title": "Mga tanong tungkol sa Calcalou",
+  "faq": [
+    [
+      "Libre ba ang Calcalou?",
+      "Libre ang mano-manong pag-log ng calories at protina, pag-scan ng barcode at pag-track ng tubig. Premium ang AI scan; kung saan available, puwedeng subukan ng isang account ang hanggang 3 libreng scan nang isang beses. Ipinapakita sa app at sa store ang presyo ng subscription at kwalipikasyon."
+    ],
+    [
+      "Binibilang ba ng photo scan ang protina?",
+      "Sa bersyon 1.7, kayang tantyahin ng AI photo scan ang calories, protina, taba at carbs ng bawat pagkaing natukoy. Puwedeng mali ang tantya, lalo na sa serving, mantika at halo-halong ulam. Ang nawawalang nutrition value ay hindi zero: suriin o ilagay ang mga ito nang mano-mano."
+    ],
+    [
+      "Sino ang puwedeng gumamit ng Calcalou?",
+      "Para sa edad 13 pataas ang Calcalou, alinsunod sa lokal na age requirement. Sa bersyon 1.7, kailangan ng edad na 18 pataas at kwalipikadong rehiyon para sa AI scan at pagbili ng Premium. Ang Calcalou ay pangkalahatang wellness app, hindi medical device."
+    ],
+    [
+      "Puwede ko ba itong gamitin nang hindi nagsa-sign in?",
+      "Kailangang mag-sign in. Naka-link ang diary mo sa account mo; gamitin ang parehong paraan ng pag-sign in kapag bumalik ka sa ibang device."
+    ]
+  ],
+  "more": "Ihambing ang mga tracker at pumili ng paraan",
+  "stores": "Kunin ang Calcalou",
+  "updated": "Sinuri noong 17 Nobyembre 2026",
+  "privacy": "Privacy",
+  "support": "Suporta"
+}

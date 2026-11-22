@@ -1,0 +1,18 @@
+{
+  "meta.title": "TDEE calculator: kabuuang enerhiyang nagagamit bawat araw | Calcalou",
+  "meta.description": "Libreng TDEE calculator: tantyahin kung ilang calories ang sinusunog mo sa isang araw mula sa BMR at antas ng aktibidad mo (Mifflin-St Jeor). Metric o imperial.",
+  "meta.og_title": "TDEE calculator: kabuuang enerhiyang nagagamit bawat araw",
+  "meta.og_description": "Tantyahin ang kabuuang enerhiyang nagagamit mo bawat araw mula sa BMR at antas ng aktibidad, sa kg/cm o lb/ft.",
+  "link.footer": "TDEE calculator",
+  "h1": "TDEE calculator",
+  "h1.sub": "kabuuang enerhiyang nagagamit bawat araw",
+  "lead": "Tantyahin kung ilang calories ang sinusunog mo sa karaniwang araw: ang enerhiya mo habang nagpapahinga (BMR) kasama ang pang-araw-araw na galaw at ehersisyo.",
+  "form.label": "TDEE calculator",
+  "faq.tdee.q": "Ano ang TDEE?",
+  "faq.tdee.a": "Tinatantya ng TDEE, total daily energy expenditure, ang lahat ng calories na sinusunog mo sa isang araw: ang BMR mo habang nagpapahinga kasama ang pang-araw-araw na galaw at ehersisyo. Madalas itong tawaging maintenance calories, ang intake na nagpapanatili sa timbang mo na halos pareho.",
+  "faq.difference.q": "Ano ang pagkakaiba ng BMR at TDEE?",
+  "faq.difference.a": "Ang BMR ay ang enerhiyang ginagamit ng katawan mo kapag lubos na nagpapahinga. Minu-multiply ng TDEE ang BMR sa activity factor, mula 1.2 para sa kaunti o walang ehersisyo hanggang 1.9 para sa pisikal na trabaho o training dalawang beses sa isang araw, kaya laging mas mataas ito kaysa BMR.",
+  "faq.use.q": "Ano ang magagawa ko sa TDEE ko?",
+  "faq.use.a": "Gamitin ito bilang batayan para sa pang-araw-araw na calorie goal: kung kumakain ka nang halos katumbas ng TDEE mo, halos balanse ang intake at pagsunog, kung mas kaunti ay deficit at kung mas marami ay surplus. Panimulang tantya ito, kaya ihambing ito sa tunay na pagbabago ng timbang mo sa loob ng ilang linggo.",
+  "cta.title": "I-track ang kinain laban sa nasunog kasama si Lou."
+}
