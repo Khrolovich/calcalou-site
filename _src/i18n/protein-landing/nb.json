@@ -1,0 +1,49 @@
+{
+  "title": "App for proteinsporing: loggfør protein og kalorier",
+  "summary": "Calcalou er en app for proteinsporing på iPhone, iPad og Android. Loggfør protein ved siden av kalorier, sett et mål ut fra kroppsvekten og estimer måltider fra et bilde.",
+  "features_title": "Proteinsporing i Calcalou",
+  "features": [
+    "Loggfør protein med hver oppføring: skriv det inn selv gratis, eller fyll det inn fra en strekkode eller en AI-bildeskanning.",
+    "Sett et daglig proteinmål ut fra kroppsvekten. Calcalou viser utregningen (vekt × gram per kilo), lar deg justere den fra 0,8 til 2,0 g/kg og godtar ditt eget tall.",
+    "Se protein ved siden av kalorier på I dag, i ukeoppsummeringen og i Statistikk, og velg protein eller kalorier for hver modul.",
+    "AI-bildeskanning estimerer protein, fett og karbohydrater for hver matvare, alt kan redigeres før du lagrer. Estimater kan være feil; skanning er Premium, med alders- og regionbegrensninger.",
+    "Strekkodeskanning er gratis. Næringsverdier avhenger av produktdataene, så sjekk etiketten og porsjonen.",
+    "Rekker, fleksible påminnelser og vannsporing hjelper deg å fortsette å loggføre."
+  ],
+  "sections": [
+    [
+      "Slik sporer du protein i Calcalou",
+      "Trykk på Legg til, og skriv inn kalorier, protein, fett og karbohydrater for det du spiste, eller skann en strekkode eller et bilde for å fylle dem inn. Alle felt er valgfrie, så du kan loggføre bare protein. Protein vises ved siden av kalorier på I dag og i oppsummeringene dine."
+    ],
+    [
+      "Sett et proteinmål som passer deg",
+      "Velg Ut fra kroppsvekt, så ganger Calcalou vekten din med gram per kilo (1,2 som standard) og viser utregningen. Vekten hentes fra profilen din eller, hvis du kobler dem til, fra Apple Health eller Health Connect. Juster faktoren fra 0,8 til 2,0 g/kg eller skriv inn ditt eget mål. Et mål er et utgangspunkt, ikke medisinske råd; proteinkalkulatoren viser referanseområder."
+    ],
+    [
+      "Bilder, strekkoder eller manuelt",
+      "Bildeskanning bruker AI til å estimere kalorier, protein, fett og karbohydrater for hver matvare. Se over resultatet: porsjoner, oljer og sammensatte retter er lette å feilvurdere, og en manglende verdi er ikke null. Strekkodeskanning og manuell loggføring er gratis; produktdata varierer, så sjekk etiketten."
+    ],
+    [
+      "Hvem kan bruke den",
+      "Calcalou er for brukere fra 13 år og oppover, med forbehold om lokale alderskrav. I versjon 1.7 krever AI-skanning og Premium-kjøp at du er 18 år eller eldre og i en region som støttes. Innlogging er påkrevd. Calcalou er en app for generelt velvære, ikke medisinsk utstyr."
+    ]
+  ],
+  "faq": [
+    [
+      "Hva er den beste måten å spore protein på?",
+      "Den metoden du faktisk holder ut med. Loggfør protein med hvert måltid, sjekk etiketter på emballert mat og se på bildeestimater som utgangspunkt du kan redigere. I Calcalou kan du skrive inn protein, skanne en strekkode eller bruke AI-bildeskanning."
+    ],
+    [
+      "Hvor mye protein bør jeg spise per dag?",
+      "Det avhenger av kroppen, målene og helsen din. For voksne er EFSAs referanseinntak 0,83 g per kg kroppsvekt; 2026-standpunktet fra International Society of Sports Nutrition gir 1,2–1,6 g per kg for vektnedgang og 1,6–2,2 g per kg med styrketrening. Proteinkalkulatoren viser alle tre. Dette er generelle råd, ikke medisinske råd."
+    ],
+    [
+      "Teller Calcalou protein fra et bilde?",
+      "Ja. I versjon 1.7 estimerer en AI-bildeskanning kalorier, protein, fett og karbohydrater for hver gjenkjente matvare. Estimater kan være feil, så sjekk og rediger dem før du lagrer."
+    ],
+    [
+      "Er proteinsporing gratis?",
+      "Manuell loggføring av protein, strekkodeskanning og proteinmål er gratis. AI-bildeskanning er Premium; der det tilbys, kan en konto prøve opptil 3 gratis skanninger én gang. Priser og vilkår vises i appen og i butikken."
+    ]
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Hva er Calcalou? Kalori- og proteinteller",
+  "summary": "Calcalou er en kalori- og proteinteller for iPhone, iPad og Android, med Lou, en vennlig maskot som hjelper deg å gjøre daglig loggføring til en vane.",
+  "version": "Denne veiledningen beskriver versjon 1.7. Utrullingen i butikkene kan variere etter plattform og land; sjekk hvilken versjon du har tilgang til før du laster ned for en bestemt funksjon.",
+  "features_title": "Hva Calcalou gjør",
+  "features": [
+    "Loggfør kalorier og protein manuelt, gratis.",
+    "Skann strekkoder på produkter gratis. Næringsverdier avhenger av tilgjengelige produktdata; sjekk etiketten og porsjonsstørrelsen.",
+    "Sett et proteinmål ut fra kroppsvekten: Calcalou viser utregningen (vekt × gram per kilo), lar deg justere den og godtar ditt eget tall.",
+    "Estimer et måltid fra et bilde med AI, inkludert kalorier, protein, fett og karbohydrater for hver matvare når det er tilgjengelig. Se over og rediger resultatet før du lagrer.",
+    "Legg til vann per glass eller som en egen mengde i ml.",
+    "Sett opp flere påminnelser, hver med sitt eget tidspunkt og egne ukedager.",
+    "Hold en loggføringsrekke med Lou og følg dagens kalorier eller protein i en modul på Hjem-skjermen. Modulfunksjoner varierer etter plattform.",
+    "Eksporter dagboken som CSV for en måned, et kvartal, et år eller hele perioden.",
+    "Bruk appen på 41 grensesnittspråk i versjon 1.7. Innlogging kreves for å beholde dagboken i kontoen din."
+  ],
+  "faq_title": "Spørsmål om Calcalou",
+  "faq": [
+    [
+      "Er Calcalou gratis?",
+      "Manuell loggføring av kalorier og protein, strekkodeskanning og vannsporing er gratis. AI-skanninger er Premium; der det tilbys, kan en konto prøve opptil 3 gratis skanninger én gang. Abonnementspriser og vilkår vises i appen og i butikken."
+    ],
+    [
+      "Teller en bildeskanning protein?",
+      "I versjon 1.7 kan AI-bildeskanninger estimere kalorier, protein, fett og karbohydrater for hver gjenkjente matvare. Estimater kan være feil, særlig for porsjoner, oljer og sammensatte retter. Manglende næringsverdier er ikke null: sjekk dem eller legg dem inn manuelt."
+    ],
+    [
+      "Hvem kan bruke Calcalou?",
+      "Calcalou er for brukere fra 13 år og oppover, med forbehold om lokale alderskrav. I versjon 1.7 krever AI-skanning og Premium-kjøp at du er 18 år eller eldre og i en region som støttes. Calcalou er en app for generelt velvære, ikke medisinsk utstyr."
+    ],
+    [
+      "Kan jeg bruke den uten å logge inn?",
+      "Innlogging er påkrevd. Dagboken din er knyttet til kontoen din; bruk samme innloggingsmetode når du kommer tilbake på en annen enhet."
+    ]
+  ],
+  "more": "Sammenlign tellere og velg en arbeidsmåte",
+  "stores": "Last ned Calcalou",
+  "updated": "Kontrollert 17. november 2026",
+  "privacy": "Personvern",
+  "support": "Kundestøtte"
+}
