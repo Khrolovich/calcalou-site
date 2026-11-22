@@ -1,0 +1,41 @@
+{
+  "title": "Što je Calcalou? Brojač kalorija i proteina",
+  "summary": "Calcalou je brojač kalorija i proteina za iPhone, iPad i Android, s Lou, prijateljskom maskotom koja pomaže da dnevno bilježenje postane navika.",
+  "version": "Ovaj vodič opisuje verziju 1.7. Dostupnost u trgovinama može se razlikovati prema platformi i zemlji; ako ti treba određena značajka, prije preuzimanja provjeri koja ti je verzija dostupna.",
+  "features_title": "Što Calcalou radi",
+  "features": [
+    "Bilježi kalorije i proteine ručno, besplatno.",
+    "Skeniraj barkodove proizvoda besplatno. Nutritivne vrijednosti ovise o dostupnim podacima o proizvodu; provjeri deklaraciju i veličinu porcije.",
+    "Postavi cilj proteina prema tjelesnoj težini: Calcalou prikazuje izračun (težina × grami po kilogramu), omogućuje prilagodbu i prihvaća tvoj vlastiti broj.",
+    "Procijeni obrok s fotografije pomoću AI-ja, uključujući kalorije, proteine, masti i ugljikohidrate za svaku namirnicu kad su dostupni. Pregledaj i uredi rezultat prije spremanja.",
+    "Dodaj vodu po čašama ili kao vlastitu količinu u ml.",
+    "Postavi više podsjetnika, svaki sa svojim vremenom i danima u tjednu.",
+    "Održavaj niz bilježenja s Lou i prati današnje kalorije ili proteine u widgetu na početnom zaslonu. Značajke widgeta razlikuju se ovisno o platformi.",
+    "Izvezi dnevnik kao CSV za mjesec, tromjesečje, godinu ili cijelo razdoblje.",
+    "Koristi aplikaciju na 41 jeziku sučelja u verziji 1.7. Za čuvanje dnevnika u računu potrebna je prijava."
+  ],
+  "faq_title": "Pitanja o Calcalouu",
+  "faq": [
+    [
+      "Je li Calcalou besplatan?",
+      "Ručno bilježenje kalorija i proteina, skeniranje barkodova i praćenje vode su besplatni. AI skeniranja dio su Premiuma; gdje je ponuđeno, račun može jednom isprobati do 3 besplatna skeniranja. Cijene pretplate i uvjeti prikazani su u aplikaciji i trgovini."
+    ],
+    [
+      "Broji li skeniranje fotografije proteine?",
+      "U verziji 1.7 AI skeniranje fotografija može procijeniti kalorije, proteine, masti i ugljikohidrate za svaku prepoznatu namirnicu. Procjene mogu biti netočne, osobito za porcije, ulja i miješana jela. Nutritivne vrijednosti koje nedostaju nisu nula: provjeri ih ili ih unesi ručno."
+    ],
+    [
+      "Tko može koristiti Calcalou?",
+      "Calcalou je namijenjen osobama od 13 godina naviše, uz lokalne dobne zahtjeve. U verziji 1.7 AI skeniranja i kupnje Premiuma zahtijevaju dob od 18 godina ili više i podržanu regiju. Calcalou je aplikacija za opću dobrobit, a ne medicinski uređaj."
+    ],
+    [
+      "Mogu li ga koristiti bez prijave?",
+      "Prijava je obavezna. Tvoj dnevnik povezan je s tvojim računom; kad se vratiš na drugom uređaju, koristi isti način prijave."
+    ]
+  ],
+  "more": "Usporedi brojače i odaberi način rada",
+  "stores": "Preuzmi Calcalou",
+  "updated": "Provjereno 17. studenoga 2026.",
+  "privacy": "Privatnost",
+  "support": "Podrška"
+}

@@ -1,0 +1,49 @@
+{
+  "title": "Aplikacija za praćenje proteina: bilježi proteine i kalorije",
+  "summary": "Calcalou je aplikacija za praćenje proteina za iPhone, iPad i Android. Bilježi proteine uz kalorije, postavi cilj prema tjelesnoj težini i procijeni obroke s fotografije.",
+  "features_title": "Praćenje proteina u Calcalouu",
+  "features": [
+    "Bilježi proteine uz svaki unos: upiši ih sam besplatno ili ih ispuni putem barkoda ili AI skeniranja fotografije.",
+    "Postavi dnevni cilj proteina prema tjelesnoj težini. Calcalou prikazuje izračun (težina × grami po kilogramu), omogućuje prilagodbu od 0,8 do 2,0 g/kg i prihvaća tvoj vlastiti broj.",
+    "Prati proteine uz kalorije na zaslonu Danas, u tjednom sažetku i u Statistici te za svaki widget odaberi proteine ili kalorije.",
+    "AI skeniranje fotografija procjenjuje proteine, masti i ugljikohidrate za svaku namirnicu, a sve se može urediti prije spremanja. Procjene mogu biti netočne; skeniranje je dio Premiuma, uz ograničenja dobi i regije.",
+    "Skeniranje barkodova je besplatno. Nutritivne vrijednosti ovise o podacima o proizvodu, pa provjeri deklaraciju i porciju.",
+    "Nizovi, fleksibilni podsjetnici i praćenje vode pomažu ti da nastaviš bilježiti."
+  ],
+  "sections": [
+    [
+      "Kako pratiti proteine u Calcalouu",
+      "Dodirni Dodaj i unesi kalorije, proteine, masti i ugljikohidrate za ono što si pojeo ili skeniraj barkod ili fotografiju da se ispune. Svako polje je neobavezno, pa možeš zabilježiti samo proteine. Proteini se prikazuju uz kalorije na zaslonu Danas i u sažecima."
+    ],
+    [
+      "Postavi cilj proteina koji ti odgovara",
+      "Odaberi Prema tjelesnoj težini i Calcalou množi tvoju težinu s gramima po kilogramu (1,2 prema zadanim postavkama) te prikazuje izračun. Težina dolazi iz tvog profila ili, ako ih povežeš, iz Apple Healtha ili Health Connecta. Prilagodi faktor od 0,8 do 2,0 g/kg ili unesi vlastiti cilj. Cilj je polazište, a ne medicinski savjet; kalkulator proteina prikazuje referentne raspone."
+    ],
+    [
+      "Fotografije, barkodovi ili ručno",
+      "Skeniranje fotografija koristi AI za procjenu kalorija, proteina, masti i ugljikohidrata za svaku namirnicu. Provjeri rezultat: porcije, ulja i miješana jela lako je pogrešno procijeniti, a vrijednost koja nedostaje nije nula. Skeniranje barkodova i ručno bilježenje su besplatni; podaci o proizvodima razlikuju se, pa provjeri deklaraciju."
+    ],
+    [
+      "Tko je može koristiti",
+      "Calcalou je namijenjen osobama od 13 godina naviše, uz lokalne dobne zahtjeve. U verziji 1.7 AI skeniranja i kupnje Premiuma zahtijevaju dob od 18 godina ili više i podržanu regiju. Potrebna je prijava. Calcalou je aplikacija za opću dobrobit, a ne medicinski uređaj."
+    ]
+  ],
+  "faq": [
+    [
+      "Koji je najbolji način za praćenje proteina?",
+      "Onaj kojeg ćeš se držati. Bilježi proteine uz svaki obrok, provjeravaj deklaracije pakirane hrane i procjene s fotografija shvaćaj kao polazište koje možeš urediti. U Calcalouu možeš upisati proteine, skenirati barkod ili koristiti AI skeniranje fotografije."
+    ],
+    [
+      "Koliko proteina trebam jesti dnevno?",
+      "Ovisi o tvom tijelu, ciljevima i zdravlju. Za odrasle je referentni unos EFSA-e 0,83 g po kg tjelesne težine; stajalište International Society of Sports Nutrition iz 2026. navodi 1,2–1,6 g po kg za mršavljenje i 1,6–2,2 g po kg uz trening s otporom. Kalkulator proteina prikazuje sva tri. To su opće smjernice, a ne medicinski savjet."
+    ],
+    [
+      "Broji li Calcalou proteine s fotografije?",
+      "Da. U verziji 1.7 AI skeniranje fotografije procjenjuje kalorije, proteine, masti i ugljikohidrate za svaku prepoznatu namirnicu. Procjene mogu biti netočne, pa ih provjeri i uredi prije spremanja."
+    ],
+    [
+      "Je li praćenje proteina besplatno?",
+      "Ručno bilježenje proteina, skeniranje barkodova i ciljevi proteina su besplatni. AI skeniranje fotografija dio je Premiuma; gdje je ponuđeno, račun može jednom isprobati do 3 besplatna skeniranja. Cijene i uvjeti prikazani su u aplikaciji i trgovini."
+    ]
+  ]
+}
