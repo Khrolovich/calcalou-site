@@ -1,0 +1,18 @@
+{
+  "meta.title": "TDEE-calculator: je dagelijkse caloriebehoefte | Calcalou",
+  "meta.description": "Gratis TDEE-calculator: schat hoeveel calorieën je per dag verbrandt op basis van je BMR en activiteitsniveau (Mifflin-St Jeor). Metrisch of imperiaal.",
+  "meta.og_title": "TDEE-calculator: totaal dagelijks energieverbruik",
+  "meta.og_description": "Schat je totale dagelijkse energieverbruik op basis van je BMR en activiteitsniveau, in kg/cm of lb/ft.",
+  "link.footer": "TDEE-calculator",
+  "h1": "TDEE-calculator",
+  "h1.sub": "totaal dagelijks energieverbruik",
+  "lead": "Schat hoeveel calorieën je op een gewone dag verbrandt: je energie in rust (BMR) plus dagelijkse beweging en sport.",
+  "form.label": "TDEE-calculator",
+  "faq.tdee.q": "Wat is TDEE?",
+  "faq.tdee.a": "TDEE, je totale dagelijkse energieverbruik, schat alle calorieën die je op een dag verbrandt: je BMR in rust plus dagelijkse beweging en sport. Het wordt vaak onderhoudscalorieën genoemd: de inname waarbij je gewicht ongeveer gelijk blijft.",
+  "faq.difference.q": "Wat is het verschil tussen BMR en TDEE?",
+  "faq.difference.a": "BMR is de energie die je lichaam in volledige rust verbruikt. TDEE vermenigvuldigt de BMR met een activiteitsfactor, van 1,2 bij weinig of geen beweging tot 1,9 bij lichamelijk werk of twee keer per dag trainen, en is dus altijd hoger dan de BMR.",
+  "faq.use.q": "Wat kan ik met mijn TDEE?",
+  "faq.use.a": "Gebruik het als ijkpunt voor een dagelijks caloriedoel: eet je ongeveer je TDEE, dan zijn inname en verbranding grofweg in balans; eet je minder, dan heb je een tekort, en eet je meer, dan een overschot. Het is een eerste schatting, dus vergelijk het een paar weken met hoe je gewicht echt verandert.",
+  "cta.title": "Zet gegeten tegenover verbrand met Lou."
+}

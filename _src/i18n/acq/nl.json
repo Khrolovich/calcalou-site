@@ -1,0 +1,41 @@
+{
+  "title": "Wat is Calcalou? Calorie- en eiwitteller",
+  "summary": "Calcalou is een calorie- en eiwitteller voor iPhone, iPad en Android, met Lou, een vriendelijke mascotte die helpt om dagelijks loggen een gewoonte te maken.",
+  "version": "Deze gids beschrijft versie 1.7. De uitrol in de stores kan per platform en land verschillen; controleer welke versie voor jou beschikbaar is voordat je de app downloadt voor een bepaalde functie.",
+  "features_title": "Wat Calcalou doet",
+  "features": [
+    "Log calorieën en eiwit gratis met de hand.",
+    "Scan gratis barcodes van producten. Voedingswaarden hangen af van de beschikbare productgegevens; controleer het etiket en de portiegrootte.",
+    "Stel een eiwitdoel in op basis van je lichaamsgewicht: Calcalou laat de berekening zien (gewicht × gram per kilo), laat je die aanpassen en accepteert ook je eigen getal.",
+    "Schat een maaltijd met een foto via AI, inclusief calorieën, eiwit, vet en koolhydraten per product als die beschikbaar zijn. Controleer en pas de uitkomst aan voordat je opslaat.",
+    "Voeg water toe per glas of als eigen hoeveelheid in ml.",
+    "Stel meerdere herinneringen in, elk met een eigen tijd en eigen dagen van de week.",
+    "Houd samen met Lou een logreeks vast en volg de calorieën of het eiwit van vandaag in een widget op je beginscherm. Widgetfuncties verschillen per platform.",
+    "Exporteer je dagboek als CSV voor een maand, kwartaal, jaar of alles.",
+    "Gebruik de app in versie 1.7 in 41 talen. Inloggen is verplicht om je dagboek in je account te bewaren."
+  ],
+  "faq_title": "Vragen over Calcalou",
+  "faq": [
+    [
+      "Is Calcalou gratis?",
+      "Calorieën en eiwit met de hand loggen, barcodes scannen en water bijhouden zijn gratis. AI-scans zijn Premium; waar aangeboden kan een account eenmalig tot 3 gratis scans proberen. Abonnementsprijzen en voorwaarden staan in de app en de store."
+    ],
+    [
+      "Telt een fotoscan ook eiwit?",
+      "In versie 1.7 kunnen AI-fotoscans calorieën, eiwit, vet en koolhydraten schatten voor elk herkend product. Schattingen kunnen afwijken, vooral bij porties, olie en gemengde gerechten. Ontbrekende voedingswaarden zijn geen nul: controleer ze of vul ze zelf in."
+    ],
+    [
+      "Wie kan Calcalou gebruiken?",
+      "Calcalou is voor iedereen vanaf 13 jaar, met inachtneming van de lokale leeftijdsregels. In versie 1.7 vereisen AI-scans en Premium-aankopen een leeftijd van 18 jaar of ouder en een regio waar ze beschikbaar zijn. Calcalou is een app voor algemeen welzijn, geen medisch hulpmiddel."
+    ],
+    [
+      "Kan ik het gebruiken zonder in te loggen?",
+      "Inloggen is verplicht. Je dagboek is gekoppeld aan je account; gebruik dezelfde inlogmethode als je op een ander apparaat terugkomt."
+    ]
+  ],
+  "more": "Vergelijk trackers en kies je manier van werken",
+  "stores": "Download Calcalou",
+  "updated": "Gecontroleerd op 17 november 2026",
+  "privacy": "Privacy",
+  "support": "Support"
+}

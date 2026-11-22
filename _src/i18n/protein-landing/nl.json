@@ -1,0 +1,49 @@
+{
+  "title": "Eiwit-tracker-app: log eiwit en calorieën",
+  "summary": "Calcalou is een eiwit-tracker-app voor iPhone, iPad en Android. Log eiwit naast calorieën, stel een doel in op basis van je lichaamsgewicht en schat maaltijden met een foto.",
+  "features_title": "Eiwit bijhouden in Calcalou",
+  "features": [
+    "Log eiwit bij elke invoer: typ het zelf gratis in, of laat het invullen via een barcode of een AI-fotoscan.",
+    "Stel een dagelijks eiwitdoel in op basis van je lichaamsgewicht. Calcalou laat de berekening zien (gewicht × gram per kilo), laat je die aanpassen van 0,8 tot 2,0 g/kg en accepteert ook je eigen getal.",
+    "Zie eiwit naast calorieën op Vandaag, in je weekoverzicht en in Statistiek, en kies per widget eiwit of calorieën.",
+    "AI-fotoscans schatten eiwit, vet en koolhydraten per product, allemaal aan te passen voordat je opslaat. Schattingen kunnen afwijken; scans zijn Premium, met leeftijds- en regiogrenzen.",
+    "Barcodes scannen is gratis. Voedingswaarden hangen af van de productgegevens, dus controleer het etiket en de portie.",
+    "Reeksen, flexibele herinneringen en water bijhouden helpen je om te blijven loggen."
+  ],
+  "sections": [
+    [
+      "Zo houd je eiwit bij in Calcalou",
+      "Tik op Toevoegen en vul calorieën, eiwit, vet en koolhydraten in voor wat je at, of scan een barcode of foto om ze in te laten vullen. Elk veld is optioneel, dus je kunt ook alleen eiwit loggen. Eiwit staat naast calorieën op Vandaag en in je overzichten."
+    ],
+    [
+      "Stel een eiwitdoel in dat bij je past",
+      "Kies Op basis van lichaamsgewicht en Calcalou vermenigvuldigt je gewicht met het aantal gram per kilo (standaard 1,2) en laat de berekening zien. Je gewicht komt uit je profiel of, als je die koppelt, uit Apple Gezondheid of Health Connect. Pas de factor aan van 0,8 tot 2,0 g/kg of vul je eigen doel in. Een doel is een startpunt, geen medisch advies; de eiwitcalculator toont referentiebereiken."
+    ],
+    [
+      "Foto's, barcodes of met de hand",
+      "Fotoscans gebruiken AI om calorieën, eiwit, vet en koolhydraten per product te schatten. Controleer de uitkomst: porties, olie en gemengde gerechten zijn makkelijk verkeerd in te schatten, en een ontbrekende waarde is geen nul. Barcodes scannen en handmatig loggen zijn gratis; productgegevens verschillen, dus controleer het etiket."
+    ],
+    [
+      "Wie kan het gebruiken",
+      "Calcalou is voor iedereen vanaf 13 jaar, met inachtneming van de lokale leeftijdsregels. In versie 1.7 vereisen AI-scans en Premium-aankopen een leeftijd van 18 jaar of ouder en een regio waar ze beschikbaar zijn. Inloggen is verplicht. Calcalou is een app voor algemeen welzijn, geen medisch hulpmiddel."
+    ]
+  ],
+  "faq": [
+    [
+      "Wat is de beste manier om eiwit bij te houden?",
+      "De manier die je volhoudt. Log eiwit bij elke maaltijd, kijk op het etiket van verpakt eten en zie fotoschattingen als een startpunt dat je kunt aanpassen. In Calcalou kun je eiwit intypen, een barcode scannen of een AI-fotoscan gebruiken."
+    ],
+    [
+      "Hoeveel eiwit moet ik per dag eten?",
+      "Dat hangt af van je lichaam, je doelen en je gezondheid. Voor volwassenen is de referentie-inname van de EFSA 0,83 g per kg lichaamsgewicht; het standpunt van de International Society of Sports Nutrition uit 2026 noemt 1,2–1,6 g per kg om af te vallen en 1,6–2,2 g per kg met krachttraining. De eiwitcalculator toont ze alle drie. Dit is een algemene richtlijn, geen medisch advies."
+    ],
+    [
+      "Telt Calcalou eiwit uit een foto?",
+      "Ja. In versie 1.7 schat een AI-fotoscan calorieën, eiwit, vet en koolhydraten voor elk herkend product. Schattingen kunnen afwijken, dus controleer en pas ze aan voordat je opslaat."
+    ],
+    [
+      "Is eiwit bijhouden gratis?",
+      "Eiwit met de hand loggen, barcodes scannen en eiwitdoelen zijn gratis. AI-fotoscans zijn Premium; waar aangeboden kan een account eenmalig tot 3 gratis scans proberen. Prijzen en voorwaarden staan in de app en de store."
+    ]
+  ]
+}
