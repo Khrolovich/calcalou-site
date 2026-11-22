@@ -90,6 +90,11 @@ class CalculatorHead(unittest.TestCase):
             self.assertIn(f'<a href="{page_sets()["terms"][code]}">', home)
             self.assertNotIn(eula, home)
 
+    def test_landing_js_redirects_every_home_prefix(self):
+        script = (SITE / "assets" / "landing.js").read_text(encoding="utf-8")
+        listed = set(re.search(r"var landing = /\^\\/\(\?:\(\?:([^)]*)\)", script).group(1).split("|"))
+        self.assertLessEqual({path.strip("/") for _, path, *_ in HOME_LOCALES} - {""}, listed)
+
     def test_titles_are_unique(self):
         titles = [re.search(r"<title>(.*?)</title>", (SITE / p.strip("/") / "index.html").read_text()).group(1)
                   for pages in page_sets().values() for p in pages.values()]

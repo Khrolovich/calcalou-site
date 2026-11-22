@@ -61,6 +61,7 @@ Sign-in is required. Your diary is associated with your account; use the same si
 - [Русский](https://calcalou.com/ru/chto-takoe-calcalou/)
 - [Türkçe](https://calcalou.com/tr/calcalou-nedir/)
 - [Українська](https://calcalou.com/uk/shcho-take-calcalou/)
+- [Čeština](https://calcalou.com/cs/co-je-calcalou/)
 
 ## Localized protein tracker pages
 
@@ -74,6 +75,7 @@ Sign-in is required. Your diary is associated with your account; use the same si
 - [Русский](https://calcalou.com/ru/prilozhenie-dlya-podschyota-belka/)
 - [Türkçe](https://calcalou.com/tr/protein-takip-uygulamasi/)
 - [Українська](https://calcalou.com/uk/zastosunok-dlya-pidrakhunku-bilka/)
+- [Čeština](https://calcalou.com/cs/aplikace-na-sledovani-bilkovin/)
 
 Checked 2026-11-17. Published by the Calcalou Team. This summary does not establish independent ratings or comparative accuracy.
 

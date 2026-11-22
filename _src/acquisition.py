@@ -1,16 +1,24 @@
 import json
 from pathlib import Path
 
+from locales import extra_locales, prefix
+
 SRC = Path(__file__).resolve().parent
 PRODUCT = json.loads((SRC / "acquisition.json").read_text(encoding="utf-8"))
+for _m in extra_locales():
+    PRODUCT[_m["code"]] = {"name": _m["name"], "path": prefix(_m["code"]) + _m["slugs"]["what_is"] + "/", "home": prefix(_m["code"]),
+                           **json.loads((SRC / "i18n" / "acq" / f"{_m['code']}.json").read_text(encoding="utf-8"))}
 PROTEIN = {code: json.loads((SRC / "i18n" / "protein-landing" / f"{code}.json").read_text(encoding="utf-8"))
            for code in PRODUCT}
+for _m in extra_locales():
+    PROTEIN[_m["code"]]["path"] = prefix(_m["code"]) + _m["slugs"]["protein_landing"] + "/"
 PROTEIN_CALC_PATHS = {
     "en": "/protein-calculator/", "de": "/de/proteinrechner/", "es": "/es/calculadora-de-proteinas/",
     "fr": "/fr/calculateur-proteines/", "it": "/it/calcolo-proteine/", "pl": "/pl/kalkulator-bialka/",
     "pt-BR": "/pt-br/calculadora-de-proteinas/", "ru": "/ru/kalkulyator-belka/",
     "tr": "/tr/gunluk-protein-ihtiyaci-hesaplama/",
 }
+PROTEIN_CALC_PATHS.update({m["code"]: prefix(m["code"]) + m["slugs"]["protein"] + "/" for m in extra_locales()})
 
 
 def protein_calc_label(code):

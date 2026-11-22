@@ -13,6 +13,7 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/"/>
   </url>
   <url>
@@ -28,6 +29,7 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/"/>
   </url>
   <url>
@@ -43,6 +45,7 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/"/>
   </url>
   <url>
@@ -58,6 +61,7 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/"/>
   </url>
   <url>
@@ -73,6 +77,7 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/"/>
   </url>
   <url>
@@ -88,6 +93,7 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/"/>
   </url>
   <url>
@@ -103,6 +109,7 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/"/>
   </url>
   <url>
@@ -118,6 +125,7 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/"/>
   </url>
   <url>
@@ -133,6 +141,7 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/"/>
   </url>
   <url>
@@ -148,11 +157,28 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/"/>
+  </url>
+  <url>
+    <loc>https://calcalou.com/cs/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calcalou.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calcalou.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/"/>
   </url>
   <url>
     <loc>https://calcalou.com/terms/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/terms/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/terms/"/>
@@ -163,11 +189,12 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/terms/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/terms/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/terms/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/terms/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/terms/"/>
   </url>
   <url>
     <loc>https://calcalou.com/de/terms/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/terms/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/terms/"/>
@@ -178,11 +205,12 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/terms/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/terms/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/terms/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/terms/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/terms/"/>
   </url>
   <url>
     <loc>https://calcalou.com/es/terms/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/terms/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/terms/"/>
@@ -193,11 +221,12 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/terms/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/terms/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/terms/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/terms/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/terms/"/>
   </url>
   <url>
     <loc>https://calcalou.com/fr/terms/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/terms/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/terms/"/>
@@ -208,11 +237,12 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/terms/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/terms/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/terms/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/terms/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/terms/"/>
   </url>
   <url>
     <loc>https://calcalou.com/it/terms/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/terms/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/terms/"/>
@@ -223,11 +253,12 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/terms/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/terms/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/terms/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/terms/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/terms/"/>
   </url>
   <url>
     <loc>https://calcalou.com/pl/terms/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/terms/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/terms/"/>
@@ -238,11 +269,12 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/terms/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/terms/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/terms/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/terms/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/terms/"/>
   </url>
   <url>
     <loc>https://calcalou.com/pt-br/terms/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/terms/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/terms/"/>
@@ -253,11 +285,12 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/terms/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/terms/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/terms/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/terms/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/terms/"/>
   </url>
   <url>
     <loc>https://calcalou.com/ru/terms/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/terms/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/terms/"/>
@@ -268,11 +301,12 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/terms/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/terms/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/terms/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/terms/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/terms/"/>
   </url>
   <url>
     <loc>https://calcalou.com/tr/terms/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/terms/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/terms/"/>
@@ -283,11 +317,12 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/terms/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/terms/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/terms/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/terms/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/terms/"/>
   </url>
   <url>
     <loc>https://calcalou.com/uk/terms/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/terms/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/terms/"/>
@@ -298,6 +333,23 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/terms/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/terms/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/terms/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/terms/"/>
+  </url>
+  <url>
+    <loc>https://calcalou.com/cs/terms/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/terms/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calcalou.com/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calcalou.com/it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/terms/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/terms/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/terms/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/terms/"/>
   </url>
   <url>
@@ -312,6 +364,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-tmb/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-osnovnogo-obmena/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/bazal-metabolizma-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-bmr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/bmr-calculator/"/>
   </url>
   <url>
@@ -326,6 +379,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-tmb/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-osnovnogo-obmena/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/bazal-metabolizma-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-bmr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/bmr-calculator/"/>
   </url>
   <url>
@@ -340,6 +394,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-tmb/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-osnovnogo-obmena/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/bazal-metabolizma-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-bmr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/bmr-calculator/"/>
   </url>
   <url>
@@ -354,6 +409,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-tmb/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-osnovnogo-obmena/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/bazal-metabolizma-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-bmr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/bmr-calculator/"/>
   </url>
   <url>
@@ -368,6 +424,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-tmb/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-osnovnogo-obmena/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/bazal-metabolizma-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-bmr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/bmr-calculator/"/>
   </url>
   <url>
@@ -382,6 +439,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-tmb/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-osnovnogo-obmena/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/bazal-metabolizma-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-bmr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/bmr-calculator/"/>
   </url>
   <url>
@@ -396,6 +454,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-tmb/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-osnovnogo-obmena/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/bazal-metabolizma-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-bmr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/bmr-calculator/"/>
   </url>
   <url>
@@ -410,6 +469,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-tmb/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-osnovnogo-obmena/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/bazal-metabolizma-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-bmr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/bmr-calculator/"/>
   </url>
   <url>
@@ -424,6 +484,22 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-tmb/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-osnovnogo-obmena/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/bazal-metabolizma-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-bmr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/bmr-calculator/"/>
+  </url>
+  <url>
+    <loc>https://calcalou.com/cs/kalkulacka-bmr/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/bmr-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/grundumsatz-rechner/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/calculadora-metabolismo-basal/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calcalou.com/fr/calcul-metabolisme-de-base/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calcalou.com/it/calcolo-metabolismo-basale/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/kalkulator-bmr/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-tmb/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-osnovnogo-obmena/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/bazal-metabolizma-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-bmr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/bmr-calculator/"/>
   </url>
   <url>
@@ -438,6 +514,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-tdee/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-kaloriy/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/gunluk-kalori-ihtiyaci-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-denni-potreby-kalorii/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/tdee-calculator/"/>
   </url>
   <url>
@@ -452,6 +529,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-tdee/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-kaloriy/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/gunluk-kalori-ihtiyaci-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-denni-potreby-kalorii/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/tdee-calculator/"/>
   </url>
   <url>
@@ -466,6 +544,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-tdee/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-kaloriy/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/gunluk-kalori-ihtiyaci-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-denni-potreby-kalorii/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/tdee-calculator/"/>
   </url>
   <url>
@@ -480,6 +559,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-tdee/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-kaloriy/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/gunluk-kalori-ihtiyaci-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-denni-potreby-kalorii/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/tdee-calculator/"/>
   </url>
   <url>
@@ -494,6 +574,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-tdee/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-kaloriy/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/gunluk-kalori-ihtiyaci-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-denni-potreby-kalorii/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/tdee-calculator/"/>
   </url>
   <url>
@@ -508,6 +589,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-tdee/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-kaloriy/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/gunluk-kalori-ihtiyaci-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-denni-potreby-kalorii/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/tdee-calculator/"/>
   </url>
   <url>
@@ -522,6 +604,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-tdee/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-kaloriy/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/gunluk-kalori-ihtiyaci-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-denni-potreby-kalorii/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/tdee-calculator/"/>
   </url>
   <url>
@@ -536,6 +619,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-tdee/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-kaloriy/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/gunluk-kalori-ihtiyaci-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-denni-potreby-kalorii/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/tdee-calculator/"/>
   </url>
   <url>
@@ -550,6 +634,22 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-tdee/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-kaloriy/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/gunluk-kalori-ihtiyaci-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-denni-potreby-kalorii/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/tdee-calculator/"/>
+  </url>
+  <url>
+    <loc>https://calcalou.com/cs/kalkulacka-denni-potreby-kalorii/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/tdee-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/kalorienbedarf-rechner/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/calculadora-de-calorias/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calcalou.com/fr/calcul-besoin-calorique/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calcalou.com/it/calcolo-fabbisogno-calorico/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/kalkulator-zapotrzebowania-kalorycznego/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-tdee/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-kaloriy/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/gunluk-kalori-ihtiyaci-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-denni-potreby-kalorii/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/tdee-calculator/"/>
   </url>
   <url>
@@ -564,6 +664,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-deficit-calorico/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-deficita-kaloriy/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/kalori-acigi-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-kalorickeho-deficitu/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/calorie-deficit-calculator/"/>
   </url>
   <url>
@@ -578,6 +679,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-deficit-calorico/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-deficita-kaloriy/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/kalori-acigi-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-kalorickeho-deficitu/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/calorie-deficit-calculator/"/>
   </url>
   <url>
@@ -592,6 +694,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-deficit-calorico/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-deficita-kaloriy/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/kalori-acigi-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-kalorickeho-deficitu/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/calorie-deficit-calculator/"/>
   </url>
   <url>
@@ -606,6 +709,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-deficit-calorico/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-deficita-kaloriy/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/kalori-acigi-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-kalorickeho-deficitu/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/calorie-deficit-calculator/"/>
   </url>
   <url>
@@ -620,6 +724,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-deficit-calorico/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-deficita-kaloriy/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/kalori-acigi-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-kalorickeho-deficitu/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/calorie-deficit-calculator/"/>
   </url>
   <url>
@@ -634,6 +739,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-deficit-calorico/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-deficita-kaloriy/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/kalori-acigi-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-kalorickeho-deficitu/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/calorie-deficit-calculator/"/>
   </url>
   <url>
@@ -648,6 +754,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-deficit-calorico/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-deficita-kaloriy/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/kalori-acigi-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-kalorickeho-deficitu/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/calorie-deficit-calculator/"/>
   </url>
   <url>
@@ -662,6 +769,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-deficit-calorico/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-deficita-kaloriy/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/kalori-acigi-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-kalorickeho-deficitu/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/calorie-deficit-calculator/"/>
   </url>
   <url>
@@ -676,6 +784,22 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-deficit-calorico/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-deficita-kaloriy/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/kalori-acigi-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-kalorickeho-deficitu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/calorie-deficit-calculator/"/>
+  </url>
+  <url>
+    <loc>https://calcalou.com/cs/kalkulacka-kalorickeho-deficitu/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/calorie-deficit-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/kaloriendefizit-rechner/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/calculadora-deficit-calorico/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calcalou.com/fr/calcul-deficit-calorique/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calcalou.com/it/calcolo-deficit-calorico/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/kalkulator-deficytu-kalorycznego/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-deficit-calorico/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-deficita-kaloriy/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/kalori-acigi-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-kalorickeho-deficitu/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/calorie-deficit-calculator/"/>
   </url>
   <url>
@@ -690,6 +814,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-de-proteinas/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-belka/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/gunluk-protein-ihtiyaci-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-bilkovin/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/protein-calculator/"/>
   </url>
   <url>
@@ -704,6 +829,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-de-proteinas/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-belka/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/gunluk-protein-ihtiyaci-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-bilkovin/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/protein-calculator/"/>
   </url>
   <url>
@@ -718,6 +844,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-de-proteinas/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-belka/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/gunluk-protein-ihtiyaci-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-bilkovin/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/protein-calculator/"/>
   </url>
   <url>
@@ -732,6 +859,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-de-proteinas/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-belka/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/gunluk-protein-ihtiyaci-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-bilkovin/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/protein-calculator/"/>
   </url>
   <url>
@@ -746,6 +874,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-de-proteinas/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-belka/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/gunluk-protein-ihtiyaci-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-bilkovin/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/protein-calculator/"/>
   </url>
   <url>
@@ -760,6 +889,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-de-proteinas/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-belka/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/gunluk-protein-ihtiyaci-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-bilkovin/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/protein-calculator/"/>
   </url>
   <url>
@@ -774,6 +904,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-de-proteinas/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-belka/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/gunluk-protein-ihtiyaci-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-bilkovin/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/protein-calculator/"/>
   </url>
   <url>
@@ -788,6 +919,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-de-proteinas/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-belka/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/gunluk-protein-ihtiyaci-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-bilkovin/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/protein-calculator/"/>
   </url>
   <url>
@@ -802,11 +934,27 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-de-proteinas/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-belka/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/gunluk-protein-ihtiyaci-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-bilkovin/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/protein-calculator/"/>
+  </url>
+  <url>
+    <loc>https://calcalou.com/cs/kalkulacka-bilkovin/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/protein-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/proteinrechner/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/calculadora-de-proteinas/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calcalou.com/fr/calculateur-proteines/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calcalou.com/it/calcolo-proteine/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/kalkulator-bialka/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/calculadora-de-proteinas/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/kalkulyator-belka/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/gunluk-protein-ihtiyaci-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/kalkulacka-bilkovin/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/protein-calculator/"/>
   </url>
   <url>
     <loc>https://calcalou.com/what-is-calcalou/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/what-is-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/co-to-jest-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/was-ist-calcalou/"/>
@@ -817,11 +965,12 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/chto-takoe-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/calcalou-nedir/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/shcho-take-calcalou/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/co-je-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/what-is-calcalou/"/>
   </url>
   <url>
     <loc>https://calcalou.com/pl/co-to-jest-calcalou/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/what-is-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/co-to-jest-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/was-ist-calcalou/"/>
@@ -832,11 +981,12 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/chto-takoe-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/calcalou-nedir/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/shcho-take-calcalou/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/co-je-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/what-is-calcalou/"/>
   </url>
   <url>
     <loc>https://calcalou.com/de/was-ist-calcalou/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/what-is-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/co-to-jest-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/was-ist-calcalou/"/>
@@ -847,11 +997,12 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/chto-takoe-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/calcalou-nedir/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/shcho-take-calcalou/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/co-je-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/what-is-calcalou/"/>
   </url>
   <url>
     <loc>https://calcalou.com/es/que-es-calcalou/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/what-is-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/co-to-jest-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/was-ist-calcalou/"/>
@@ -862,11 +1013,12 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/chto-takoe-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/calcalou-nedir/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/shcho-take-calcalou/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/co-je-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/what-is-calcalou/"/>
   </url>
   <url>
     <loc>https://calcalou.com/fr/quest-ce-que-calcalou/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/what-is-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/co-to-jest-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/was-ist-calcalou/"/>
@@ -877,11 +1029,12 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/chto-takoe-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/calcalou-nedir/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/shcho-take-calcalou/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/co-je-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/what-is-calcalou/"/>
   </url>
   <url>
     <loc>https://calcalou.com/it/cose-calcalou/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/what-is-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/co-to-jest-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/was-ist-calcalou/"/>
@@ -892,11 +1045,12 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/chto-takoe-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/calcalou-nedir/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/shcho-take-calcalou/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/co-je-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/what-is-calcalou/"/>
   </url>
   <url>
     <loc>https://calcalou.com/pt-br/o-que-e-calcalou/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/what-is-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/co-to-jest-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/was-ist-calcalou/"/>
@@ -907,11 +1061,12 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/chto-takoe-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/calcalou-nedir/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/shcho-take-calcalou/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/co-je-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/what-is-calcalou/"/>
   </url>
   <url>
     <loc>https://calcalou.com/ru/chto-takoe-calcalou/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/what-is-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/co-to-jest-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/was-ist-calcalou/"/>
@@ -922,11 +1077,12 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/chto-takoe-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/calcalou-nedir/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/shcho-take-calcalou/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/co-je-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/what-is-calcalou/"/>
   </url>
   <url>
     <loc>https://calcalou.com/tr/calcalou-nedir/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/what-is-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/co-to-jest-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/was-ist-calcalou/"/>
@@ -937,11 +1093,12 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/chto-takoe-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/calcalou-nedir/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/shcho-take-calcalou/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/co-je-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/what-is-calcalou/"/>
   </url>
   <url>
     <loc>https://calcalou.com/uk/shcho-take-calcalou/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/what-is-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/co-to-jest-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/was-ist-calcalou/"/>
@@ -952,11 +1109,28 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/chto-takoe-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/calcalou-nedir/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/shcho-take-calcalou/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/co-je-calcalou/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/what-is-calcalou/"/>
+  </url>
+  <url>
+    <loc>https://calcalou.com/cs/co-je-calcalou/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/what-is-calcalou/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/co-to-jest-calcalou/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/was-ist-calcalou/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/que-es-calcalou/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calcalou.com/fr/quest-ce-que-calcalou/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calcalou.com/it/cose-calcalou/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/o-que-e-calcalou/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/chto-takoe-calcalou/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/calcalou-nedir/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/shcho-take-calcalou/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/co-je-calcalou/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/what-is-calcalou/"/>
   </url>
   <url>
     <loc>https://calcalou.com/protein-tracker-app/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/protein-tracker-app/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/aplikacja-do-liczenia-bialka/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/eiweiss-tracker-app/"/>
@@ -967,11 +1141,12 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/prilozhenie-dlya-podschyota-belka/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/protein-takip-uygulamasi/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/zastosunok-dlya-pidrakhunku-bilka/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/aplikace-na-sledovani-bilkovin/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/protein-tracker-app/"/>
   </url>
   <url>
     <loc>https://calcalou.com/pl/aplikacja-do-liczenia-bialka/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/protein-tracker-app/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/aplikacja-do-liczenia-bialka/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/eiweiss-tracker-app/"/>
@@ -982,11 +1157,12 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/prilozhenie-dlya-podschyota-belka/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/protein-takip-uygulamasi/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/zastosunok-dlya-pidrakhunku-bilka/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/aplikace-na-sledovani-bilkovin/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/protein-tracker-app/"/>
   </url>
   <url>
     <loc>https://calcalou.com/de/eiweiss-tracker-app/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/protein-tracker-app/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/aplikacja-do-liczenia-bialka/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/eiweiss-tracker-app/"/>
@@ -997,11 +1173,12 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/prilozhenie-dlya-podschyota-belka/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/protein-takip-uygulamasi/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/zastosunok-dlya-pidrakhunku-bilka/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/aplikace-na-sledovani-bilkovin/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/protein-tracker-app/"/>
   </url>
   <url>
     <loc>https://calcalou.com/es/app-para-contar-proteinas/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/protein-tracker-app/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/aplikacja-do-liczenia-bialka/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/eiweiss-tracker-app/"/>
@@ -1012,11 +1189,12 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/prilozhenie-dlya-podschyota-belka/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/protein-takip-uygulamasi/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/zastosunok-dlya-pidrakhunku-bilka/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/aplikace-na-sledovani-bilkovin/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/protein-tracker-app/"/>
   </url>
   <url>
     <loc>https://calcalou.com/fr/application-suivi-proteines/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/protein-tracker-app/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/aplikacja-do-liczenia-bialka/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/eiweiss-tracker-app/"/>
@@ -1027,11 +1205,12 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/prilozhenie-dlya-podschyota-belka/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/protein-takip-uygulamasi/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/zastosunok-dlya-pidrakhunku-bilka/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/aplikace-na-sledovani-bilkovin/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/protein-tracker-app/"/>
   </url>
   <url>
     <loc>https://calcalou.com/it/app-per-contare-le-proteine/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/protein-tracker-app/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/aplikacja-do-liczenia-bialka/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/eiweiss-tracker-app/"/>
@@ -1042,11 +1221,12 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/prilozhenie-dlya-podschyota-belka/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/protein-takip-uygulamasi/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/zastosunok-dlya-pidrakhunku-bilka/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/aplikace-na-sledovani-bilkovin/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/protein-tracker-app/"/>
   </url>
   <url>
     <loc>https://calcalou.com/pt-br/app-para-contar-proteinas/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/protein-tracker-app/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/aplikacja-do-liczenia-bialka/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/eiweiss-tracker-app/"/>
@@ -1057,11 +1237,12 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/prilozhenie-dlya-podschyota-belka/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/protein-takip-uygulamasi/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/zastosunok-dlya-pidrakhunku-bilka/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/aplikace-na-sledovani-bilkovin/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/protein-tracker-app/"/>
   </url>
   <url>
     <loc>https://calcalou.com/ru/prilozhenie-dlya-podschyota-belka/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/protein-tracker-app/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/aplikacja-do-liczenia-bialka/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/eiweiss-tracker-app/"/>
@@ -1072,11 +1253,12 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/prilozhenie-dlya-podschyota-belka/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/protein-takip-uygulamasi/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/zastosunok-dlya-pidrakhunku-bilka/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/aplikace-na-sledovani-bilkovin/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/protein-tracker-app/"/>
   </url>
   <url>
     <loc>https://calcalou.com/tr/protein-takip-uygulamasi/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/protein-tracker-app/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/aplikacja-do-liczenia-bialka/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/eiweiss-tracker-app/"/>
@@ -1087,11 +1269,12 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/prilozhenie-dlya-podschyota-belka/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/protein-takip-uygulamasi/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/zastosunok-dlya-pidrakhunku-bilka/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/aplikace-na-sledovani-bilkovin/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/protein-tracker-app/"/>
   </url>
   <url>
     <loc>https://calcalou.com/uk/zastosunok-dlya-pidrakhunku-bilka/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/protein-tracker-app/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/aplikacja-do-liczenia-bialka/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/eiweiss-tracker-app/"/>
@@ -1102,6 +1285,23 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/prilozhenie-dlya-podschyota-belka/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/protein-takip-uygulamasi/"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/zastosunok-dlya-pidrakhunku-bilka/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/aplikace-na-sledovani-bilkovin/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/protein-tracker-app/"/>
+  </url>
+  <url>
+    <loc>https://calcalou.com/cs/aplikace-na-sledovani-bilkovin/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calcalou.com/protein-tracker-app/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://calcalou.com/pl/aplikacja-do-liczenia-bialka/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calcalou.com/de/eiweiss-tracker-app/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calcalou.com/es/app-para-contar-proteinas/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calcalou.com/fr/application-suivi-proteines/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calcalou.com/it/app-per-contare-le-proteine/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://calcalou.com/pt-br/app-para-contar-proteinas/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://calcalou.com/ru/prilozhenie-dlya-podschyota-belka/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://calcalou.com/tr/protein-takip-uygulamasi/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://calcalou.com/uk/zastosunok-dlya-pidrakhunku-bilka/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://calcalou.com/cs/aplikace-na-sledovani-bilkovin/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcalou.com/protein-tracker-app/"/>
   </url>
   <url>

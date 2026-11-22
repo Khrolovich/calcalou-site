@@ -1,0 +1,64 @@
+{
+  "title": "Podmínky používání Calcalou",
+  "description": "Podmínky používání Calcalou, počítadla kalorií a bílkovin: předplatné, AI odhady, přijatelné užívání, tvůj obsah, smazání účtu a odpovědnost.",
+  "updated": "Poslední aktualizace 18. listopadu 2026",
+  "sections": [
+    ["Kdo jsme a s čím souhlasíš", [
+      "Calcalou (aplikace, „Calcalou“) a web calcalou.com vyvíjí a provozuje Vladimir Khrolovich, nezávislý vývojář („my“, „nás“). Stažením Calcalou, vytvořením účtu nebo používáním aplikace či webu souhlasíš s těmito Podmínkami. Pokud nesouhlasíš, aplikaci ani web nepoužívej.",
+      "Tyto Podmínky platí společně s našimi [Zásadami ochrany osobních údajů](/privacy/). Popis funkce nebo verze aplikace se vztahuje na verzi, která je ti dostupná."
+    ]],
+    ["Způsobilost a tvůj účet", [
+      "Calcalou je určena pro osoby od 13 let, s ohledem na věkové požadavky ve tvé zemi. AI skeny fotek a nákupy Premium jsou určeny pro osoby od 18 let, a to jen tam, kde jsou nabízeny.",
+      "Přihlášení je povinné. Odpovídáš za zabezpečení svých přihlašovacích údajů a za vše, co se pod tvým účtem děje. Uváděj pravdivé údaje a dej nám vědět, pokud máš podezření, že byl tvůj účet zneužit."
+    ]],
+    ["Nejde o lékařskou radu", [
+      "Calcalou je nástroj pro celkovou pohodu a zapisování jídla. Není zdravotnickým prostředkem a nediagnostikuje, neléčí ani nevyléčí žádné onemocnění a žádnému nepředchází. Hodnoty kalorií a bílkovin, cíle, výpočty, série a návrhy jsou obecné odhady, ne osobní lékařské, nutriční ani dietologické rady.",
+      "Poraď se s kvalifikovaným zdravotníkem, než změníš stravu nebo začneš s cvičebním či hubnoucím programem, a také pokud jsi těhotná, máš zdravotní potíže nebo poruchu příjmu potravy, nebo je ti méně než 18 let. Nikdy kvůli něčemu v Calcalou neignoruj ani neodkládej odbornou radu."
+    ]],
+    ["AI a údaje o potravinách jsou odhady", [
+      "AI skeny fotek i údaje o potravinách, čárových kódech a nutričních hodnotách jsou přibližné. Porce, oleje, omáčky a míchaná jídla se odhadují obzvlášť těžko a údaje o produktech od třetích stran mohou být neúplné nebo chybné. Chybějící hodnota neznamená nulu.",
+      "Tam, kde záleží na přesnosti, kontroluj etikety a vážená množství a každý výsledek před uložením zkontroluj a uprav. Nezaručujeme, že je jakýkoli odhad nebo údaj přesný, úplný nebo vhodný pro tvůj účel. Co zapíšeš a co s tím uděláš, rozhoduješ ty."
+    ]],
+    ["Předplatné a nákupy", [
+      "Calcalou Premium a další placené funkce se prodávají jako předplatné nebo nákupy přes Apple App Store nebo Google Play. Cena, zúčtovací období, případná zkušební verze zdarma nebo úvodní nabídka a zahrnuté funkce se zobrazují v aplikaci a v obchodě před nákupem.",
+      "Platbu přijímá Apple nebo Google, ne my. Předplatné se automaticky obnovuje na stejné období, pokud ho nezrušíš v nastavení účtu v obchodě před koncem aktuálního období, ve lhůtě, kterou obchod stanoví. Smazáním aplikace nebo účtu Calcalou se předplatné nezruší. Zkušební verze zdarma nebo úvodní cena, kde jsou nabízeny, přejdou na běžnou placenou cenu, pokud je včas nezrušíš.",
+      "Zúčtování, obnovení, zrušení a vrácení peněz řeší obchod podle svých vlastních podmínek; předplatné v obchodě nemůžeme sami zrušit ani vrátit platbu provedenou v obchodě. Ceny, nabídky a funkce zahrnuté v tarifu se mohou změnit; kdy se změna projeví u stávajícího předplatného, určují pravidla obchodu."
+    ]],
+    ["Přijatelné užívání", [
+      "Používej Calcalou jen k zákonným, osobním účelům. Nezneužívej ji: neporušuj zákon ani práva druhých; neprováděj zpětnou analýzu aplikace, nekopíruj ji ani ji dále neprodávej; nenarušuj její fungování ani zabezpečení; nepřistupuj k ní automatizovaně, například scrapingem nebo boty; neobcházej limity, příděly skenů zdarma, odměny za pozvánky ani ověření věku; neobtěžuj ostatní ani se za nikoho nevydávej; a nenahrávej obsah, který je nezákonný, škodlivý nebo který nemáš právo sdílet.",
+      "Pokud porušíš tyto Podmínky nebo pokud nám to ukládá zákon, můžeme přístup omezit, pozastavit nebo ukončit."
+    ]],
+    ["Tvůj obsah", [
+      "To, co zadáš nebo nahraješ, například záznamy v deníku, cíle, fotky a nastavení, zůstává tvoje. Uděluješ nám celosvětovou nevýhradní licenci tento obsah ukládat, zpracovávat a zobrazovat jen v rozsahu potřebném k provozu a zlepšování Calcalou pro tebe, včetně odeslání fotky službě AI, když požádáš o sken, jak popisují [Zásady ochrany osobních údajů](/privacy/).",
+      "Za svůj obsah odpovídáš ty a zaručuješ, že máš právo ho poskytnout."
+    ]],
+    ["Naše práva", [
+      "Calcalou, její design, texty, maskot Lou, název a logo patří nám nebo našim poskytovatelům licencí a jsou chráněny zákonem. Udělujeme ti omezenou, osobní, nevýhradní, nepřevoditelnou a odvolatelnou licenci používat aplikaci na vlastních zařízeních pro vlastní nekomerční potřebu podle těchto Podmínek. Komponenty třetích stran se řídí vlastními licencemi. Všechna ostatní práva jsou vyhrazena."
+    ]],
+    ["Smazání účtu a ukončení používání", [
+      "Calcalou můžeš kdykoli přestat používat. Účet můžeš smazat v aplikaci (Profil → Smazat účet) nebo e-mailem, jak popisuje [stránka o smazání účtu](/delete-account/). Smazáním účtu se odstraní tvoje data, jak je popsáno tam a v Zásadách ochrany osobních údajů, ale nezruší se předplatné v obchodě: to nejdřív zruš v obchodě.",
+      "Tvůj účet můžeme pozastavit nebo zrušit, pokud porušíš tyto Podmínky, pokud to vyžaduje zákon nebo pokud aplikaci přestaneme nabízet."
+    ]],
+    ["Dostupnost a změny aplikace", [
+      "Snažíme se, aby Calcalou fungovala, ale poskytujeme ji tak, jak je dostupná. Může být přerušena, měnit se nebo přicházet o funkce, nebo může být ukončena, a některé funkce se liší podle platformy, země, věku a verze aplikace."
+    ]],
+    ["Vyloučení záruk a omezení odpovědnosti", [
+      "V nejširším rozsahu, který zákon dovoluje, jsou Calcalou a web poskytovány „tak, jak jsou“ a „tak, jak jsou dostupné“, bez jakýchkoli výslovných či předpokládaných záruk, včetně přesnosti, vhodnosti pro určitý účel a nepřerušovaného či bezchybného provozu.",
+      "V nejširším rozsahu, který zákon dovoluje, neodpovídáme za nepřímé, nahodilé, zvláštní, následné ani sankční škody, za ztrátu dat, zisku či příležitostí ani za jakýkoli zdravotní, stravovací, hmotnostní či jiný výsledek nebo rozhodnutí založené na Calcalou nebo jejích odhadech. Naše celková odpovědnost za jakýkoli nárok související s Calcalou je omezena částkou, kterou jsi za ni zaplatil během 12 měsíců před uplatněním nároku.",
+      "Nic v těchto Podmínkách neomezuje odpovědnost, kterou podle zákona omezit nelze, například za podvod, za smrt nebo újmu na zdraví způsobenou nedbalostí, ani tvá kogentní spotřebitelská práva."
+    ]],
+    ["Podmínky App Store a Google Play", [
+      "Na iPhonu a iPadu se používání aplikace řídí také licenční smlouvou společnosti Apple [Standard Licensed Application End User License Agreement](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) (Apple EULA). Apple neodpovídá za aplikaci, její údržbu, podporu ani za jakékoli nároky, které se jí týkají, a Apple a jeho dceřiné společnosti jsou oprávněnými třetími stranami Apple EULA.",
+      "Na Androidu se používání Google Play a nákupů v něm řídí také podmínkami společnosti Google. Pokud jsou tyto Podmínky v rozporu s Apple EULA pro verzi z App Store, má Apple EULA přednost v požadovaném rozsahu."
+    ]],
+    ["Změny těchto Podmínek", [
+      "Tyto Podmínky můžeme aktualizovat, například když se změní funkce nebo zákon. Novou verzi zveřejníme zde s jejím datem a o podstatných změnách tě můžeme informovat i v aplikaci nebo e-mailem. Pokud budeš Calcalou používat i poté, co změna nabude účinnosti, přijímáš nové Podmínky; pokud je nepřijímáš, přestaň Calcalou používat a smaž svůj účet."
+    ]],
+    ["Rozhodné právo a spory", [
+      "Tyto Podmínky se řídí právem země, kde je vývojář usazen, s vyloučením jejích kolizních norem, a spory řeší tamní soudy. Tím nejsi zbaven kogentní spotřebitelské ochrany země svého bydliště ani práva podat žalobu u místních soudů. Prosíme, napiš nám nejdřív, abychom se mohli pokusit problém vyřešit neformálně."
+    ]],
+    ["Kontakt", [
+      "Dotazy k těmto Podmínkám: support@calcalou.com."
+    ]]
+  ]
+}

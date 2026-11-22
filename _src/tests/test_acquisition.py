@@ -11,12 +11,13 @@ SRC = Path(__file__).resolve().parent.parent
 SITE = SRC.parent
 sys.path.insert(0, str(SRC))
 import acquisition
+from locales import extra_locales
 import build
 
 
 class Acquisition(unittest.TestCase):
     def test_product_locales_and_visible_schema(self):
-        self.assertEqual(set(acquisition.PRODUCT), {'en', 'pl', 'de', 'es', 'fr', 'it', 'pt-BR', 'ru', 'tr', 'uk'})
+        self.assertEqual(set(acquisition.PRODUCT), {'en', 'pl', 'de', 'es', 'fr', 'it', 'pt-BR', 'ru', 'tr', 'uk'} | {m['code'] for m in extra_locales()})
         for code, t in acquisition.PRODUCT.items():
             with self.subTest(locale=code):
                 html = (SITE / t['path'].strip('/') / 'index.html').read_text()

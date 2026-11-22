@@ -126,7 +126,7 @@
     var nav = win.navigator || {};
     var platform = detectPlatform(nav.userAgent, nav.platform, nav.maxTouchPoints);
 
-    var landing = /^\/(?:(?:de|es|fr|it|pl|pt-br|ru|tr)\/?)?$/.test(win.location.pathname || '/');
+    var landing = /^\/(?:(?:af|az|be|bg|ca|cs|da|de|el|es|et|eu|fi|fil|fr|gl|hr|hu|hy|is|it|ka|kk|lt|lv|mk|mn|nb|nl|pl|pt-br|ro|ru|sk|sl|sq|sr|sv|tr|uk)\/?)?$/.test(win.location.pathname || '/');
     if (raw && landing) {
       if (platform === 'ios') { win.location.replace(links.ios); return; }
       if (platform === 'android' && PLAY_ENABLED) { win.location.replace(links.android); return; }

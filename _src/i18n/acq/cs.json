@@ -1,0 +1,41 @@
+{
+  "title": "Co je Calcalou? Počítadlo kalorií a bílkovin",
+  "summary": "Calcalou je počítadlo kalorií a bílkovin pro iPhone, iPad a Android s Lou, přátelským maskotem, který ti pomůže udělat z denního zapisování zvyk.",
+  "version": "Tento průvodce popisuje verzi 1.7. Dostupnost v obchodech se může lišit podle platformy a země; pokud ti jde o konkrétní funkci, před stažením zkontroluj verzi, která je ti dostupná.",
+  "features_title": "Co Calcalou umí",
+  "features": [
+    "Zapisuj kalorie a bílkoviny ručně zdarma.",
+    "Skenuj čárové kódy produktů zdarma. Nutriční hodnoty závisí na dostupných údajích o produktu; zkontroluj etiketu a velikost porce.",
+    "Nastav si cíl pro bílkoviny podle tělesné hmotnosti: Calcalou ukáže výpočet (hmotnost × gramy na kilogram), dovolí ho upravit a přijme i tvoje vlastní číslo.",
+    "Odhadni jídlo z fotky pomocí AI, včetně kalorií, bílkovin, tuků a sacharidů u každé potraviny, pokud jsou k dispozici. Před uložením výsledek zkontroluj a uprav.",
+    "Přidávej vodu po sklenicích nebo jako vlastní množství v ml.",
+    "Nastav si několik připomínek, každou s vlastním časem a dny v týdnu.",
+    "Drž si s Lou sérii zapisování a sleduj dnešní kalorie nebo bílkoviny ve widgetu na ploše. Funkce widgetů se liší podle platformy.",
+    "Exportuj svůj deník jako CSV za měsíc, čtvrtletí, rok nebo celou dobu.",
+    "Ve verzi 1.7 používej aplikaci ve 41 jazycích rozhraní. Aby se deník ukládal do tvého účtu, je potřeba se přihlásit."
+  ],
+  "faq_title": "Otázky o Calcalou",
+  "faq": [
+    [
+      "Je Calcalou zdarma?",
+      "Ruční zápis kalorií a bílkovin, skenování čárových kódů a sledování vody jsou zdarma. AI skeny jsou součástí Premium; kde je to nabízeno, může si účet jednou vyzkoušet až 3 skeny zdarma. Ceny předplatného a podmínky dostupnosti najdeš v aplikaci a v obchodě."
+    ],
+    [
+      "Počítá sken fotky bílkoviny?",
+      "Ve verzi 1.7 umí AI skeny fotek odhadnout kalorie, bílkoviny, tuky a sacharidy u každé rozpoznané potraviny. Odhady mohou být nepřesné, hlavně u porcí, olejů a míchaných jídel. Chybějící nutriční hodnoty neznamenají nulu: zkontroluj je nebo je zadej ručně."
+    ],
+    [
+      "Kdo může Calcalou používat?",
+      "Calcalou je určena pro uživatele od 13 let, s ohledem na místní věkové požadavky. Ve verzi 1.7 vyžadují AI skeny a nákupy Premium věk alespoň 18 let a podporovaný region. Calcalou je aplikace pro celkovou pohodu, ne zdravotnický prostředek."
+    ],
+    [
+      "Můžu ji používat bez přihlášení?",
+      "Přihlášení je povinné. Tvůj deník je spojený s tvým účtem; když se vracíš na jiném zařízení, použij stejný způsob přihlášení."
+    ]
+  ],
+  "more": "Porovnej počítadla a vyber si postup",
+  "stores": "Stáhni Calcalou",
+  "updated": "Zkontrolováno 17. listopadu 2026",
+  "privacy": "Soukromí",
+  "support": "Podpora"
+}

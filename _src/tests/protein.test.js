@@ -58,7 +58,7 @@ test("EN copy examples are the calculator's own numbers", () => {
 });
 
 test('protein calculator pages: every locale, campaign links, script, sources, no placeholders', () => {
-  assert.ok(SETS.protein && Object.keys(SETS.protein).length === 9);
+  assert.ok(SETS.protein && Object.keys(SETS.protein).length >= 9);
   for (const [lang, page] of Object.entries(SETS.protein)) {
     const html = fs.readFileSync(path.join(SITE, page, 'index.html'), 'utf8');
     const links = L.storeLinks('web-protein-' + lang.toLowerCase());

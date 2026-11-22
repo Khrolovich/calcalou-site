@@ -1,0 +1,49 @@
+{
+  "title": "Aplikace na sledování bílkovin: bílkoviny a kalorie",
+  "summary": "Calcalou je aplikace na sledování bílkovin pro iPhone, iPad a Android. Zapisuj bílkoviny vedle kalorií, nastav si cíl podle hmotnosti a odhaduj jídla z fotky.",
+  "features_title": "Sledování bílkovin v Calcalou",
+  "features": [
+    "Zapisuj bílkoviny ke každému záznamu: zadej je sám zdarma, nebo je doplň z čárového kódu či AI skenu fotky.",
+    "Nastav si denní cíl pro bílkoviny podle tělesné hmotnosti. Calcalou ukáže výpočet (hmotnost × gramy na kilogram), dovolí ho upravit od 0,8 do 2,0 g/kg a přijme i tvoje vlastní číslo.",
+    "Sleduj bílkoviny vedle kalorií na obrazovce Dnes, v týdenním přehledu i ve Statistikách a u každého widgetu si vyber bílkoviny nebo kalorie.",
+    "AI skeny fotek odhadnou bílkoviny, tuky a sacharidy u každé potraviny, vše lze před uložením upravit. Odhady mohou být nepřesné; skeny jsou součástí Premium a platí pro ně věkové a regionální omezení.",
+    "Skenování čárových kódů je zdarma. Nutriční hodnoty závisí na údajích o produktu, proto zkontroluj etiketu a porci.",
+    "Série, flexibilní připomínky a sledování vody ti pomohou u zapisování vydržet."
+  ],
+  "sections": [
+    [
+      "Jak sledovat bílkoviny v Calcalou",
+      "Klepni na Přidat a zadej kalorie, bílkoviny, tuky a sacharidy toho, co jsi snědl, nebo je doplň naskenováním čárového kódu či fotky. Každé pole je volitelné, takže můžeš zapsat i jen bílkoviny. Bílkoviny se zobrazují vedle kalorií na obrazovce Dnes i v přehledech."
+    ],
+    [
+      "Nastav si cíl pro bílkoviny, který ti sedí",
+      "Zvol Podle tělesné hmotnosti a Calcalou vynásobí tvou hmotnost gramy na kilogram (výchozí 1,2) a ukáže výpočet. Hmotnost se bere z tvého profilu, nebo pokud je propojíš, z Apple Health či Health Connect. Koeficient uprav od 0,8 do 2,0 g/kg nebo zadej vlastní cíl. Cíl je výchozí bod, ne lékařská rada; kalkulačka bílkovin ukazuje referenční rozmezí."
+    ],
+    [
+      "Fotky, čárové kódy nebo ručně",
+      "Skeny fotek používají AI k odhadu kalorií, bílkovin, tuků a sacharidů u každé potraviny. Výsledek zkontroluj: porce, oleje a míchaná jídla se snadno odhadnou špatně a chybějící hodnota neznamená nulu. Skenování čárových kódů a ruční zápis jsou zdarma; údaje o produktech se liší, proto zkontroluj etiketu."
+    ],
+    [
+      "Kdo ji může používat",
+      "Calcalou je určena pro uživatele od 13 let, s ohledem na místní věkové požadavky. Ve verzi 1.7 vyžadují AI skeny a nákupy Premium věk alespoň 18 let a podporovaný region. Přihlášení je povinné. Calcalou je aplikace pro celkovou pohodu, ne zdravotnický prostředek."
+    ]
+  ],
+  "faq": [
+    [
+      "Jak nejlépe sledovat bílkoviny?",
+      "Používej způsob, u kterého vydržíš. Zapisuj bílkoviny ke každému jídlu, u balených potravin kontroluj etikety a odhady z fotek ber jako výchozí bod, který můžeš upravit. V Calcalou můžeš bílkoviny zadat ručně, naskenovat čárový kód nebo použít AI sken fotky."
+    ],
+    [
+      "Kolik bílkovin bych měl denně sníst?",
+      "Záleží na tvém těle, cílech a zdraví. Pro dospělé je referenční příjem EFSA 0,83 g na kg tělesné hmotnosti; stanovisko International Society of Sports Nutrition z roku 2026 uvádí 1,2–1,6 g na kg pro hubnutí a 1,6–2,2 g na kg s odporovým tréninkem. Kalkulačka bílkovin ukazuje všechny tři hodnoty. Jde o obecné doporučení, ne o lékařskou radu."
+    ],
+    [
+      "Počítá Calcalou bílkoviny z fotky?",
+      "Ano. Ve verzi 1.7 odhadne AI sken fotky kalorie, bílkoviny, tuky a sacharidy u každé rozpoznané potraviny. Odhady mohou být nepřesné, proto je před uložením zkontroluj a uprav."
+    ],
+    [
+      "Je sledování bílkovin zdarma?",
+      "Ruční zápis bílkovin, skenování čárových kódů a cíle pro bílkoviny jsou zdarma. AI skeny fotek jsou součástí Premium; kde je to nabízeno, může si účet jednou vyzkoušet až 3 skeny zdarma. Ceny a podmínky dostupnosti najdeš v aplikaci a v obchodě."
+    ]
+  ]
+}

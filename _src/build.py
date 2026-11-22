@@ -13,6 +13,7 @@ import sys
 from pathlib import Path
 from urllib.parse import quote
 import acquisition
+from locales import extra_locales, prefix
 
 
 SRC = Path(__file__).resolve().parent
@@ -31,9 +32,13 @@ LOCALES = [
     ("ru", "/ru/", "Русский", "ru_RU", "ru", " "),
     ("tr", "/tr/", "Türkçe", "tr_TR", "tr", "."),
 ]
+EXTRA = extra_locales()
 # The home page also ships in uk, which has no calculators or food pages yet.
 HOME_LOCALES = LOCALES + [("uk", "/uk/", "Українська", "uk_UA", "uk", " ")]
-OG_LOCALES = {code for code, *_ in HOME_LOCALES}
+LOCALES += [(m["code"], prefix(m["code"]), m["name"], m["og_locale"], "en", m["sep"]) for m in EXTRA]
+HOME_LOCALES += LOCALES[9:]
+OG_LOCALES = {code for code, *_ in HOME_LOCALES if (SITE / "assets" / "img" / f"og-{code.lower()}.jpg").exists()}
+DECIMAL = {m["code"]: m["dec"] for m in EXTRA}
 
 
 def og_image(code):
@@ -53,6 +58,7 @@ CALC_LOCALES = [
     ("ru", "/ru/kalkulyator-osnovnogo-obmena/", "metric"),
     ("tr", "/tr/bazal-metabolizma-hesaplama/", "metric"),
 ]
+CALC_LOCALES += [(m["code"], prefix(m["code"]) + m["slugs"]["bmr"] + "/", m["units"]) for m in EXTRA]
 CALC_FACTORS = ["1.2", "1.375", "1.55", "1.725", "1.9"]
 TDEE_PATHS = {
     "en": "/tdee-calculator/", "de": "/de/kalorienbedarf-rechner/", "es": "/es/calculadora-de-calorias/",
@@ -67,9 +73,12 @@ DEFICIT_PATHS = {
     "pt-BR": "/pt-br/calculadora-deficit-calorico/", "ru": "/ru/kalkulyator-deficita-kaloriy/",
     "tr": "/tr/kalori-acigi-hesaplama/",
 }
+TDEE_PATHS.update({m["code"]: prefix(m["code"]) + m["slugs"]["tdee"] + "/" for m in EXTRA})
+DEFICIT_PATHS.update({m["code"]: prefix(m["code"]) + m["slugs"]["deficit"] + "/" for m in EXTRA})
 DEFICITS = [250, 500, 750, 1000]
 # Thousands separator as Intl.NumberFormat(lang) prints it in calc.js (es and pl do not group 4-digit numbers).
 CALC_SEP = {"en": ",", "de": ".", "es": "", "fr": "\u202f", "it": ".", "pl": "", "pt-BR": ".", "ru": "\u00a0", "tr": "."}
+CALC_SEP.update({m["code"]: m["sep"] for m in EXTRA})
 PROTEIN_PATHS = acquisition.PROTEIN_CALC_PATHS
 # page set: (mode, i18n folder for strings over i18n/calc, store ct prefix, FAQ keys, {code: path})
 CALC_PAGES = {
@@ -322,7 +331,7 @@ def render_all():
             gp={"code": gp_code, "w": gp_w, "as_w": assets["appStore"][gp_code][0]}, calcs=calcs, links=store_links(LANDING_CT),
             protein_guide=acquisition.PROTEIN[code]["path"], protein_calc=acquisition.PROTEIN_CALC_PATHS.get(code),
             num=lambda n, s=sep: f"{n:,}".replace(",", s),
-            dec=lambda x, p="." if code == "en" else ",": f"{x:.1f}".replace(".", p), year=year)
+            dec=lambda x, p=DECIMAL.get(code, "." if code == "en" else ","): f"{x:.1f}".replace(".", p), year=year)
         pages[SITE / path.strip("/") / "index.html"] = html
     calc_template = env.get_template("calc.html")
     units_by_code = {code: units for code, _, units in CALC_LOCALES}
@@ -333,7 +342,7 @@ def render_all():
             html = calc_template.render(
                 mode=mode, lang=code, path=path, home=home, base=BASE, og_locale=og_locale, t=strings[code],
                 c=page_strings[name][code], locales=locales, current={"name": lang_name, "short": code.split("-")[0]},
-                units=units_by_code[code], factors=[f if code == "en" else f.replace(".", ",") for f in CALC_FACTORS],
+                units=units_by_code[code], factors=[f.replace(".", DECIMAL.get(code, "." if code == "en" else ",")) for f in CALC_FACTORS],
                 deficits=DEFICITS, num=lambda n, s=CALC_SEP[code]: f"{n:,}".replace(",", s),
                 others=[{"path": sets[o][code], "label": page_strings[o][code]["link.footer"]}
                         for o in CALC_PAGES if o != name],
