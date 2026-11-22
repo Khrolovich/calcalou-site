@@ -1,0 +1,18 @@
+{
+  "meta.title": "TDEE-kalkylator: total daglig energiförbrukning | Calcalou",
+  "meta.description": "Gratis TDEE-kalkylator: uppskatta hur många kalorier du förbränner per dag utifrån din BMR och aktivitetsnivå (Mifflin-St Jeor). Metriska eller imperiska enheter.",
+  "meta.og_title": "TDEE-kalkylator: total daglig energiförbrukning",
+  "meta.og_description": "Uppskatta din totala dagliga energiförbrukning utifrån din BMR och aktivitetsnivå, i kg/cm eller lb/ft.",
+  "link.footer": "TDEE-kalkylator",
+  "h1": "TDEE-kalkylator",
+  "h1.sub": "total daglig energiförbrukning",
+  "lead": "Uppskatta hur många kalorier du förbränner en vanlig dag: energin i vila (BMR) plus vardagsrörelse och träning.",
+  "form.label": "TDEE-kalkylator",
+  "faq.tdee.q": "Vad är TDEE?",
+  "faq.tdee.a": "TDEE, total daglig energiförbrukning, uppskattar alla kalorier du förbränner under en dag: din BMR i vila plus vardagsrörelse och träning. Den kallas ofta underhållskalorier, alltså det intag som håller vikten ungefär oförändrad.",
+  "faq.difference.q": "Vad är skillnaden mellan BMR och TDEE?",
+  "faq.difference.a": "BMR är den energi kroppen gör av med i fullständig vila. TDEE multiplicerar BMR med en aktivitetsfaktor, från 1,2 vid lite eller ingen träning till 1,9 vid fysiskt arbete eller träning två gånger om dagen, så den är alltid högre än BMR.",
+  "faq.use.q": "Vad kan jag göra med min TDEE?",
+  "faq.use.a": "Använd den som utgångspunkt för ett dagligt kalorimål: äter du ungefär din TDEE är intag och förbränning ungefär i balans, äter du mindre blir det ett underskott och äter du mer ett överskott. Det är en första uppskattning, så jämför den med hur vikten faktiskt förändras under några veckor.",
+  "cta.title": "Följ ätit mot förbränt med Lou."
+}
