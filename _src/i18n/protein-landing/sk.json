@@ -1,0 +1,49 @@
+{
+  "title": "Aplikácia na sledovanie bielkovín: zapisuj bielkoviny a kalórie",
+  "summary": "Calcalou je aplikácia na sledovanie bielkovín pre iPhone, iPad a Android. Zapisuj bielkoviny vedľa kalórií, nastav si cieľ podľa telesnej hmotnosti a odhaduj jedlá z fotky.",
+  "features_title": "Sledovanie bielkovín v Calcalou",
+  "features": [
+    "Zapisuj bielkoviny pri každom zázname: napíš ich sám zadarmo alebo ich doplň z čiarového kódu či zo skenu fotky pomocou AI.",
+    "Nastav si denný cieľ pre bielkoviny podľa telesnej hmotnosti. Calcalou ukáže výpočet (hmotnosť × gramy na kilogram), dovolí ho upraviť od 0,8 do 2,0 g/kg a prijme aj tvoje vlastné číslo.",
+    "Sleduj bielkoviny vedľa kalórií na obrazovke Dnes, v týždennom prehľade aj v Štatistikách a pre každý widget si vyber bielkoviny alebo kalórie.",
+    "Skenovanie fotiek pomocou AI odhadne bielkoviny, tuky a sacharidy pre každú potravinu, všetko sa dá pred uložením upraviť. Odhady sa môžu mýliť; skeny sú súčasťou Premium s obmedzeniami podľa veku a regiónu.",
+    "Skenovanie čiarových kódov je zadarmo. Nutričné hodnoty závisia od údajov o produkte, preto skontroluj etiketu a porciu.",
+    "Série, flexibilné pripomienky a sledovanie vody ti pomôžu v zapisovaní pokračovať."
+  ],
+  "sections": [
+    [
+      "Ako sledovať bielkoviny v Calcalou",
+      "Ťukni na Pridať a zadaj kalórie, bielkoviny, tuky a sacharidy toho, čo si zjedol, alebo naskenuj čiarový kód či fotku a nechaj ich doplniť. Všetky polia sú voliteľné, takže môžeš zapísať len bielkoviny. Bielkoviny sa zobrazujú vedľa kalórií na obrazovke Dnes aj v prehľadoch."
+    ],
+    [
+      "Nastav si cieľ pre bielkoviny, ktorý ti sedí",
+      "Vyber Podľa telesnej hmotnosti a Calcalou vynásobí tvoju hmotnosť gramami na kilogram (predvolene 1,2) a ukáže výpočet. Hmotnosť sa berie z tvojho profilu alebo, ak ich prepojíš, z Apple Zdravie či Health Connect. Uprav koeficient od 0,8 do 2,0 g/kg alebo zadaj vlastný cieľ. Cieľ je východiskový bod, nie lekárska rada; kalkulačka bielkovín ukazuje referenčné rozpätia."
+    ],
+    [
+      "Fotky, čiarové kódy alebo ručne",
+      "Skeny fotiek používajú AI na odhad kalórií, bielkovín, tukov a sacharidov pre každú potravinu. Výsledok skontroluj: porcie, oleje a miešané jedlá sa ľahko odhadnú zle a chýbajúca hodnota nie je nula. Skenovanie čiarových kódov a ručné zapisovanie sú zadarmo; údaje o produktoch sa líšia, preto skontroluj etiketu."
+    ],
+    [
+      "Kto ju môže používať",
+      "Calcalou je určené pre ľudí od 13 rokov v súlade s miestnymi vekovými požiadavkami. Vo verzii 1.7 vyžadujú skeny pomocou AI a nákupy Premium vek aspoň 18 rokov a región, kde sú dostupné. Prihlásenie je povinné. Calcalou je aplikácia pre všeobecný wellness, nie zdravotnícka pomôcka."
+    ]
+  ],
+  "faq": [
+    [
+      "Aký je najlepší spôsob sledovania bielkovín?",
+      "Ten, pri ktorom vydržíš. Zapisuj bielkoviny ku každému jedlu, kontroluj etikety balených potravín a odhady z fotiek ber ako východisko, ktoré môžeš upraviť. V Calcalou môžeš bielkoviny napísať, naskenovať čiarový kód alebo použiť sken fotky pomocou AI."
+    ],
+    [
+      "Koľko bielkovín by som mal denne zjesť?",
+      "Závisí to od tvojho tela, cieľov a zdravia. Pre dospelých je referenčný príjem EFSA 0,83 g na kg telesnej hmotnosti; stanovisko International Society of Sports Nutrition z roku 2026 uvádza 1,2–1,6 g na kg pri chudnutí a 1,6–2,2 g na kg so silovým tréningom. Kalkulačka bielkovín ukazuje všetky tri. Ide o všeobecné odporúčanie, nie lekársku radu."
+    ],
+    [
+      "Počíta Calcalou bielkoviny z fotky?",
+      "Áno. Vo verzii 1.7 sken fotky pomocou AI odhadne kalórie, bielkoviny, tuky a sacharidy pre každú rozpoznanú potravinu. Odhady sa môžu mýliť, preto ich pred uložením skontroluj a uprav."
+    ],
+    [
+      "Je sledovanie bielkovín zadarmo?",
+      "Ručné zapisovanie bielkovín, skenovanie čiarových kódov a ciele pre bielkoviny sú zadarmo. Skeny fotiek pomocou AI sú súčasťou Premium; kde je to dostupné, účet si môže raz vyskúšať až 3 skeny zadarmo. Ceny a podmienky nájdeš v aplikácii a v obchode."
+    ]
+  ]
+}

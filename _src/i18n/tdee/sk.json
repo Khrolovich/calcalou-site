@@ -1,0 +1,18 @@
+{
+  "meta.title": "Kalkulačka TDEE: celkový denný energetický výdaj | Calcalou",
+  "meta.description": "Kalkulačka TDEE zadarmo: odhadni, koľko kalórií denne spáliš, podľa svojho BMR a úrovne aktivity (Mifflin-St Jeor). Metrické alebo britské jednotky.",
+  "meta.og_title": "Kalkulačka TDEE: celkový denný energetický výdaj",
+  "meta.og_description": "Odhadni svoj celkový denný energetický výdaj podľa BMR a úrovne aktivity, v kg/cm alebo lb/ft.",
+  "link.footer": "Kalkulačka TDEE",
+  "h1": "Kalkulačka TDEE",
+  "h1.sub": "celkový denný energetický výdaj",
+  "lead": "Odhadni, koľko kalórií spáliš počas bežného dňa: energia v pokoji (BMR) plus bežný pohyb a cvičenie.",
+  "form.label": "Kalkulačka TDEE",
+  "faq.tdee.q": "Čo je TDEE?",
+  "faq.tdee.a": "TDEE, celkový denný energetický výdaj, odhaduje všetky kalórie, ktoré za deň spáliš: tvoj BMR v pokoji plus bežný pohyb a cvičenie. Často sa nazýva kalórie na udržanie, teda príjem, pri ktorom zostáva hmotnosť približne rovnaká.",
+  "faq.difference.q": "Aký je rozdiel medzi BMR a TDEE?",
+  "faq.difference.a": "BMR je energia, ktorú tvoje telo spotrebuje v úplnom pokoji. TDEE násobí BMR koeficientom aktivity, od 1,2 pri malom alebo žiadnom pohybe po 1,9 pri fyzickej práci alebo tréningu dvakrát denne, takže je vždy vyššie ako BMR.",
+  "faq.use.q": "Na čo môžem použiť svoje TDEE?",
+  "faq.use.a": "Použi ho ako východiskový bod pre denný kalorický cieľ: keď ješ približne svoje TDEE, príjem a výdaj sú zhruba v rovnováhe, keď ješ menej, ide o deficit, a keď viac, o prebytok. Je to prvotný odhad, preto ho porovnaj s tým, ako sa tvoja hmotnosť počas niekoľkých týždňov skutočne mení.",
+  "cta.title": "Sleduj zjedené oproti spálenému s Lou."
+}
