@@ -1,0 +1,41 @@
+{
+  "title": "Hvað er Calcalou? Hitaeininga- og próteinteljari",
+  "summary": "Calcalou er hitaeininga- og próteinteljari fyrir iPhone, iPad og Android, með Lou, vinalegu lukkudýri sem hjálpar til við að gera daglega skráningu að vana.",
+  "version": "Þessi leiðarvísir lýsir útgáfu 1.7. Útgáfa í verslunum getur verið mismunandi eftir stýrikerfi og landi; athugaðu hvaða útgáfa stendur þér til boða áður en þú sækir appið vegna tiltekins eiginleika.",
+  "features_title": "Hvað Calcalou gerir",
+  "features": [
+    "Skráðu hitaeiningar og prótein handvirkt ókeypis.",
+    "Skannaðu strikamerki vara ókeypis. Næringargildi fara eftir tiltækum vörugögnum; athugaðu merkimiðann og skammtastærðina.",
+    "Settu próteinmarkmið út frá líkamsþyngd: Calcalou sýnir útreikninginn (þyngd × grömm á kíló), leyfir þér að stilla hann og tekur við þinni eigin tölu.",
+    "Mettu máltíð út frá mynd með gervigreind, þar á meðal hitaeiningar, prótein, fitu og kolvetni fyrir hverja fæðu þegar það er tiltækt. Farðu yfir og breyttu niðurstöðunni áður en þú vistar.",
+    "Bættu við vatni í glösum eða sem eigin magni í ml.",
+    "Stilltu nokkrar áminningar, hverja með sinn tíma og sína vikudaga.",
+    "Haltu skráningarröð með Lou og fylgstu með hitaeiningum eða próteini dagsins í græju á heimaskjánum. Eiginleikar græja eru mismunandi eftir stýrikerfi.",
+    "Flyttu dagbókina út sem CSV fyrir mánuð, ársfjórðung, ár eða allan tímann.",
+    "Notaðu appið á 41 viðmótstungumáli (útgáfa 1.7). Innskráning er nauðsynleg til að geyma dagbókina á aðganginum þínum."
+  ],
+  "faq_title": "Spurningar um Calcalou",
+  "faq": [
+    [
+      "Er Calcalou ókeypis?",
+      "Handvirk skráning hitaeininga og próteins, skönnun strikamerkja og vatnsskráning eru ókeypis. Gervigreindarskannanir fylgja Premium; þar sem það býðst getur aðgangur prófað allt að 3 ókeypis skannanir einu sinni. Áskriftarverð og skilyrði eru sýnd í appinu og versluninni."
+    ],
+    [
+      "Telur myndskönnun prótein?",
+      "Í útgáfu 1.7 geta myndskannanir með gervigreind metið hitaeiningar, prótein, fitu og kolvetni fyrir hverja greinda fæðu. Matið getur verið rangt, sérstaklega fyrir skammta, olíur og blandaða rétti. Næringargildi sem vantar eru ekki núll: athugaðu þau eða sláðu þau inn handvirkt."
+    ],
+    [
+      "Hver getur notað Calcalou?",
+      "Calcalou er fyrir 13 ára og eldri, með fyrirvara um aldurskröfur á hverjum stað. Í útgáfu 1.7 krefjast gervigreindarskannanir og Premium-kaup að notandi sé að minnsta kosti 18 ára og á svæði þar sem þau bjóðast. Calcalou er app fyrir almenna vellíðan, ekki lækningatæki."
+    ],
+    [
+      "Get ég notað það án þess að skrá mig inn?",
+      "Innskráning er nauðsynleg. Dagbókin þín tengist aðganginum þínum; notaðu sömu innskráningarleið þegar þú kemur aftur í öðru tæki."
+    ]
+  ],
+  "more": "Berðu saman öpp og veldu þína leið",
+  "stores": "Sæktu Calcalou",
+  "updated": "Yfirfarið 17. nóvember 2026",
+  "privacy": "Persónuvernd",
+  "support": "Aðstoð"
+}

@@ -1,0 +1,49 @@
+{
+  "title": "Próteinapp: skráðu prótein og hitaeiningar",
+  "summary": "Calcalou er próteinapp fyrir iPhone, iPad og Android. Skráðu prótein við hlið hitaeininga, settu markmið út frá líkamsþyngd og mettu máltíðir út frá mynd.",
+  "features_title": "Próteinskráning í Calcalou",
+  "features": [
+    "Skráðu prótein með hverri færslu: skrifaðu það inn sjálf/ur ókeypis eða fylltu út út frá strikamerki eða myndskönnun með gervigreind.",
+    "Settu daglegt próteinmarkmið út frá líkamsþyngd. Calcalou sýnir útreikninginn (þyngd × grömm á kíló), leyfir þér að stilla hann á bilinu 0,8 til 2,0 g/kg og tekur við þinni eigin tölu.",
+    "Sjáðu prótein við hlið hitaeininga á skjánum Í dag, í vikuyfirlitinu og í Tölfræði, og veldu prótein eða hitaeiningar fyrir hverja græju.",
+    "Myndskönnun með gervigreind metur prótein, fitu og kolvetni fyrir hverja fæðu, allt hægt að breyta áður en þú vistar. Matið getur verið rangt; skannanir fylgja Premium, með aldurs- og svæðistakmörkunum.",
+    "Skönnun strikamerkja er ókeypis. Næringargildi fara eftir vörugögnum, svo athugaðu merkimiðann og skammtinn.",
+    "Raðir, sveigjanlegar áminningar og vatnsskráning hjálpa þér að halda áfram að skrá."
+  ],
+  "sections": [
+    [
+      "Svona fylgist þú með próteini í Calcalou",
+      "Ýttu á Bæta við og sláðu inn hitaeiningar, prótein, fitu og kolvetni fyrir það sem þú borðaðir, eða skannaðu strikamerki eða mynd til að fylla þau út. Allir reitir eru valfrjálsir, svo þú getur skráð prótein eitt og sér. Prótein birtist við hlið hitaeininga á skjánum Í dag og í yfirlitunum."
+    ],
+    [
+      "Settu próteinmarkmið sem hentar þér",
+      "Veldu Út frá líkamsþyngd og Calcalou margfaldar þyngdina þína með grömmum á kíló (sjálfgefið 1,2) og sýnir útreikninginn. Þyngdin kemur úr prófílnum þínum eða, ef þú tengir það, úr Apple Health eða Health Connect. Stilltu stuðulinn á bilinu 0,8 til 2,0 g/kg eða sláðu inn þitt eigið markmið. Markmið er upphafspunktur, ekki læknisráð; próteinreiknivélin sýnir viðmiðunarbil."
+    ],
+    [
+      "Myndir, strikamerki eða handvirkt",
+      "Myndskannanir nota gervigreind til að meta hitaeiningar, prótein, fitu og kolvetni fyrir hverja fæðu. Farðu yfir niðurstöðuna: auðvelt er að misreikna skammta, olíur og blandaða rétti og gildi sem vantar er ekki núll. Skönnun strikamerkja og handvirk skráning eru ókeypis; vörugögn eru misjöfn, svo athugaðu merkimiðann."
+    ],
+    [
+      "Hver getur notað það",
+      "Calcalou er fyrir 13 ára og eldri, með fyrirvara um aldurskröfur á hverjum stað. Í útgáfu 1.7 krefjast gervigreindarskannanir og Premium-kaup að notandi sé að minnsta kosti 18 ára og á svæði þar sem þau bjóðast. Innskráning er nauðsynleg. Calcalou er app fyrir almenna vellíðan, ekki lækningatæki."
+    ]
+  ],
+  "faq": [
+    [
+      "Hver er besta leiðin til að fylgjast með próteini?",
+      "Sú sem þú heldur út. Skráðu prótein með hverri máltíð, athugaðu merkimiða á pakkaðri matvöru og líttu á myndamat sem upphafspunkt sem þú getur breytt. Í Calcalou getur þú skrifað inn prótein, skannað strikamerki eða notað myndskönnun með gervigreind."
+    ],
+    [
+      "Hversu mikið prótein ætti ég að borða á dag?",
+      "Það fer eftir líkama þínum, markmiðum og heilsu. Fyrir fullorðna er viðmiðunarneysla EFSA 0,83 g á hvert kg líkamsþyngdar; afstaða International Society of Sports Nutrition frá 2026 gefur 1,2–1,6 g á kg fyrir þyngdartap og 1,6–2,2 g á kg með styrktarþjálfun. Próteinreiknivélin sýnir öll þrjú. Þetta er almenn leiðsögn, ekki læknisráð."
+    ],
+    [
+      "Telur Calcalou prótein út frá mynd?",
+      "Já. Í útgáfu 1.7 metur myndskönnun með gervigreind hitaeiningar, prótein, fitu og kolvetni fyrir hverja greinda fæðu. Matið getur verið rangt, svo athugaðu það og breyttu áður en þú vistar."
+    ],
+    [
+      "Er próteinskráning ókeypis?",
+      "Handvirk próteinskráning, skönnun strikamerkja og próteinmarkmið eru ókeypis. Myndskannanir með gervigreind fylgja Premium; þar sem það býðst getur aðgangur prófað allt að 3 ókeypis skannanir einu sinni. Verð og skilyrði eru sýnd í appinu og versluninni."
+    ]
+  ]
+}

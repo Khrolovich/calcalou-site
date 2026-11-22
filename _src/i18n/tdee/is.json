@@ -1,0 +1,18 @@
+{
+  "meta.title": "TDEE-reiknivél: heildardagleg orkunotkun | Calcalou",
+  "meta.description": "Ókeypis TDEE-reiknivél: áætlaðu hversu margar hitaeiningar þú brennir á dag út frá BMR og virknistigi (Mifflin-St Jeor). Metrakerfi eða breskt kerfi.",
+  "meta.og_title": "TDEE-reiknivél: heildardagleg orkunotkun",
+  "meta.og_description": "Áætlaðu heildardaglega orkunotkun þína út frá BMR og virknistigi, í kg/cm eða lb/ft.",
+  "link.footer": "TDEE-reiknivél",
+  "h1": "TDEE-reiknivél",
+  "h1.sub": "heildardagleg orkunotkun",
+  "lead": "Áætlaðu hversu margar hitaeiningar þú brennir á venjulegum degi: orkuna í hvíld (BMR) auk daglegrar hreyfingar og þjálfunar.",
+  "form.label": "TDEE-reiknivél",
+  "faq.tdee.q": "Hvað er TDEE?",
+  "faq.tdee.a": "TDEE, heildardagleg orkunotkun, áætlar allar hitaeiningarnar sem þú brennir á dag: BMR í hvíld auk daglegrar hreyfingar og þjálfunar. Hún er oft kölluð viðhaldshitaeiningar, þ.e. inntakan sem heldur þyngdinni nokkurn veginn óbreyttri.",
+  "faq.difference.q": "Hver er munurinn á BMR og TDEE?",
+  "faq.difference.a": "BMR er orkan sem líkaminn notar í algjörri hvíld. TDEE margfaldar BMR með virknistuðli, frá 1,2 við litla eða enga hreyfingu upp í 1,9 við líkamlega vinnu eða þjálfun tvisvar á dag, svo hún er alltaf hærri en BMR.",
+  "faq.use.q": "Hvað get ég gert við TDEE?",
+  "faq.use.a": "Notaðu hana sem viðmið fyrir daglegt hitaeiningamarkmið: ef þú borðar um það bil TDEE eru inntaka og brennsla nokkurn veginn í jafnvægi, minna er skortur og meira er umframmagn. Þetta er upphafsmat, svo berðu það saman við hvernig þyngdin breytist í raun á nokkrum vikum.",
+  "cta.title": "Fylgstu með borðuðu á móti brenndu með Lou."
+}
