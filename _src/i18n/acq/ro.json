@@ -1,0 +1,41 @@
+{
+  "title": "Ce este Calcalou? Contor de calorii și proteine",
+  "summary": "Calcalou este un contor de calorii și proteine pentru iPhone, iPad și Android, cu Lou, o mascotă prietenoasă care te ajută să transformi notarea zilnică într-un obicei.",
+  "version": "Acest ghid descrie versiunea 1.7. Lansarea în magazine poate diferi în funcție de platformă și țară; verifică versiunea disponibilă pentru tine înainte de a descărca aplicația pentru o anumită funcție.",
+  "features_title": "Ce face Calcalou",
+  "features": [
+    "Notează caloriile și proteinele manual, gratuit.",
+    "Scanează gratuit codurile de bare ale produselor. Valorile nutriționale depind de datele disponibile despre produs; verifică eticheta și mărimea porției.",
+    "Setează un obiectiv de proteine după greutatea corporală: Calcalou arată calculul (greutate × grame pe kilogram), te lasă să-l ajustezi și acceptă propriul tău număr.",
+    "Estimează o masă dintr-o fotografie cu AI, inclusiv caloriile, proteinele, grăsimile și carbohidrații fiecărui aliment, când sunt disponibile. Revizuiește și editează rezultatul înainte de salvare.",
+    "Adaugă apă la pahar sau ca o cantitate personalizată în ml.",
+    "Setează mai multe mementouri, fiecare cu ora și zilele lui din săptămână.",
+    "Păstrează o serie de notare cu Lou și urmărește caloriile sau proteinele de azi într-un widget pe ecranul principal. Funcțiile widgeturilor diferă în funcție de platformă.",
+    "Exportă-ți jurnalul ca CSV pentru o lună, un trimestru, un an sau toată perioada.",
+    "Folosește aplicația în 41 de limbi de interfață în versiunea 1.7. Autentificarea este necesară pentru a-ți păstra jurnalul în cont."
+  ],
+  "faq_title": "Întrebări despre Calcalou",
+  "faq": [
+    [
+      "Calcalou este gratuit?",
+      "Notarea manuală a caloriilor și proteinelor, scanarea codurilor de bare și urmărirea apei sunt gratuite. Scanările AI sunt Premium; acolo unde este disponibil, un cont poate încerca o singură dată până la 3 scanări gratuite. Prețurile abonamentului și eligibilitatea sunt afișate în aplicație și în magazin."
+    ],
+    [
+      "O scanare foto numără proteinele?",
+      "În versiunea 1.7, scanările foto cu AI pot estima caloriile, proteinele, grăsimile și carbohidrații pentru fiecare aliment detectat. Estimările pot fi greșite, mai ales la porții, uleiuri și mâncăruri combinate. Valorile nutriționale lipsă nu înseamnă zero: verifică-le sau introdu-le manual."
+    ],
+    [
+      "Cine poate folosi Calcalou?",
+      "Calcalou este pentru persoane de la 13 ani în sus, în funcție de cerințele locale de vârstă. În versiunea 1.7, scanările AI și achizițiile Premium necesită vârsta de cel puțin 18 ani și o regiune eligibilă. Calcalou este o aplicație de wellness general, nu un dispozitiv medical."
+    ],
+    [
+      "Îl pot folosi fără autentificare?",
+      "Autentificarea este obligatorie. Jurnalul tău este asociat contului; folosește aceeași metodă de autentificare când revii pe alt dispozitiv."
+    ]
+  ],
+  "more": "Compară contoarele și alege un mod de lucru",
+  "stores": "Descarcă Calcalou",
+  "updated": "Verificat pe 17 noiembrie 2026",
+  "privacy": "Confidențialitate",
+  "support": "Asistență"
+}

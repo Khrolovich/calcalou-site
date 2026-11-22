@@ -1,0 +1,49 @@
+{
+  "title": "Aplicație pentru urmărirea proteinelor: notează proteine și calorii",
+  "summary": "Calcalou este o aplicație pentru urmărirea proteinelor pe iPhone, iPad și Android. Notează proteinele lângă calorii, setează un obiectiv după greutatea corporală și estimează mesele dintr-o fotografie.",
+  "features_title": "Urmărirea proteinelor în Calcalou",
+  "features": [
+    "Notează proteinele la fiecare înregistrare: scrie-le tu gratuit sau completează-le dintr-un cod de bare ori dintr-o scanare foto cu AI.",
+    "Setează un obiectiv zilnic de proteine după greutatea corporală. Calcalou arată calculul (greutate × grame pe kilogram), te lasă să-l ajustezi între 0,8 și 2,0 g/kg și acceptă propriul tău număr.",
+    "Vezi proteinele lângă calorii pe ecranul Azi, în rezumatul săptămânal și în Statistici și alege proteine sau calorii pentru fiecare widget.",
+    "Scanările foto cu AI estimează proteinele, grăsimile și carbohidrații fiecărui aliment, totul editabil înainte de salvare. Estimările pot fi greșite; scanările sunt Premium, cu limite de vârstă și regiune.",
+    "Scanarea codurilor de bare este gratuită. Valorile nutriționale depind de datele produsului, așa că verifică eticheta și porția.",
+    "Seriile, mementourile flexibile și urmărirea apei te ajută să continui să notezi."
+  ],
+  "sections": [
+    [
+      "Cum urmărești proteinele în Calcalou",
+      "Atinge Adaugă și introdu caloriile, proteinele, grăsimile și carbohidrații pentru ce ai mâncat sau scanează un cod de bare ori o fotografie ca să le completezi. Toate câmpurile sunt opționale, așa că poți nota doar proteinele. Proteinele apar lângă calorii pe ecranul Azi și în rezumate."
+    ],
+    [
+      "Setează un obiectiv de proteine potrivit pentru tine",
+      "Alege După greutatea corporală, iar Calcalou îți înmulțește greutatea cu gramele pe kilogram (1,2 implicit) și îți arată calculul. Greutatea vine din profilul tău sau, dacă le conectezi, din Apple Health ori Health Connect. Ajustează factorul între 0,8 și 2,0 g/kg sau introdu propriul obiectiv. Un obiectiv este un punct de plecare, nu un sfat medical; calculatorul de proteine arată intervalele de referință."
+    ],
+    [
+      "Fotografii, coduri de bare sau manual",
+      "Scanările foto folosesc AI pentru a estima caloriile, proteinele, grăsimile și carbohidrații fiecărui aliment. Verifică rezultatul: porțiile, uleiurile și mâncărurile combinate sunt ușor de estimat greșit, iar o valoare lipsă nu înseamnă zero. Scanarea codurilor de bare și notarea manuală sunt gratuite; datele produselor variază, așa că verifică eticheta."
+    ],
+    [
+      "Cine o poate folosi",
+      "Calcalou este pentru persoane de la 13 ani în sus, în funcție de cerințele locale de vârstă. În versiunea 1.7, scanările AI și achizițiile Premium necesită vârsta de cel puțin 18 ani și o regiune eligibilă. Este necesară autentificarea. Calcalou este o aplicație de wellness general, nu un dispozitiv medical."
+    ]
+  ],
+  "faq": [
+    [
+      "Care este cel mai bun mod de a urmări proteinele?",
+      "Cel pe care îl vei respecta. Notează proteinele la fiecare masă, verifică etichetele alimentelor ambalate și tratează estimările din fotografii ca puncte de plecare pe care le poți edita. În Calcalou poți scrie proteinele, scana un cod de bare sau folosi o scanare foto cu AI."
+    ],
+    [
+      "Câte proteine ar trebui să mănânc pe zi?",
+      "Depinde de corpul, obiectivele și sănătatea ta. Pentru adulți, aportul de referință EFSA este de 0,83 g pe kg de greutate corporală; poziția din 2026 a International Society of Sports Nutrition dă 1,2–1,6 g pe kg pentru slăbire și 1,6–2,2 g pe kg cu antrenament de rezistență. Calculatorul de proteine le arată pe toate trei. Acestea sunt recomandări generale, nu un sfat medical."
+    ],
+    [
+      "Calcalou numără proteinele dintr-o fotografie?",
+      "Da. În versiunea 1.7, o scanare foto cu AI estimează caloriile, proteinele, grăsimile și carbohidrații pentru fiecare aliment detectat. Estimările pot fi greșite, așa că verifică-le și editează-le înainte de salvare."
+    ],
+    [
+      "Este gratuită urmărirea proteinelor?",
+      "Notarea manuală a proteinelor, scanarea codurilor de bare și obiectivele de proteine sunt gratuite. Scanările foto cu AI sunt Premium; acolo unde este disponibil, un cont poate încerca o singură dată până la 3 scanări gratuite. Prețurile și eligibilitatea sunt afișate în aplicație și în magazin."
+    ]
+  ]
+}

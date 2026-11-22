@@ -1,0 +1,18 @@
+{
+  "meta.title": "Calculator TDEE: consumul energetic zilnic total | Calcalou",
+  "meta.description": "Calculator TDEE gratuit: estimează câte calorii arzi într-o zi pe baza BMR-ului și a nivelului de activitate (Mifflin-St Jeor). Unități metrice sau imperiale.",
+  "meta.og_title": "Calculator TDEE: consumul energetic zilnic total",
+  "meta.og_description": "Estimează-ți consumul energetic zilnic total pe baza BMR-ului și a nivelului de activitate, în kg/cm sau lb/ft.",
+  "link.footer": "Calculator TDEE",
+  "h1": "Calculator TDEE",
+  "h1.sub": "consumul energetic zilnic total",
+  "lead": "Estimează câte calorii arzi într-o zi obișnuită: energia în repaus (BMR) plus mișcarea de zi cu zi și sportul.",
+  "form.label": "Calculator TDEE",
+  "faq.tdee.q": "Ce este TDEE?",
+  "faq.tdee.a": "TDEE, consumul energetic zilnic total, estimează toate caloriile pe care le arzi într-o zi: BMR-ul în repaus plus mișcarea de zi cu zi și sportul. Este numit adesea calorii de menținere, adică aportul care îți menține greutatea cam la fel.",
+  "faq.difference.q": "Care este diferența dintre BMR și TDEE?",
+  "faq.difference.a": "BMR este energia pe care corpul o folosește în repaus complet. TDEE înmulțește BMR cu un factor de activitate, de la 1,2 pentru puțin sau deloc sport până la 1,9 pentru muncă fizică sau antrenament de două ori pe zi, așa că este mereu mai mare decât BMR.",
+  "faq.use.q": "Ce pot face cu TDEE-ul meu?",
+  "faq.use.a": "Folosește-l ca punct de referință pentru un obiectiv zilnic de calorii: dacă mănânci cam cât TDEE-ul tău, aportul și arderea sunt aproximativ echilibrate, mai puțin înseamnă deficit, iar mai mult înseamnă surplus. Este o estimare de pornire, așa că compar-o cu felul în care greutatea ta se schimbă de fapt în câteva săptămâni.",
+  "cta.title": "Urmărește ce mănânci față de ce arzi cu Lou."
+}
