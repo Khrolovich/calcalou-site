@@ -1,0 +1,49 @@
+{
+  "title": "Fehérjekövető alkalmazás: rögzítsd a fehérjét és a kalóriát",
+  "summary": "A Calcalou fehérjekövető alkalmazás iPhone-ra, iPadre és Androidra. Rögzítsd a fehérjét a kalória mellett, állíts be célt a testsúlyod alapján, és becsüld meg az ételeket fotóról.",
+  "features_title": "Fehérjekövetés a Calcalou-ban",
+  "features": [
+    "Rögzíts fehérjét minden bejegyzéshez: írd be magad ingyen, vagy töltsd ki vonalkódról vagy AI-alapú fotószkenneléssel.",
+    "Állíts be napi fehérjecélt a testsúlyod alapján. A Calcalou megmutatja a számítást (testsúly × gramm/kg), 0,8 és 2,0 g/kg között módosíthatod, és a saját számodat is elfogadja.",
+    "Lásd a fehérjét a kalória mellett a Ma képernyőn, a heti összefoglalóban és a Statisztikában, és minden widgethez válaszd a fehérjét vagy a kalóriát.",
+    "Az AI-alapú fotószkennelés minden ételhez megbecsüli a fehérjét, a zsírt és a szénhidrátot, mentés előtt mind szerkeszthető. A becslések tévedhetnek; a szkennelés Premium funkció, életkori és régiós korlátozásokkal.",
+    "A vonalkód-beolvasás ingyenes. A tápértékek a termékadatoktól függenek, ezért nézd meg a címkét és az adagot.",
+    "A sorozatok, a rugalmas emlékeztetők és a vízkövetés segítenek kitartani a rögzítés mellett."
+  ],
+  "sections": [
+    [
+      "Így követheted a fehérjét a Calcalou-ban",
+      "Koppints a Hozzáadás gombra, és add meg az elfogyasztott étel kalóriáját, fehérjéjét, zsírját és szénhidrátját, vagy olvass be egy vonalkódot vagy fotót a kitöltéshez. Minden mező opcionális, így csak a fehérjét is rögzítheted. A fehérje a kalória mellett látszik a Ma képernyőn és az összefoglalókban."
+    ],
+    [
+      "Állíts be hozzád illő fehérjecélt",
+      "Válaszd a Testsúly alapján lehetőséget, és a Calcalou megszorozza a testsúlyodat a kilogrammonkénti grammal (alapértelmezés szerint 1,2), majd megmutatja a számítást. A testsúlyod a profilodból, vagy ha összekapcsolod, az Apple Egészségből vagy a Health Connectből származik. Állítsd a tényezőt 0,8 és 2,0 g/kg között, vagy add meg a saját célodat. A cél kiindulópont, nem orvosi tanács; a fehérjekalkulátor referenciatartományokat mutat."
+    ],
+    [
+      "Fotók, vonalkódok vagy kézzel",
+      "A fotószkennelés AI segítségével becsüli meg minden étel kalóriáját, fehérjéjét, zsírját és szénhidrátját. Ellenőrizd az eredményt: az adagokat, az olajokat és a vegyes ételeket könnyű félrebecsülni, és a hiányzó érték nem nulla. A vonalkód-beolvasás és a kézi rögzítés ingyenes; a termékadatok eltérhetnek, ezért nézd meg a címkét."
+    ],
+    [
+      "Ki használhatja",
+      "A Calcalou 13 éves kortól használható, a helyi korhatárok figyelembevételével. Az 1.7-es verzióban az AI-szkenneléshez és a Premium vásárláshoz legalább 18 éves kor és olyan régió szükséges, ahol ezek elérhetők. Bejelentkezés szükséges. A Calcalou általános jólléti alkalmazás, nem orvostechnikai eszköz."
+    ]
+  ],
+  "faq": [
+    [
+      "Mi a legjobb módja a fehérje követésének?",
+      "Az, amelyet tartósan csinálni fogsz. Rögzíts fehérjét minden étkezéshez, nézd meg a csomagolt ételek címkéjét, és a fotós becsléseket kezeld szerkeszthető kiindulópontként. A Calcalou-ban beírhatod a fehérjét, beolvashatsz egy vonalkódot, vagy használhatod az AI-alapú fotószkennelést."
+    ],
+    [
+      "Mennyi fehérjét egyek naponta?",
+      "Ez a testedtől, a céljaidtól és az egészségedtől függ. Felnőtteknek az EFSA referenciabevitele 0,83 g testsúlykilogrammonként; az International Society of Sports Nutrition 2026-os állásfoglalása fogyáshoz 1,2–1,6 g-ot, erőedzéssel 1,6–2,2 g-ot ad meg kilogrammonként. A fehérjekalkulátor mindhármat megmutatja. Ez általános iránymutatás, nem orvosi tanács."
+    ],
+    [
+      "Kiszámolja a Calcalou a fehérjét egy fotóból?",
+      "Igen. Az 1.7-es verzióban az AI-alapú fotószkennelés minden felismert ételhez megbecsüli a kalóriát, a fehérjét, a zsírt és a szénhidrátot. A becslések tévedhetnek, ezért mentés előtt ellenőrizd és módosítsd őket."
+    ],
+    [
+      "Ingyenes a fehérjekövetés?",
+      "A fehérje kézi rögzítése, a vonalkód-beolvasás és a fehérjecélok ingyenesek. Az AI-alapú fotószkennelés Premium funkció; ahol elérhető, egy fiók egyszer legfeljebb 3 ingyenes szkennelést próbálhat ki. Az árak és a feltételek az appban és az áruházban láthatók."
+    ]
+  ]
+}

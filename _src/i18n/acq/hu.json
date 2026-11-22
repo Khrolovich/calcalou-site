@@ -1,0 +1,41 @@
+{
+  "title": "Mi az a Calcalou? Kalória- és fehérjeszámláló",
+  "summary": "A Calcalou kalória- és fehérjeszámláló iPhone-ra, iPadre és Androidra, Lou-val, a barátságos kabalafigurával, aki segít, hogy a napi rögzítés szokássá váljon.",
+  "version": "Ez az útmutató az 1.7-es verziót írja le. Az áruházi megjelenés platformonként és országonként eltérhet; ha egy adott funkció miatt töltenéd le, előbb ellenőrizd, melyik verzió érhető el számodra.",
+  "features_title": "Mire képes a Calcalou",
+  "features": [
+    "Rögzítsd a kalóriát és a fehérjét kézzel, ingyen.",
+    "Olvasd be a termékek vonalkódját ingyen. A tápértékek az elérhető termékadatoktól függenek; nézd meg a címkét és az adag méretét.",
+    "Állíts be fehérjecélt a testsúlyod alapján: a Calcalou megmutatja a számítást (testsúly × gramm/kg), módosíthatod, és a saját számodat is elfogadja.",
+    "Becsüld meg az ételt fotóról AI segítségével, beleértve minden étel kalóriáját, fehérjéjét, zsírját és szénhidrátját, ha elérhetők. Mentés előtt nézd át és módosítsd az eredményt.",
+    "Adj hozzá vizet poharanként vagy saját mennyiségként ml-ben.",
+    "Állíts be több emlékeztetőt, mindegyiket saját időponttal és a hét napjaival.",
+    "Tartsd fenn a rögzítési sorozatot Lou-val, és kövesd a mai kalóriát vagy fehérjét egy kezdőképernyős widgetben. A widgetek funkciói platformonként eltérnek.",
+    "Exportáld a naplódat CSV-ként egy hónapról, negyedévről, évről vagy a teljes időszakról.",
+    "Használd az appot 41 kezelőfelületi nyelven (1.7-es verzió). A napló fiókban tárolásához bejelentkezés szükséges."
+  ],
+  "faq_title": "Kérdések a Calcalou-ról",
+  "faq": [
+    [
+      "Ingyenes a Calcalou?",
+      "A kalória és a fehérje kézi rögzítése, a vonalkód-beolvasás és a vízkövetés ingyenes. Az AI-szkennelés Premium funkció; ahol elérhető, egy fiók egyszer legfeljebb 3 ingyenes szkennelést próbálhat ki. Az előfizetési árak és feltételek az appban és az áruházban láthatók."
+    ],
+    [
+      "Számolja a fotószkennelés a fehérjét?",
+      "Az 1.7-es verzióban az AI-alapú fotószkennelés minden felismert ételhez megbecsülheti a kalóriát, a fehérjét, a zsírt és a szénhidrátot. A becslések tévedhetnek, különösen az adagoknál, az olajoknál és a vegyes ételeknél. A hiányzó tápértékek nem nullák: ellenőrizd vagy add meg őket kézzel."
+    ],
+    [
+      "Ki használhatja a Calcalou-t?",
+      "A Calcalou 13 éves kortól használható, a helyi korhatárok figyelembevételével. Az 1.7-es verzióban az AI-szkenneléshez és a Premium vásárláshoz legalább 18 éves kor és olyan régió szükséges, ahol ezek elérhetők. A Calcalou általános jólléti alkalmazás, nem orvostechnikai eszköz."
+    ],
+    [
+      "Használhatom bejelentkezés nélkül?",
+      "Bejelentkezés szükséges. A naplód a fiókodhoz kapcsolódik; ha másik eszközön térsz vissza, ugyanazt a bejelentkezési módot használd."
+    ]
+  ],
+  "more": "Hasonlítsd össze az appokat, és válassz munkamódszert",
+  "stores": "Szerezd be a Calcalou-t",
+  "updated": "Ellenőrizve: 2026. november 17.",
+  "privacy": "Adatvédelem",
+  "support": "Támogatás"
+}

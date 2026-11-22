@@ -1,0 +1,18 @@
+{
+  "meta.title": "TDEE-kalkulátor: teljes napi energiafelhasználás | Calcalou",
+  "meta.description": "Ingyenes TDEE-kalkulátor: becsüld meg, napi hány kalóriát égetsz el a BMR-ed és az aktivitási szinted alapján (Mifflin-St Jeor). Metrikus vagy angolszász mértékegység.",
+  "meta.og_title": "TDEE-kalkulátor: teljes napi energiafelhasználás",
+  "meta.og_description": "Becsüld meg a teljes napi energiafelhasználásodat a BMR-ed és az aktivitási szinted alapján, kg/cm vagy lb/ft mértékegységben.",
+  "link.footer": "TDEE-kalkulátor",
+  "h1": "TDEE-kalkulátor",
+  "h1.sub": "teljes napi energiafelhasználás",
+  "lead": "Becsüld meg, mennyi kalóriát égetsz el egy átlagos napon: a nyugalmi energiát (BMR), plusz a mindennapi mozgást és az edzést.",
+  "form.label": "TDEE-kalkulátor",
+  "faq.tdee.q": "Mi az a TDEE?",
+  "faq.tdee.a": "A TDEE, azaz a teljes napi energiafelhasználás, az összes kalóriát megbecsüli, amelyet egy nap alatt elégetsz: a nyugalmi BMR-t, plusz a mindennapi mozgást és az edzést. Gyakran fenntartó kalóriának is hívják, vagyis annak a bevitelnek, amellyel a testsúly nagyjából változatlan marad.",
+  "faq.difference.q": "Mi a különbség a BMR és a TDEE között?",
+  "faq.difference.a": "A BMR az az energia, amelyet a tested teljes nyugalomban felhasznál. A TDEE a BMR-t egy aktivitási tényezővel szorozza, amely kevés vagy semmi mozgásnál 1,2, fizikai munkánál vagy napi két edzésnél 1,9, így mindig nagyobb a BMR-nél.",
+  "faq.use.q": "Mire használhatom a TDEE-met?",
+  "faq.use.a": "Használd kiindulópontként a napi kalóriacélhoz: ha nagyjából a TDEE-dnek megfelelően eszel, a bevitel és az égetés nagyjából egyensúlyban van, ha kevesebbet, az deficit, ha többet, az többlet. Ez egy kezdeti becslés, ezért vesd össze azzal, hogyan változik valójában a testsúlyod néhány hét alatt.",
+  "cta.title": "Kövesd a bevitelt és az égetést Lou-val."
+}
