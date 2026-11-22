@@ -1,0 +1,18 @@
+{
+  "meta.title": "TDEE-kalkulaator: päevane koguenergiakulu | Calcalou",
+  "meta.description": "Tasuta TDEE-kalkulaator: hinda, mitu kalorit päevas põletad, oma BMR-i ja aktiivsuse taseme põhjal (Mifflin-St Jeor). Meetrilised või briti ühikud.",
+  "meta.og_title": "TDEE-kalkulaator: päevane koguenergiakulu",
+  "meta.og_description": "Hinda oma päevast koguenergiakulu BMR-i ja aktiivsuse taseme põhjal, ühikutes kg/cm või lb/ft.",
+  "link.footer": "TDEE-kalkulaator",
+  "h1": "TDEE-kalkulaator",
+  "h1.sub": "päevane koguenergiakulu",
+  "lead": "Hinda, mitu kalorit tavalisel päeval põletad: energia puhkeolekus (BMR) pluss igapäevane liikumine ja treening.",
+  "form.label": "TDEE-kalkulaator",
+  "faq.tdee.q": "Mis on TDEE?",
+  "faq.tdee.a": "TDEE ehk päevane koguenergiakulu hindab kõiki kaloreid, mida päeva jooksul põletad: BMR puhkeolekus pluss igapäevane liikumine ja treening. Seda nimetatakse sageli säilituskaloriteks ehk tarbimiseks, mis hoiab kaalu umbes samana.",
+  "faq.difference.q": "Mis vahe on BMR-il ja TDEE-l?",
+  "faq.difference.a": "BMR on energia, mida su keha täielikus puhkeolekus kulutab. TDEE korrutab BMR-i aktiivsusteguriga, alates 1,2-st vähese või puuduva liikumise korral kuni 1,9-ni füüsilise töö või kaks korda päevas treenimise korral, seega on see alati BMR-ist suurem.",
+  "faq.use.q": "Mida ma oma TDEE-ga teha saan?",
+  "faq.use.a": "Kasuta seda päevase kalorieesmärgi lähtepunktina: kui sööd umbes oma TDEE jagu, on tarbimine ja kulu enam-vähem tasakaalus, vähem süües tekib defitsiit ja rohkem süües ülejääk. See on esialgne hinnang, seega võrdle seda paari nädala jooksul sellega, kuidas su kaal tegelikult muutub.",
+  "cta.title": "Jälgi söödut ja põletatut koos Louga."
+}

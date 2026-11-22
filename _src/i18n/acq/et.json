@@ -1,0 +1,41 @@
+{
+  "title": "Mis on Calcalou? Kalorite ja valgu lugeja",
+  "summary": "Calcalou on kalorite ja valgu lugeja iPhone'ile, iPadile ja Androidile, kus on Lou, sõbralik maskott, kes aitab igapäevasest logimisest harjumuse teha.",
+  "version": "See juhend kirjeldab versiooni 1.7. Poodides avaldamine võib platvormiti ja riigiti erineda; enne konkreetse funktsiooni pärast allalaadimist kontrolli, milline versioon sulle saadaval on.",
+  "features_title": "Mida Calcalou teeb",
+  "features": [
+    "Logi kaloreid ja valku käsitsi tasuta.",
+    "Skanni toodete vöötkoode tasuta. Toiteväärtused sõltuvad saadaolevatest tooteandmetest; kontrolli etiketti ja portsjoni suurust.",
+    "Sea valgueesmärk kehakaalu järgi: Calcalou näitab arvutust (kaal × grammi kilogrammi kohta), laseb seda muuta ja võtab vastu ka sinu oma arvu.",
+    "Hinda toidukorda foto põhjal TI abil, sealhulgas iga toidu kaloreid, valku, rasva ja süsivesikuid, kui need on saadaval. Vaata tulemus üle ja muuda seda enne salvestamist.",
+    "Lisa vett klaasi kaupa või oma kogusena milliliitrites.",
+    "Sea mitu meeldetuletust, igaühel oma kellaaeg ja nädalapäevad.",
+    "Hoia koos Louga logimise seeriat ja jälgi tänaseid kaloreid või valku avakuva vidinas. Vidinate funktsioonid erinevad platvormiti.",
+    "Ekspordi oma päevik CSV-failina kuu, kvartali, aasta või kogu aja kohta.",
+    "Kasuta rakendust 41 liidese keeles (versioon 1.7). Päeviku hoidmiseks oma kontol on sisselogimine nõutav."
+  ],
+  "faq_title": "Küsimused Calcalou kohta",
+  "faq": [
+    [
+      "Kas Calcalou on tasuta?",
+      "Kalorite ja valgu käsitsi logimine, vöötkoodide skannimine ja vee jälgimine on tasuta. TI-skannimine kuulub Premiumi; kus pakutakse, saab konto ühe korra proovida kuni 3 tasuta skannimist. Tellimuste hinnad ja tingimused on näha rakenduses ja poes."
+    ],
+    [
+      "Kas fotoskannimine arvestab valku?",
+      "Versioonis 1.7 saab TI-fotoskannimine hinnata iga tuvastatud toidu kaloreid, valku, rasva ja süsivesikuid. Hinnangud võivad eksida, eriti portsjonite, õlide ja segaroogade puhul. Puuduvad toiteväärtused ei ole null: kontrolli neid või sisesta käsitsi."
+    ],
+    [
+      "Kes saab Calcalou't kasutada?",
+      "Calcalou on mõeldud alates 13. eluaastast, kohalike vanusenõuete kohaselt. Versioonis 1.7 eeldavad TI-skannimine ja Premiumi ostud vähemalt 18-aastast vanust ja piirkonda, kus neid pakutakse. Calcalou on üldise heaolu rakendus, mitte meditsiiniseade."
+    ],
+    [
+      "Kas saan seda kasutada sisse logimata?",
+      "Sisselogimine on nõutav. Sinu päevik on seotud sinu kontoga; kasuta teises seadmes naastes sama sisselogimisviisi."
+    ]
+  ],
+  "more": "Võrdle rakendusi ja vali oma töövoog",
+  "stores": "Hangi Calcalou",
+  "updated": "Kontrollitud 17. novembril 2026",
+  "privacy": "Privaatsus",
+  "support": "Tugi"
+}

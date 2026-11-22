@@ -1,0 +1,49 @@
+{
+  "title": "Valgu jälgimise rakendus: logi valku ja kaloreid",
+  "summary": "Calcalou on valgu jälgimise rakendus iPhone'ile, iPadile ja Androidile. Logi valku kalorite kõrval, sea eesmärk kehakaalu järgi ja hinda toidukordi foto põhjal.",
+  "features_title": "Valgu jälgimine Calcalous",
+  "features": [
+    "Logi valk iga kirje juurde: kirjuta see ise tasuta või täida vöötkoodi või TI-fotoskannimise põhjal.",
+    "Sea päevane valgueesmärk kehakaalu järgi. Calcalou näitab arvutust (kaal × grammi kilogrammi kohta), laseb seda muuta vahemikus 0,8 kuni 2,0 g/kg ja võtab vastu ka sinu oma arvu.",
+    "Näe valku kalorite kõrval vaates Täna, nädala kokkuvõttes ja Statistikas ning vali iga vidina jaoks valk või kalorid.",
+    "TI-fotoskannimine hindab iga toidu valku, rasva ja süsivesikuid, kõik on enne salvestamist muudetavad. Hinnangud võivad eksida; skannimine kuulub Premiumi ning sellel on vanuse- ja piirkonnapiirangud.",
+    "Vöötkoodide skannimine on tasuta. Toiteväärtused sõltuvad tooteandmetest, seega kontrolli etiketti ja portsjonit.",
+    "Seeriad, paindlikud meeldetuletused ja vee jälgimine aitavad logimist jätkata."
+  ],
+  "sections": [
+    [
+      "Kuidas Calcalous valku jälgida",
+      "Puuduta nuppu Lisa ja sisesta söödu kalorid, valk, rasv ja süsivesikud või skanni nende täitmiseks vöötkood või foto. Kõik väljad on valikulised, seega võid logida ainult valku. Valk on kalorite kõrval vaates Täna ja kokkuvõtetes."
+    ],
+    [
+      "Sea endale sobiv valgueesmärk",
+      "Vali Kehakaalu järgi ja Calcalou korrutab sinu kaalu grammidega kilogrammi kohta (vaikimisi 1,2) ning näitab arvutust. Kaal tuleb sinu profiilist või, kui need ühendad, Apple Healthist või Health Connectist. Muuda tegurit vahemikus 0,8 kuni 2,0 g/kg või sisesta oma eesmärk. Eesmärk on lähtepunkt, mitte meditsiiniline nõuanne; valgukalkulaator näitab võrdlusvahemikke."
+    ],
+    [
+      "Fotod, vöötkoodid või käsitsi",
+      "Fotoskannimine kasutab TI-d, et hinnata iga toidu kaloreid, valku, rasva ja süsivesikuid. Vaata tulemus üle: portsjoneid, õlisid ja segaroogi on lihtne valesti hinnata ning puuduv väärtus ei ole null. Vöötkoodide skannimine ja käsitsi logimine on tasuta; tooteandmed erinevad, seega kontrolli etiketti."
+    ],
+    [
+      "Kes saab seda kasutada",
+      "Calcalou on mõeldud alates 13. eluaastast, kohalike vanusenõuete kohaselt. Versioonis 1.7 eeldavad TI-skannimine ja Premiumi ostud vähemalt 18-aastast vanust ja piirkonda, kus neid pakutakse. Sisselogimine on nõutav. Calcalou on üldise heaolu rakendus, mitte meditsiiniseade."
+    ]
+  ],
+  "faq": [
+    [
+      "Mis on parim viis valku jälgida?",
+      "See, mida suudad järjepidevalt teha. Logi valk iga toidukorra juurde, kontrolli pakendatud toidu etiketti ja pea fotohinnanguid lähtepunktiks, mida saad muuta. Calcalous saad valgu sisse kirjutada, vöötkoodi skannida või kasutada TI-fotoskannimist."
+    ],
+    [
+      "Kui palju valku peaksin päevas sööma?",
+      "See sõltub sinu kehast, eesmärkidest ja tervisest. Täiskasvanutele on EFSA võrdluskogus 0,83 g kehakaalu kilogrammi kohta; International Society of Sports Nutritioni 2026. aasta seisukohavõtt annab kaalulanguseks 1,2–1,6 g kilogrammi kohta ja jõutreeningu korral 1,6–2,2 g kilogrammi kohta. Valgukalkulaator näitab kõiki kolme. See on üldine juhis, mitte meditsiiniline nõuanne."
+    ],
+    [
+      "Kas Calcalou arvestab valku foto põhjal?",
+      "Jah. Versioonis 1.7 hindab TI-fotoskannimine iga tuvastatud toidu kaloreid, valku, rasva ja süsivesikuid. Hinnangud võivad eksida, seega kontrolli ja muuda neid enne salvestamist."
+    ],
+    [
+      "Kas valgu jälgimine on tasuta?",
+      "Valgu käsitsi logimine, vöötkoodide skannimine ja valgueesmärgid on tasuta. TI-fotoskannimine kuulub Premiumi; kus pakutakse, saab konto ühe korra proovida kuni 3 tasuta skannimist. Hinnad ja tingimused on näha rakenduses ja poes."
+    ]
+  ]
+}
