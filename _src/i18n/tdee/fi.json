@@ -1,0 +1,18 @@
+{
+  "meta.title": "TDEE-laskuri: päivittäinen kokonaisenergiankulutus | Calcalou",
+  "meta.description": "Ilmainen TDEE-laskuri: arvioi, montako kaloria kulutat päivässä BMR:si ja aktiivisuustasosi perusteella (Mifflin-St Jeor). Metriset tai brittiläiset yksiköt.",
+  "meta.og_title": "TDEE-laskuri: päivittäinen kokonaisenergiankulutus",
+  "meta.og_description": "Arvioi päivittäinen kokonaisenergiankulutuksesi BMR:si ja aktiivisuustasosi perusteella, yksikköinä kg/cm tai lb/ft.",
+  "link.footer": "TDEE-laskuri",
+  "h1": "TDEE-laskuri",
+  "h1.sub": "päivittäinen kokonaisenergiankulutus",
+  "lead": "Arvioi, montako kaloria kulutat tavallisena päivänä: energia levossa (BMR) sekä arkiliikunta ja treeni.",
+  "form.label": "TDEE-laskuri",
+  "faq.tdee.q": "Mikä on TDEE?",
+  "faq.tdee.a": "TDEE eli päivittäinen kokonaisenergiankulutus arvioi kaikki kalorit, jotka kulutat päivässä: BMR levossa sekä arkiliikunta ja treeni. Sitä kutsutaan usein ylläpitokaloreiksi eli saanniksi, jolla paino pysyy suunnilleen ennallaan.",
+  "faq.difference.q": "Mitä eroa on BMR:llä ja TDEE:llä?",
+  "faq.difference.a": "BMR on energia, jonka kehosi kuluttaa täydessä levossa. TDEE kertoo BMR:n aktiivisuuskertoimella, joka vaihtelee 1,2:sta, kun liikuntaa on vähän tai ei lainkaan, 1,9:ään, kun teet fyysistä työtä tai treenaat kahdesti päivässä, joten se on aina BMR:ää suurempi.",
+  "faq.use.q": "Mitä voin tehdä TDEE:lläni?",
+  "faq.use.a": "Käytä sitä päivittäisen kaloritavoitteen lähtökohtana: kun syöt suunnilleen TDEE:si verran, saanti ja kulutus ovat karkeasti tasapainossa, vähemmän syöminen on vajetta ja enemmän syöminen ylijäämää. Se on alustava arvio, joten vertaa sitä siihen, miten painosi todella muuttuu muutaman viikon aikana.",
+  "cta.title": "Seuraa syötyä ja kulutettua Loun kanssa."
+}

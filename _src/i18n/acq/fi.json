@@ -1,0 +1,41 @@
+{
+  "title": "Mikä on Calcalou? Kalori- ja proteiinilaskuri",
+  "summary": "Calcalou on kalori- ja proteiinilaskuri iPhonelle, iPadille ja Androidille. Mukana on Lou, ystävällinen maskotti, joka auttaa tekemään päivittäisestä kirjaamisesta tavan.",
+  "version": "Tämä opas kuvaa versiota 1.7. Julkaisu kaupoissa voi vaihdella alustan ja maan mukaan; tarkista sinulle saatavilla oleva versio ennen kuin lataat sovelluksen tietyn ominaisuuden vuoksi.",
+  "features_title": "Mitä Calcalou tekee",
+  "features": [
+    "Kirjaa kalorit ja proteiini käsin ilmaiseksi.",
+    "Skannaa tuotteiden viivakoodeja ilmaiseksi. Ravintoarvot riippuvat saatavilla olevista tuotetiedoista; tarkista pakkausmerkinnät ja annoskoko.",
+    "Aseta proteiinitavoite kehonpainosi mukaan: Calcalou näyttää laskun (paino × grammaa kiloa kohden), antaa säätää sitä ja hyväksyy myös oman lukusi.",
+    "Arvioi ateria kuvasta tekoälyn avulla, mukaan lukien kalorit, proteiini, rasva ja hiilihydraatit jokaiselle ruoalle, kun ne ovat saatavilla. Tarkista ja muokkaa tulos ennen tallennusta.",
+    "Lisää vettä laseittain tai omana määränä millilitroina.",
+    "Aseta useita muistutuksia, jokaiselle oma kellonaika ja omat viikonpäivät.",
+    "Pidä kirjausputkea yllä Loun kanssa ja seuraa päivän kaloreita tai proteiinia kotinäytön widgetissä. Widgetien ominaisuudet vaihtelevat alustan mukaan.",
+    "Vie päiväkirjasi CSV-tiedostona kuukaudelta, vuosineljännekseltä, vuodelta tai koko ajalta.",
+    "Käytä sovellusta 41 käyttöliittymäkielellä (versio 1.7). Sisäänkirjautuminen vaaditaan, jotta päiväkirjasi säilyy tililläsi."
+  ],
+  "faq_title": "Kysymyksiä Calcalousta",
+  "faq": [
+    [
+      "Onko Calcalou ilmainen?",
+      "Kalorien ja proteiinin kirjaaminen käsin, viivakoodien skannaus ja veden seuranta ovat ilmaisia. Tekoälyskannaukset kuuluvat Premiumiin; missä tarjolla, tilillä voi kokeilla kerran enintään 3 ilmaista skannausta. Tilausten hinnat ja ehdot näkyvät sovelluksessa ja kaupassa."
+    ],
+    [
+      "Laskeeko kuvaskannaus proteiinin?",
+      "Versiossa 1.7 tekoälyn kuvaskannaukset voivat arvioida kalorit, proteiinin, rasvan ja hiilihydraatit jokaiselle tunnistetulle ruoalle. Arviot voivat olla vääriä, etenkin annoskokojen, öljyjen ja sekaruokien kohdalla. Puuttuvat ravintoarvot eivät ole nollia: tarkista ne tai syötä ne käsin."
+    ],
+    [
+      "Kuka voi käyttää Calcalouta?",
+      "Calcalou on tarkoitettu 13 vuotta täyttäneille, paikallisten ikärajojen mukaisesti. Versiossa 1.7 tekoälyskannaukset ja Premium-ostot edellyttävät vähintään 18 vuoden ikää ja aluetta, jossa niitä tarjotaan. Calcalou on yleisen hyvinvoinnin sovellus, ei lääkinnällinen laite."
+    ],
+    [
+      "Voinko käyttää sitä kirjautumatta?",
+      "Sisäänkirjautuminen vaaditaan. Päiväkirjasi on liitetty tiliisi; käytä samaa kirjautumistapaa, kun palaat toisella laitteella."
+    ]
+  ],
+  "more": "Vertaa sovelluksia ja valitse tapasi kirjata",
+  "stores": "Lataa Calcalou",
+  "updated": "Tarkistettu 17. marraskuuta 2026",
+  "privacy": "Tietosuoja",
+  "support": "Tuki"
+}

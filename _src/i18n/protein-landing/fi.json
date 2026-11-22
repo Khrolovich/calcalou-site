@@ -1,0 +1,49 @@
+{
+  "title": "Proteiinisovellus: kirjaa proteiini ja kalorit",
+  "summary": "Calcalou on proteiinin seurantasovellus iPhonelle, iPadille ja Androidille. Kirjaa proteiini kaloreiden rinnalle, aseta tavoite kehonpainosi mukaan ja arvioi ateriat kuvasta.",
+  "features_title": "Proteiinin seuranta Calcaloussa",
+  "features": [
+    "Kirjaa proteiini jokaiseen merkintään: kirjoita se itse ilmaiseksi tai täytä se viivakoodista tai tekoälyn kuvaskannauksella.",
+    "Aseta päivittäinen proteiinitavoite kehonpainosi mukaan. Calcalou näyttää laskun (paino × grammaa kiloa kohden), antaa säätää sitä väliltä 0,8–2,0 g/kg ja hyväksyy myös oman lukusi.",
+    "Näe proteiini kaloreiden vieressä Tänään-näkymässä, viikkoyhteenvedossa ja Tilastoissa, ja valitse jokaiseen widgetiin proteiini tai kalorit.",
+    "Tekoälyn kuvaskannaukset arvioivat proteiinin, rasvan ja hiilihydraatit jokaiselle ruoalle, kaikki muokattavissa ennen tallennusta. Arviot voivat olla vääriä; skannaukset kuuluvat Premiumiin, ja niillä on ikä- ja aluerajoituksia.",
+    "Viivakoodien skannaus on ilmaista. Ravintoarvot riippuvat tuotetiedoista, joten tarkista pakkausmerkinnät ja annoskoko.",
+    "Putket, joustavat muistutukset ja veden seuranta auttavat jatkamaan kirjaamista."
+  ],
+  "sections": [
+    [
+      "Näin seuraat proteiinia Calcaloussa",
+      "Napauta Lisää ja syötä syömäsi ruoan kalorit, proteiini, rasva ja hiilihydraatit, tai skannaa viivakoodi tai kuva, niin ne täyttyvät. Kaikki kentät ovat valinnaisia, joten voit kirjata pelkän proteiinin. Proteiini näkyy kaloreiden vieressä Tänään-näkymässä ja yhteenvedoissa."
+    ],
+    [
+      "Aseta sinulle sopiva proteiinitavoite",
+      "Valitse Kehonpainon mukaan, niin Calcalou kertoo painosi grammoilla kiloa kohden (oletuksena 1,2) ja näyttää laskun. Painosi tulee profiilistasi tai, jos yhdistät ne, Apple Terveydestä tai Health Connectista. Säädä kerrointa väliltä 0,8–2,0 g/kg tai syötä oma tavoite. Tavoite on lähtökohta, ei lääketieteellistä neuvontaa; proteiinilaskuri näyttää viitevälit."
+    ],
+    [
+      "Kuvat, viivakoodit tai käsin",
+      "Kuvaskannaukset arvioivat tekoälyn avulla kalorit, proteiinin, rasvan ja hiilihydraatit jokaiselle ruoalle. Tarkista tulos: annoskoot, öljyt ja sekaruoat on helppo arvioida väärin, eikä puuttuva arvo ole nolla. Viivakoodien skannaus ja käsin kirjaaminen ovat ilmaisia; tuotetiedot vaihtelevat, joten tarkista pakkausmerkinnät."
+    ],
+    [
+      "Kuka voi käyttää sitä",
+      "Calcalou on tarkoitettu 13 vuotta täyttäneille, paikallisten ikärajojen mukaisesti. Versiossa 1.7 tekoälyskannaukset ja Premium-ostot edellyttävät vähintään 18 vuoden ikää ja aluetta, jossa niitä tarjotaan. Sisäänkirjautuminen vaaditaan. Calcalou on yleisen hyvinvoinnin sovellus, ei lääkinnällinen laite."
+    ]
+  ],
+  "faq": [
+    [
+      "Mikä on paras tapa seurata proteiinia?",
+      "Se, jota jaksat jatkaa. Kirjaa proteiini jokaiselle aterialle, tarkista pakattujen ruokien merkinnät ja pidä kuva-arvioita lähtökohtina, joita voit muokata. Calcaloussa voit kirjoittaa proteiinin, skannata viivakoodin tai käyttää tekoälyn kuvaskannausta."
+    ],
+    [
+      "Kuinka paljon proteiinia minun pitäisi syödä päivässä?",
+      "Se riippuu kehostasi, tavoitteistasi ja terveydestäsi. Aikuisille EFSA:n viitesaanti on 0,83 g kehonpainokiloa kohden; International Society of Sports Nutritionin vuoden 2026 kannanotto antaa laihdutukseen 1,2–1,6 g kiloa kohden ja voimaharjoittelun kanssa 1,6–2,2 g kiloa kohden. Proteiinilaskuri näyttää kaikki kolme. Tämä on yleisohje, ei lääketieteellistä neuvontaa."
+    ],
+    [
+      "Laskeeko Calcalou proteiinin kuvasta?",
+      "Kyllä. Versiossa 1.7 tekoälyn kuvaskannaus arvioi kalorit, proteiinin, rasvan ja hiilihydraatit jokaiselle tunnistetulle ruoalle. Arviot voivat olla vääriä, joten tarkista ja muokkaa ne ennen tallennusta."
+    ],
+    [
+      "Onko proteiinin seuranta ilmaista?",
+      "Proteiinin kirjaaminen käsin, viivakoodien skannaus ja proteiinitavoitteet ovat ilmaisia. Tekoälyn kuvaskannaukset kuuluvat Premiumiin; missä tarjolla, tilillä voi kokeilla kerran enintään 3 ilmaista skannausta. Hinnat ja ehdot näkyvät sovelluksessa ja kaupassa."
+    ]
+  ]
+}
