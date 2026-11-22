@@ -1,0 +1,18 @@
+{
+  "meta.title": "Kalkulator TDEE: skupna dnevna poraba energije | Calcalou",
+  "meta.description": "Brezplačen kalkulator TDEE: oceni, koliko kalorij porabiš na dan glede na BMR in raven aktivnosti (Mifflin-St Jeor). Metrične ali imperialne enote.",
+  "meta.og_title": "Kalkulator TDEE: skupna dnevna poraba energije",
+  "meta.og_description": "Oceni skupno dnevno porabo energije glede na BMR in raven aktivnosti, v kg/cm ali lb/ft.",
+  "link.footer": "Kalkulator TDEE",
+  "h1": "Kalkulator TDEE",
+  "h1.sub": "skupna dnevna poraba energije",
+  "lead": "Oceni, koliko kalorij porabiš na običajen dan: energijo v mirovanju (BMR) ter vsakodnevno gibanje in vadbo.",
+  "form.label": "Kalkulator TDEE",
+  "faq.tdee.q": "Kaj je TDEE?",
+  "faq.tdee.a": "TDEE, skupna dnevna poraba energije, oceni vse kalorije, ki jih porabiš v enem dnevu: tvoj BMR v mirovanju ter vsakodnevno gibanje in vadbo. Pogosto se imenuje kalorije za vzdrževanje, torej vnos, ki ohranja tvojo težo približno enako.",
+  "faq.difference.q": "Kakšna je razlika med BMR in TDEE?",
+  "faq.difference.a": "BMR je energija, ki jo telo porabi v popolnem mirovanju. TDEE pomnoži BMR s faktorjem aktivnosti, od 1,2 za malo ali nič vadbe do 1,9 za fizično delo ali trening dvakrat na dan, zato je vedno večji od BMR.",
+  "faq.use.q": "Kaj lahko naredim s svojim TDEE?",
+  "faq.use.a": "Uporabi ga kot izhodišče za dnevni cilj kalorij: če poješ približno toliko, kot znaša tvoj TDEE, sta vnos in poraba približno uravnotežena, manj pomeni primanjkljaj in več presežek. Gre za začetno oceno, zato jo primerjaj s tem, kako se tvoja teža v resnici spreminja v nekaj tednih.",
+  "cta.title": "Spremljaj pojedeno v primerjavi s porabljenim z Lou."
+}

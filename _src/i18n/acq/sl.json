@@ -1,0 +1,41 @@
+{
+  "title": "Kaj je Calcalou? Števec kalorij in beljakovin",
+  "summary": "Calcalou je števec kalorij in beljakovin za iPhone, iPad in Android, z Lou, prijazno maskoto, ki pomaga, da dnevno zapisovanje postane navada.",
+  "version": "Ta vodnik opisuje različico 1.7. Razpoložljivost v trgovinah se lahko razlikuje glede na platformo in državo; če želiš določeno funkcijo, pred prenosom preveri, katera različica ti je na voljo.",
+  "features_title": "Kaj zna Calcalou",
+  "features": [
+    "Brezplačno ročno zapisuj kalorije in beljakovine.",
+    "Brezplačno skeniraj črtne kode izdelkov. Hranilne vrednosti so odvisne od razpoložljivih podatkov o izdelku; preveri deklaracijo in velikost porcije.",
+    "Nastavi cilj beljakovin glede na telesno težo: Calcalou prikaže izračun (teža × grami na kilogram), omogoča prilagoditev in sprejme tvojo številko.",
+    "Oceni obrok s fotografije z UI, vključno s kalorijami, beljakovinami, maščobami in ogljikovimi hidrati za vsako živilo, ko so na voljo. Pred shranjevanjem preglej in uredi rezultat.",
+    "Dodaj vodo po kozarcih ali kot svojo količino v ml.",
+    "Nastavi več opomnikov, vsakega s svojim časom in dnevi v tednu.",
+    "Ohranjaj niz zapisovanja z Lou in spremljaj današnje kalorije ali beljakovine v pripomočku na začetnem zaslonu. Funkcije pripomočkov se razlikujejo glede na platformo.",
+    "Izvozi dnevnik kot CSV za mesec, četrtletje, leto ali celotno obdobje.",
+    "Uporabljaj aplikacijo v 41 jezikih vmesnika v različici 1.7. Za shranjevanje dnevnika v računu je potrebna prijava."
+  ],
+  "faq_title": "Vprašanja o Calcalou",
+  "faq": [
+    [
+      "Je Calcalou brezplačen?",
+      "Ročno zapisovanje kalorij in beljakovin, skeniranje črtnih kod in spremljanje vode so brezplačni. Skeniranje z UI je del Premium; kjer je na voljo, lahko račun enkrat preizkusi do 3 brezplačna skeniranja. Cene naročnine in pogoji so prikazani v aplikaciji in trgovini."
+    ],
+    [
+      "Ali skeniranje fotografije šteje beljakovine?",
+      "V različici 1.7 lahko skeniranje fotografij z UI oceni kalorije, beljakovine, maščobe in ogljikove hidrate za vsako prepoznano živilo. Ocene so lahko napačne, zlasti pri porcijah, oljih in mešanih jedeh. Manjkajoče hranilne vrednosti niso nič: preveri jih ali jih vpiši ročno."
+    ],
+    [
+      "Kdo lahko uporablja Calcalou?",
+      "Calcalou je namenjen uporabnikom od 13. leta naprej, ob upoštevanju lokalnih starostnih zahtev. V različici 1.7 skeniranje z UI in nakupi Premium zahtevajo starost 18 let ali več in ustrezno regijo. Calcalou je aplikacija za splošno dobro počutje, ne medicinski pripomoček."
+    ],
+    [
+      "Ga lahko uporabljam brez prijave?",
+      "Prijava je obvezna. Tvoj dnevnik je povezan s tvojim računom; ko se vrneš na drugi napravi, uporabi isti način prijave."
+    ]
+  ],
+  "more": "Primerjaj števce in izberi svoj način",
+  "stores": "Prenesi Calcalou",
+  "updated": "Preverjeno 17. novembra 2026",
+  "privacy": "Zasebnost",
+  "support": "Podpora"
+}

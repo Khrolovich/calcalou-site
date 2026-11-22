@@ -1,0 +1,49 @@
+{
+  "title": "Aplikacija za spremljanje beljakovin: beljakovine in kalorije",
+  "summary": "Calcalou je aplikacija za spremljanje beljakovin za iPhone, iPad in Android. Zapisuj beljakovine ob kalorijah, nastavi cilj glede na telesno težo in oceni obroke s fotografije.",
+  "features_title": "Spremljanje beljakovin v Calcalou",
+  "features": [
+    "Zapiši beljakovine ob vsakem vnosu: vpiši jih sam brezplačno ali jih izpolni s črtno kodo ali s skeniranjem fotografije z UI.",
+    "Nastavi dnevni cilj beljakovin glede na telesno težo. Calcalou prikaže izračun (teža × grami na kilogram), omogoča prilagoditev od 0,8 do 2,0 g/kg in sprejme tvojo številko.",
+    "Spremljaj beljakovine ob kalorijah na zaslonu Danes, v tedenskem povzetku in v Statistiki ter za vsak pripomoček izberi beljakovine ali kalorije.",
+    "Skeniranje fotografij z UI oceni beljakovine, maščobe in ogljikove hidrate za vsako živilo, vse lahko urediš pred shranjevanjem. Ocene so lahko napačne; skeniranje je del Premium, z omejitvami glede starosti in regije.",
+    "Skeniranje črtnih kod je brezplačno. Hranilne vrednosti so odvisne od podatkov o izdelku, zato preveri deklaracijo in porcijo.",
+    "Nizi, prilagodljivi opomniki in spremljanje vode ti pomagajo, da vztrajaš pri zapisovanju."
+  ],
+  "sections": [
+    [
+      "Kako spremljati beljakovine v Calcalou",
+      "Tapni Dodaj in vpiši kalorije, beljakovine, maščobe in ogljikove hidrate za to, kar si pojedel, ali skeniraj črtno kodo ali fotografijo, da se izpolnijo. Vsa polja so neobvezna, zato lahko zapišeš samo beljakovine. Beljakovine so prikazane ob kalorijah na zaslonu Danes in v povzetkih."
+    ],
+    [
+      "Nastavi cilj beljakovin, ki ti ustreza",
+      "Izberi Glede na telesno težo in Calcalou bo pomnožil tvojo težo z grami na kilogram (privzeto 1,2) ter prikazal izračun. Teža se prenese iz tvojega profila ali, če ju povežeš, iz Apple Health ali Health Connect. Prilagodi faktor od 0,8 do 2,0 g/kg ali vpiši svoj cilj. Cilj je izhodišče, ne zdravniški nasvet; kalkulator beljakovin prikaže referenčne razpone."
+    ],
+    [
+      "Fotografije, črtne kode ali ročno",
+      "Skeniranje fotografij z UI oceni kalorije, beljakovine, maščobe in ogljikove hidrate za vsako živilo. Preveri rezultat: porcije, olja in mešane jedi je lahko napačno oceniti, manjkajoča vrednost pa ni nič. Skeniranje črtnih kod in ročno zapisovanje sta brezplačna; podatki o izdelkih se razlikujejo, zato preveri deklaracijo."
+    ],
+    [
+      "Kdo jo lahko uporablja",
+      "Calcalou je namenjen uporabnikom od 13. leta naprej, ob upoštevanju lokalnih starostnih zahtev. V različici 1.7 skeniranje z UI in nakupi Premium zahtevajo starost 18 let ali več in ustrezno regijo. Prijava je obvezna. Calcalou je aplikacija za splošno dobro počutje, ne medicinski pripomoček."
+    ]
+  ],
+  "faq": [
+    [
+      "Kateri je najboljši način za spremljanje beljakovin?",
+      "Tisti, pri katerem boš vztrajal. Zapisuj beljakovine ob vsakem obroku, preverjaj deklaracije pakirane hrane in ocene s fotografij jemlji kot izhodišče, ki ga lahko urediš. V Calcalou lahko beljakovine vpišeš, skeniraš črtno kodo ali uporabiš skeniranje fotografije z UI."
+    ],
+    [
+      "Koliko beljakovin naj pojem na dan?",
+      "Odvisno od tvojega telesa, ciljev in zdravja. Za odrasle je referenčni vnos EFSA 0,83 g na kg telesne teže; stališče International Society of Sports Nutrition iz leta 2026 navaja 1,2–1,6 g na kg za hujšanje in 1,6–2,2 g na kg z vadbo za moč. Kalkulator beljakovin prikaže vse tri. To so splošne smernice, ne zdravniški nasvet."
+    ],
+    [
+      "Ali Calcalou šteje beljakovine s fotografije?",
+      "Da. V različici 1.7 skeniranje fotografije z UI oceni kalorije, beljakovine, maščobe in ogljikove hidrate za vsako prepoznano živilo. Ocene so lahko napačne, zato jih pred shranjevanjem preveri in uredi."
+    ],
+    [
+      "Je spremljanje beljakovin brezplačno?",
+      "Ročno zapisovanje beljakovin, skeniranje črtnih kod in cilji beljakovin so brezplačni. Skeniranje fotografij z UI je del Premium; kjer je na voljo, lahko račun enkrat preizkusi do 3 brezplačna skeniranja. Cene in pogoji so prikazani v aplikaciji in trgovini."
+    ]
+  ]
+}
