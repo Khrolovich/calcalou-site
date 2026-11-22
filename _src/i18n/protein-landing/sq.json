@@ -1,0 +1,49 @@
+{
+  "title": "Aplikacion për proteinat: regjistro proteinat dhe kaloritë",
+  "summary": "Calcalou është një aplikacion për ndjekjen e proteinave në iPhone, iPad dhe Android. Regjistro proteinat pranë kalorive, vendos një objektiv sipas peshës trupore dhe vlerëso vaktet nga një foto.",
+  "features_title": "Ndjekja e proteinave në Calcalou",
+  "features": [
+    "Regjistro proteinat me çdo regjistrim: shkruaji vetë falas ose plotësoji nga një barkod ose nga një skanim fotoje me AI.",
+    "Vendos një objektiv ditor proteinash sipas peshës trupore. Calcalou tregon llogaritjen (pesha × gramë për kilogram), të lejon ta rregullosh nga 0,8 deri në 2,0 g/kg dhe pranon numrin tënd.",
+    "Shiko proteinat pranë kalorive në ekranin Sot, në përmbledhjen javore dhe te Statistika, dhe zgjidh proteinat ose kaloritë për çdo widget.",
+    "Skanimet e fotove me AI vlerësojnë proteinat, yndyrën dhe karbohidratet për çdo ushqim, të gjitha të modifikueshme para ruajtjes. Vlerësimet mund të jenë të gabuara; skanimet janë Premium, me kufizime moshe dhe rajoni.",
+    "Skanimi i barkodeve është falas. Vlerat ushqyese varen nga të dhënat e produktit, ndaj kontrollo etiketën dhe racionin.",
+    "Seritë, kujtesat fleksibile dhe ndjekja e ujit të ndihmojnë të vazhdosh regjistrimin."
+  ],
+  "sections": [
+    [
+      "Si t'i ndjekësh proteinat në Calcalou",
+      "Prek Shto dhe fut kaloritë, proteinat, yndyrën dhe karbohidratet për atë që hëngre, ose skano një barkod apo një foto për t'i plotësuar. Çdo fushë është opsionale, ndaj mund të regjistrosh vetëm proteinat. Proteinat shfaqen pranë kalorive në ekranin Sot dhe në përmbledhjet e tua."
+    ],
+    [
+      "Vendos një objektiv proteinash që të përshtatet",
+      "Zgjidh Sipas peshës trupore dhe Calcalou shumëzon peshën tënde me gramët për kilogram (1,2 si parazgjedhje) dhe tregon llogaritjen. Pesha merret nga profili yt ose, nëse i lidh, nga Apple Health ose Health Connect. Rregulloje faktorin nga 0,8 deri në 2,0 g/kg ose fut objektivin tënd. Objektivi është një pikënisje, jo këshillë mjekësore; kalkulatori i proteinave tregon gamat e referencës."
+    ],
+    [
+      "Foto, barkode ose me dorë",
+      "Skanimet e fotove përdorin AI për të vlerësuar kaloritë, proteinat, yndyrën dhe karbohidratet për çdo ushqim. Rishiko rezultatin: racionet, vajrat dhe gatimet e përziera vlerësohen lehtë gabim, dhe një vlerë që mungon nuk është zero. Skanimi i barkodeve dhe regjistrimi manual janë falas; të dhënat e produkteve ndryshojnë, ndaj kontrollo etiketën."
+    ],
+    [
+      "Kush mund ta përdorë",
+      "Calcalou është për moshat 13 vjeç e lart, në përputhje me kërkesat lokale të moshës. Në versionin 1.7, skanimet me AI dhe blerjet Premium kërkojnë moshë 18 vjeç ose më shumë dhe një rajon ku ofrohen. Hyrja në llogari është e detyrueshme. Calcalou është një aplikacion për mirëqenie të përgjithshme, jo pajisje mjekësore."
+    ]
+  ],
+  "faq": [
+    [
+      "Cila është mënyra më e mirë për të ndjekur proteinat?",
+      "Ajo që do ta vazhdosh. Regjistro proteinat me çdo vakt, kontrollo etiketat e ushqimeve të paketuara dhe trajtoji vlerësimet nga fotot si pikënisje që mund t'i ndryshosh. Në Calcalou mund t'i shkruash proteinat, të skanosh një barkod ose të përdorësh një skanim fotoje me AI."
+    ],
+    [
+      "Sa proteina duhet të ha në ditë?",
+      "Varet nga trupi, objektivat dhe shëndeti yt. Për të rriturit, marrja e referencës e EFSA është 0,83 g për kg peshë trupore; qëndrimi zyrtar i vitit 2026 i International Society of Sports Nutrition jep 1,2–1,6 g për kg për humbje peshe dhe 1,6–2,2 g për kg me stërvitje force. Kalkulatori i proteinave i tregon të tria. Ky është udhëzim i përgjithshëm, jo këshillë mjekësore."
+    ],
+    [
+      "A i llogarit Calcalou proteinat nga një foto?",
+      "Po. Në versionin 1.7, një skanim fotoje me AI vlerëson kaloritë, proteinat, yndyrën dhe karbohidratet për çdo ushqim të dalluar. Vlerësimet mund të jenë të gabuara, ndaj kontrolloji dhe ndryshoji para ruajtjes."
+    ],
+    [
+      "A është falas ndjekja e proteinave?",
+      "Regjistrimi i proteinave me dorë, skanimi i barkodeve dhe objektivat e proteinave janë falas. Skanimet e fotove me AI janë Premium; aty ku ofrohet, një llogari mund të provojë një herë deri në 3 skanime falas. Çmimet dhe kushtet shfaqen në aplikacion dhe në dyqan."
+    ]
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "meta.title": "Kalkulator TDEE: shpenzimi total ditor i energjisë | Calcalou",
+  "meta.description": "Kalkulator TDEE falas: vlerëso sa kalori djeg në ditë sipas BMR-së dhe nivelit të aktivitetit (Mifflin-St Jeor). Njësi metrike ose imperiale.",
+  "meta.og_title": "Kalkulator TDEE: shpenzimi total ditor i energjisë",
+  "meta.og_description": "Vlerëso shpenzimin total ditor të energjisë sipas BMR-së dhe nivelit të aktivitetit, në kg/cm ose lb/ft.",
+  "link.footer": "Kalkulator TDEE",
+  "h1": "Kalkulator TDEE",
+  "h1.sub": "shpenzimi total ditor i energjisë",
+  "lead": "Vlerëso sa kalori djeg në një ditë të zakonshme: energjia në qetësi (BMR) plus lëvizja e përditshme dhe stërvitja.",
+  "form.label": "Kalkulator TDEE",
+  "faq.tdee.q": "Çfarë është TDEE?",
+  "faq.tdee.a": "TDEE, shpenzimi total ditor i energjisë, vlerëson të gjitha kaloritë që djeg në një ditë: BMR-në në qetësi plus lëvizjen e përditshme dhe stërvitjen. Shpesh quhet kaloritë e mbajtjes, pra marrja që e mban peshën pothuajse të njëjtë.",
+  "faq.difference.q": "Cili është ndryshimi midis BMR dhe TDEE?",
+  "faq.difference.a": "BMR është energjia që përdor trupi yt në qetësi të plotë. TDEE e shumëzon BMR-në me një faktor aktiviteti, nga 1,2 për pak ose aspak lëvizje deri në 1,9 për punë fizike ose stërvitje dy herë në ditë, ndaj është gjithmonë më i lartë se BMR.",
+  "faq.use.q": "Çfarë mund të bëj me TDEE-në time?",
+  "faq.use.a": "Përdore si pikë referimi për një objektiv ditor kalorish: kur ha rreth TDEE-së tënde, marrja dhe djegia janë pak a shumë në ekuilibër, kur ha më pak ke deficit dhe kur ha më shumë ke suficit. Është një vlerësim fillestar, ndaj krahasoje me mënyrën si ndryshon realisht pesha jote gjatë disa javëve.",
+  "cta.title": "Ndiq të ngrënën kundrejt të djegurës me Lou."
+}

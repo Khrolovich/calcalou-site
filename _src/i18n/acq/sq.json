@@ -1,0 +1,41 @@
+{
+  "title": "Çfarë është Calcalou? Numërues kalorish dhe proteinash",
+  "summary": "Calcalou është një numërues kalorish dhe proteinash për iPhone, iPad dhe Android, me Lou, një maskotë miqësore që të ndihmon ta kthesh regjistrimin e përditshëm në zakon.",
+  "version": "Ky udhëzues përshkruan versionin 1.7. Publikimi në dyqane mund të ndryshojë sipas platformës dhe vendit; kontrollo versionin që të është i disponueshëm para se ta shkarkosh për një veçori të caktuar.",
+  "features_title": "Çfarë bën Calcalou",
+  "features": [
+    "Regjistro kaloritë dhe proteinat me dorë falas.",
+    "Skano barkodet e produkteve falas. Vlerat ushqyese varen nga të dhënat e disponueshme të produktit; kontrollo etiketën dhe madhësinë e racionit.",
+    "Vendos një objektiv proteinash sipas peshës trupore: Calcalou tregon llogaritjen (pesha × gramë për kilogram), të lejon ta rregullosh dhe pranon numrin tënd.",
+    "Vlerëso një vakt nga një foto me AI, përfshirë kaloritë, proteinat, yndyrën dhe karbohidratet për çdo ushqim kur janë të disponueshme. Rishiko dhe ndrysho rezultatin para ruajtjes.",
+    "Shto ujë me gota ose si sasi të zgjedhur në ml.",
+    "Vendos disa kujtesa, secila me orën dhe ditët e veta të javës.",
+    "Mbaj një seri regjistrimi me Lou dhe ndiq kaloritë ose proteinat e sotme në një widget në ekranin bazë. Veçoritë e widget-eve ndryshojnë sipas platformës.",
+    "Eksporto ditarin si CSV për një muaj, tremujor, vit ose gjithë kohën.",
+    "Përdore aplikacionin në 41 gjuhë ndërfaqeje (versioni 1.7). Hyrja në llogari është e detyrueshme për ta ruajtur ditarin në llogarinë tënde."
+  ],
+  "faq_title": "Pyetje për Calcalou",
+  "faq": [
+    [
+      "A është Calcalou falas?",
+      "Regjistrimi manual i kalorive dhe proteinave, skanimi i barkodeve dhe ndjekja e ujit janë falas. Skanimet me AI janë Premium; aty ku ofrohet, një llogari mund të provojë një herë deri në 3 skanime falas. Çmimet dhe kushtet e abonimit shfaqen në aplikacion dhe në dyqan."
+    ],
+    [
+      "A i numëron skanimi i fotos proteinat?",
+      "Në versionin 1.7, skanimet e fotove me AI mund të vlerësojnë kaloritë, proteinat, yndyrën dhe karbohidratet për çdo ushqim të dalluar. Vlerësimet mund të jenë të gabuara, sidomos për racionet, vajrat dhe gatimet e përziera. Vlerat ushqyese që mungojnë nuk janë zero: kontrolloji ose futi me dorë."
+    ],
+    [
+      "Kush mund ta përdorë Calcalou?",
+      "Calcalou është për moshat 13 vjeç e lart, në përputhje me kërkesat lokale të moshës. Në versionin 1.7, skanimet me AI dhe blerjet Premium kërkojnë moshë 18 vjeç ose më shumë dhe një rajon ku ofrohen. Calcalou është një aplikacion për mirëqenie të përgjithshme, jo pajisje mjekësore."
+    ],
+    [
+      "A mund ta përdor pa hyrë në llogari?",
+      "Hyrja në llogari është e detyrueshme. Ditari yt lidhet me llogarinë tënde; përdor të njëjtën mënyrë hyrjeje kur kthehesh në një pajisje tjetër."
+    ]
+  ],
+  "more": "Krahaso aplikacionet dhe zgjidh mënyrën tënde",
+  "stores": "Merr Calcalou",
+  "updated": "Kontrolluar më 17 nëntor 2026",
+  "privacy": "Privatësia",
+  "support": "Mbështetje"
+}
