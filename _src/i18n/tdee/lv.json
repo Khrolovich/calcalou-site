@@ -1,0 +1,18 @@
+{
+  "meta.title": "TDEE kalkulators: kopējais dienas enerģijas patēriņš | Calcalou",
+  "meta.description": "Bezmaksas TDEE kalkulators: aprēķini, cik kaloriju dienā sadedzini, pēc sava BMR un aktivitātes līmeņa (Mifflin-St Jeor). Metriskās vai britu mērvienības.",
+  "meta.og_title": "TDEE kalkulators: kopējais dienas enerģijas patēriņš",
+  "meta.og_description": "Aprēķini savu kopējo dienas enerģijas patēriņu pēc BMR un aktivitātes līmeņa, mērvienībās kg/cm vai lb/ft.",
+  "link.footer": "TDEE kalkulators",
+  "h1": "TDEE kalkulators",
+  "h1.sub": "kopējais dienas enerģijas patēriņš",
+  "lead": "Aprēķini, cik kaloriju sadedzini parastā dienā: enerģija miera stāvoklī (BMR) plus ikdienas kustības un treniņi.",
+  "form.label": "TDEE kalkulators",
+  "faq.tdee.q": "Kas ir TDEE?",
+  "faq.tdee.a": "TDEE jeb kopējais dienas enerģijas patēriņš aprēķina visas kalorijas, ko sadedzini dienā: tavs BMR miera stāvoklī plus ikdienas kustības un treniņi. To bieži sauc par uzturošajām kalorijām, tas ir, uzņemšanu, kas notur svaru aptuveni nemainīgu.",
+  "faq.difference.q": "Kāda ir atšķirība starp BMR un TDEE?",
+  "faq.difference.a": "BMR ir enerģija, ko tavs ķermenis patērē pilnīgā miera stāvoklī. TDEE reizina BMR ar aktivitātes koeficientu, no 1,2, ja aktivitāšu ir maz vai nav vispār, līdz 1,9, ja ir fizisks darbs vai treniņi divreiz dienā, tāpēc tas vienmēr ir lielāks par BMR.",
+  "faq.use.q": "Ko es varu darīt ar savu TDEE?",
+  "faq.use.a": "Izmanto to kā atskaites punktu dienas kaloriju mērķim: ēdot aptuveni savu TDEE, uzņemšana un patēriņš ir aptuveni līdzsvarā, ēdot mazāk, rodas deficīts, bet ēdot vairāk, pārpalikums. Tas ir sākotnējs aprēķins, tāpēc salīdzini to ar to, kā tavs svars patiesībā mainās dažu nedēļu laikā.",
+  "cta.title": "Seko apēstajam un sadedzinātajam kopā ar Lou."
+}

@@ -1,0 +1,49 @@
+{
+  "title": "Olbaltumvielu uzskaites lietotne: ieraksti olbaltumvielas un kalorijas",
+  "summary": "Calcalou ir olbaltumvielu uzskaites lietotne iPhone, iPad un Android ierīcēm. Ieraksti olbaltumvielas blakus kalorijām, iestati mērķi pēc ķermeņa svara un aprēķini maltītes no foto.",
+  "features_title": "Olbaltumvielu uzskaite lietotnē Calcalou",
+  "features": [
+    "Ieraksti olbaltumvielas katrā ierakstā: ieraksti tās pats bez maksas vai aizpildi no svītrkoda vai MI foto skenēšanas.",
+    "Iestati dienas olbaltumvielu mērķi pēc ķermeņa svara. Calcalou parāda aprēķinu (svars × grami uz kilogramu), ļauj to pielāgot no 0,8 līdz 2,0 g/kg un pieņem arī tavu skaitli.",
+    "Redzi olbaltumvielas blakus kalorijām ekrānā Šodien, nedēļas kopsavilkumā un Statistikā un katram logrīkam izvēlies olbaltumvielas vai kalorijas.",
+    "MI foto skenēšana aprēķina katra produkta olbaltumvielas, taukus un ogļhidrātus, visu var labot pirms saglabāšanas. Aprēķini var kļūdīties; skenēšana ir Premium funkcija ar vecuma un reģiona ierobežojumiem.",
+    "Svītrkodu skenēšana ir bez maksas. Uzturvērtības ir atkarīgas no produkta datiem, tāpēc pārbaudi etiķeti un porciju.",
+    "Sērijas, elastīgi atgādinājumi un ūdens uzskaite palīdz turpināt ierakstīšanu."
+  ],
+  "sections": [
+    [
+      "Kā uzskaitīt olbaltumvielas lietotnē Calcalou",
+      "Pieskaries pogai Pievienot un ievadi apēstā kalorijas, olbaltumvielas, taukus un ogļhidrātus vai noskenē svītrkodu vai foto, lai tos aizpildītu. Visi lauki nav obligāti, tāpēc vari ierakstīt tikai olbaltumvielas. Olbaltumvielas redzamas blakus kalorijām ekrānā Šodien un tavos kopsavilkumos."
+    ],
+    [
+      "Iestati sev piemērotu olbaltumvielu mērķi",
+      "Izvēlies Pēc ķermeņa svara, un Calcalou reizinās tavu svaru ar gramiem uz kilogramu (pēc noklusējuma 1,2) un parādīs aprēķinu. Svars tiek ņemts no tava profila vai, ja tos savieno, no Apple Health vai Health Connect. Pielāgo koeficientu no 0,8 līdz 2,0 g/kg vai ievadi savu mērķi. Mērķis ir sākumpunkts, nevis medicīnisks padoms; olbaltumvielu kalkulators rāda atsauces diapazonus."
+    ],
+    [
+      "Foto, svītrkodi vai manuāli",
+      "Foto skenēšana izmanto MI, lai aprēķinātu katra produkta kalorijas, olbaltumvielas, taukus un ogļhidrātus. Pārskati rezultātu: porcijas, eļļas un jauktus ēdienus ir viegli novērtēt nepareizi, un trūkstoša vērtība nav nulle. Svītrkodu skenēšana un manuāla ierakstīšana ir bez maksas; produktu dati atšķiras, tāpēc pārbaudi etiķeti."
+    ],
+    [
+      "Kas to var izmantot",
+      "Calcalou ir paredzēta no 13 gadu vecuma, ievērojot vietējās vecuma prasības. Versijā 1.7 MI skenēšanai un Premium pirkumiem nepieciešams vismaz 18 gadu vecums un reģions, kurā tie tiek piedāvāti. Nepieciešams pieteikties. Calcalou ir vispārējās labsajūtas lietotne, nevis medicīniska ierīce."
+    ]
+  ],
+  "faq": [
+    [
+      "Kāds ir labākais veids, kā uzskaitīt olbaltumvielas?",
+      "Tas, kuru spēsi turpināt. Ieraksti olbaltumvielas pie katras maltītes, pārbaudi iepakotu produktu etiķetes un uztver foto aprēķinus kā sākumpunktu, ko vari labot. Lietotnē Calcalou vari ierakstīt olbaltumvielas, noskenēt svītrkodu vai izmantot MI foto skenēšanu."
+    ],
+    [
+      "Cik daudz olbaltumvielu man vajadzētu apēst dienā?",
+      "Tas atkarīgs no tava ķermeņa, mērķiem un veselības. Pieaugušajiem EFSA atsauces uzņemšanas daudzums ir 0,83 g uz kilogramu ķermeņa svara; International Society of Sports Nutrition 2026. gada nostāja norāda 1,2–1,6 g uz kilogramu svara zaudēšanai un 1,6–2,2 g uz kilogramu ar spēka treniņiem. Olbaltumvielu kalkulators rāda visus trīs. Tās ir vispārīgas vadlīnijas, nevis medicīnisks padoms."
+    ],
+    [
+      "Vai Calcalou uzskaita olbaltumvielas no foto?",
+      "Jā. Versijā 1.7 MI foto skenēšana aprēķina kalorijas, olbaltumvielas, taukus un ogļhidrātus katram atpazītajam produktam. Aprēķini var kļūdīties, tāpēc pārbaudi un labo tos pirms saglabāšanas."
+    ],
+    [
+      "Vai olbaltumvielu uzskaite ir bez maksas?",
+      "Olbaltumvielu ierakstīšana manuāli, svītrkodu skenēšana un olbaltumvielu mērķi ir bez maksas. MI foto skenēšana ir Premium funkcija; kur tas tiek piedāvāts, konts vienu reizi var izmēģināt līdz 3 bezmaksas skenēšanām. Cenas un nosacījumi redzami lietotnē un veikalā."
+    ]
+  ]
+}

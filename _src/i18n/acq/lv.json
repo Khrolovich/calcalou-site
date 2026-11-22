@@ -1,0 +1,41 @@
+{
+  "title": "Kas ir Calcalou? Kaloriju un olbaltumvielu skaitītājs",
+  "summary": "Calcalou ir kaloriju un olbaltumvielu skaitītājs iPhone, iPad un Android ierīcēm ar Lou, draudzīgu talismanu, kas palīdz ikdienas ierakstīšanu padarīt par ieradumu.",
+  "version": "Šis ceļvedis apraksta versiju 1.7. Pieejamība veikalos var atšķirties atkarībā no platformas un valsts; pirms lejupielādēt konkrētas funkcijas dēļ, pārbaudi, kura versija tev ir pieejama.",
+  "features_title": "Ko dara Calcalou",
+  "features": [
+    "Ieraksti kalorijas un olbaltumvielas manuāli bez maksas.",
+    "Skenē produktu svītrkodus bez maksas. Uzturvērtības ir atkarīgas no pieejamajiem produkta datiem; pārbaudi etiķeti un porcijas lielumu.",
+    "Iestati olbaltumvielu mērķi pēc ķermeņa svara: Calcalou parāda aprēķinu (svars × grami uz kilogramu), ļauj to pielāgot un pieņem arī tavu skaitli.",
+    "Aprēķini maltīti no foto ar MI, tostarp katra produkta kalorijas, olbaltumvielas, taukus un ogļhidrātus, ja tie ir pieejami. Pirms saglabāšanas pārskati un labo rezultātu.",
+    "Pievieno ūdeni pa glāzei vai savā daudzumā mililitros.",
+    "Iestati vairākus atgādinājumus, katram savu laiku un nedēļas dienas.",
+    "Noturi ierakstu sēriju kopā ar Lou un seko šodienas kalorijām vai olbaltumvielām logrīkā sākuma ekrānā. Logrīku funkcijas atšķiras atkarībā no platformas.",
+    "Eksportē savu dienasgrāmatu CSV formātā par mēnesi, ceturksni, gadu vai visu laiku.",
+    "Lieto lietotni 41 saskarnes valodā (versija 1.7). Lai dienasgrāmata glabātos tavā kontā, nepieciešams pieteikties."
+  ],
+  "faq_title": "Jautājumi par Calcalou",
+  "faq": [
+    [
+      "Vai Calcalou ir bez maksas?",
+      "Kaloriju un olbaltumvielu ierakstīšana manuāli, svītrkodu skenēšana un ūdens uzskaite ir bez maksas. MI skenēšana ir Premium funkcija; kur tas tiek piedāvāts, konts vienu reizi var izmēģināt līdz 3 bezmaksas skenēšanām. Abonementu cenas un nosacījumi redzami lietotnē un veikalā."
+    ],
+    [
+      "Vai foto skenēšana uzskaita olbaltumvielas?",
+      "Versijā 1.7 MI foto skenēšana var aprēķināt kalorijas, olbaltumvielas, taukus un ogļhidrātus katram atpazītajam produktam. Aprēķini var kļūdīties, īpaši attiecībā uz porcijām, eļļām un jauktiem ēdieniem. Trūkstošas uzturvērtības nav nulle: pārbaudi tās vai ievadi manuāli."
+    ],
+    [
+      "Kas var lietot Calcalou?",
+      "Calcalou ir paredzēta no 13 gadu vecuma, ievērojot vietējās vecuma prasības. Versijā 1.7 MI skenēšanai un Premium pirkumiem nepieciešams vismaz 18 gadu vecums un reģions, kurā tie tiek piedāvāti. Calcalou ir vispārējās labsajūtas lietotne, nevis medicīniska ierīce."
+    ],
+    [
+      "Vai varu to lietot bez pieteikšanās?",
+      "Nepieciešams pieteikties. Tava dienasgrāmata ir saistīta ar tavu kontu; atgriežoties citā ierīcē, izmanto to pašu pieteikšanās veidu."
+    ]
+  ],
+  "more": "Salīdzini lietotnes un izvēlies savu pieeju",
+  "stores": "Iegūsti Calcalou",
+  "updated": "Pārbaudīts 2026. gada 17. novembrī",
+  "privacy": "Privātums",
+  "support": "Atbalsts"
+}
