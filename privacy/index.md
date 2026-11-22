@@ -5,7 +5,7 @@ permalink: /privacy/
 
 # Privacy Policy for Calcalou Calorie Tracker
 
-**Last updated:** 2026-11-XX
+**Last updated:** 2026-11-21
 
 **Applies to:** Calcalou Calorie Tracker for iOS and Android, version 1.1 and later
 
