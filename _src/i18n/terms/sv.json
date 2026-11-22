@@ -42,7 +42,7 @@
     [
       "Tillåten användning",
       [
-        "Använd Calcalou bara för lagliga, personliga ändamål. Missbruka den inte: bryt inte mot lagen eller någons rättigheter; dekompilera, kopiera eller sälj inte vidare appen; stör inte appen eller dess säkerhet; använd den inte automatiserat, till exempel med skrapning eller bottar; kringgå inte gränser, gratisskanningar, inbjudningsbelöningar eller ålderskontroller; trakassera inte andra och utge dig inte för att vara någon annan; och ladda inte upp innehåll som är olagligt, skadligt eller som du inte har rätt att dela.",
+        "Använd Calcalou bara för lagliga, personliga ändamål. Missbruka den inte: bryt inte mot lagen eller någons rättigheter; bakåtutveckla, kopiera eller sälj inte vidare appen; stör inte appen eller dess säkerhet; använd den inte automatiserat, till exempel med skrapning eller bottar; kringgå inte gränser, kvoter för gratisskanningar, inbjudningsbelöningar eller ålderskontroller; trakassera inte andra och utge dig inte för att vara någon annan; och ladda inte upp innehåll som är olagligt, skadligt eller som du inte har rätt att dela.",
         "Vi kan begränsa, stänga av eller avsluta åtkomst om du bryter mot dessa villkor eller om lagen kräver det."
       ]
     ],
@@ -69,21 +69,21 @@
     [
       "Tillgänglighet och ändringar i appen",
       [
-        "Vi försöker hålla Calcalou igång, men den tillhandahålls i befintligt skick. Den kan avbrytas, ändra eller förlora funktioner eller läggas ned, och vissa funktioner skiljer sig åt mellan plattformar, länder, åldrar och appversioner."
+        "Vi försöker hålla Calcalou igång, men den tillhandahålls i mån av tillgänglighet. Den kan avbrytas, ändra eller förlora funktioner eller läggas ned, och vissa funktioner skiljer sig åt mellan plattformar, länder, åldrar och appversioner."
       ]
     ],
     [
       "Friskrivning och ansvarsbegränsning",
       [
-        "I den utsträckning lagen tillåter tillhandahålls Calcalou och webbplatsen ”i befintligt skick” och ”i mån av tillgänglighet”, utan garantier av något slag, uttryckliga eller underförstådda, inklusive korrekthet, lämplighet för ett visst ändamål och oavbruten eller felfri drift.",
-        "I den utsträckning lagen tillåter ansvarar vi inte för indirekta, tillfälliga, särskilda, följd- eller straffskador, eller för förlorade data, vinster eller möjligheter, eller för något hälso-, kost-, vikt- eller annat utfall eller beslut som grundas på Calcalou eller dess uppskattningar. Vårt sammanlagda ansvar för alla anspråk som rör Calcalou är begränsat till det belopp du har betalat för den under de 12 månaderna före anspråket.",
+        "I den största utsträckning som lagen tillåter tillhandahålls Calcalou och webbplatsen ”i befintligt skick” och ”i mån av tillgänglighet”, utan garantier av något slag, uttryckliga eller underförstådda, inklusive korrekthet, lämplighet för ett visst ändamål och oavbruten eller felfri drift.",
+        "I den största utsträckning som lagen tillåter ansvarar vi inte för indirekta, tillfälliga eller särskilda skador, följdskador eller skadestånd i bestraffande syfte, eller för förlorade data, vinster eller möjligheter, eller för något hälso-, kost-, vikt- eller annat utfall eller beslut som grundas på Calcalou eller dess uppskattningar. Vårt sammanlagda ansvar för varje anspråk som rör Calcalou är begränsat till det belopp du har betalat för den under de 12 månaderna före anspråket.",
         "Inget i dessa villkor begränsar ansvar som inte kan begränsas enligt lag, till exempel för bedrägeri, för dödsfall eller personskada orsakad av vårdslöshet, eller dina tvingande rättigheter som konsument."
       ]
     ],
     [
       "Villkor för App Store och Google Play",
       [
-        "På iPhone och iPad omfattas din användning av appen även av Apples [Standard Licensed Application End User License Agreement](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) (Apple EULA). Apple ansvarar inte för appen, dess underhåll, support eller anspråk som rör den, och Apple och dess dotterbolag är tredjepartsförmånstagare enligt Apple EULA.",
+        "På iPhone och iPad omfattas din användning av appen även av Apples [Standardlicensavtal för slutanvändare av licensierade appar](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) (Apple EULA). Apple ansvarar inte för appen, dess underhåll, support eller anspråk som rör den, och Apple och dess dotterbolag är tredjepartsförmånstagare enligt Apple EULA.",
         "På Android omfattas din användning av Google Play och köp som görs där även av Googles villkor. Om dessa villkor strider mot Apple EULA för App Store-versionen har Apple EULA företräde i den utsträckning som krävs."
       ]
     ],
@@ -96,7 +96,7 @@
     [
       "Tillämplig lag och tvister",
       [
-        "Dessa villkor regleras av lagen i det land där utvecklaren är etablerad, utan dess lagvalsregler, och tvister prövas av domstolarna där. Det inskränker inte det tvingande konsumentskyddet i ditt hemland eller din rätt att väcka talan vid din lokala domstol. Skriv gärna till oss först så att vi kan försöka lösa problemet informellt."
+        "Dessa villkor regleras av lagen i det land där utvecklaren är etablerad, utan dess lagvalsregler, och tvister prövas av domstolarna där. Det inskränker inte det tvingande konsumentskyddet i det land där du bor eller din rätt att väcka talan vid din lokala domstol. Skriv gärna till oss först så att vi kan försöka lösa problemet informellt."
       ]
     ],
     [

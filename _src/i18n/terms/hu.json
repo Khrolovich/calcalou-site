@@ -42,14 +42,14 @@
     [
       "Elfogadható használat",
       [
-        "A Calcalou-t csak jogszerű, személyes célra használd. Ne élj vissza vele: ne szegd meg a törvényt vagy mások jogait; ne fejtsd vissza, ne másold és ne értékesítsd tovább az appot; ne zavard a működését vagy a biztonságát; ne férj hozzá automatizált módon, például adatkaparással vagy botokkal; ne kerüld meg a korlátokat, az ingyenes szkenneléseket, a meghívási jutalmakat vagy az életkor-ellenőrzést; ne zaklass másokat, és ne add ki magad másnak; és ne tölts fel jogellenes, ártalmas vagy olyan tartalmat, amelynek megosztására nincs jogod.",
+        "A Calcalou-t csak jogszerű, személyes célra használd. Ne élj vissza vele: ne szegd meg a törvényt vagy mások jogait; ne fejtsd vissza, ne másold és ne értékesítsd tovább az appot; ne zavard a működését vagy a biztonságát; ne férj hozzá automatizált módon, például adatkaparással vagy botokkal; ne kerüld meg a korlátokat, az ingyenes szkennelési kereteket, a meghívási jutalmakat vagy az életkor-ellenőrzést; ne zaklass másokat, és ne add ki magad másnak; és ne tölts fel jogellenes, ártalmas vagy olyan tartalmat, amelynek megosztására nincs jogod.",
         "Korlátozhatjuk, felfüggeszthetjük vagy megszüntethetjük a hozzáférést, ha megszeged ezeket a Feltételeket, vagy ha a jogszabály ezt írja elő."
       ]
     ],
     [
       "A tartalmad",
       [
-        "Amit beírsz vagy feltöltesz, például naplóbejegyzések, célok, fotók és beállítások, a tiéd marad. Világszerte érvényes, nem kizárólagos licencet adsz nekünk ezek tárolására, feldolgozására és megjelenítésére, kizárólag a Calcalou működtetéséhez és fejlesztéséhez szükséges mértékben, beleértve egy fotó AI-szolgáltatásnak való elküldését, amikor szkennelést kérsz, ahogy az [Adatvédelmi irányelvekben](/privacy/) le van írva.",
+        "Amit beírsz vagy feltöltesz, például naplóbejegyzések, célok, fotók és beállítások, a tiéd marad. Világszerte érvényes, nem kizárólagos licencet adsz nekünk ezek tárolására, feldolgozására és megjelenítésére, kizárólag a Calcalou számodra történő működtetéséhez és fejlesztéséhez szükséges mértékben, beleértve egy fotó AI-szolgáltatásnak való elküldését, amikor szkennelést kérsz, ahogy az [Adatvédelmi irányelvekben](/privacy/) le van írva.",
         "Te felelsz a tartalmadért, és vállalod, hogy jogod van azt beküldeni."
       ]
     ],
@@ -73,7 +73,7 @@
       ]
     ],
     [
-      "Jogi nyilatkozat és a felelősség korlátozása",
+      "Felelősségkizárás és a felelősség korlátozása",
       [
         "A jogszabályok által megengedett legteljesebb mértékben a Calcalou és a webhely „ahogy van” és „ahogy elérhető” alapon érhető el, bármilyen kifejezett vagy hallgatólagos garancia nélkül, beleértve a pontosságot, az adott célra való alkalmasságot és a megszakítás- vagy hibamentes működést.",
         "A jogszabályok által megengedett legteljesebb mértékben nem felelünk a közvetett, járulékos, különleges, következményi vagy büntető jellegű károkért, az elveszett adatokért, nyereségért vagy lehetőségekért, sem a Calcalou-ra vagy annak becsléseire alapuló bármilyen egészségügyi, táplálkozási, testsúllyal kapcsolatos vagy egyéb eredményért vagy döntésért. A Calcalou-val kapcsolatos bármely igényért fennálló teljes felelősségünk arra az összegre korlátozódik, amelyet az igényt megelőző 12 hónapban fizettél érte.",
@@ -83,7 +83,7 @@
     [
       "Az App Store és a Google Play feltételei",
       [
-        "iPhone-on és iPaden az app használatára az Apple [Standard Licensed Application End User License Agreement](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) (Apple EULA) is vonatkozik. Az Apple nem felel az appért, annak karbantartásáért, támogatásáért vagy az azzal kapcsolatos igényekért, és az Apple és leányvállalatai az Apple EULA harmadik fél kedvezményezettjei.",
+        "iPhone-on és iPaden az app használatára az Apple [Licencelt alkalmazásokra vonatkozó szabványos végfelhasználói licencszerződés](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) (Apple EULA) is vonatkozik. Az Apple nem felel az appért, annak karbantartásáért, támogatásáért vagy az azzal kapcsolatos igényekért, és az Apple és leányvállalatai az Apple EULA kedvezményezett harmadik felei.",
         "Androidon a Google Play és az ott végzett vásárlások használatára a Google feltételei is vonatkoznak. Ha ezek a Feltételek az App Store-verzió esetében ellentmondanak az Apple EULA-nak, az Apple EULA az előírt mértékben elsőbbséget élvez."
       ]
     ],
@@ -96,7 +96,7 @@
     [
       "Irányadó jog és jogviták",
       [
-        "Ezekre a Feltételekre annak az országnak a joga az irányadó, ahol a fejlesztő székhelye van, kollíziós szabályai nélkül, és a jogvitákat az ottani bíróságok bírálják el. Ez nem foszt meg téged a lakóhelyed szerinti ország kötelező fogyasztóvédelmétől, illetve attól a jogodtól, hogy a helyi bíróságodhoz fordulj. Kérjük, előbb írj nekünk, hogy megpróbálhassuk informálisan megoldani a problémát."
+        "Ezekre a Feltételekre annak az országnak a joga az irányadó, ahol a fejlesztő letelepedett, kollíziós szabályai nélkül, és a jogvitákat az ottani bíróságok bírálják el. Ez nem foszt meg téged a lakóhelyed szerinti ország kötelező fogyasztóvédelmétől, illetve attól a jogodtól, hogy a helyi bíróságodhoz fordulj. Kérjük, előbb írj nekünk, hogy megpróbálhassuk informálisan megoldani a problémát."
       ]
     ],
     [

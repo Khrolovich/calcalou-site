@@ -11,7 +11,7 @@
       ]
     ],
     [
-      "Uvjeti korištenja i tvoj račun",
+      "Pravo na korištenje i tvoj račun",
       [
         "Calcalou je namijenjen osobama od 13 godina naviše, uz dobne zahtjeve u tvojoj zemlji. AI skeniranja fotografija i kupnje Premiuma namijenjeni su osobama od 18 godina naviše i samo tamo gdje su ponuđeni.",
         "Potrebna je prijava. Odgovoran si za sigurnost svojih podataka za prijavu i za sve što se radi putem tvog računa. Navodi točne podatke i javi nam ako misliš da je tvoj račun zloupotrijebljen."
@@ -21,7 +21,7 @@
       "Nije medicinski savjet",
       [
         "Calcalou je alat za opću dobrobit i bilježenje hrane. Nije medicinski uređaj i ne dijagnosticira, ne liječi, ne izliječi niti sprječava bilo kakvo stanje. Vrijednosti kalorija i proteina, ciljevi, izračuni, nizovi i prijedlozi opće su procjene, a ne osobni medicinski, nutricionistički ili dijetetski savjet.",
-        "Razgovaraj s kvalificiranim zdravstvenim stručnjakom prije nego što promijeniš prehranu, započneš program vježbanja ili mršavljenja, ili ako si trudna, imaš zdravstveno stanje ili poremećaj prehrane, ili si mlađi od 18 godina. Nikad ne zanemaruj i ne odgađaj stručni savjet zbog nečega u Calcalouu."
+        "Razgovaraj s kvalificiranim zdravstvenim stručnjakom prije nego što promijeniš prehranu, započneš program vježbanja ili upravljanja tjelesnom težinom, ili ako si trudna, imaš zdravstveno stanje ili poremećaj prehrane, ili si mlađi od 18 godina. Nikad ne zanemaruj i ne odgađaj stručni savjet zbog nečega u Calcalouu."
       ]
     ],
     [
@@ -42,7 +42,7 @@
     [
       "Prihvatljivo korištenje",
       [
-        "Koristi Calcalou samo u zakonite, osobne svrhe. Nemoj ga zloupotrebljavati: nemoj kršiti zakon ili tuđa prava; nemoj obrnuto inženjerirati, kopirati ili preprodavati aplikaciju; nemoj ometati njezin rad ili sigurnost; nemoj joj pristupati automatiziranim sredstvima kao što su scraping ili botovi; nemoj zaobilaziti ograničenja, besplatna skeniranja, nagrade za pozivnice ili provjere dobi; nemoj uznemiravati druge ni lažno se predstavljati; i nemoj učitavati sadržaj koji je nezakonit, štetan ili koji nemaš pravo dijeliti.",
+        "Koristi Calcalou samo u zakonite, osobne svrhe. Nemoj ga zloupotrebljavati: nemoj kršiti zakon ili tuđa prava; nemoj obrnuto inženjerirati, kopirati ili preprodavati aplikaciju; nemoj ometati njezin rad ili sigurnost; nemoj joj pristupati automatiziranim sredstvima kao što su automatsko izdvajanje podataka ili botovi; nemoj zaobilaziti ograničenja, kvote besplatnih skeniranja, nagrade za pozivnice ili provjere dobi; nemoj uznemiravati druge ni lažno se predstavljati; i nemoj učitavati sadržaj koji je nezakonit, štetan ili koji nemaš pravo dijeliti.",
         "Možemo ograničiti, suspendirati ili ukinuti pristup ako prekršiš ove Uvjete ili ako to zahtijeva zakon."
       ]
     ],
@@ -50,7 +50,7 @@
       "Tvoj sadržaj",
       [
         "Ono što uneseš ili učitaš, primjerice unosi u dnevnik, ciljevi, fotografije i postavke, ostaje tvoje. Daješ nam svjetsku, neisključivu licenciju da to pohranjujemo, obrađujemo i prikazujemo samo koliko je potrebno da bi Calcalou radio i bio bolji za tebe, uključujući slanje fotografije AI usluzi kad zatražiš skeniranje, kako je opisano u [Pravilima privatnosti](/privacy/).",
-        "Odgovoran si za svoj sadržaj i jamčiš da ga imaš pravo poslati."
+        "Odgovoran si za svoj sadržaj i obećavaš da ga imaš pravo poslati."
       ]
     ],
     [
@@ -83,7 +83,7 @@
     [
       "Uvjeti App Storea i Google Playa",
       [
-        "Na iPhoneu i iPadu korištenje aplikacije podliježe i Appleovom [Standard Licensed Application End User License Agreement](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) (Apple EULA). Apple nije odgovoran za aplikaciju, njezino održavanje, podršku ni bilo kakve zahtjeve u vezi s njom, a Apple i njegova društva kćeri treće su strane korisnice Apple EULA-e.",
+        "Na iPhoneu i iPadu korištenje aplikacije podliježe i Appleovom [Standardnom ugovoru o licenciji za krajnjeg korisnika licencirane aplikacije](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) (Apple EULA). Apple nije odgovoran za aplikaciju, njezino održavanje, podršku ni bilo kakve zahtjeve u vezi s njom, a Apple i njegova društva kćeri treće su osobe u čiju je korist ugovorena Apple EULA.",
         "Na Androidu korištenje Google Playa i kupnji obavljenih ondje podliježe i Googleovim uvjetima. Ako su ovi Uvjeti u sukobu s Apple EULA-om za verziju iz App Storea, Apple EULA ima prednost u potrebnoj mjeri."
       ]
     ],
@@ -96,7 +96,7 @@
     [
       "Mjerodavno pravo i sporovi",
       [
-        "Na ove Uvjete primjenjuje se pravo zemlje u kojoj je programer registriran, bez njezinih pravila o sukobu zakona, a sporovi se rješavaju pred sudovima te zemlje. To ti ne oduzima obveznu zaštitu potrošača zemlje u kojoj živiš ni pravo da pokreneš postupak pred svojim lokalnim sudovima. Molimo te da nam najprije pišeš kako bismo problem pokušali riješiti neformalno."
+        "Na ove Uvjete primjenjuje se pravo zemlje u kojoj programer ima poslovni nastan, bez njezinih pravila o sukobu zakona, a sporovi se rješavaju pred sudovima te zemlje. To ti ne oduzima obveznu zaštitu potrošača zemlje u kojoj živiš ni pravo da pokreneš postupak pred svojim lokalnim sudovima. Molimo te da nam najprije pišeš kako bismo problem pokušali riješiti neformalno."
       ]
     ],
     [

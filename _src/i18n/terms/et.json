@@ -6,7 +6,7 @@
     [
       "Kes me oleme ja millega nõustud",
       [
-        "Calcalou (rakendus, „Calcalou“) ja veebisaiti calcalou.com arendab ja haldab Vladimir Khrolovich, sõltumatu arendaja („meie“). Calcalou alla laadides, kontot luues või rakendust või veebisaiti kasutades nõustud nende tingimustega. Kui sa ei nõustu, ära neid kasuta.",
+        "Calcalou't (rakendust, „Calcalou“) ja veebisaiti calcalou.com arendab ja haldab Vladimir Khrolovich, sõltumatu arendaja („meie“). Calcalou alla laadides, kontot luues või rakendust või veebisaiti kasutades nõustud nende tingimustega. Kui sa ei nõustu, ära neid kasuta.",
         "Need tingimused kehtivad koos meie [privaatsuspoliitikaga](/privacy/). Kui kirjeldatakse funktsiooni või rakenduse versiooni, kehtib see sulle kättesaadava versiooni kohta."
       ]
     ],
@@ -21,7 +21,7 @@
       "Ei ole meditsiiniline nõuanne",
       [
         "Calcalou on üldise heaolu ja toidu logimise tööriist. See ei ole meditsiiniseade ega diagnoosi, ravi, tervenda ega enneta ühtegi seisundit. Kalorite ja valgu väärtused, eesmärgid, arvutused, seeriad ja soovitused on üldised hinnangud, mitte isiklik meditsiiniline, toitumis- ega dieedinõuanne.",
-        "Räägi kvalifitseeritud tervishoiutöötajaga enne, kui muudad oma toitumist või alustad treening- või kaaluprogrammi, või kui oled rase, sul on terviseseisund või söömishäire või oled alla 18-aastane. Ära kunagi eira ega lükka professionaalset nõu edasi millegi tõttu, mis on Calcalous."
+        "Räägi kvalifitseeritud tervishoiutöötajaga enne, kui muudad oma toitumist või alustad treening- või kaaluprogrammi, või kui oled rase, sul on tervisehäire või söömishäire või oled alla 18-aastane. Ära kunagi eira ega lükka professionaalset nõu edasi millegi tõttu, mis on Calcalous."
       ]
     ],
     [
@@ -42,7 +42,7 @@
     [
       "Lubatud kasutus",
       [
-        "Kasuta Calcalou't ainult seaduslikel isiklikel eesmärkidel. Ära kuritarvita seda: ära riku seadust ega kellegi õigusi; ära tee rakendusele pöördprojekteerimist, ära kopeeri ega edasimüü seda; ära sega rakenduse ega selle turvalisuse tööd; ära kasuta seda automatiseeritult, näiteks kraapimise või bottidega; ära möödu piirangutest, tasuta skannimistest, kutsetasudest ega vanusekontrollist; ära ahista teisi ega esine kellegi teisena; ning ära laadi üles sisu, mis on ebaseaduslik, kahjulik või mida sul pole õigust jagada.",
+        "Kasuta Calcalou't ainult seaduslikel isiklikel eesmärkidel. Ära kuritarvita seda: ära riku seadust ega kellegi õigusi; ära tee rakendusele pöördprojekteerimist, ära kopeeri ega edasimüü seda; ära sega rakenduse ega selle turvalisuse tööd; ära kasuta seda automatiseeritult, näiteks kraapimise või bottidega; ära hiili mööda piirangutest, tasuta skannimiste kvootidest, kutsepreemiatest ega vanusekontrollist; ära ahista teisi ega esine kellegi teisena; ning ära laadi üles sisu, mis on ebaseaduslik, kahjulik või mida sul pole õigust jagada.",
         "Võime ligipääsu piirata, peatada või lõpetada, kui rikud neid tingimusi või kui seadus seda nõuab."
       ]
     ],
@@ -50,13 +50,13 @@
       "Sinu sisu",
       [
         "See, mida sisestad või üles laadid, näiteks päevikukirjed, eesmärgid, fotod ja seaded, jääb sinu omaks. Annad meile ülemaailmse lihtlitsentsi seda salvestada, töödelda ja kuvada ainult ulatuses, mis on vajalik Calcalou toimimiseks ja täiustamiseks sinu jaoks, sealhulgas foto saatmiseks TI-teenusele, kui palud skannimist, nagu on kirjeldatud [privaatsuspoliitikas](/privacy/).",
-        "Vastutad oma sisu eest ja kinnitad, et sul on õigus seda esitada."
+        "Vastutad oma sisu eest ja lubad, et sul on õigus seda esitada."
       ]
     ],
     [
       "Meie õigused",
       [
-        "Calcalou, selle kujundus, tekstid, maskott Lou, nimi ja logo kuuluvad meile või meie litsentsiandjatele ning on seadusega kaitstud. Anname sulle piiratud, isikliku, mitteainu-, mitteüleantava ja tagasivõetava litsentsi kasutada rakendust oma seadmetes oma mitteäriliseks kasutuseks nende tingimuste kohaselt. Kolmandate osapoolte komponentidele kehtivad nende enda litsentsid. Kõik muud õigused on kaitstud."
+        "Calcalou, selle kujundus, tekstid, maskott Lou, nimi ja logo kuuluvad meile või meie litsentsiandjatele ning on seadusega kaitstud. Anname sulle piiratud, isikliku, mitteüleantava ja tagasivõetava lihtlitsentsi kasutada rakendust oma seadmetes oma mitteäriliseks kasutuseks nende tingimuste kohaselt. Kolmandate osapoolte komponentidele kehtivad nende enda litsentsid. Kõik muud õigused on kaitstud."
       ]
     ],
     [
@@ -75,15 +75,15 @@
     [
       "Lahtiütlus ja vastutuse piirangud",
       [
-        "Seadusega lubatud ulatuses pakutakse Calcalou't ja veebisaiti „nagu on“ ja „nagu kättesaadav“, ilma igasuguste otseste või kaudsete garantiideta, sealhulgas täpsuse, kindlaks otstarbeks sobivuse ning katkematu või veatu töö osas.",
-        "Seadusega lubatud ulatuses ei vastuta me kaudse, juhusliku, erilise, tuletatud ega karistusliku kahju eest ega kaotatud andmete, kasumi või võimaluste eest ega ühegi tervise-, toitumis-, kaalu- või muu tulemuse või otsuse eest, mis põhineb Calcalou'l või selle hinnangutel. Meie koguvastutus mis tahes Calcalou'ga seotud nõude puhul piirdub summaga, mille oled selle eest maksnud nõudele eelnenud 12 kuu jooksul.",
+        "Seadusega lubatud suurimas ulatuses pakutakse Calcalou't ja veebisaiti „nagu on“ ja „nagu kättesaadav“, ilma igasuguste otseste või kaudsete garantiideta, sealhulgas täpsuse, kindlaks otstarbeks sobivuse ning katkematu või veatu töö osas.",
+        "Seadusega lubatud suurimas ulatuses ei vastuta me kaudse, juhusliku, erilise, tuletatud ega karistusliku kahju eest ega kaotatud andmete, kasumi või võimaluste eest ega ühegi tervise-, toitumis-, kaalu- või muu tulemuse või otsuse eest, mis põhineb Calcalou'l või selle hinnangutel. Meie koguvastutus mis tahes Calcalou'ga seotud nõude puhul piirdub summaga, mille oled selle eest maksnud nõudele eelnenud 12 kuu jooksul.",
         "Miski nendes tingimustes ei piira vastutust, mida seaduse järgi piirata ei saa, näiteks pettuse, hooletusest põhjustatud surma või kehavigastuse eest, ega sinu kohustuslikke tarbijaõigusi."
       ]
     ],
     [
       "App Store'i ja Google Play tingimused",
       [
-        "iPhone'is ja iPadis kehtib rakenduse kasutamisele ka Apple'i [Standard Licensed Application End User License Agreement](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) (Apple EULA). Apple ei vastuta rakenduse, selle hoolduse, toe ega sellega seotud nõuete eest ning Apple ja selle tütarettevõtted on Apple EULA kolmandast isikust soodustatud isikud.",
+        "iPhone'is ja iPadis kehtib rakenduse kasutamisele ka Apple'i [Litsentsitud rakenduse standardne lõppkasutaja litsentsileping](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) (Apple EULA). Apple ei vastuta rakenduse, selle hoolduse, toe ega sellega seotud nõuete eest ning Apple ja selle tütarettevõtted on Apple EULA kolmandast isikust soodustatud isikud.",
         "Androidis kehtivad Google Play ja seal tehtud ostude kasutamisele ka Google'i tingimused. Kui need tingimused on App Store'i versiooni puhul vastuolus Apple EULA-ga, on Apple EULA nõutavas ulatuses ülimuslik."
       ]
     ],
@@ -96,7 +96,7 @@
     [
       "Kohaldatav õigus ja vaidlused",
       [
-        "Nendele tingimustele kohaldatakse selle riigi õigust, kus arendaja on asutatud, ilma selle kollisiooninormideta, ning vaidlused lahendatakse sealsetes kohtutes. See ei võta sinult sinu elukohariigi kohustuslikku tarbijakaitset ega õigust pöörduda kohaliku kohtu poole. Kirjuta meile esmalt, et saaksime proovida probleemi mitteametlikult lahendada."
+        "Nendele tingimustele kohaldatakse selle riigi õigust, kus arendaja asub, ilma selle kollisiooninormideta, ning vaidlused lahendatakse sealsetes kohtutes. See ei võta sinult sinu elukohariigi kohustuslikku tarbijakaitset ega õigust pöörduda kohaliku kohtu poole. Kirjuta meile esmalt, et saaksime proovida probleemi mitteametlikult lahendada."
       ]
     ],
     [

@@ -11,17 +11,17 @@
       ]
     ],
     [
-      "Baldintzak eta zure kontua",
+      "Betekizunak eta zure kontua",
       [
-        "Calcalou 13 urtetik gorako pertsonentzat da, zure herrialdeko adin-baldintzen arabera. AA bidezko argazki-eskaneatzeak eta Premium erosketak 18 urtetik gorakoentzat dira, eta eskaintzen diren lekuetan bakarrik.",
+        "Calcalou 13 urte edo gehiagoko pertsonentzat da, zure herrialdeko adin-baldintzen arabera. AA bidezko argazki-eskaneatzeak eta Premium erosketak 18 urte edo gehiagokoentzat dira, eta eskaintzen diren lekuetan bakarrik.",
         "Saioa hasi behar da. Zu zara zure saio-hasierako datuak seguru gordetzearen eta zure kontuarekin egiten den guztiaren arduraduna. Eman informazio zehatza eta jakinarazi iezaguzu zure kontua gaizki erabili dutela uste baduzu."
       ]
     ],
     [
       "Ez da aholku medikoa",
       [
-        "Calcalou ongizate orokorrerako eta elikagaiak erregistratzeko tresna bat da. Ez da gailu mediko bat, eta ez du inolako gaixotasunik diagnostikatzen, tratatzen, sendatzen edo prebenitzen. Kaloria- eta proteina-zifrak, helburuak, kalkuluak, boladak eta iradokizunak estimazio orokorrak dira, ez aholku mediko, nutrizional edo dietetiko pertsonala.",
-        "Hitz egin osasun-profesional kualifikatu batekin zure dieta aldatu aurretik, ariketa- edo pisu-programa bat hasi aurretik, edo haurdun bazaude, gaixotasun edo elikadura-nahasmendu bat baduzu, edo 18 urte baino gutxiago badituzu. Ez ezazu inoiz aholku profesionala baztertu edo atzeratu Calcalou-ko zerbaitengatik."
+        "Calcalou ongizate orokorrerako eta elikagaiak erregistratzeko tresna bat da. Ez da gailu mediko bat, eta ez du inolako osasun-arazorik diagnostikatzen, tratatzen, sendatzen edo prebenitzen. Kaloria- eta proteina-zifrak, helburuak, kalkuluak, boladak eta iradokizunak estimazio orokorrak dira, ez aholku mediko, nutrizional edo dietetiko pertsonala.",
+        "Hitz egin osasun-profesional kualifikatu batekin zure dieta aldatu aurretik, ariketa- edo pisu-programa bat hasi aurretik, edo haurdun bazaude, osasun-arazoren bat edo elikadura-nahasmendu bat baduzu, edo 18 urte baino gutxiago badituzu. Ez ezazu inoiz aholku profesionala baztertu edo atzeratu Calcalou-ko zerbaitengatik."
       ]
     ],
     [
@@ -42,7 +42,7 @@
     [
       "Erabilera onargarria",
       [
-        "Erabili Calcalou helburu legezko eta pertsonaletarako bakarrik. Ez egin erabilera desegokirik: ez urratu legea edo inoren eskubideak; ez egin alderantzizko ingeniaritzarik, ez kopiatu eta ez birsaldu aplikazioa; ez oztopatu haren funtzionamendua edo segurtasuna; ez sartu bitarteko automatizatuen bidez, hala nola scraping edo bot bidez; ez saihestu mugak, doako eskaneatzeak, gonbidapen-sariak edo adin-egiaztapenak; ez jazarri besteak eta ez egin beste inoren itxurarik; eta ez igo legez kanpoko edukirik, kaltegarririk edo partekatzeko eskubiderik ez duzunik.",
+        "Erabili Calcalou helburu legezko eta pertsonaletarako bakarrik. Ez egin erabilera desegokirik: ez urratu legea edo inoren eskubideak; ez egin alderantzizko ingeniaritzarik, ez kopiatu eta ez birsaldu aplikazioa; ez oztopatu haren funtzionamendua edo segurtasuna; ez sartu bitarteko automatizatuen bidez, hala nola datu-erauzketa automatizatuaren edo boten bidez; ez saihestu mugak, doako eskaneatzeen kupoak, gonbidapen-sariak edo adin-egiaztapenak; ez jazarri besteak eta ez egin beste inoren itxurarik; eta ez igo legez kanpoko edukirik, kaltegarririk edo partekatzeko eskubiderik ez duzunik.",
         "Sarbidea mugatu, eten edo amaitu dezakegu Baldintza hauek urratzen badituzu edo legeak hala eskatzen badigu."
       ]
     ],
@@ -50,7 +50,7 @@
       "Zure edukia",
       [
         "Sartzen edo igotzen duzuna, hala nola egunkariko sarrerak, helburuak, argazkiak eta ezarpenak, zurea izaten jarraitzen du. Mundu osorako lizentzia ez-esklusibo bat ematen diguzu hori gordetzeko, prozesatzeko eta erakusteko, Calcalou zuretzat funtzionarazteko eta hobetzeko behar den neurrian bakarrik, eskaneatze bat eskatzen duzunean argazki bat AA zerbitzu batera bidaltzea barne, [Pribatutasun-politikan](/privacy/) deskribatzen den bezala.",
-        "Zu zara zure edukiaren arduraduna eta bermatzen duzu hura bidaltzeko eskubidea duzula."
+        "Zu zara zure edukiaren arduraduna eta hitzematen duzu hura bidaltzeko eskubidea duzula."
       ]
     ],
     [
@@ -83,7 +83,7 @@
     [
       "App Store eta Google Play-ren baldintzak",
       [
-        "iPhone eta iPad-en, aplikazioaren erabilera Apple-ren [Standard Licensed Application End User License Agreement](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) akordioaren mende ere badago (Apple EULA). Apple ez da aplikazioaren, haren mantentzearen, laguntzaren edo hari buruzko erreklamazioen erantzule, eta Apple eta haren filialak Apple EULAren hirugarren onuradunak dira.",
+        "iPhone eta iPad-en, aplikazioaren erabilera Apple-ren [Lizentziadun aplikazioaren azken erabiltzailearen lizentzia-akordio estandarra](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) akordioaren mende ere badago (Apple EULA). Apple ez da aplikazioaren, haren mantentzearen, laguntzaren edo hari buruzko erreklamazioen erantzule, eta Apple eta haren filialak Apple EULAren hirugarren onuradunak dira.",
         "Android-en, Google Play-ren eta bertan egindako erosketen erabilera Google-ren baldintzen mende ere badago. Baldintza hauek App Store bertsiorako Apple EULArekin kontraesanean badaude, Apple EULA nagusitzen da beharrezkoa den neurrian."
       ]
     ],

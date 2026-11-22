@@ -1,12 +1,12 @@
 {
   "title": "Calcalou lietošanas noteikumi",
-  "description": "Noteikumi kaloriju un olbaltumvielu skaitītāja Calcalou lietošanai: abonementi, MI aprēķini, atļautā lietošana, tavs saturs, konta dzēšana un atbildība.",
+  "description": "Noteikumi kaloriju un olbaltumvielu skaitītāja Calcalou lietošanai: abonementi, MI aplēses, atļautā lietošana, tavs saturs, konta dzēšana un atbildība.",
   "updated": "Pēdējo reizi atjaunināts 2026. gada 18. novembrī",
   "sections": [
     [
       "Kas mēs esam un kam tu piekrīti",
       [
-        "Calcalou (lietotne, “Calcalou”) un vietni calcalou.com izstrādā un uztur Vladimir Khrolovich, neatkarīgs izstrādātājs (“mēs”). Lejupielādējot Calcalou, izveidojot kontu vai lietojot lietotni vai vietni, tu piekrīti šiem noteikumiem. Ja tu tiem nepiekrīti, nelieto tās.",
+        "Calcalou (lietotne, “Calcalou”) un vietni calcalou.com izstrādā un pārvalda Vladimir Khrolovich, neatkarīgs izstrādātājs (“mēs”). Lejupielādējot Calcalou, izveidojot kontu vai lietojot lietotni vai vietni, tu piekrīti šiem noteikumiem. Ja tu tiem nepiekrīti, nelieto tās.",
         "Šie noteikumi darbojas kopā ar mūsu [privātuma politiku](/privacy/). Ja ir aprakstīta funkcija vai lietotnes versija, tas attiecas uz tev pieejamo versiju."
       ]
     ],
@@ -20,15 +20,15 @@
     [
       "Nav medicīnisks padoms",
       [
-        "Calcalou ir vispārējās labsajūtas un ēdiena ierakstīšanas rīks. Tā nav medicīniska ierīce, un tā nediagnosticē, neārstē, neizārstē un nenovērš nekādus stāvokļus. Kaloriju un olbaltumvielu skaitļi, mērķi, aprēķini, sērijas un ieteikumi ir vispārīgi aprēķini, nevis personisks medicīnisks, uztura vai diētas padoms.",
+        "Calcalou ir vispārējās labsajūtas un ēdiena ierakstīšanas rīks. Tā nav medicīniska ierīce, un tā nediagnosticē, neārstē, neizārstē un nenovērš nekādus stāvokļus. Kaloriju un olbaltumvielu skaitļi, mērķi, aprēķini, sērijas un ieteikumi ir vispārīgas aplēses, nevis personisks medicīnisks, uztura vai diētas padoms.",
         "Pirms maini uzturu vai sāc treniņu vai svara programmu, kā arī ja esi stāvoklī, tev ir veselības problēmas vai ēšanas traucējumi vai esi jaunāks par 18 gadiem, konsultējies ar kvalificētu veselības aprūpes speciālistu. Nekad neignorē un neatliec profesionālu padomu kaut kā dēļ, kas ir lietotnē Calcalou."
       ]
     ],
     [
-      "MI un ēdiena dati ir aprēķini",
+      "MI un ēdiena dati ir aplēses",
       [
         "MI foto skenēšana un ēdiena, svītrkodu un uzturvērtības dati ir aptuveni. Porcijas, eļļas, mērces un jauktus ēdienus ir īpaši grūti novērtēt, un trešo pušu produktu dati var būt nepilnīgi vai nepareizi. Trūkstoša vērtība nav nulle.",
-        "Pārbaudi etiķetes un nosvērtos daudzumus, kad precizitāte ir svarīga, un pārskati un labo katru rezultātu pirms saglabāšanas. Mēs negarantējam, ka kāds aprēķins vai dati ir precīzi, pilnīgi vai piemēroti tavam mērķim. Tu izlem, ko ierakstīt un ko ar to darīt."
+        "Pārbaudi etiķetes un nosvērtos daudzumus, kad precizitāte ir svarīga, un pārskati un labo katru rezultātu pirms saglabāšanas. Mēs negarantējam, ka kāda aplēse vai dati ir precīzi, pilnīgi vai piemēroti tavam mērķim. Tu izlem, ko ierakstīt un ko ar to darīt."
       ]
     ],
     [
@@ -42,7 +42,7 @@
     [
       "Atļautā lietošana",
       [
-        "Lieto Calcalou tikai likumīgiem, personiskiem mērķiem. Neizmanto to ļaunprātīgi: nepārkāp likumu vai kāda tiesības; neveic lietotnes apgriezto inženieriju, nekopē un nepārdod to tālāk; netraucē tās darbību vai drošību; nepiekļūsti tai automatizēti, piemēram, ar datu nolasīšanu vai robotiem; neapej ierobežojumus, bezmaksas skenēšanas, ielūgumu atlīdzības vai vecuma pārbaudes; neuzmācies citiem un neuzdodies par kādu citu; un neaugšupielādē saturu, kas ir nelikumīgs, kaitīgs vai ko tev nav tiesību kopīgot.",
+        "Lieto Calcalou tikai likumīgiem, personiskiem mērķiem. Neizmanto to ļaunprātīgi: nepārkāp likumu vai kāda tiesības; neveic lietotnes apgriezto inženieriju, nekopē un nepārdod to tālāk; netraucē tās darbību vai drošību; nepiekļūsti tai automatizēti, piemēram, ar datu nolasīšanu vai robotiem; neapej ierobežojumus, bezmaksas skenēšanas kvotas, ielūgumu atlīdzības vai vecuma pārbaudes; neuzmācies citiem un neuzdodies par kādu citu; un neaugšupielādē saturu, kas ir nelikumīgs, kaitīgs vai ko tev nav tiesību kopīgot.",
         "Mēs varam ierobežot, apturēt vai izbeigt piekļuvi, ja tu pārkāp šos noteikumus vai ja to prasa likums."
       ]
     ],
@@ -75,15 +75,15 @@
     [
       "Atruna un atbildības ierobežojumi",
       [
-        "Ciktāl to atļauj likums, Calcalou un vietne tiek nodrošinātas “tādas, kādas tās ir” un “kā pieejamas”, bez jebkādām tiešām vai netiešām garantijām, tostarp attiecībā uz precizitāti, piemērotību konkrētam mērķim un nepārtrauktu vai kļūdām brīvu darbību.",
-        "Ciktāl to atļauj likums, mēs neatbildam par netiešiem, nejaušiem, īpašiem, izrietošiem vai sodoša rakstura zaudējumiem, par zaudētiem datiem, peļņu vai iespējām, kā arī par jebkādu veselības, uztura, svara vai citu iznākumu vai lēmumu, kas balstīts uz Calcalou vai tās aprēķiniem. Mūsu kopējā atbildība par jebkuru prasību saistībā ar Calcalou ir ierobežota ar summu, ko par to samaksāji 12 mēnešos pirms prasības.",
+        "Maksimālajā apmērā, ko atļauj likums, Calcalou un vietne tiek nodrošinātas “tādas, kādas tās ir” un “kā pieejamas”, bez jebkādām skaidri izteiktām vai netiešām garantijām, tostarp attiecībā uz precizitāti, piemērotību konkrētam mērķim un nepārtrauktu vai kļūdām brīvu darbību.",
+        "Maksimālajā apmērā, ko atļauj likums, mēs neatbildam par netiešiem, nejaušiem, īpašiem, izrietošiem vai sodoša rakstura zaudējumiem, par zaudētiem datiem, peļņu vai iespējām, kā arī par jebkādu veselības, uztura, svara vai citu iznākumu vai lēmumu, kas balstīts uz Calcalou vai tās aplēsēm. Mūsu kopējā atbildība par jebkuru prasību saistībā ar Calcalou ir ierobežota ar summu, ko par to samaksāji 12 mēnešos pirms prasības.",
         "Nekas šajos noteikumos neierobežo atbildību, ko saskaņā ar likumu nevar ierobežot, piemēram, par krāpšanu, par nolaidības izraisītu nāvi vai miesas bojājumu, vai tavas obligātās patērētāja tiesības."
       ]
     ],
     [
       "App Store un Google Play noteikumi",
       [
-        "iPhone un iPad ierīcēs uz lietotnes lietošanu attiecas arī Apple [Standard Licensed Application End User License Agreement](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) (Apple EULA). Apple nav atbildīgs par lietotni, tās uzturēšanu, atbalstu vai jebkādām prasībām par to, un Apple un tā meitasuzņēmumi ir Apple EULA trešās puses labuma guvēji.",
+        "iPhone un iPad ierīcēs uz lietotnes lietošanu attiecas arī Apple [Standarta licencētas lietotnes galalietotāja licences līgums](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) (Apple EULA). Apple nav atbildīgs par lietotni, tās uzturēšanu, atbalstu vai jebkādām prasībām par to, un Apple un tā meitasuzņēmumi ir Apple EULA trešās puses labuma guvēji.",
         "Android ierīcēs uz Google Play un tur veikto pirkumu izmantošanu attiecas arī Google noteikumi. Ja šie noteikumi App Store versijai ir pretrunā ar Apple EULA, noteicošais ir Apple EULA tādā apmērā, kā nepieciešams."
       ]
     ],
@@ -96,7 +96,7 @@
     [
       "Piemērojamie likumi un strīdi",
       [
-        "Šiem noteikumiem piemēro tās valsts likumus, kurā izstrādātājs ir reģistrēts, neņemot vērā tās kolīziju normas, un strīdi tiek izskatīti tās tiesās. Tas neatņem tev tavas dzīvesvietas valsts obligāto patērētāju aizsardzību vai tiesības vērsties savā vietējā tiesā. Lūdzu, vispirms raksti mums, lai mēs varētu mēģināt atrisināt problēmu neformāli."
+        "Šiem noteikumiem piemēro tās valsts likumus, kurā ir izstrādātāja pastāvīgā darbības vieta, neņemot vērā tās kolīziju normas, un strīdi tiek izskatīti tās tiesās. Tas neatņem tev tavas dzīvesvietas valsts obligāto patērētāju aizsardzību vai tiesības vērsties savā vietējā tiesā. Lūdzu, vispirms raksti mums, lai mēs varētu mēģināt atrisināt problēmu neformāli."
       ]
     ],
     [

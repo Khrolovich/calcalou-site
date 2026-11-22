@@ -21,13 +21,13 @@
       "Geen medisch advies",
       [
         "Calcalou is een hulpmiddel voor algemeen welzijn en het bijhouden van eten. Het is geen medisch hulpmiddel en stelt geen diagnose, behandelt, geneest of voorkomt geen enkele aandoening. Calorie- en eiwitwaarden, doelen, berekeningen, reeksen en suggesties zijn algemene schattingen, geen persoonlijk medisch, voedings- of dieetadvies.",
-        "Overleg met een gekwalificeerde zorgverlener voordat je je eetpatroon verandert of aan een sport- of afvalprogramma begint, of als je zwanger bent, een aandoening of eetstoornis hebt of jonger bent dan 18. Negeer of stel professioneel advies nooit uit vanwege iets in Calcalou."
+        "Overleg met een gekwalificeerde zorgverlener voordat je je eetpatroon verandert of aan een sportprogramma of een programma voor gewichtsbeheersing begint, of als je zwanger bent, een aandoening of eetstoornis hebt of jonger bent dan 18. Negeer of stel professioneel advies nooit uit vanwege iets in Calcalou."
       ]
     ],
     [
       "AI en voedingsgegevens zijn schattingen",
       [
-        "AI-fotoscans en voedings-, barcode- en productgegevens zijn bij benadering. Porties, olie, sauzen en gemengde gerechten zijn extra lastig in te schatten, en productgegevens van derden kunnen onvolledig of onjuist zijn. Een ontbrekende waarde is geen nul.",
+        "AI-fotoscans en gegevens over voedsel, barcodes en voedingswaarden zijn bij benadering. Porties, olie, sauzen en gemengde gerechten zijn extra lastig in te schatten, en productgegevens van derden kunnen onvolledig of onjuist zijn. Een ontbrekende waarde is geen nul.",
         "Controleer etiketten en afgewogen hoeveelheden als nauwkeurigheid belangrijk is, en bekijk en pas elke uitkomst aan voordat je hem opslaat. We garanderen niet dat een schatting of gegeven juist, volledig of geschikt is voor jouw doel. Jij bepaalt wat je logt en wat je ermee doet."
       ]
     ],
@@ -42,7 +42,7 @@
     [
       "Toegestaan gebruik",
       [
-        "Gebruik Calcalou alleen voor legale, persoonlijke doeleinden. Misbruik het niet: overtreed de wet of andermans rechten niet; decompileer, kopieer of verkoop de app niet door; verstoor de app of de beveiliging ervan niet; gebruik hem niet op geautomatiseerde wijze, zoals met scraping of bots; omzeil geen limieten, gratis scans, uitnodigingsbeloningen of leeftijdscontroles; val anderen niet lastig en doe je niet voor als iemand anders; en upload geen content die onwettig of schadelijk is of die je niet mag delen.",
+        "Gebruik Calcalou alleen voor legale, persoonlijke doeleinden. Misbruik het niet: overtreed de wet of andermans rechten niet; pas geen reverse engineering toe op de app, kopieer of verkoop de app niet door; verstoor de app of de beveiliging ervan niet; gebruik hem niet op geautomatiseerde wijze, zoals met scraping of bots; omzeil geen limieten, quota voor gratis scans, uitnodigingsbeloningen of leeftijdscontroles; val anderen niet lastig en doe je niet voor als iemand anders; en upload geen content die onwettig of schadelijk is of die je niet mag delen.",
         "We kunnen de toegang beperken, opschorten of beëindigen als je deze Voorwaarden overtreedt of als de wet ons dat verplicht."
       ]
     ],
@@ -75,15 +75,15 @@
     [
       "Disclaimer en beperking van aansprakelijkheid",
       [
-        "Voor zover de wet dat toestaat, worden Calcalou en de website aangeboden „zoals ze zijn” en „zoals beschikbaar”, zonder garanties van welke aard dan ook, uitdrukkelijk of stilzwijgend, waaronder juistheid, geschiktheid voor een bepaald doel en ononderbroken of foutloze werking.",
-        "Voor zover de wet dat toestaat, zijn we niet aansprakelijk voor indirecte, incidentele, bijzondere, gevolg- of punitieve schade, of voor verloren gegevens, winst of kansen, of voor enig gezondheids-, voedings-, gewichts- of ander resultaat of besluit op basis van Calcalou of de schattingen ervan. Onze totale aansprakelijkheid voor een claim met betrekking tot Calcalou is beperkt tot het bedrag dat je er in de 12 maanden vóór de claim voor hebt betaald.",
+        "Voor zover de wet dat maximaal toestaat, worden Calcalou en de website aangeboden „zoals ze zijn” en „zoals beschikbaar”, zonder garanties van welke aard dan ook, uitdrukkelijk of stilzwijgend, waaronder juistheid, geschiktheid voor een bepaald doel en ononderbroken of foutloze werking.",
+        "Voor zover de wet dat maximaal toestaat, zijn we niet aansprakelijk voor indirecte, incidentele, bijzondere, gevolg- of punitieve schade, of voor verloren gegevens, winst of kansen, of voor enig gezondheids-, voedings-, gewichts- of ander resultaat of besluit op basis van Calcalou of de schattingen ervan. Onze totale aansprakelijkheid voor een claim met betrekking tot Calcalou is beperkt tot het bedrag dat je er in de 12 maanden vóór de claim voor hebt betaald.",
         "Niets in deze Voorwaarden beperkt aansprakelijkheid die volgens de wet niet beperkt kan worden, zoals voor fraude, voor overlijden of lichamelijk letsel door nalatigheid, of je dwingende rechten als consument."
       ]
     ],
     [
       "Voorwaarden van de App Store en Google Play",
       [
-        "Op iPhone en iPad valt je gebruik van de app ook onder de [Standard Licensed Application End User License Agreement](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) van Apple (de Apple EULA). Apple is niet verantwoordelijk voor de app, het onderhoud, de ondersteuning of claims daarover, en Apple en zijn dochterondernemingen zijn derde begunstigden van de Apple EULA.",
+        "Op iPhone en iPad valt je gebruik van de app ook onder de [Standaardlicentieovereenkomst voor eindgebruikers van gelicentieerde applicaties](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) van Apple (de Apple EULA). Apple is niet verantwoordelijk voor de app, het onderhoud, de ondersteuning of claims daarover, en Apple en zijn dochterondernemingen zijn derde begunstigden van de Apple EULA.",
         "Op Android valt je gebruik van Google Play en van daar gedane aankopen ook onder de voorwaarden van Google. Als deze Voorwaarden voor de App Store-versie in strijd zijn met de Apple EULA, gaat de Apple EULA voor, voor zover dat vereist is."
       ]
     ],
@@ -96,7 +96,7 @@
     [
       "Toepasselijk recht en geschillen",
       [
-        "Op deze Voorwaarden is het recht van toepassing van het land waar de ontwikkelaar gevestigd is, zonder de regels van internationaal privaatrecht, en geschillen worden voorgelegd aan de rechter daar. Dit doet niets af aan de dwingende consumentenbescherming van je woonland of aan je recht om een zaak bij je lokale rechter aan te spannen. Neem eerst contact met ons op, zodat we een probleem informeel kunnen proberen op te lossen."
+        "Op deze Voorwaarden is het recht van toepassing van het land waar de ontwikkelaar gevestigd is, zonder de regels van dat land inzake wetsconflicten, en geschillen worden voorgelegd aan de rechter daar. Dit doet niets af aan de dwingende consumentenbescherming van je woonland of aan je recht om een zaak bij je lokale rechter aan te spannen. Schrijf ons eerst, zodat we een probleem informeel kunnen proberen op te lossen."
       ]
     ],
     [
