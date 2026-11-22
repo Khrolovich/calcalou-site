@@ -1,0 +1,41 @@
+{
+  "title": "Zer da Calcalou? Kaloria eta proteina kontagailua",
+  "summary": "Calcalou iPhone, iPad eta Android-erako kaloria eta proteina kontagailu bat da, Lou-rekin, eguneroko erregistroa ohitura bihurtzen laguntzen duen maskota atsegina.",
+  "version": "Gida honek 1.7 bertsioa deskribatzen du. Dendetako zabalkundea plataformaren eta herrialdearen arabera alda daiteke; funtzio jakin bat nahi baduzu, egiaztatu zuretzat eskuragarri dagoen bertsioa deskargatu aurretik.",
+  "features_title": "Zer egiten duen Calcalou-k",
+  "features": [
+    "Erregistratu kaloriak eta proteinak eskuz, doan.",
+    "Eskaneatu produktuen barra-kodeak doan. Balio nutrizionalak eskuragarri dauden produktu-datuen araberakoak dira; begiratu etiketa eta anoaren tamaina.",
+    "Ezarri proteina helburu bat zure gorputz-pisuaren arabera: Calcalou-k kalkulua erakusten du (pisua × gramo kilo bakoitzeko), doitzen uzten dizu eta zure zenbakia onartzen du.",
+    "Estimatu otordu bat argazki batetik AA bidez, elikagai bakoitzaren kaloriak, proteinak, gantzak eta karbohidratoak barne, eskuragarri daudenean. Berrikusi eta editatu emaitza gorde aurretik.",
+    "Gehitu ura edalontzika edo kopuru pertsonalizatu batean ml-tan.",
+    "Ezarri hainbat oroigarri, bakoitza bere ordu eta asteko egunekin.",
+    "Mantendu erregistro-bolada bat Lou-rekin eta egin jarraipena gaurko kaloriei edo proteinei hasierako pantailako widget batean. Widgeten funtzioak plataformaren arabera aldatzen dira.",
+    "Esportatu zure egunkaria CSV gisa hilabete, hiruhileko, urte edo denbora osorako.",
+    "Erabili aplikazioa 41 interfaze-hizkuntzatan 1.7 bertsioan. Saioa hasi behar da zure egunkaria zure kontuan gordetzeko."
+  ],
+  "faq_title": "Calcalou-ri buruzko galderak",
+  "faq": [
+    [
+      "Doakoa al da Calcalou?",
+      "Kaloriak eta proteinak eskuz erregistratzea, barra-kodeak eskaneatzea eta uraren jarraipena doakoak dira. AA bidezko eskaneatzeak Premium dira; eskaintzen den lekuetan, kontu batek 3 eskaneatu doan arte proba ditzake behin. Harpidetzaren prezioak eta baldintzak aplikazioan eta dendan erakusten dira."
+    ],
+    [
+      "Argazki-eskaneatze batek zenbatzen al ditu proteinak?",
+      "1.7 bertsioan, AA bidezko argazki-eskaneatzeek detektatutako elikagai bakoitzaren kaloriak, proteinak, gantzak eta karbohidratoak estima ditzakete. Estimazioak oker egon daitezke, batez ere anoetan, olioetan eta plater nahasietan. Falta diren balio nutrizionalak ez dira zero: egiaztatu edo sartu eskuz."
+    ],
+    [
+      "Nork erabil dezake Calcalou?",
+      "Calcalou 13 urtetik gorakoentzat da, tokiko adin-baldintzen arabera. 1.7 bertsioan, AA bidezko eskaneatzeek eta Premium erosketek 18 urte edo gehiago eta eskualde egoki bat eskatzen dituzte. Calcalou ongizate orokorreko aplikazio bat da, ez gailu mediko bat."
+    ],
+    [
+      "Erabil dezaket saioa hasi gabe?",
+      "Saioa hasi behar da. Zure egunkaria zure kontuari lotuta dago; erabili saio-hasierako metodo bera beste gailu batean itzultzen zarenean."
+    ]
+  ],
+  "more": "Alderatu kontagailuak eta aukeratu lan egiteko modu bat",
+  "stores": "Deskargatu Calcalou",
+  "updated": "2026ko azaroaren 17an egiaztatua",
+  "privacy": "Pribatutasuna",
+  "support": "Laguntza"
+}

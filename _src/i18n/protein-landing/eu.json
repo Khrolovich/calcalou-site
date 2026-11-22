@@ -1,0 +1,49 @@
+{
+  "title": "Proteinen jarraipen-aplikazioa: erregistratu proteinak eta kaloriak",
+  "summary": "Calcalou iPhone, iPad eta Android-erako proteinen jarraipen-aplikazio bat da. Erregistratu proteinak kalorien ondoan, ezarri helburu bat zure gorputz-pisuaren arabera eta estimatu otorduak argazki batetik.",
+  "features_title": "Proteinen jarraipena Calcalou-n",
+  "features": [
+    "Erregistratu proteinak sarrera bakoitzarekin: idatzi zuk zeuk doan, edo bete barra-kode batetik edo AA bidezko argazki-eskaneatze batetik.",
+    "Ezarri eguneroko proteina helburu bat zure gorputz-pisuaren arabera. Calcalou-k kalkulua erakusten du (pisua × gramo kilo bakoitzeko), 0,8 eta 2,0 g/kg artean doitzen uzten dizu eta zure zenbakia onartzen du.",
+    "Ikusi proteinak kalorien ondoan Gaur pantailan, asteko laburpenean eta Estatistiketan, eta aukeratu proteinak edo kaloriak widget bakoitzerako.",
+    "AA bidezko argazki-eskaneatzeek elikagai bakoitzaren proteinak, gantzak eta karbohidratoak estimatzen dituzte, dena editagarria gorde aurretik. Estimazioak oker egon daitezke; eskaneatzeak Premium dira, adin- eta eskualde-mugekin.",
+    "Barra-kodeen eskaneatzea doakoa da. Balio nutrizionalak produktuaren datuen araberakoak dira; beraz, begiratu etiketa eta anoa.",
+    "Boladek, oroigarri malguek eta uraren jarraipenak erregistratzen jarraitzen laguntzen dizute."
+  ],
+  "sections": [
+    [
+      "Nola egin proteinei jarraipena Calcalou-n",
+      "Sakatu Gehitu eta sartu jan duzunaren kaloriak, proteinak, gantzak eta karbohidratoak, edo eskaneatu barra-kode bat edo argazki bat betetzeko. Eremu guztiak aukerakoak dira; beraz, proteinak bakarrik erregistra ditzakezu. Proteinak kalorien ondoan agertzen dira Gaur pantailan eta zure laburpenetan."
+    ],
+    [
+      "Ezarri zuretzako proteina helburu egokia",
+      "Aukeratu Gorputz-pisuaren arabera, eta Calcalou-k zure pisua biderkatzen du kilo bakoitzeko gramoekin (1,2 lehenespenez) eta kalkulua erakusten du. Zure pisua zure profiletik dator edo, konektatzen badituzu, Apple Health edo Health Connect-etik. Doitu faktorea 0,8 eta 2,0 g/kg artean edo sartu zure helburua. Helburu bat abiapuntu bat da, ez aholku medikoa; proteina kalkulagailuak erreferentzia-tarteak erakusten ditu."
+    ],
+    [
+      "Argazkiak, barra-kodeak edo eskuz",
+      "Argazki-eskaneatzeek AA erabiltzen dute elikagai bakoitzaren kaloriak, proteinak, gantzak eta karbohidratoak estimatzeko. Berrikusi emaitza: anoak, olioak eta plater nahasiak erraz estimatzen dira gaizki, eta falta den balio bat ez da zero. Barra-kodeen eskaneatzea eta eskuzko erregistroa doakoak dira; produktuen datuak aldatu egiten dira, beraz, begiratu etiketa."
+    ],
+    [
+      "Nork erabil dezake",
+      "Calcalou 13 urtetik gorakoentzat da, tokiko adin-baldintzen arabera. 1.7 bertsioan, AA bidezko eskaneatzeek eta Premium erosketek 18 urte edo gehiago eta eskualde egoki bat eskatzen dituzte. Saioa hasi behar da. Calcalou ongizate orokorreko aplikazio bat da, ez gailu mediko bat."
+    ]
+  ],
+  "faq": [
+    [
+      "Zein da proteinei jarraipena egiteko modurik onena?",
+      "Mantenduko duzun metodoa. Erregistratu proteinak otordu bakoitzarekin, begiratu ontziratutako janarien etiketak eta hartu argazki bidezko estimazioak edita ditzakezun abiapuntu gisa. Calcalou-n proteinak idatz ditzakezu, barra-kode bat eskanea dezakezu edo AA bidezko argazki-eskaneatze bat erabil dezakezu."
+    ],
+    [
+      "Zenbat proteina jan behar dut egunean?",
+      "Zure gorputzaren, helburuen eta osasunaren araberakoa da. Helduentzat EFSAren erreferentziazko kontsumoa 0,83 g da gorputz-pisuaren kilo bakoitzeko; International Society of Sports Nutrition erakundearen 2026ko jarrera-adierazpenak 1,2–1,6 g ematen ditu kilo bakoitzeko pisua galtzeko eta 1,6–2,2 g kilo bakoitzeko erresistentzia-entrenamenduarekin. Proteina kalkulagailuak hirurak erakusten ditu. Orientazio orokorra da, ez aholku medikoa."
+    ],
+    [
+      "Calcalou-k zenbatzen al ditu argazki bateko proteinak?",
+      "Bai. 1.7 bertsioan, AA bidezko argazki-eskaneatze batek detektatutako elikagai bakoitzaren kaloriak, proteinak, gantzak eta karbohidratoak estimatzen ditu. Estimazioak oker egon daitezke; beraz, egiaztatu eta editatu gorde aurretik."
+    ],
+    [
+      "Doakoa al da proteinen jarraipena?",
+      "Proteinak eskuz erregistratzea, barra-kodeak eskaneatzea eta proteina helburuak doakoak dira. AA bidezko argazki-eskaneatzeak Premium dira; eskaintzen den lekuetan, kontu batek 3 eskaneatu doan arte proba ditzake behin. Prezioak eta baldintzak aplikazioan eta dendan erakusten dira."
+    ]
+  ]
+}

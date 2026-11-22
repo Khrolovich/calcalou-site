@@ -1,0 +1,18 @@
+{
+  "meta.title": "TDEE kalkulagailua: eguneko energia-gastu osoa | Calcalou",
+  "meta.description": "TDEE kalkulagailu doakoa: estimatu egunean zenbat kaloria erretzen dituzun zure BMR eta jarduera-mailaren arabera (Mifflin-St Jeor). Unitate metrikoak edo inperialak.",
+  "meta.og_title": "TDEE kalkulagailua: eguneko energia-gastu osoa",
+  "meta.og_description": "Estimatu zure eguneko energia-gastu osoa zure BMR eta jarduera-mailaren arabera, kg/cm edo lb/ft unitateetan.",
+  "link.footer": "TDEE kalkulagailua",
+  "h1": "TDEE kalkulagailua",
+  "h1.sub": "eguneko energia-gastu osoa",
+  "lead": "Estimatu egun arrunt batean zenbat kaloria erretzen dituzun: zure energia atsedenean (BMR) gehi eguneroko mugimendua eta ariketa.",
+  "form.label": "TDEE kalkulagailua",
+  "faq.tdee.q": "Zer da TDEE?",
+  "faq.tdee.a": "TDEE-k, eguneko energia-gastu osoak, egun batean erretzen dituzun kaloria guztiak estimatzen ditu: zure BMR atsedenean gehi eguneroko mugimendua eta ariketa. Askotan mantentze-kaloriak deitzen zaio, zure pisua gutxi gorabehera berdin mantentzen duen kontsumoa.",
+  "faq.difference.q": "Zer desberdintasun dago BMR eta TDEE artean?",
+  "faq.difference.a": "BMR zure gorputzak atseden osoan erabiltzen duen energia da. TDEE-k BMR jarduera-faktore batez biderkatzen du, ariketa gutxi edo batere ez denean 1,2tik lan fisikoa edo egunean bi aldiz entrenatzen denean 1,9ra; beraz, beti da BMR baino handiagoa.",
+  "faq.use.q": "Zer egin dezaket nire TDEE-rekin?",
+  "faq.use.a": "Erabili eguneroko kaloria helburu baterako erreferentzia-puntu gisa: zure TDEE inguruan jateak kontsumoa eta gastua gutxi gorabehera orekatuta mantentzen ditu, gutxiago jatea defizita da eta gehiago jatea superabita. Hasierako estimazio bat da; beraz, alderatu zure pisua aste batzuetan benetan nola aldatzen den.",
+  "cta.title": "Egin jarraipena jandakoari eta erretakoari Lou-rekin."
+}
