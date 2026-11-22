@@ -1,0 +1,41 @@
+{
+  "title": "Que é Calcalou? Contador de calorías e proteínas",
+  "summary": "Calcalou é un contador de calorías e proteínas para iPhone, iPad e Android, con Lou, unha mascota simpática que axuda a converter o rexistro diario nun hábito.",
+  "version": "Esta guía describe a versión 1.7. A dispoñibilidade nas tendas pode variar segundo a plataforma e o país; comproba a versión dispoñible para ti antes de descargala por unha función concreta.",
+  "features_title": "Que fai Calcalou",
+  "features": [
+    "Rexistra calorías e proteínas a man de balde.",
+    "Escanea códigos de barras de produtos de balde. Os valores nutricionais dependen dos datos dispoñibles do produto; revisa a etiqueta e o tamaño da ración.",
+    "Fixa un obxectivo de proteínas segundo o teu peso: Calcalou mostra a conta (peso × gramos por quilo), permite axustala e acepta o teu propio número.",
+    "Estima unha comida a partir dunha foto con IA, incluídas as calorías, as proteínas, as graxas e os hidratos de cada alimento cando estean dispoñibles. Revisa e edita o resultado antes de gardar.",
+    "Engade auga por vasos ou nunha cantidade personalizada en ml.",
+    "Configura varios recordatorios, cada un coa súa hora e os seus días da semana.",
+    "Mantén unha racha de rexistro con Lou e segue as calorías ou as proteínas de hoxe nun widget da pantalla de inicio. As funcións dos widgets varían segundo a plataforma.",
+    "Exporta o teu diario en CSV dun mes, un trimestre, un ano ou todo o historial.",
+    "Usa a app en 41 idiomas de interface (versión 1.7). É necesario iniciar sesión para gardar o diario na túa conta."
+  ],
+  "faq_title": "Preguntas sobre Calcalou",
+  "faq": [
+    [
+      "Calcalou é de balde?",
+      "Rexistrar calorías e proteínas a man, escanear códigos de barras e controlar a auga son de balde. Os escaneos con IA son Premium; onde estea dispoñible, unha conta pode probar ata 3 escaneos de balde unha vez. Os prezos e as condicións da subscrición móstranse na app e na tenda."
+    ],
+    [
+      "Un escaneo de foto conta as proteínas?",
+      "Na versión 1.7, os escaneos de fotos con IA poden estimar as calorías, as proteínas, as graxas e os hidratos de cada alimento detectado. As estimacións poden fallar, sobre todo coas racións, os aceites e os pratos mesturados. Os valores nutricionais que faltan non son cero: revísaos ou introdúceos a man."
+    ],
+    [
+      "Quen pode usar Calcalou?",
+      "Calcalou é para maiores de 13 anos, conforme aos requisitos de idade locais. Na versión 1.7, os escaneos con IA e as compras de Premium requiren ter 18 anos ou máis e estar nunha rexión onde estean dispoñibles. Calcalou é unha app de benestar xeral, non un produto sanitario."
+    ],
+    [
+      "Podo usala sen iniciar sesión?",
+      "É necesario iniciar sesión. O teu diario está asociado á túa conta; usa o mesmo método de inicio de sesión cando volvas noutro dispositivo."
+    ]
+  ],
+  "more": "Compara apps e escolle a túa maneira de rexistrar",
+  "stores": "Consegue Calcalou",
+  "updated": "Revisado o 17 de novembro de 2026",
+  "privacy": "Privacidade",
+  "support": "Asistencia"
+}

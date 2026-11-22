@@ -1,0 +1,18 @@
+{
+  "meta.title": "Calculadora de GET: gasto enerxético total diario | Calcalou",
+  "meta.description": "Calculadora de GET de balde: estima cantas calorías queimas ao día a partir da túa TMB e do teu nivel de actividade (Mifflin-St Jeor). Unidades métricas ou imperiais.",
+  "meta.og_title": "Calculadora de GET: gasto enerxético total diario",
+  "meta.og_description": "Estima o teu gasto enerxético total diario a partir da túa TMB e do teu nivel de actividade, en kg/cm ou lb/ft.",
+  "link.footer": "Calculadora de GET",
+  "h1": "Calculadora de GET",
+  "h1.sub": "gasto enerxético total diario",
+  "lead": "Estima cantas calorías queimas nun día normal: a túa enerxía en repouso (TMB) máis o movemento diario e o exercicio.",
+  "form.label": "Calculadora de GET",
+  "faq.tdee.q": "Que é o GET?",
+  "faq.tdee.a": "O GET, gasto enerxético total diario, estima todas as calorías que queimas nun día: a túa TMB en repouso máis o movemento diario e o exercicio. Adoita chamarse calorías de mantemento, a inxestión que mantén o teu peso máis ou menos igual.",
+  "faq.difference.q": "Cal é a diferenza entre a TMB e o GET?",
+  "faq.difference.a": "A TMB é a enerxía que usa o teu corpo en repouso absoluto. O GET multiplica a TMB por un factor de actividade, de 1,2 para pouco ou nada de exercicio a 1,9 para un traballo físico ou adestrar dúas veces ao día, polo que sempre é maior ca TMB.",
+  "faq.use.q": "Que podo facer co meu GET?",
+  "faq.use.a": "Úsao como punto de referencia para un obxectivo diario de calorías: comer arredor do teu GET mantén a inxestión e o gasto máis ou menos equilibrados, comer menos é un déficit e comer máis é un superávit. É unha estimación inicial, así que compáraa con como cambia de verdade o teu peso ao longo dunhas semanas.",
+  "cta.title": "Controla o comido fronte ao queimado con Lou."
+}

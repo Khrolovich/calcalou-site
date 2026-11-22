@@ -1,0 +1,49 @@
+{
+  "title": "App para contar proteínas: rexistra proteínas e calorías",
+  "summary": "Calcalou é unha app para contar proteínas en iPhone, iPad e Android. Rexistra as proteínas xunto ás calorías, fixa un obxectivo segundo o teu peso e estima comidas a partir dunha foto.",
+  "features_title": "Control de proteínas en Calcalou",
+  "features": [
+    "Rexistra as proteínas en cada entrada: escríbeas ti de balde ou énchelas desde un código de barras ou un escaneo de foto con IA.",
+    "Fixa un obxectivo diario de proteínas segundo o teu peso. Calcalou mostra a conta (peso × gramos por quilo), permite axustala entre 0,8 e 2,0 g/kg e acepta o teu propio número.",
+    "Mira as proteínas xunto ás calorías na pantalla Hoxe, no resumo semanal e en Estatísticas, e escolle proteínas ou calorías para cada widget.",
+    "Os escaneos de fotos con IA estiman as proteínas, as graxas e os hidratos de cada alimento, todo editable antes de gardar. As estimacións poden fallar; os escaneos son Premium, con límites de idade e rexión.",
+    "O escaneo de códigos de barras é de balde. Os valores nutricionais dependen dos datos do produto, así que revisa a etiqueta e a ración.",
+    "As rachas, os recordatorios flexibles e o control da auga axúdanche a seguir rexistrando."
+  ],
+  "sections": [
+    [
+      "Como contar proteínas en Calcalou",
+      "Toca Engadir e introduce as calorías, as proteínas, as graxas e os hidratos do que comiches, ou escanea un código de barras ou unha foto para enchelos. Todos os campos son opcionais, así que podes rexistrar só as proteínas. As proteínas aparecen xunto ás calorías na pantalla Hoxe e nos teus resumos."
+    ],
+    [
+      "Fixa un obxectivo de proteínas axeitado para ti",
+      "Escolle Segundo o peso corporal e Calcalou multiplica o teu peso polos gramos por quilo (1,2 por defecto) e mostra a conta. O peso tómase do teu perfil ou, se os conectas, de Apple Health ou Health Connect. Axusta o factor entre 0,8 e 2,0 g/kg ou introduce o teu propio obxectivo. Un obxectivo é un punto de partida, non consello médico; a calculadora de proteínas mostra rangos de referencia."
+    ],
+    [
+      "Fotos, códigos de barras ou a man",
+      "Os escaneos de fotos usan IA para estimar as calorías, as proteínas, as graxas e os hidratos de cada alimento. Revisa o resultado: as racións, os aceites e os pratos mesturados son doados de calcular mal, e un valor que falta non é cero. O escaneo de códigos de barras e o rexistro manual son de balde; os datos dos produtos varían, así que revisa a etiqueta."
+    ],
+    [
+      "Quen pode usala",
+      "Calcalou é para maiores de 13 anos, conforme aos requisitos de idade locais. Na versión 1.7, os escaneos con IA e as compras de Premium requiren ter 18 anos ou máis e estar nunha rexión onde estean dispoñibles. É necesario iniciar sesión. Calcalou é unha app de benestar xeral, non un produto sanitario."
+    ]
+  ],
+  "faq": [
+    [
+      "Cal é a mellor forma de contar proteínas?",
+      "A que vaias manter. Rexistra as proteínas en cada comida, revisa as etiquetas dos alimentos envasados e toma as estimacións das fotos como un punto de partida que podes editar. En Calcalou podes escribir as proteínas, escanear un código de barras ou usar un escaneo de foto con IA."
+    ],
+    [
+      "Cantas proteínas debo comer ao día?",
+      "Depende do teu corpo, dos teus obxectivos e da túa saúde. Para adultos, a inxestión de referencia da EFSA é de 0,83 g por kg de peso corporal; a declaración de posición de 2026 da International Society of Sports Nutrition indica 1,2–1,6 g por kg para perder peso e 1,6–2,2 g por kg con adestramento de forza. A calculadora de proteínas mostra os tres. É unha orientación xeral, non consello médico."
+    ],
+    [
+      "Calcalou conta as proteínas dunha foto?",
+      "Si. Na versión 1.7, un escaneo de foto con IA estima as calorías, as proteínas, as graxas e os hidratos de cada alimento detectado. As estimacións poden fallar, así que revísaas e edítaas antes de gardar."
+    ],
+    [
+      "Contar proteínas é de balde?",
+      "Rexistrar proteínas a man, escanear códigos de barras e os obxectivos de proteínas son de balde. Os escaneos de fotos con IA son Premium; onde estea dispoñible, unha conta pode probar ata 3 escaneos de balde unha vez. Os prezos e as condicións móstranse na app e na tenda."
+    ]
+  ]
+}
