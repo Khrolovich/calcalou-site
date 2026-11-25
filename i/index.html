@@ -60,16 +60,27 @@
     (function () {
       var stores = window.CalcalouStores;
       if (stores.aiSource(location.search, document.referrer, location.pathname)) stores.init(document, window);
-      var code = String(new URLSearchParams(location.search).get('c') || '').toUpperCase().replace(/[^0-9A-Z]/g, '');
-      if (!/^[0-9A-HJKMNP-TV-Z]{6}$/.test(code)) return;
-      document.querySelector('[data-code]').textContent = code.slice(0, 3) + ' ' + code.slice(3);
-      document.querySelectorAll('[data-invite]').forEach(function (el) { el.hidden = false; });
+      var params = new URLSearchParams(location.search);
+      var code = String(params.get('c') || '').toUpperCase().replace(/[^0-9A-Z]/g, '');
       var play = document.querySelector('[data-store="android"]');
       var target = new URL(play.href);
       var referrer = new URLSearchParams(target.searchParams.get('referrer'));
-      referrer.set('invite', code);
+      if (params.has('ct')) {
+        var campaign = params.get('ct');
+        if (!/^[A-Za-z0-9_-]{1,40}$/.test(campaign)) campaign = 'invite';
+        var ios = document.querySelector('[data-store="ios"]');
+        var apple = new URL(ios.href);
+        apple.searchParams.set('ct', campaign);
+        ios.href = apple.href;
+        referrer.set('utm_campaign', campaign);
+      }
+      var validCode = /^[0-9A-HJKMNP-TV-Z]{6}$/.test(code);
+      if (validCode) referrer.set('invite', code);
       target.searchParams.set('referrer', referrer.toString());
       play.href = target.href;
+      if (!validCode) return;
+      document.querySelector('[data-code]').textContent = code.slice(0, 3) + ' ' + code.slice(3);
+      document.querySelectorAll('[data-invite]').forEach(function (el) { el.hidden = false; });
       var copy = document.querySelector('[data-copy]');
       copy.addEventListener('click', function () {
         (navigator.clipboard ? navigator.clipboard.writeText(code) : Promise.reject()).then(function () { copy.textContent = 'Copied'; }, function () {

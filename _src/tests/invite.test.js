@@ -37,7 +37,7 @@ function render(search) {
     replace() {throw new Error('Unexpected invite-page redirect');}};
   const window = {CalcalouStores: L, URL, URLSearchParams, location, navigator: {userAgent: 'Android'}};
   vm.runInNewContext(script, { window, document: doc, location, URL, URLSearchParams, navigator: {}, Promise });
-  return { code: node('[data-code]').textContent, shown: !invite[0].hidden, play: node('[data-store="android"]').href };
+  return { code: node('[data-code]').textContent, shown: !invite[0].hidden, apple: node('[data-store="ios"]').href, play: node('[data-store="android"]').href };
 }
 
 test('a code in ?c= is shown in two halves and handed to Play through the install referrer', () => {
@@ -66,15 +66,11 @@ test('AI attribution and an invite code both survive inside the Play install ref
 });
 
 test('404.html forwards /i/<CODE> to the invite page and still forwards /app', () => {
-  const script = /<script>([\s\S]*?)<\/script>/.exec(read('404.html'))[1];
-  const go = (pathname) => {
-    let to = null;
-    vm.runInNewContext(script, { location: { pathname, search: '', replace: (u) => { to = u; } } });
-    return to;
-  };
+  const go = redirect;
   assert.equal(go('/i/K7Q2M9'), '/i/?c=K7Q2M9');
   assert.equal(go('/i/K7Q2M9/'), '/i/?c=K7Q2M9');
   assert.equal(go('/app/scan'), '/');
+  assert.equal(go('/app/scan?ct=share-day-v1'), '/?ct=share-day-v1');
   assert.equal(go('/i/'), null);
   assert.equal(go('/nope'), null);
 });
@@ -84,4 +80,55 @@ test('apple-app-site-association claims /i/<CODE>, keeps /app, and leaves the we
   assert.deepEqual(components.map((c) => [c['/'], !!c.exclude]), [
     ['/app', false], ['/app/*', false], ['/i/', true], ['/i/*', false],
   ]);
+});
+
+function redirect(input) {
+  const url = new URL(input, 'https://calcalou.com');
+  let to = null;
+  const script = /<script>([\s\S]*?)<\/script>/.exec(read('404.html'))[1];
+  vm.runInNewContext(script, { URLSearchParams, location: {
+    pathname: url.pathname, search: url.search, replace: (value) => { to = value; },
+  } });
+  return to;
+}
+
+const cases = [
+  ['/i/ABC123', '/i/?c=ABC123', 'invite'],
+  ['/i/ABC123?ct=share-day-v1', '/i/?c=ABC123&ct=share-day-v1', 'share-day-v1'],
+  ['/i/ABC123?ct=<script>', '/i/?c=ABC123&ct=invite', 'invite'],
+  ['/i/abc123?ct=share-day-v1', '/i/?c=abc123&ct=share-day-v1', 'share-day-v1'],
+  ['/i/ABC123/?ct=share-day-v1', '/i/?c=ABC123&ct=share-day-v1', 'share-day-v1'],
+  ['/i/ABC123?ct=share-day-v1&foo=bar&c=ZZZZZZ', '/i/?c=ABC123&ct=share-day-v1', 'share-day-v1'],
+];
+
+for (const [input, destination, campaign] of cases) {
+  test(`invite campaign survives redirect and store links: ${input}`, () => {
+    assert.equal(redirect(input), destination);
+    const result = render(new URL(destination, 'https://calcalou.com').search);
+    const apple = 'https://apps.apple.com/app/apple-store/id6757434158?pt=128407090&ct=' + campaign + '&mt=8';
+    const play = 'https://play.google.com/store/apps/details?id=com.khrolovich.calorietracker&referrer=' +
+      encodeURIComponent('utm_source=app-invite&utm_medium=referral&utm_campaign=' + campaign + '&invite=ABC123');
+    assert.equal(result.apple, apple);
+    assert.equal(result.play, play);
+    assert.equal(result.code, 'ABC 123');
+    assert.ok(result.shown);
+    console.log(JSON.stringify({input, redirect: destination, apple: result.apple, play: result.play}));
+  });
+}
+
+test('direct invite landing validates the whole campaign, including length boundaries', () => {
+  for (const token of ['', '<script>', 'bad token', 'x'.repeat(41), 'trailing\n']) {
+    const result = render('?c=ABC123&ct=' + encodeURIComponent(token));
+    assert.equal(new URL(result.apple).searchParams.get('ct'), 'invite', JSON.stringify(token));
+    const referrer = new URLSearchParams(new URL(result.play).searchParams.get('referrer'));
+    assert.equal(referrer.get('utm_campaign'), 'invite');
+    assert.equal(referrer.get('invite'), 'ABC123');
+    assert.equal(redirect('/i/ABC123?ct=' + encodeURIComponent(token)), '/i/?c=ABC123&ct=invite');
+  }
+  for (const token of ['a', 'AZaz09_-', 'x'.repeat(40)]) {
+    const result = render('?c=ABC123&ct=' + token);
+    assert.equal(new URL(result.apple).searchParams.get('ct'), token);
+    assert.equal(new URLSearchParams(new URL(result.play).searchParams.get('referrer')).get('utm_campaign'), token);
+    assert.equal(redirect('/i/ABC123?ct=' + token), '/i/?c=ABC123&ct=' + token);
+  }
 });
