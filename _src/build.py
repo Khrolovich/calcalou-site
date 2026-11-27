@@ -492,6 +492,9 @@ def go_pages(env, t, gp_w):
             t=t, gp_w=gp_w, ct=ct, links=store_links(ct), qr=qr_svg(url, channel))
         if ct.startswith("ai_"):
             pages[SITE / "assets" / "qr" / f"{channel}.svg"] = str(qr_svg(url, channel)) + "\n"
+    pages[SITE / "app" / "index.html"] = template.render(
+        t=t, gp_w=gp_w, ct="web-app", links=store_links("web-app"), qr=qr_svg(f"{BASE}/app/", "app"),
+        query_ct=True, og=True)
     return pages
 
 

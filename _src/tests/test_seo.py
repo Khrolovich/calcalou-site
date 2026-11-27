@@ -204,9 +204,9 @@ class StaticFiles(unittest.TestCase):
             self.assertTrue(all(re.fullmatch(r"([0-9A-F]{2}:){31}[0-9A-F]{2}", f)
                                 for f in s["target"]["sha256_cert_fingerprints"]))
 
-    def test_app_paths_fall_back_to_landing(self):
-        self.assertIn(r"/^\/app(\/|$)/.test(location.pathname)", (SITE / "404.html").read_text())
-        self.assertFalse((SITE / "app").exists(), "/app/* must reach 404.html, which forwards to the landing")
+    def test_app_paths_reach_the_app_page(self):
+        self.assertIn(r"/^\/app\/./.test(location.pathname)", (SITE / "404.html").read_text())
+        self.assertTrue((SITE / "app" / "index.html").is_file(), "/app must answer 200, not the 404 page")
 
 
 class PressKit(unittest.TestCase):

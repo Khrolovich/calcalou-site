@@ -65,12 +65,13 @@ test('AI attribution and an invite code both survive inside the Play install ref
   assert.equal(referrer.get('invite'), 'K7Q2M9');
 });
 
-test('404.html forwards /i/<CODE> to the invite page and still forwards /app', () => {
+test('404.html forwards /i/<CODE> to the invite page and deeper /app/* to /app/', () => {
   const go = redirect;
   assert.equal(go('/i/K7Q2M9'), '/i/?c=K7Q2M9');
   assert.equal(go('/i/K7Q2M9/'), '/i/?c=K7Q2M9');
-  assert.equal(go('/app/scan'), '/');
-  assert.equal(go('/app/scan?ct=share-day-v1'), '/?ct=share-day-v1');
+  assert.equal(go('/app/scan'), '/app/');
+  assert.equal(go('/app/scan?ct=share-day-v1'), '/app/?ct=share-day-v1');
+  assert.equal(go('/apple'), null);
   assert.equal(go('/i/'), null);
   assert.equal(go('/nope'), null);
 });

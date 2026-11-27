@@ -9,7 +9,7 @@
   <meta property="og:image" content="https://calcalou.com/assets/img/og.jpg">
   <link rel="icon" href="/assets/img/favicon-48.png" sizes="48x48">
   <script>
-    if (/^\/app(\/|$)/.test(location.pathname)) location.replace('/' + location.search);
+    if (/^\/app\/./.test(location.pathname)) location.replace('/app/' + location.search);
     var invite = /^\/i\/([0-9A-Za-z-]{1,40})\/?$/.exec(location.pathname);
     if (invite) {
       var params = new URLSearchParams(location.search);

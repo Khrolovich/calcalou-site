@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
   <title>Get Calcalou</title>
+{%- if og | default(false) %}
+  <meta property="og:title" content="Calcalou: tell Lou what you ate">
+  <meta property="og:description" content="{{ t['hero.title1'] }} {{ t['hero.title2'] }}">
+  <meta property="og:image" content="https://calcalou.com/assets/img/og.jpg">
+{%- endif %}
   <link rel="icon" href="/favicon.ico">
   {{ analytics }}
   <style>
@@ -41,7 +46,7 @@
       stores.init(document, window);
       var ai = stores.aiSource(location.search, document.referrer, location.pathname);
       if (ai) document.querySelector('.qr').innerHTML = '<img width="180" height="180" alt="Calcalou AI campaign QR" src="/assets/qr/ai-' + ai + '.svg">';
-      var url = stores.storeLinks(ai ? 'ai_' + ai : {{ ct | tojson }})[stores.detectPlatform(nav.userAgent, nav.platform, nav.maxTouchPoints)];
+      var url = stores.storeLinks(ai ? 'ai_' + ai : {% if query_ct | default(false) %}stores.sanitizeCampaign(new URLSearchParams(location.search).get('ct'), {{ ct | tojson }}){% else %}{{ ct | tojson }}{% endif %})[stores.detectPlatform(nav.userAgent, nav.platform, nav.maxTouchPoints)];
       if (!url) return;
       var gone = false;
       var go = function () { if (!gone) { gone = true; location.replace(url); } };
